@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessForBusiness.Design", "FitnessForBusiness.Design\FitnessForBusiness.Design.csproj", "{0B2831C8-7A08-4585-A46C-63AF119E1309}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessForBusiness.Core", "FitnessForBusiness.Core\FitnessForBusiness.Core.csproj", "{E03A3EEB-8EBC-4227-95A9-7EE36F120056}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B2831C8-7A08-4585-A46C-63AF119E1309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B2831C8-7A08-4585-A46C-63AF119E1309}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B2831C8-7A08-4585-A46C-63AF119E1309}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B2831C8-7A08-4585-A46C-63AF119E1309}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E03A3EEB-8EBC-4227-95A9-7EE36F120056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E03A3EEB-8EBC-4227-95A9-7EE36F120056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E03A3EEB-8EBC-4227-95A9-7EE36F120056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E03A3EEB-8EBC-4227-95A9-7EE36F120056}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D9E64F7-8A3A-4547-8636-C98F2680D245}
+	EndGlobalSection
+EndGlobal
