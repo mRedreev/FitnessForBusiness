@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FitnessForBusiness.Core.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace FitnessForBusiness.Core.Models
 
         public string Name { get; set;}
 
-        public bool? Type { get; set;}
+        public string Type { get; set;}
 
         public bool? Level { get; set;}
 
@@ -31,7 +32,7 @@ namespace FitnessForBusiness.Core.Models
         public int Length { get; set;}
 
 
-        public Training(string name, bool? type, bool? level, List<Excercise> excercises, int exLength, int breakLength, int circleAmount)
+        public Training(string name, string type, bool? level, List<Excercise> excercises, int exLength, int breakLength, int circleAmount)
         {
             Name = name;
             Type = type;
@@ -49,9 +50,9 @@ namespace FitnessForBusiness.Core.Models
             Length = (ExcerciseLength + BreakLength) * ExcerciseAmount * CircleAmount - breakLength;
         }
 
-        public string NameOfType()
+        public string ShowLevel()
         {
-            if (Type == true) return "";
+            return functions.NameOfLevel(Level);
         }
 
     }

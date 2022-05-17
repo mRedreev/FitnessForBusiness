@@ -16,12 +16,15 @@ namespace FitnessForBusiness.Core.Models
 
         public bool? Level {get; set;}
 
-        public bool? Type {get; set;}
-
         public List<string> BodyParts {get; set;}
 
         public string Equipment {get; set;}
 
         public string Description {get; set;}
     }
+
+    public string ShowLevel()
+        {
+            return functions.NameOfLevel(Level);
+        }
 }
