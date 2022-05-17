@@ -14,7 +14,7 @@
             CornerRadius="20">
         <Grid>
             <Grid.Background>
-                <ImageBrush ImageSource="/background.jpg"/>
+                <ImageBrush ImageSource="/Pictures/background.jpg"/>
             </Grid.Background>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -60,7 +60,7 @@
                 <StackPanel Orientation="Horizontal">
                     <Image Height="50"
                            Width="50"
-                           Source="/Images/sLogo.png"/>
+                           Source="/Pictures/sLogo.png"/>
 
                     <TextBlock Text="trong Partner"
                                FontSize="26"
