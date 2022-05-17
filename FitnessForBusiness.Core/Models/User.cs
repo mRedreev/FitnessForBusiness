@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FitnessForBusiness.Core.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace FitnessForBusiness.Core.Models
 
         public string ImageSource { get; set; }
 
-        public Date Age { get; set;}
+        public int Age { get; set;}
 
         public bool? Level { get; set;}
 
@@ -25,10 +26,20 @@ namespace FitnessForBusiness.Core.Models
         public string Login { get; set; }
 
         public string Password { get; set; }
-    }
 
-    public string ShowGoal()
+        public string ShowGoal()
         {
             return functions.NameOfGoal(Goal);
         }
+
+        public int CountAge(DateTime born)
+        {
+            DateTime now = DateTime.Today;
+            int age = now.Year - born.Year;
+            if (born > now.AddYears(-age)) age--;
+            return age;
+        }
+    }
+
+    
 }
