@@ -15,5 +15,12 @@ namespace FitnessForBusiness.Core.Core
             else if (level == true) return "Advanced";
             return null;
         }
+
+        public static string NameOfGoal(bool? goal)
+        {
+            if (goal == null) return "Losing weight";
+            else if (goal == true) return "Gaining muscels";
+            else if (goal == false) return "Keeping fit";
+        }
     }
 }
