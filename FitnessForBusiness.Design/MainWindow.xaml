@@ -60,14 +60,14 @@
                 <StackPanel Orientation="Horizontal">
                     <Image Height="50"
                            Width="50"
-                           />
+                           Source="/Images/sLogo.png"/>
 
-                    <TextBlock Text="Strong Partner"
+                    <TextBlock Text="trong Partner"
                                FontSize="26"
                                Foreground="#ab5eeb"
                                VerticalAlignment="Center"
                                FontWeight="Bold"
-                               Margin="10,0,0,0"/>
+                               Margin="-17,9,0,0"/>
 
                 </StackPanel>
 
@@ -81,7 +81,10 @@
                         <Button.Style>
                             <Style TargetType="Button">
                                 <Setter Property="Cursor" Value="Hand"/>
-                                
+                                <Setter Property="Background" Value="#ab5eeb"/>
+                                <Style.Triggers>
+                                    
+                                </Style.Triggers>
                             </Style>
                         </Button.Style>
                         
