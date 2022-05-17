@@ -44,6 +44,9 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Core\ObservableObject.cs" />
     <Compile Include="Core\RelayCommand.cs" />
+    <Compile Include="Models\Excercise.cs" />
+    <Compile Include="Models\Training.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="MVVM\ViewModel\DiscoveryViewModel.cs" />
     <Compile Include="MVVM\ViewModel\HomeViewModel.cs" />
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
