@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FitnessForBusiness.Core.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
