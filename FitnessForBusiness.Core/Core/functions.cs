@@ -21,6 +21,7 @@ namespace FitnessForBusiness.Core.Core
             if (goal == null) return "Losing weight";
             else if (goal == true) return "Gaining muscels";
             else if (goal == false) return "Keeping fit";
+            return null;
         }
     }
 }
