@@ -22,4 +22,9 @@ namespace FitnessForBusiness.Core.Models
 
         public string Description {get; set;}
     }
+
+    public string ShowLevel()
+        {
+            return functions.NameOfLevel(Level);
+        }
 }

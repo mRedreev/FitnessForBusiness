@@ -16,7 +16,7 @@ namespace FitnessForBusiness.Core.Models
 
         public string ImageSource { get; set; }
 
-        public DateTime Age { get; set;}
+        public Date Age { get; set;}
 
         public bool? Level { get; set;}
 
@@ -26,4 +26,9 @@ namespace FitnessForBusiness.Core.Models
 
         public string Password { get; set; }
     }
+
+    public string ShowGoal()
+        {
+            return functions.NameOfGoal(Goal);
+        }
 }
