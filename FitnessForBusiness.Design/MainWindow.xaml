@@ -13,6 +13,9 @@
     <Border Background="#252737"
             CornerRadius="20">
         <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/background.jpg"/>
+            </Grid.Background>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -22,7 +25,71 @@
                 <RowDefinition Height="25"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            
+
+            <Grid Grid.ColumnSpan="2"
+                  Background="#252737">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="text"
+                           Foreground="White"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Grid.Column="1"
+                           FontSize="14"/>
+
+            </Grid>
+
+            <StackPanel Grid.Row="1">
+
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="50"
+                           Width="50"
+                           />
+
+                    <TextBlock Text="Strong Partner"
+                               FontSize="26"
+                               Foreground="#ab5eeb"
+                               VerticalAlignment="Center"
+                               FontWeight="Bold"
+                               Margin="10,0,0,0"/>
+
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="Войти"
+                            Background="Transparent"
+                            Foreground="#ab5eeb"
+                            FontSize="20"
+                            FontWeight="Medium">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Cursor" Value="Hand"/>
+                                
+                            </Style>
+                        </Button.Style>
+                        
+                    </Button>
+                </StackPanel>
+
+
+            </StackPanel>
             
         </Grid>
         
