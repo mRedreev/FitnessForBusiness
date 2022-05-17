@@ -51,10 +51,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\gigachad.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Font\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
