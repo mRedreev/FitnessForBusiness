@@ -49,5 +49,10 @@ namespace FitnessForBusiness.Core.Models
             Length = (ExcerciseLength + BreakLength) * ExcerciseAmount * CircleAmount - breakLength;
         }
 
+        public string NameOfType()
+        {
+            if (Type == true) return "";
+        }
+
     }
 }
