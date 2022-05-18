@@ -53,6 +53,11 @@ namespace FitnessForBusiness.Core.Models
             Age = CountAge(born);
             CompletedTrainings = new List<Training>();
         }
+
+        public User()
+        {
+
+        }
     }
 
     

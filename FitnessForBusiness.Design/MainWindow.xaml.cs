@@ -25,11 +25,20 @@ namespace FitnessForBusiness.Design
         public MainWindow()
         {
             InitializeComponent();
-            //InitialUsers();
             //InitialTrainings();
+            //InitialUsers();
+            
+
+            /*using (Context context = new Context())
+            {
+                MessageBox.Show(context.Users.ToList()[1].CompletedTrainings[0].ToString());
+                context.Users.ToList()[1].CompletedTrainings = new List<Training>() { context.Trainings.ToList()[0] };
+                context.SaveChanges();
+                //context.Users.ToList()[1].CompletedTrainings = new List<Training>() { context.Trainings.ToList()[0] };
+            }*/
         }
 
-       /* private void InitialUsers()
+        private void InitialUsers()
         {
             using (Context context = new Context()) //Создание подключения (локальной копии БД)
             {
@@ -103,6 +112,6 @@ namespace FitnessForBusiness.Design
                 context.SaveChanges();
                 MessageBox.Show("training1 saved");
             }
-        }*/
+        }
     }
 }

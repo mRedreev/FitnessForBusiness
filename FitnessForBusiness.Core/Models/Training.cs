@@ -51,6 +51,11 @@ namespace FitnessForBusiness.Core.Models
             Description = description;
         }
 
+        public Training()
+        {
+
+        }
+
         public string ShowLevel()
         {
             return functions.NameOfLevel(Level);
