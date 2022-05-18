@@ -25,6 +25,8 @@ namespace FitnessForBusiness.Design
         public MainWindow()
         {
             InitializeComponent();
+            InitialUsers();
+            InitialTrainings();
         }
 
         private void InitialUsers()
@@ -43,7 +45,7 @@ namespace FitnessForBusiness.Design
                     );
                 context.Users.Add(user1);
                 context.SaveChanges();
-                MessageBox.Show("Saved user1");
+                MessageBox.Show("user1 saved");
             }
         }
 
@@ -78,9 +80,28 @@ namespace FitnessForBusiness.Design
                     Equipment = "mat",
                 };
 
+                Excercise excercise4 = new Excercise
+                {
+                    Name = "astride jumps",
+                    VideoSource = "http://d205bpvrqc9yn1.cloudfront.net/3220.gif",
+                    Level = null,
+                    BodyParts = new List<string>() { "cardiovascular system" },
+                    Equipment = "mat",
+                };
 
-
-                
+                Training training1 = new Training(
+                    "Short warm-up",
+                    "warm-up",
+                    null,
+                    new List<Excercise> { excercise1, excercise2, excercise3, excercise4 },
+                    0.5,
+                    0.25,
+                    2,
+                    ""
+                    );
+                context.Trainings.Add(training1);
+                context.SaveChanges();
+                MessageBox.Show("training1 saved");
             }
         }
     }

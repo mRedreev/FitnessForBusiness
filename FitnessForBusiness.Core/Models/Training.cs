@@ -21,18 +21,18 @@ namespace FitnessForBusiness.Core.Models
 
         public List<string> Equipment { get; set;}
 
-        public int ExcerciseLength { get; set;}
+        public double ExcerciseLength { get; set;}
 
         public int ExcerciseAmount { get; set;}
         
-        public int BreakLength { get; set;}
+        public double BreakLength { get; set;}
 
         public int CircleAmount { get; set;}
 
-        public int Length { get; set;}
+        public double Length { get; set;}
         public string Description { get; set;}
 
-        public Training(string name, string type, bool? level, List<Excercise> excercises, int exLength, int breakLength, int circleAmount)
+        public Training(string name, string type, bool? level, List<Excercise> excercises, double exLength, double breakLength, int circleAmount, string description)
         {
             Name = name;
             Type = type;
@@ -48,7 +48,7 @@ namespace FitnessForBusiness.Core.Models
                 .ToList();
             ExcerciseAmount = excercises.Count;
             Length = (ExcerciseLength + BreakLength) * ExcerciseAmount * CircleAmount - breakLength;
-            Description = Description;
+            Description = description;
         }
 
         public string ShowLevel()
