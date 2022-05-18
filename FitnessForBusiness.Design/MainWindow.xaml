@@ -82,6 +82,7 @@
                             <Style TargetType="Button">
                                 <Setter Property="Cursor" Value="Hand"/>
                                 <Setter Property="Background" Value="#ab5eeb"/>
+                                
                                 <Style.Triggers>
                                     
                                 </Style.Triggers>

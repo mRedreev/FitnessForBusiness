@@ -145,6 +145,12 @@
   <ItemGroup>
     <Resource Include="Pictures\sLogo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FitnessForBusiness.Core\FitnessForBusiness.Core.csproj">
+      <Project>{E03A3EEB-8EBC-4227-95A9-7EE36F120056}</Project>
+      <Name>FitnessForBusiness.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

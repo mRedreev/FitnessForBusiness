@@ -1,7 +1,9 @@
-﻿using System;
-using DesignBomba.Core;
+﻿using FitnessForBusiness.Core.Core;
+using System;
 
-namespace DesignBomba.MVVM.ViewModel
+
+
+namespace FitnessForBusiness.Design.MVVM.ViewModel
 {
     internal class MainViewModel : ObservableObject
     {
