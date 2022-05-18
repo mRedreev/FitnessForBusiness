@@ -21,8 +21,6 @@ namespace FitnessForBusiness.Core.Models
 
         public string Equipment {get; set;}
 
-        public string Description {get; set;}
-
         public string ShowLevel()
         {
             return functions.NameOfLevel(Level);

@@ -30,7 +30,7 @@ namespace FitnessForBusiness.Core.Models
         public int CircleAmount { get; set;}
 
         public int Length { get; set;}
-
+        public string Description { get; set;}
 
         public Training(string name, string type, bool? level, List<Excercise> excercises, int exLength, int breakLength, int circleAmount)
         {
@@ -48,6 +48,7 @@ namespace FitnessForBusiness.Core.Models
                 .ToList();
             ExcerciseAmount = excercises.Count;
             Length = (ExcerciseLength + BreakLength) * ExcerciseAmount * CircleAmount - breakLength;
+            Description = Description;
         }
 
         public string ShowLevel()

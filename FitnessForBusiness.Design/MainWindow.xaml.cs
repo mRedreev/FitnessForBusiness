@@ -35,7 +35,7 @@ namespace FitnessForBusiness.Design
                     "Mikhail",
                     "Redreev",
                    ".. / .. / Users /user1.jpg",
-                    DateTime.Parse("30.09.2002"),
+                    DateTime.Parse("30.11.2002"),
                     true,
                     true,
                     "MRedreev",
@@ -47,6 +47,41 @@ namespace FitnessForBusiness.Design
             }
         }
 
-        private void Initial
+        private void InitialTrainings()
+        {
+            using (Context context = new Context()) //Создание подключения (локальной копии БД)
+            {
+                Excercise excercise1 = new Excercise
+                {
+                    Name = "Air bike",
+                    VideoSource = "http://d205bpvrqc9yn1.cloudfront.net/0003.gif",
+                    Level = null,
+                    BodyParts = new List<string>() { "waist", "abs" },
+                    Equipment = "mat",
+                };
+
+                Excercise excercise2 = new Excercise
+                {
+                    Name = "All fours squad stretch",
+                    VideoSource = "http://d205bpvrqc9yn1.cloudfront.net/1512.gif",
+                    Level = null,
+                    BodyParts = new List<string>() { "quads" },
+                    Equipment = "mat",
+                };
+
+                Excercise excercise3 = new Excercise
+                {
+                    Name = "ankle circles",
+                    VideoSource = "http://d205bpvrqc9yn1.cloudfront.net/1368.gif",
+                    Level = null,
+                    BodyParts = new List<string>() { "calves" },
+                    Equipment = "mat",
+                };
+
+
+
+                
+            }
+        }
     }
 }
