@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FitnessForBusiness.Core;
+using FitnessForBusiness.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,5 +26,27 @@ namespace FitnessForBusiness.Design
         {
             InitializeComponent();
         }
+
+        private void InitialUsers()
+        {
+            using (Context context = new Context()) //Создание подключения (локальной копии БД)
+            {
+                User user1 = new User(
+                    "Mikhail",
+                    "Redreev",
+                   ".. / .. / Users /user1.jpg",
+                    DateTime.Parse("30.09.2002"),
+                    true,
+                    true,
+                    "MRedreev",
+                    "Misha2002"
+                    );
+                context.Users.Add(user1);
+                context.SaveChanges();
+                MessageBox.Show("Saved user1");
+            }
+        }
+
+        private void Initial
     }
 }

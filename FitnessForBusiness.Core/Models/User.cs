@@ -39,6 +39,18 @@ namespace FitnessForBusiness.Core.Models
             if (born > now.AddYears(-age)) age--;
             return age;
         }
+
+        public User(string name, string surname, string imageSource, DateTime born, bool? level, bool? goal, string login, string password)
+        {
+            Name = name;
+            Surname = surname;
+            ImageSource = imageSource;
+            Level = level;
+            Goal = goal;
+            Login = login;
+            Password = password;
+            Age = CountAge(born);
+        }
     }
 
     
