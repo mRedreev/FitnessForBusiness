@@ -25,11 +25,11 @@ namespace FitnessForBusiness.Design
         public MainWindow()
         {
             InitializeComponent();
-            InitialUsers();
-            InitialTrainings();
+            //InitialUsers();
+            //InitialTrainings();
         }
 
-        private void InitialUsers()
+       /* private void InitialUsers()
         {
             using (Context context = new Context()) //Создание подключения (локальной копии БД)
             {
@@ -102,7 +102,7 @@ namespace FitnessForBusiness.Design
                 context.Trainings.Add(training1);
                 context.SaveChanges();
                 MessageBox.Show("training1 saved");
-            }
+            }*/
         }
     }
 }
