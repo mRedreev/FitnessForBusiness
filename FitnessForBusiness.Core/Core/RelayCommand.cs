@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace DesignBomba.Core
+namespace FitnessForBusiness.Core.Core
 {
     internal class RelayCommand : ICommand
     {
