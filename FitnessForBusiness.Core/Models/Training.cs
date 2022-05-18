@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FitnessForBusiness.Core.Models
 {
-    class Training
+    public class Training
     {
         public int Id { get; set;}
 
