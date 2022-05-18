@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace DesignBomba.Core
+namespace FitnessForBusiness.Core.Core
 {
     internal class ObservableObject : INotifyPropertyChanged
     {
