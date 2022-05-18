@@ -102,7 +102,7 @@ namespace FitnessForBusiness.Design
                 context.Trainings.Add(training1);
                 context.SaveChanges();
                 MessageBox.Show("training1 saved");
-            }*/
-        }
+            }
+        }*/
     }
 }
