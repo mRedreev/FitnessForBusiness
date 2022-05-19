@@ -113,5 +113,28 @@ namespace FitnessForBusiness.Design
                 MessageBox.Show("training1 saved");
             }
         }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+         //   LoginWindow loginWindow = new LoginWindow();
+
+         //   loginWindow.Show();
+
+            this.Close();
+        }
+
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+          //  RegisterWindow registerWindow = new registerWindow();
+
+         //   regsiterWindow.Show();
+
+            this.Close();
+        }
     }
 }
