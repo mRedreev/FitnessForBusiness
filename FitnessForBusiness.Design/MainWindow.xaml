@@ -46,54 +46,169 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <TextBlock Text="text"
+                <TextBlock Text="Strong Partner"
                            Foreground="White"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"
                            Grid.Column="1"
+                           Grid.ColumnSpan="2"
                            FontSize="14"/>
+
+                <Button Content="Exit"
+                        Foreground="Black"
+                        FontSize="10"
+                        FontWeight="Medium"
+                        Margin="0,0,10,0"
+                        Grid.Column="12"
+                        Grid.ColumnSpan="2">
+
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Setter Property="Background" Value="#fc0303"/>
+
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#bd0202"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="75" 
+                                    Height="15"
+                                    CornerRadius="6"
+                                    Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
 
             </Grid>
 
-            <StackPanel Grid.Row="1">
+            <StackPanel Grid.Row="1"
+                        VerticalAlignment="Center"
+                        Margin="60">
 
-                <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal"
+                            Margin="20,0,0,20">
                     <Image Height="50"
                            Width="50"
-                           Source="/Pictures/sLogo.png"/>
+                           Source="/Pictures/sLogo.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"/>
 
                     <TextBlock Text="trong Partner"
                                FontSize="26"
                                Foreground="#ab5eeb"
                                VerticalAlignment="Center"
                                FontWeight="Bold"
-                               Margin="-17,9,0,0"/>
+                               Margin="-17,8,0,0"/>
 
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal">
-                    <Button Content="Войти"
-                            Background="Transparent"
-                            Foreground="#ab5eeb"
-                            FontSize="20"
+                <TextBlock Text="Get"
+                               FontSize="26"
+                               Foreground="#ab5eeb"
+                               VerticalAlignment="Center"
+                               FontWeight="Bold"
+                               />
+
+                <TextBlock Text="Fitter"
+                               FontSize="26"
+                               Foreground="#ab5eeb"
+                               VerticalAlignment="Center"
+                               FontWeight="Bold"
+                               />
+
+                <TextBlock Text="Today"
+                               FontSize="26"
+                               Foreground="#ab5eeb"
+                               VerticalAlignment="Center"
+                               FontWeight="Bold"
+                               />
+
+                <TextBlock Text="Strong Partner provides workouts&#x0a;for corporates employees"
+                               FontSize="16"
+                               Foreground="#ab5eeb"
+                               VerticalAlignment="Center"
+                               FontWeight="Bold"
+                               Margin="0,15,0,0"/>
+
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,25,0,0"
+                            HorizontalAlignment="Center">
+                    <Button Content="Log In"
+                            Foreground="Black"
+                            FontSize="14"
+                            FontWeight="Medium"
+                            Margin="0,0,10,0">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Cursor" Value="Hand"/>
+                                <Setter Property="Background" Value="#FC6586"/>
+
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#b50e33"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="120" Height="30"
+                                        CornerRadius="13"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button Content="Register"
+                            Foreground="Black"
+                            FontSize="14"
                             FontWeight="Medium">
 
                         <Button.Style>
                             <Style TargetType="Button">
                                 <Setter Property="Cursor" Value="Hand"/>
-                                <Setter Property="Background" Value="#ab5eeb"/>
-                                
+                                <Setter Property="Background" Value="#3dddc2"/>
+
                                 <Style.Triggers>
-                                    
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#05a389"/>
+                                    </Trigger>
                                 </Style.Triggers>
                             </Style>
                         </Button.Style>
-                        
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="120" Height="30"
+                                        CornerRadius="13"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+
                     </Button>
+
                 </StackPanel>
 
 
             </StackPanel>
+            
+            
             
         </Grid>
         
