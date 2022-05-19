@@ -27,7 +27,7 @@
                                        Foreground="DarkGray"
                                        FontSize="11"
                                        Grid.Column="1">
-                                
+
                                 <TextBlock.Style>
                                     <Style TargetType="{x:Type TextBlock}">
                                         <Style.Triggers>
@@ -38,19 +38,18 @@
                                         <Setter Property="Visibility" Value="Hidden"/>
                                     </Style>
                                 </TextBlock.Style>
-                                
+
                             </TextBlock>
-                            
+
                         </Grid>
-                        
+
                     </Border>
-                    
+
                 </ControlTemplate>
-                
+
             </Setter.Value>
-            
+
         </Setter>
-        
+
     </Style>
-    
 </ResourceDictionary>
