@@ -55,12 +55,14 @@
                            FontSize="14"/>
 
                 <Button Content="Exit"
+                        Name="ExitButton"
                         Foreground="Black"
                         FontSize="10"
                         FontWeight="Medium"
                         Margin="0,0,10,0"
                         Grid.Column="12"
-                        Grid.ColumnSpan="2">
+                        Grid.ColumnSpan="2"
+                        Click="ExitButton_Click">
 
                     <Button.Style>
                         <Style TargetType="Button">
@@ -142,10 +144,12 @@
                             Margin="0,25,0,0"
                             HorizontalAlignment="Center">
                     <Button Content="Log In"
+                            Name="LoginButton"
                             Foreground="Black"
                             FontSize="14"
                             FontWeight="Medium"
-                            Margin="0,0,10,0">
+                            Margin="0,0,10,0"
+                            Click="LoginButton_Click">
 
                         <Button.Style>
                             <Style TargetType="Button">
@@ -173,9 +177,11 @@
                     </Button>
 
                     <Button Content="Register"
+                            Name="RegisterButton"
                             Foreground="Black"
                             FontSize="14"
-                            FontWeight="Medium">
+                            FontWeight="Medium"
+                            Click="RegisterButton_Click">
 
                         <Button.Style>
                             <Style TargetType="Button">
