@@ -46,7 +46,13 @@ namespace FitnessForBusiness.Core.Models
                 .Select(e => e.Equipment)
                 .Distinct()
                 .ToList();
-            ExcerciseAmount = excercises.Count;
+            if (Equipment.Count > 1)
+            {
+                if (Equipment.Any(e => e == ""))
+                    Equipment.Remove("");
+            }
+
+                ExcerciseAmount = excercises.Count;
             Length = (ExcerciseLength + BreakLength) * ExcerciseAmount * CircleAmount - breakLength;
             Description = description;
         }
