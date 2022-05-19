@@ -51,7 +51,7 @@ namespace FitnessForBusiness.Core.Models
             Login = login;
             Password = password;
             Age = CountAge(born);
-            CompletedTrainingsId = new List<int>();
+            CompletedTrainingsId = new List<int>() { 1};
         }
 
         public User()
