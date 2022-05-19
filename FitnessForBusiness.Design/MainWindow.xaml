@@ -216,14 +216,15 @@
 
             <Grid Grid.Column="1"
                   Grid.RowSpan="2"
-                  Margin="150, -165, -500, 85">
+                  Margin="150, -165, -500, 85"
+                  Panel.ZIndex="-1">
 
                 <Grid.RenderTransform>
-                    <RotateTransform Angle="45"/>
+                    <RotateTransform Angle="50"/>
                 </Grid.RenderTransform>
 
                 <StackPanel Orientation="Horizontal"
-                            Margin="-450, 250, -250, -250">
+                            Margin="-400, 180, -250, -250">
 
                     <StackPanel>
                         <Border Width="650"
