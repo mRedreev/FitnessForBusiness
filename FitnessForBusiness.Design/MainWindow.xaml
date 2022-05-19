@@ -213,7 +213,61 @@
 
 
             </StackPanel>
-            
+
+            <Grid Grid.Column="1"
+                  Grid.RowSpan="2"
+                  Margin="150, -165, -500, 85">
+
+                <Grid.RenderTransform>
+                    <RotateTransform Angle="45"/>
+                </Grid.RenderTransform>
+
+                <StackPanel Orientation="Horizontal"
+                            Margin="-450, 250, -250, -250">
+
+                    <StackPanel>
+                        <Border Width="650"
+                            Height="40"
+                            CornerRadius="15"
+                            Background="#FC6586"
+                            Margin="75,0,0,0"/>
+
+                        <Border Width="650"
+                            Height="40"
+                            CornerRadius="15"
+                            Background="#ab5eeb"
+                            Margin="0,12,0,0"/>
+
+                        <Border Width="650"
+                            Height="40"
+                            CornerRadius="15"
+                            Background="#3dddc2"
+                            Margin="150,12,0,0"/>
+                    </StackPanel>
+
+                    <StackPanel>
+                        <Border Width="650"
+                            Height="40"
+                            CornerRadius="15"
+                            Background="#FC6586"
+                            Margin="75,0,0,0"/>
+
+                        <Border Width="650"
+                            Height="40"
+                            CornerRadius="15"
+                            Background="#ab5eeb"
+                            Margin="0,12,0,0"/>
+
+                        <Border Width="650"
+                            Height="40"
+                            CornerRadius="15"
+                            Background="#3dddc2"
+                            Margin="150,12,0,0"/>
+                    </StackPanel>
+
+                </StackPanel>
+                
+            </Grid>
             
             
         </Grid>

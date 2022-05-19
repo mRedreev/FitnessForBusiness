@@ -121,18 +121,18 @@ namespace FitnessForBusiness.Design
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-         //   LoginWindow loginWindow = new LoginWindow();
+         // LoginWindow loginWindow = new LoginWindow();
 
-         //   loginWindow.Show();
+         // loginWindow.Show();
 
             this.Close();
         }
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-          //  RegisterWindow registerWindow = new registerWindow();
+            RegistrationWindow registrationWindow = new RegistrationWindow();
 
-         //   regsiterWindow.Show();
+            registrationWindow.Show();
 
             this.Close();
         }
