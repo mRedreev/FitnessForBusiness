@@ -25,8 +25,8 @@ namespace FitnessForBusiness.Design
         public MainWindow()
         {
             InitializeComponent();
-            //InitialTrainings();
-            //InitialUsers();
+            InitialTrainings();
+            InitialUsers();
             
 
             /*using (Context context = new Context())
@@ -106,7 +106,7 @@ namespace FitnessForBusiness.Design
                     0.5,
                     0.25,
                     2,
-                    ""
+                    "You can use this training instead of coffee to wake up"
                     );
                 context.Trainings.Add(training1);
                 context.SaveChanges();
