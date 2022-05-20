@@ -23,5 +23,10 @@ namespace FitnessForBusiness.Design
         {
             InitializeComponent();
         }
+
+        private void LevelButton_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitnessForBusiness.Design"
         mc:Ignorable="d"
-        Title="RegistrationWindow" Height="450" Width="800">
+        Title="RegistrationWindow" Height="700" Width="810">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="background.jpg"/>
@@ -17,13 +17,42 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Background="#ab5eeb">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.RowSpan="2" Grid.ColumnSpan="3" Background="#ab5eeb">
+
+
+
+            <TextBlock Text="REGISTRATION"  Grid.Row="1" Grid.Column="1"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36" Margin="0 30 0 0" > 
+                
+            </TextBlock>
             <StackPanel.Effect>
                 <DropShadowEffect/>
             </StackPanel.Effect>
 
         </StackPanel>
+
+        <TextBox Name="NameBox"  Style="{StaticResource ModernTextBox}" Text="Name" Grid.Row="2" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        <TextBox Name="SurnameTextBox" Style="{StaticResource ModernTextBox}" Text="Surname" Grid.Row="2" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <TextBox Name="EmailTextBox" Style="{StaticResource ModernTextBox}" Text="Email" Grid.Row="3" Grid.Column="1" Width="270" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox Name="PasswordBox"  Style="{StaticResource ModernTextBox}" Text="Password" Grid.Row="4" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox Name="PasswordAgianTextBox" Style="{StaticResource ModernTextBox}" Text="Confirm password" Grid.Row="4" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+        <ToggleButton Name="GoalButton" IsTabStop="False" Grid.Row="4" Grid.Column="1" Width="130" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Background="#FF353340">
+            <StackPanel Name="GoalContentPanel" IsHitTestVisible="False"
+		Margin="4,0,5,0" Orientation="Horizontal"/>
+        </ToggleButton>
+        <ToggleButton Name="LevelButton" IsTabStop="False" Grid.Row="4" Grid.Column="1" Width="130" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Right" Checked="LevelButton_Checked" Background="#FF353340">
+            <StackPanel Name="LevelContentPanel" IsHitTestVisible="False" 
+		Margin="4,0,5,0" Orientation="Horizontal"/>
+        </ToggleButton>
+        <Button Name="RegisterButton" Background="#FF353340" Grid.Row="5" Grid.Column="1" Height="30" Width="70" Content="Registration" Foreground="#FFCFCFCD" Cursor="Hand" 
+                />
     </Grid>
 </Window>
