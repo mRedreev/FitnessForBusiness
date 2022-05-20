@@ -25,8 +25,8 @@ namespace FitnessForBusiness.Design
         public MainWindow()
         {
             InitializeComponent();
-           // InitialTrainings();
-            //InitialUsers();
+            InitialTrainings();
+            InitialUsers();
             
 
             /*using (Context context = new Context())
@@ -63,40 +63,40 @@ namespace FitnessForBusiness.Design
             using (Context context = new Context()) //Создание подключения (локальной копии БД)
             {
                 Excercise excercise1 = new Excercise
-                {
-                    Name = "Air bike",
-                    VideoSource = "http://d205bpvrqc9yn1.cloudfront.net/0003.gif",
-                    Level = null,
-                    BodyParts = new List<string>() { "waist", "abs" },
-                    Equipment = "mat",
-                };
+                (
+                    "Air bike",
+                    "http://d205bpvrqc9yn1.cloudfront.net/0003.gif",
+                    null,
+                    new List<string>() { "waist", "abs" },
+                    "mat"
+                );
 
                 Excercise excercise2 = new Excercise
-                {
-                    Name = "All fours squad stretch",
-                    VideoSource = "http://d205bpvrqc9yn1.cloudfront.net/1512.gif",
-                    Level = null,
-                    BodyParts = new List<string>() { "quads" },
-                    Equipment = "mat",
-                };
+                (
+                    "All fours squad stretch",
+                    "http://d205bpvrqc9yn1.cloudfront.net/1512.gif",
+                    null,
+                    new List<string>() { "quads" },
+                    "mat"
+                );
 
                 Excercise excercise3 = new Excercise
-                {
-                    Name = "ankle circles",
-                    VideoSource = "http://d205bpvrqc9yn1.cloudfront.net/1368.gif",
-                    Level = null,
-                    BodyParts = new List<string>() { "calves" },
-                    Equipment = "mat",
-                };
+                (
+                    "ankle circles",
+                    "http://d205bpvrqc9yn1.cloudfront.net/1368.gif",
+                    null,
+                    new List<string>() { "calves" },
+                    "mat"
+                );
 
                 Excercise excercise4 = new Excercise
-                {
-                    Name = "astride jumps",
-                    VideoSource = "http://d205bpvrqc9yn1.cloudfront.net/3220.gif",
-                    Level = null,
-                    BodyParts = new List<string>() { "cardiovascular system" },
-                    Equipment = "mat",
-                };
+                (
+                    "astride jumps",
+                    "http://d205bpvrqc9yn1.cloudfront.net/3220.gif",
+                    null,
+                    new List<string>() { "cardiovascular system" },
+                    "mat"
+                );
 
                 Training training1 = new Training(
                     "Short warm-up",
@@ -105,8 +105,7 @@ namespace FitnessForBusiness.Design
                     new List<Excercise> { excercise1, excercise2, excercise3, excercise4 },
                     0.5,
                     0.25,
-                    2,
-                    "You can use this training instead of coffee to wake up"
+                    2
                     );
                 context.Trainings.Add(training1);
                 context.SaveChanges();

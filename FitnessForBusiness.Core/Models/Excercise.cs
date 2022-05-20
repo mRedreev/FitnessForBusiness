@@ -17,10 +17,22 @@ namespace FitnessForBusiness.Core.Models
 
         public bool? Level {get; set;}
 
-        public List<string> BodyParts {get; set;}
+        public List<Bodypart> BodyParts {get; set;}
 
-        public string Equipment {get; set;}
+        public Equipment Equipment {get; set;}
 
+        public Excercise(string name, string videooSource, bool? level, List<string> bodyParts, string equipment)
+        {
+            Name = name;
+            VideoSource = videooSource;
+            Level = level;
+            BodyParts = new List<Bodypart>();
+            foreach(var part in bodyParts)
+            {
+                BodyParts.Add(new Bodypart(part));
+            }
+            Equipment = new Equipment(equipment);
+        }
         public string ShowLevel()
         {
             return functions.NameOfLevel(Level);
