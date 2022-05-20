@@ -27,7 +27,8 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.ColumnSpan="2"
-                  Background="#252737">
+                  Background="#252737"
+                  MouseDown="Grid_MouseDown">
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
