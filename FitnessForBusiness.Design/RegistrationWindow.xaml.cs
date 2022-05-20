@@ -28,5 +28,10 @@ namespace FitnessForBusiness.Design
         {
 
         }
+
+        private void GetName()
+        {
+            var name = NameBox.Text;
+        }
     }
 }
