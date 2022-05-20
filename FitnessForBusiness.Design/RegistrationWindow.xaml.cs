@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FitnessForBusiness.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,9 +30,13 @@ namespace FitnessForBusiness.Design
 
         }
 
-        private void GetName()
-        {
-            var name = NameBox.Text;
-        }
+        /*  private void AddNewUser()
+          {
+              var name = NameBox.Text;
+              var surname = ;
+              var imageSource = ;
+              var born = DateTime.Parse();
+              var 
+          }*/
     }
 }
