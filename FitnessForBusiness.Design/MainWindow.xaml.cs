@@ -25,8 +25,8 @@ namespace FitnessForBusiness.Design
         public MainWindow()
         {
             InitializeComponent();
-            InitialTrainings();
-            InitialUsers();
+           // InitialTrainings();
+           // InitialUsers();
             
 
             /*using (Context context = new Context())
