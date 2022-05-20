@@ -19,7 +19,7 @@ namespace FitnessForBusiness.Core.Models
 
         public List<Excercise> Excercises { get; set;}
 
-        public List<string> Equipment { get; set;}
+        public List<Equipment> Equipment { get; set;}
 
         public double ExcerciseLength { get; set;}
 
@@ -32,7 +32,9 @@ namespace FitnessForBusiness.Core.Models
         public double Length { get; set;}
         public string Description { get; set;}
 
-        public Training(string name, string type, bool? level, List<Excercise> excercises, double exLength, double breakLength, int circleAmount, string description)
+        public List<User> Users { get; set;}
+
+        public Training(string name, string type, bool? level, List<Excercise> excercises, double exLength, double breakLength, int circleAmount)
         {
             Name = name;
             Type = type;
@@ -41,20 +43,37 @@ namespace FitnessForBusiness.Core.Models
             ExcerciseLength = exLength;
             BreakLength = breakLength;
             CircleAmount = circleAmount;
-            Equipment = new List<string>();
+            Equipment = new List<Equipment>();
             Equipment = excercises
                 .Select(e => e.Equipment)
                 .Distinct()
                 .ToList();
             if (Equipment.Count > 1)
             {
-                if (Equipment.Any(e => e == ""))
-                    Equipment.Remove("");
+                foreach (var e in Equipment)
+                {
+                    if (e.Name == "")
+                        Equipment.Remove(e);
+                }
             }
 
-                ExcerciseAmount = excercises.Count;
+            ExcerciseAmount = excercises.Count;
             Length = (ExcerciseLength + BreakLength) * ExcerciseAmount * CircleAmount - breakLength;
-            Description = description;
+            var bodyparts = new List<string>();
+            foreach (var e in Excercises)
+            {
+                foreach (var bodypart in e.BodyParts)
+                {
+                    bodyparts.Add(bodypart.Name);
+                }
+            }
+
+            for (int i = 0; i < bodyparts.Count - 1; i++)
+            {
+                Description = Description + bodyparts[i];
+                Description = Description + ", ";
+            }
+            Users = new List<User>();
         }
 
         public Training()
