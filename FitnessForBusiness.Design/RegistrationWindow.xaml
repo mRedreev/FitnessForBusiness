@@ -54,7 +54,7 @@
                 <DropShadowEffect/>
             </TextBox.Effect>
         </TextBox>
-        <TextBox Name="PasswordBox"  Style="{StaticResource ModernTextBox}" Text="Password" Grid.Row="3" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <TextBox Name="PasswordBox"  Style="{StaticResource ModernTextBox}" Text="Password" Grid.Row="3" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top"  Grid.RowSpan="2">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>
@@ -65,7 +65,7 @@
             </TextBox.Effect>
         </TextBox>
 
-        <ComboBox Name="GoalComboBox" Height="30" Width="130" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Row="4" Grid.Column="1" Background="{x:Null}">
+        <ComboBox Name="GoalComboBox" Height="30" Width="130" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="1" Background="#FF353340">
             <ComboBox.Effect>
                 <DropShadowEffect/>
             </ComboBox.Effect>
@@ -73,7 +73,7 @@
             <TextBlock>Maintain weight</TextBlock>
             <TextBlock>Gain muscle mass</TextBlock>
         </ComboBox>
-        <ComboBox Name="LevelComboBox" Height="30" Width="130" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="4" Grid.Column="1" Background="{x:Null}">
+        <ComboBox Name="LevelComboBox" Height="30" Width="130" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="1" Background="Black" >
             <ComboBox.Effect>
                 <DropShadowEffect/>
             </ComboBox.Effect>
@@ -81,14 +81,15 @@
             <TextBlock>Intermadiate</TextBlock>
             <TextBlock>Advanced</TextBlock>
         </ComboBox>
-        <DatePicker x:Name="BitrhDateDatePicker" Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom"
-             DisplayDateStart="1980/01/01"
-                SelectedDate="{Binding Path=B.SzuletesiDatum}" Background="#FF353340">
-            <DatePicker.Effect>
+        <Calendar x:Name="BitrhDateDatePicker" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" VerticalAlignment="Center"  Style="{StaticResource DatePickerCalendarStyle}" 
+             
+                 Background="#FF353340" OverridesDefaultStyle="False"   AutomationProperties.HelpText="BirthDate">
+            
+            <Calendar.Effect>
                 <DropShadowEffect/>
-            </DatePicker.Effect>
-        </DatePicker>
-        <StackPanel Grid.Row="3" Grid.Column="2"  Grid.ColumnSpan="2" >
+            </Calendar.Effect>
+        </Calendar>
+        <StackPanel Grid.Row="2" Grid.Column="2" Grid.RowSpan="2">
             <WrapPanel HorizontalAlignment="Center"  >
                 <Button x:Name="AvatarButton"  Click="AvatarButton_Click" Background="#FF353340" Foreground="#FFCFCFCF" Content="Load avatar from File...">
                     <Button.Effect>
@@ -96,9 +97,9 @@
                     </Button.Effect>
                 </Button>
             </WrapPanel>
-            <Image Name="imgDynamicImage" Margin="10" Grid.ColumnSpan="2" />
+            <Image Name="imgDynamicImage" Stretch="Uniform" Grid.RowSpan="2"  Margin="10"/>
         </StackPanel>
-        <Button Name="RegisterButton" Background="#FF353340" Grid.Row="5" Grid.Column="1" VerticalAlignment="Top" Height="30" Width="70" Content="Registration" Foreground="#FFCFCFCD" Cursor="Hand" >
+        <Button Name="RegisterButton" Background="#FF353340" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Height="30" Width="70" Content="Registration" Foreground="#FFCFCFCD" Cursor="Hand" >
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
