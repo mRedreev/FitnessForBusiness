@@ -15,7 +15,7 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
+
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
@@ -26,18 +26,12 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.RowSpan="2" 
-                    Grid.ColumnSpan="3" 
-                    Background="#ab5eeb">
+        <StackPanel Grid.RowSpan="1" Grid.ColumnSpan="3" Background="#ab5eeb">
 
-            <TextBlock Text="REGISTRATION"  
-                       Grid.Row="1" 
-                       Grid.Column="1"  
-                       VerticalAlignment="Center" 
-                       HorizontalAlignment="Center" 
-                       FontSize="36" 
-                       Margin="0 30 0 0"> 
-                
+
+
+            <TextBlock Text="REGISTRATION"  Grid.Row="1" Grid.Column="1"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36" Margin="0 30 0 0" >
+
             </TextBlock>
             <StackPanel.Effect>
                 <DropShadowEffect/>
@@ -45,20 +39,70 @@
 
         </StackPanel>
 
-        <TextBox Name="NameBox" Style="{StaticResource ModernTextBox}" Grid.Row="2" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-        <TextBox Name="SurnameTextBox" Style="{StaticResource ModernTextBox}" Grid.Row="2" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
-        <TextBox Name="EmailTextBox" Style="{StaticResource ModernTextBox}" Grid.Row="3" Grid.Column="1" Width="270" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBox Name="PasswordBox"  Style="{StaticResource ModernTextBox}" Grid.Row="4" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <TextBox Name="PasswordAgianTextBox" Style="{StaticResource ModernTextBox}" Grid.Row="4" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-        <ToggleButton Name="GoalButton" IsTabStop="False" Grid.Row="4" Grid.Column="1" Width="130" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Background="#FF353340">
-            <StackPanel Name="GoalContentPanel" IsHitTestVisible="False"
-		Margin="4,0,5,0" Orientation="Horizontal"/>
-        </ToggleButton>
-        <ToggleButton Name="LevelButton" IsTabStop="False" Grid.Row="4" Grid.Column="1" Width="130" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Right" Checked="LevelButton_Checked" Background="#FF353340">
-            <StackPanel Name="LevelContentPanel" IsHitTestVisible="False" 
-		Margin="4,0,5,0" Orientation="Horizontal"/>
-        </ToggleButton>
-        <Button Name="RegisterButton" Background="#FF353340" Grid.Row="5" Grid.Column="1" Height="30" Width="70" Content="Registration" Foreground="#FFCFCFCD" Cursor="Hand" 
-                />
+        <TextBox Name="NameBox"  Style="{StaticResource ModernTextBox}" Text="Name"  Grid.Row="1" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox Name="SurnameTextBox" Style="{StaticResource ModernTextBox}" Text="Surname" Grid.Row="1" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox Name="EmailTextBox" Style="{StaticResource ModernTextBox}" Text="Email" Grid.Row="2" Grid.Column="1" Width="270" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox Name="PasswordBox"  Style="{StaticResource ModernTextBox}" Text="Password" Grid.Row="3" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top"  Grid.RowSpan="2">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox Name="PasswordAgianTextBox" Style="{StaticResource ModernTextBox}" Text="Confirm password" Grid.Row="3" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+
+        <ComboBox Name="GoalComboBox" Height="30" Width="130" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="1" Background="#FF353340">
+            <ComboBox.Effect>
+                <DropShadowEffect/>
+            </ComboBox.Effect>
+            <TextBlock>Lose weight</TextBlock>
+            <TextBlock>Maintain weight</TextBlock>
+            <TextBlock>Gain muscle mass</TextBlock>
+        </ComboBox>
+        <ComboBox Name="LevelComboBox" Height="30" Width="130" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="1" Background="Black" >
+            <ComboBox.Effect>
+                <DropShadowEffect/>
+            </ComboBox.Effect>
+            <TextBlock>Begginer</TextBlock>
+            <TextBlock>Intermadiate</TextBlock>
+            <TextBlock>Advanced</TextBlock>
+        </ComboBox>
+        <Calendar x:Name="BitrhDateDatePicker" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" VerticalAlignment="Center"  Style="{StaticResource DatePickerCalendarStyle}" 
+             
+                 Background="#FF353340" OverridesDefaultStyle="False"   AutomationProperties.HelpText="BirthDate">
+            
+            <Calendar.Effect>
+                <DropShadowEffect/>
+            </Calendar.Effect>
+        </Calendar>
+        <StackPanel Grid.Row="2" Grid.Column="2" Grid.RowSpan="2">
+            <WrapPanel HorizontalAlignment="Center"  >
+                <Button x:Name="AvatarButton"  Click="AvatarButton_Click" Background="#FF353340" Foreground="#FFCFCFCF" Content="Load avatar from File...">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+                </Button>
+            </WrapPanel>
+            <Image Name="imgDynamicImage" Stretch="Uniform" Grid.RowSpan="2"  Margin="10"/>
+        </StackPanel>
+        <Button Name="RegisterButton" Background="#FF353340" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Height="30" Width="70" Content="Registration" Foreground="#FFCFCFCD" Cursor="Hand" >
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Window>

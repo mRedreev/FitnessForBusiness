@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 
 namespace FitnessForBusiness.Design
 {
@@ -30,13 +31,27 @@ namespace FitnessForBusiness.Design
 
         }
 
-        /*  private void AddNewUser()
-          {
-              var name = NameBox.Text;
-              var surname = ;
-              var imageSource = ;
-              var born = DateTime.Parse();
-              var 
-          }*/
+
+        private void AvatarButton_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                Uri fileUri = new Uri(openFileDialog.FileName);
+                imgDynamicImage.Source = new BitmapImage(fileUri);
+            }
+        }
+
+    //      private void AddNewUser()
+    //      {
+    //          var name = NameBox.Text;
+    //          var surname = ;
+    //          var imageSource = ;
+    //        var born = BitrhDateDatePicker;
+    //        var login = EmailTextBox.Text;
+    //        var password = PasswordBox.Text;
+    //        var goal = GoalComboBox.Text
+
+    //      }
     }
 }
