@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:FitnessForBusiness.Design"
         mc:Ignorable="d"
         Height="600" Width="450"
-        Title="Strong Partner">
+        Title="Strong Partner"
+        Icon="Pictures/sLogo.png">
 
     <Border CornerRadius="20">
         <Grid>
