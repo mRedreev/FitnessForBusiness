@@ -8,9 +8,7 @@
         Height="600" Width="900"
         Title="Strong Partner">
 
-    <Border Background="#252737"
-            CornerRadius="20">
-
+    <Border CornerRadius="20">
         <Grid>
             <Grid.Background>
                 <ImageBrush ImageSource="/Pictures/background.jpg"/>
