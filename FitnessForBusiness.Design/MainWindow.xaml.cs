@@ -120,9 +120,9 @@ namespace FitnessForBusiness.Design
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-         // LoginWindow loginWindow = new LoginWindow();
+            LoginWindow loginWindow = new LoginWindow();
 
-         // loginWindow.Show();
+            loginWindow.Show();
 
             this.Close();
         }

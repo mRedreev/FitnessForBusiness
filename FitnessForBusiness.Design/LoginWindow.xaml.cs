@@ -32,9 +32,16 @@ namespace FitnessForBusiness.Design
             }
         }
 
+       
+
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void UsernameTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            UsernameTextBox.Clear();
         }
     }
 }
