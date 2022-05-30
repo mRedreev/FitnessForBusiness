@@ -6,10 +6,7 @@
         xmlns:local="clr-namespace:FitnessForBusiness.Design"
         mc:Ignorable="d"
         Height="700" Width="810"
-        WindowStyle="None"
-        ResizeMode="NoResize"
-        AllowsTransparency="True"
-        Background="Transparent">
+        Title="Strong Partner">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="Pictures/background.jpg"/>
@@ -30,46 +27,8 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        
-
         <StackPanel Grid.RowSpan="1" Grid.ColumnSpan="3" Background="#ab5eeb">
 
-            <Button Content="Exit"
-                    Name="ExitButton"
-                    Foreground="Black"
-                    FontSize="10"
-                    FontWeight="Medium"
-                    HorizontalAlignment="Right"
-                    Margin="0,5,10,0"
-                    Grid.Column="12"
-                    Grid.ColumnSpan="2"
-                    Click="ExitButton_Click">
-
-                <Button.Style>
-                    <Style TargetType="Button">
-                        <Setter Property="Cursor" Value="Hand"/>
-                        <Setter Property="Background" Value="#fc0303"/>
-
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#bd0202"/>
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Button.Style>
-
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Border Width="75" 
-                                    Height="15"
-                                    CornerRadius="6"
-                                    Background="{TemplateBinding Background}">
-                            <ContentPresenter VerticalAlignment="Center"
-                                                  HorizontalAlignment="Center"/>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
 
             <TextBlock Text="REGISTRATION"  Grid.Row="1" Grid.Column="1"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36" Margin="0 18 0 0" >
 
