@@ -25,6 +25,7 @@
             <StackPanel Grid.Row="1"
                         VerticalAlignment="Center"
                         Margin="60">
+
                 <StackPanel Orientation="Horizontal"
                             Margin="20,0,0,20">
                     <Image Height="50"
