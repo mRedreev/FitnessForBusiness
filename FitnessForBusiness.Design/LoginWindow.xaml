@@ -28,8 +28,8 @@
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal"
-                                Margin="0,30,0,0"
-                                HorizontalAlignment="Center">
+                            Margin="0,30,0,0"
+                            HorizontalAlignment="Center">
                     <StackPanel Orientation="Vertical">
                         <TextBlock Text="My Email"
                                        Foreground="#ab5eeb"
@@ -46,24 +46,49 @@
                     <StackPanel Orientation="Vertical"
                                     Margin="10,5,0,0">
                         <TextBox Name="LogInUsernameBox"
-                                     Style="{StaticResource UITextBox}"/>
+                                 Style="{StaticResource UITextBox}"
+                                 Width="150"
+                                 Height="20"/>
 
                         <PasswordBox Name="LogInPasswordBox"
-                                         Margin="0,18,0,0"
-                                         Style="{StaticResource PassBox}"/>
+                                     Margin="0,18,0,0"
+                                     Style="{StaticResource PassBox}"
+                                     Width="150"
+                                     Height="20"/>
                     </StackPanel>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical"
                                 Margin="0,20,0,0">
                     <Button Name="LogInButton"
-                                Style="{StaticResource UIButton}"
-                                Width="150"
-                                Height="30"
-                                Content="Login"
-                                FontSize="16"
-                                Background="#ab5eeb"
-                                Click="LogInButton_Click"/>
+                            Content="Login"
+                            FontSize="16"
+                            FontWeight="Medium"
+                            Click="LogInButton_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Cursor" Value="Hand"/>
+                                <Setter Property="Background" Value="#ab5eeb"/>
+
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="Purple"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="120" Height="30"
+                                        CornerRadius="13"
+                                        Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                      HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
                 </StackPanel>
             </StackPanel>
         </Grid>

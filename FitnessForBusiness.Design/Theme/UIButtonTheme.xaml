@@ -3,7 +3,8 @@
     <Style TargetType="{x:Type Button}"
            x:Key="UIButton">
         <Style.Setters>
-            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Foreground" Value="#FFCFCFCF"/>
+            <Setter Property="Background" Value="#272537"/>
             <Setter Property="FontWeight" Value="Medium"/>
             <Setter Property="Template">
                 <Setter.Value>
@@ -19,5 +20,10 @@
                 </Setter.Value>
             </Setter>
         </Style.Setters>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="DarkSlateGray"/>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 </ResourceDictionary>
