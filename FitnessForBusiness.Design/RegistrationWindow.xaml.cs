@@ -42,16 +42,21 @@ namespace FitnessForBusiness.Design
             }
         }
 
-    //      private void AddNewUser()
-    //      {
-    //          var name = NameBox.Text;
-    //          var surname = ;
-    //          var imageSource = ;
-    //        var born = BitrhDateDatePicker;
-    //        var login = EmailTextBox.Text;
-    //        var password = PasswordBox.Text;
-    //        var goal = GoalComboBox.Text
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
 
-    //      }
+        //      private void AddNewUser()
+        //      {
+        //          var name = NameBox.Text;
+        //          var surname = ;
+        //          var imageSource = ;
+        //        var born = BitrhDateDatePicker;
+        //        var login = EmailTextBox.Text;
+        //        var password = PasswordBox.Text;
+        //        var goal = GoalComboBox.Text
+
+        //      }
     }
 }
