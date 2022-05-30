@@ -30,44 +30,42 @@
         <StackPanel Grid.RowSpan="1" Grid.ColumnSpan="3" Background="#ab5eeb">
 
 
-            <TextBlock Text="REGISTRATION"  Grid.Row="1" Grid.Column="1"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36" Margin="0 18 0 0" >
-
-            </TextBlock>
+            <TextBlock Text="REGISTRATION"  Grid.Row="1" Grid.Column="1"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36" Margin="0 18 0 0" FontWeight="Bold" TextDecorations="{x:Null}" />
             <StackPanel.Effect>
                 <DropShadowEffect/>
             </StackPanel.Effect>
 
         </StackPanel>
         <TextBlock Grid.Row="1" VerticalAlignment="Center"  Margin="267,66,0,30" HorizontalAlignment="Left" Foreground="#FFCFCFCF" Grid.ColumnSpan="2">Name</TextBlock>
-        <TextBox Name="NameBox"  Style="{StaticResource ModernTextBox}" Grid.Row="1" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+        <TextBox Name="NameBox"  Style="{StaticResource UITextBox}" Grid.Row="1" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>
         </TextBox>
         <TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"  Foreground="#FFCFCFCF" HorizontalAlignment="Right" Margin="0,66,83,30">Surname</TextBlock>
-        <TextBox Name="SurnameTextBox" Style="{StaticResource ModernTextBox}"  Grid.Row="1" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+        <TextBox Name="SurnameTextBox" Style="{StaticResource UITextBox}"  Grid.Row="1" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>
         </TextBox>
         <TextBlock Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"  Foreground="#FFCFCFCF" HorizontalAlignment="Left" Margin="0,25,0,70" >Email</TextBlock>
-        <TextBox Name="EmailTextBox" Style="{StaticResource ModernTextBox}"  Grid.Row="2" Grid.Column="1" Width="270" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBox Name="EmailTextBox" Style="{StaticResource UITextBox}"  Grid.Row="2" Grid.Column="1" Width="270" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>
         </TextBox>
         <TextBlock Grid.Row="2" Grid.Column="1" VerticalAlignment="Bottom"  HorizontalAlignment="Left" Foreground="#FFCFCFCF" >Password</TextBlock>
-        <TextBox Name="PasswordBox"  Style="{StaticResource ModernTextBox}" Grid.Row="3" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top"  Grid.RowSpan="2">
-            <TextBox.Effect>
+        <PasswordBox Name="PasswordBox"  Style="{StaticResource PassBox}" Grid.Row="3" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top"  Grid.RowSpan="2">
+            <PasswordBox.Effect>
                 <DropShadowEffect/>
-            </TextBox.Effect>
-        </TextBox>
+            </PasswordBox.Effect>
+        </PasswordBox>
         <TextBlock Grid.Row="2" Grid.Column="1" VerticalAlignment="Bottom"  HorizontalAlignment="Center" Foreground="#FFCFCFCF" Margin="138,0,34,0" >Confirm Password</TextBlock>
-        <TextBox Name="PasswordAgianTextBox" Style="{StaticResource ModernTextBox}"  Grid.Row="3" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top">
-            <TextBox.Effect>
+        <PasswordBox Name="PasswordAgianTextBox" Style="{StaticResource PassBox}"  Grid.Row="3" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <PasswordBox.Effect>
                 <DropShadowEffect/>
-            </TextBox.Effect>
-        </TextBox>
+            </PasswordBox.Effect>
+        </PasswordBox>
 
         <ComboBox Name="GoalComboBox" Text="Your Main Goal" Height="30" Width="130" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="1"  IsEditable="True" Background="#FF5748A8" BorderBrush="#FF030303" Foreground="Black" OpacityMask="Black" VerticalContentAlignment="Bottom">
             <ComboBox.Effect>
@@ -98,7 +96,7 @@
                 <DropShadowEffect/>
             </StackPanel.Effect>
             <WrapPanel HorizontalAlignment="Center"  >
-                <Button x:Name="AvatarButton"  Click="AvatarButton_Click" Width="140" Background="#FF353340" Foreground="#FFCFCFCF" Content="Load avatar from File..." Style="{DynamicResource UIButton}">
+                <Button x:Name="AvatarButton"  Click="AvatarButton_Click" Width="140" Background="#FF272537" Foreground="#FFCFCFCF" Content="Load avatar from File..." Style="{DynamicResource UIButton}" FontWeight="Bold">
                     <Button.Effect>
                         <DropShadowEffect/>
                     </Button.Effect>
@@ -106,7 +104,7 @@
             </WrapPanel>
             <Image Name="imgDynamicImage" Stretch="Uniform" Grid.RowSpan="2"  Margin="10"/>
         </StackPanel>
-        <Button Name="RegisterButton" Background="#FF353340" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Height="30" Width="70" Content="Registration" Foreground="#FFCFCFCD" Cursor="Hand" Style="{DynamicResource UIButton}">
+        <Button Name="RegisterButton" Background="#FF272537" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Height="30" Width="70" Content="Registration" Foreground="#FFCFCFCF" Cursor="Hand" Style="{DynamicResource UIButton}" FontWeight="Bold">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
