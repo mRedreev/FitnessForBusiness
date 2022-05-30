@@ -24,24 +24,9 @@ namespace FitnessForBusiness.Design
             InitializeComponent();
         }
 
-        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        private void LogInButton_Click(object sender, RoutedEventArgs e)
         {
-            if (e.LeftButton == MouseButtonState.Pressed)
-            {
-                DragMove();
-            }
-        }
 
-       
-
-        private void ExitButton_Click(object sender, RoutedEventArgs e)
-        {
-            Environment.Exit(0);
-        }
-
-        private void UsernameTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            UsernameTextBox.Clear();
         }
     }
 }

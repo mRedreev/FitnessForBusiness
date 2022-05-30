@@ -6,11 +6,12 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                
                 <ResourceDictionary Source="Theme/TextBoxTheme.xaml"/>
                 <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
                 <ResourceDictionary Source="Theme/DatePickerTheme.xaml"/>
                 <ResourceDictionary Source="Theme/UIButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/UITextBoxTheme.xaml"/>
+                <ResourceDictionary Source="Theme/PasswordBoxTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

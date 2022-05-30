@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitnessForBusiness.Design"
         mc:Ignorable="d"
-        Height="600" Width="900"
+        Height="600" Width="450"
         Title="Strong Partner">
 
     <Border CornerRadius="20">
@@ -14,89 +14,58 @@
                 <ImageBrush ImageSource="/Pictures/background.jpg"/>
             </Grid.Background>
 
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="25"/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-
-                
-
-                <StackPanel Grid.Row="1"
-                            Grid.ColumnSpan="3"
-                            VerticalAlignment="Center">
+            <StackPanel VerticalAlignment="Center">
+                <StackPanel Orientation="Vertical">
                     <Image Source="Pictures/sLogo.png" 
                            Height="200"
                            Width="200"/>
                     <TextBlock Text="Strong Partner"
-                               FontWeight="SemiBold"
+                               FontWeight="Bold"
                                FontSize="28"
                                FontFamily="Montserrat"
                                Foreground="#ab5eeb"
                                HorizontalAlignment="Center"/>
                 </StackPanel>
 
-                <StackPanel Grid.Row="2"
-                            Grid.ColumnSpan="3">
+                <StackPanel Orientation="Horizontal"
+                                Margin="0,30,0,0"
+                                HorizontalAlignment="Center">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="My Email"
+                                       Foreground="#ab5eeb"
+                                       FontWeight="Medium"
+                                       FontSize="20"/>
 
-                    <StackPanel Orientation="Horizontal">
-                        <TextBox 
-                            Text="Username"
-                            Name="UsernameTextBox"
-                            Foreground="#ab5eeb"
-                            Background="Transparent"
-                            FontSize="22"
-                            HorizontalAlignment="Center"
-                            FontWeight="Medium"
-                            Width="100"
-                            Height="30"
-                            Margin="225,0,0,0"
-                            MouseDoubleClick="UsernameTextBox_MouseDoubleClick"
-                            />
-
-                        
+                        <TextBlock Text="Password"
+                                       Foreground="#ab5eeb"
+                                       FontWeight="Medium"
+                                       FontSize="20"
+                                       Margin="0,12,0,0"/>
                     </StackPanel>
 
-                    
+                    <StackPanel Orientation="Vertical"
+                                    Margin="10,5,0,0">
+                        <TextBox Name="LogInUsernameBox"
+                                     Style="{StaticResource UITextBox}"/>
 
-                    <StackPanel Orientation="Horizontal"
-                                Margin="0,20,0,0">
-                        <TextBlock 
-                            Text="Password"
-                            Foreground="#ab5eeb"
-                            Background="Transparent"
-                            FontSize="22"
-                            HorizontalAlignment="Center"
-                            FontWeight="Medium"
-                            Width="100"
-                            Height="30"
-                            Margin="225,0,0,0"/>
+                        <PasswordBox Name="LogInPasswordBox"
+                                         Margin="0,18,0,0"
+                                         Style="{StaticResource PassBox}"/>
                     </StackPanel>
-
-                    
-
                 </StackPanel>
-                
-                
 
-
-
-
-
-
-            </Grid>
-            
-            
-            
-            
+                <StackPanel Orientation="Vertical"
+                                Margin="0,20,0,0">
+                    <Button Name="LogInButton"
+                                Style="{StaticResource UIButton}"
+                                Width="150"
+                                Height="30"
+                                Content="Login"
+                                FontSize="16"
+                                Background="#ab5eeb"
+                                Click="LogInButton_Click"/>
+                </StackPanel>
+            </StackPanel>
         </Grid>
     </Border>
-    
 </Window>
