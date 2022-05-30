@@ -38,28 +38,32 @@
             </StackPanel.Effect>
 
         </StackPanel>
-
-        <TextBox Name="NameBox"  Style="{StaticResource ModernTextBox}" Text="Name" Grid.Row="1" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+        <TextBlock Grid.Row="1" VerticalAlignment="Center"  Margin="267,66,0,30" HorizontalAlignment="Left" Foreground="#FFCFCFCF" Grid.ColumnSpan="2">Name</TextBlock>
+        <TextBox Name="NameBox"  Style="{StaticResource ModernTextBox}" Grid.Row="1" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>
         </TextBox>
-        <TextBox Name="SurnameTextBox" Style="{StaticResource ModernTextBox}" Text="Surname" Grid.Row="1" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+        <TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"  Foreground="#FFCFCFCF" HorizontalAlignment="Right" Margin="0,66,83,30">Surname</TextBlock>
+        <TextBox Name="SurnameTextBox" Style="{StaticResource ModernTextBox}"  Grid.Row="1" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>
         </TextBox>
-        <TextBox Name="EmailTextBox" Style="{StaticResource ModernTextBox}" Text="Email" Grid.Row="2" Grid.Column="1" Width="270" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <TextBlock Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"  Foreground="#FFCFCFCF" HorizontalAlignment="Left" Margin="0,25,0,70" >Email</TextBlock>
+        <TextBox Name="EmailTextBox" Style="{StaticResource ModernTextBox}"  Grid.Row="2" Grid.Column="1" Width="270" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>
         </TextBox>
-        <TextBox Name="PasswordBox"  Style="{StaticResource ModernTextBox}" Text="Password" Grid.Row="3" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top"  Grid.RowSpan="2">
+        <TextBlock Grid.Row="2" Grid.Column="1" VerticalAlignment="Bottom"  HorizontalAlignment="Left" Foreground="#FFCFCFCF" >Password</TextBlock>
+        <TextBox Name="PasswordBox"  Style="{StaticResource ModernTextBox}" Grid.Row="3" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top"  Grid.RowSpan="2">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>
         </TextBox>
-        <TextBox Name="PasswordAgianTextBox" Style="{StaticResource ModernTextBox}" Text="Confirm password" Grid.Row="3" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top">
+        <TextBlock Grid.Row="2" Grid.Column="1" VerticalAlignment="Bottom"  HorizontalAlignment="Center" Foreground="#FFCFCFCF" Margin="138,0,34,0" >Confirm Password</TextBlock>
+        <TextBox Name="PasswordAgianTextBox" Style="{StaticResource ModernTextBox}"  Grid.Row="3" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>
@@ -84,7 +88,7 @@
         <Calendar x:Name="BitrhDateDatePicker" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" VerticalAlignment="Center"  Style="{StaticResource DatePickerCalendarStyle}" 
              
                  Background="#FF353340" OverridesDefaultStyle="False"   AutomationProperties.HelpText="BirthDate">
-            
+
             <Calendar.Effect>
                 <DropShadowEffect/>
             </Calendar.Effect>
