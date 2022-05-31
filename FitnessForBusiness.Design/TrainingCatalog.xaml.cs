@@ -23,5 +23,7 @@ namespace FitnessForBusiness.Design
         {
             InitializeComponent();
         }
+
+ 
     }
 }
