@@ -71,6 +71,9 @@
     <Compile Include="RegistrationWindow.xaml.cs">
       <DependentUpon>RegistrationWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TrainingCatalog.xaml.cs">
+      <DependentUpon>TrainingCatalog.xaml</DependentUpon>
+    </Compile>
     <Page Include="LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -120,6 +123,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Theme\UITextBoxTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TrainingCatalog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -180,6 +187,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Pictures\boy1-1536x1536.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\Catalog2PngPicture.png" />
+    <Resource Include="Pictures\CatalogPngPicture.png" />
+    <Resource Include="Pictures\FavouritesPngPicture.png" />
+    <Resource Include="Pictures\PlusPngPicture.png" />
+    <Resource Include="Pictures\ProfilePngPicture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\FindExersicesPngPicture.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

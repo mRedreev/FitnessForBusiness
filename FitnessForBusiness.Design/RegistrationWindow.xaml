@@ -9,9 +9,6 @@
         Title="Strong Partner"
         Icon="Pictures/sLogo.png">
     <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="Pictures/background.jpg"/>
-        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
@@ -27,6 +24,10 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="Pictures/background.jpg"/>
+        </Grid.Background>
+        
 
         <StackPanel Grid.RowSpan="1" Grid.ColumnSpan="3" Background="#ab5eeb">
 
