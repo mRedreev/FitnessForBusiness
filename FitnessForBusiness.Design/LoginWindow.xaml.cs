@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using FitnessForBusiness.Core.Storages;
 
 namespace FitnessForBusiness.Design
 {
@@ -19,8 +20,11 @@ namespace FitnessForBusiness.Design
     /// </summary>
     public partial class LoginWindow : Window
     {
+        IStorage _storage;
+
         public LoginWindow()
         {
+            _storage = new Context();
             InitializeComponent();
         }
 
@@ -29,6 +33,23 @@ namespace FitnessForBusiness.Design
             TrainingCatalog trainingCatalog = new TrainingCatalog();
             trainingCatalog.Show();
             this.Close();
+        }
+
+        private User SearchUser()
+        {
+            var userName = LogInUserNameBox.Text;
+            var userPassword = LogInPasswordBox.Text;
+            User userNow = new User();
+
+            foreach (var user in _storage.GetUsers)
+            {
+                if (user.Login == userName && user.Password == user.Password)
+                {
+                    userNow = user;
+                }
+            }
+
+            return userNow;
         }
     }
 }
