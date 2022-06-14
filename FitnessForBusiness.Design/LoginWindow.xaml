@@ -92,6 +92,16 @@
                     </Button>
                 </StackPanel>
             </StackPanel>
+
+            <StackPanel Orientation="Vertical">
+                <Button Name="GoBackButton"
+                        Width="60"
+                        Height="20"
+                        HorizontalAlignment="Right"
+                        Margin="0,5,5,0"
+                        Content="Back"
+                        Style="{StaticResource UIButton}"/>
+            </StackPanel>
         </Grid>
     </Border>
 </Window>

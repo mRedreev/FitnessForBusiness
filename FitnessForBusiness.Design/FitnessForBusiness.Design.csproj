@@ -198,6 +198,9 @@
   <ItemGroup>
     <Resource Include="Pictures\FindExersicesPngPicture.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\Plus2PngPicture.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
