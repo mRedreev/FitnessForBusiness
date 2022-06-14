@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using FitnessForBusiness.Core;
+using FitnessForBusiness.Core.Models;
+using FitnessForBusiness.Core.Storages;
 
 namespace FitnessForBusiness.Design
 {
@@ -20,9 +22,13 @@ namespace FitnessForBusiness.Design
     /// </summary>
     public partial class TrainingCatalog : Window
     {
-        public TrainingCatalog()
+        User _user;
+
+        IStorage _storage;
+        public TrainingCatalog(User user, IStorage storage)
         {
             InitializeComponent();
+            _storage = storage;
         }
 
  

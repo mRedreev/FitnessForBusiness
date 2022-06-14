@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using FitnessForBusiness.Core.Models;
 using FitnessForBusiness.Core.Storages;
 
 namespace FitnessForBusiness.Design
@@ -30,20 +31,30 @@ namespace FitnessForBusiness.Design
 
         private void LogInButton_Click(object sender, RoutedEventArgs e)
         {
-            TrainingCatalog trainingCatalog = new TrainingCatalog();
-            trainingCatalog.Show();
-            this.Close();
+            var user = SearchUser();
+            if (user.Name == null)
+            {
+                MessageBox.Show("Incorrect Data");
+                MessageBox.Show(LogInPasswordBox.Password);
+            }
+            else
+            {
+                TrainingCatalog trainingCatalog = new TrainingCatalog(user, _storage);
+                trainingCatalog.Show();
+                this.Close();
+            }
+
         }
 
         private User SearchUser()
         {
-            var userName = LogInUserNameBox.Text;
-            var userPassword = LogInPasswordBox.Text;
+            var userName = LogInUsernameBox.Text;
+            var userPassword = LogInPasswordBox.Password;
             User userNow = new User();
 
             foreach (var user in _storage.GetUsers)
             {
-                if (user.Login == userName && user.Password == user.Password)
+                if (user.Login == userName && user.Password == userPassword)
                 {
                     userNow = user;
                 }
