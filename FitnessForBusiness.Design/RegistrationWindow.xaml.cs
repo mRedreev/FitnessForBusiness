@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Microsoft.Win32;
+using FitnessForBusiness.Core.Storages;
 
 namespace FitnessForBusiness.Design
 {
@@ -21,8 +22,10 @@ namespace FitnessForBusiness.Design
     /// </summary>
     public partial class RegistrationWindow : Window
     {
+        IStorage _storage;
         public RegistrationWindow()
         {
+            _storage = new Context();
             InitializeComponent();
         }
 
