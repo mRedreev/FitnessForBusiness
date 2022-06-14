@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitnessForBusiness.Design"
         mc:Ignorable="d"
-        Title="TrainingCatalog" Height="500" Width="800">
+        Title="TrainingCatalog" 
+        Height="500" Width="800"
+        Icon="Pictures/sLogo.png">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -48,7 +50,7 @@
             <StackPanel.Effect>
                 <DropShadowEffect/>
             </StackPanel.Effect>
-            <Button x:Name="CatalogButton" Height="50" Width="50"   VerticalAlignment="Center" HorizontalAlignment="Center" BorderBrush="Black" Foreground="{x:Null}" Style="{StaticResource UIButton}" Margin="0,20,0,0" FontWeight="Normal"  >
+            <Button x:Name="CatalogButton" Height="50" Width="50" VerticalAlignment="Center" HorizontalAlignment="Center" BorderBrush="Black" Foreground="{x:Null}" Style="{StaticResource UIButton}" Margin="0,20,0,0" FontWeight="Normal"  >
                 <Button.Effect>
                     <DropShadowEffect/>
                 </Button.Effect>
