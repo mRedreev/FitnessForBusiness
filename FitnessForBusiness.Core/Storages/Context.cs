@@ -1,5 +1,7 @@
-﻿using System;
+﻿using FitnessForBusiness.Core.Models;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,15 +10,15 @@ namespace FitnessForBusiness.Core.Storages
 {
     public class Context : DbContext, IStorage
     {
-        public DbSet<Film> Films { get; set; }
+        public DbSet<User> Users { get; set; }
 
-        public DbSet<Actor> Actors { get; set; }
+        public DbSet<Training> Trainings { get; set; }
 
 
 
-        public List<Actor> GetActors => Actors.ToList();
+        public List<User> GetUsers => Users.ToList();
 
-        public List<Film> GetFilms => Films.ToList();
+        public List<Training> GetTrainings => Trainings.ToList();
 
 
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FitnessForBusiness.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,24 +9,24 @@ namespace FitnessForBusiness.Core.Storages
 {
     public class JSONStorage : IStorage
     {
-        readonly Repository<Film> _films;
-        readonly Repository<Actor> _actors;
+        readonly Repository<User> _users;
+        readonly Repository<Training> _trainings;
 
         public JSONStorage()
         {
-            _films = new Repository<Film>("films.json");
-            _actors = new Repository<Actor>("actors.json");
+            _users = new Repository<User>("user.json");
+            _trainings = new Repository<Training>("training.json");
         }
 
 
-        public List<Film> GetFilms => _films.GetCollection;
+        public List<User> GetUsers => _users.GetCollection;
 
-        public List<Actor> GetActors => _actors.GetCollection;
+        public List<Training> GetTrainings => _trainings.GetCollection;
 
         public void Save()
         {
-            _films.Save();
-            _actors.Save();
+            _users.Save();
+            _trainings.Save();
         }
     }
 }
