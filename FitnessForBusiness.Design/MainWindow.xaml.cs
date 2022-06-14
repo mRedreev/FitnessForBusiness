@@ -23,8 +23,10 @@ namespace FitnessForBusiness.Design
     /// </summary>
     public partial class MainWindow : Window
     {
+        IStorage _storage;
         public MainWindow()
         {
+            _storage = new Context();
             InitializeComponent();
            // InitialTrainings();
            // InitialUsers();
