@@ -26,7 +26,9 @@ namespace FitnessForBusiness.Design
 
         private void LogInButton_Click(object sender, RoutedEventArgs e)
         {
-
+            TrainingCatalog trainingCatalog = new TrainingCatalog();
+            trainingCatalog.Show();
+            this.Close();
         }
     }
 }
