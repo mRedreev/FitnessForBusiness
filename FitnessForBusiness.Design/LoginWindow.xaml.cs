@@ -24,38 +24,31 @@ namespace FitnessForBusiness.Design
             InitializeComponent();
         }
 
+
         private void LogInButton_Click(object sender, RoutedEventArgs e)
         {
-            var user = SearchUser();
-            if (user.Name == null)
+
+            try
             {
-                MessageBox.Show("Incorrect Data");
-                MessageBox.Show(LogInPasswordBox.Password);
-            }
-            else
-            {
+                var user = SearchUser();
                 TrainingCatalog trainingCatalog = new TrainingCatalog(user, _storage);
                 trainingCatalog.Show();
                 this.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Incorrect Data");
             }
 
         }
 
         private User SearchUser()
         {
-            var userName = LogInUsernameBox.Text;
-            var userPassword = LogInPasswordBox.Password;
-            User userNow = new User();
-
-            foreach (var user in _storage.GetUsers)
-            {
-                if (user.Login == userName && user.Password == userPassword)
-                {
-                    userNow = user;
-                }
-            }
-
+            MessageBox.Show(LogInUsernameBox.Text);
+            User userNow = _storage.GetUsers.Where(u => u.Login.ToString() == LogInUsernameBox.Text.ToString()).Where(u => u.Password == LogInPasswordBox.Password).ToList()[0];
             return userNow;
         }
+
     }
 }
