@@ -6,75 +6,78 @@
         xmlns:local="clr-namespace:FitnessForBusiness.Design"
         mc:Ignorable="d"
         Title="TrainingCatalog" 
-        Height="500" Width="800"
+        Height="530" Width="920"
         Icon="Pictures/sLogo.png">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="30"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="100"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="Pictures/background.jpg"/>
         </Grid.Background>
-        <ListBox Grid.Row="0" Grid.Column="1" Grid.RowSpan="5" Grid.ColumnSpan="7">
+        <ListBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="7">
             <ListBox.Background>
                 <ImageBrush ImageSource="Pictures/background.jpg"/>
             </ListBox.Background>
 
         </ListBox>
-        <StackPanel Name="BorderLineDownStackPanel" Grid.ColumnSpan="8" Background="#FFAB5EEB" VerticalAlignment="Top" Orientation="Horizontal" MinHeight="30" Grid.Column="1">
-           
-        </StackPanel>
-        <StackPanel Name="BorderLineUpStackPanel" Grid.ColumnSpan="8" Background="#FFAB5EEB" VerticalAlignment="Bottom" Orientation="Horizontal" MinHeight="30" Grid.Row="5">
+        <Border Name="BorderLineDownStackPanel" Grid.ColumnSpan="2" Background="#FFAB5EEB" VerticalAlignment="Top" Height="30" Grid.Column="0">
             
-        </StackPanel>
-        <StackPanel x:Name="IconsStackPanel" Grid.Row="0" Grid.RowSpan="5" Grid.ColumnSpan="1" Background="#ab5eeb">
+        </Border>
+
+
+        <StackPanel Name="IconsStackPanel" 
+                    Grid.Row="0"
+                    Grid.RowSpan="2"
+                    VerticalAlignment="Center"
+                    Background="#ab5eeb"
+                    Height="515">
             
-            <Button x:Name="CatalogButton" Height="50" Width="50" VerticalAlignment="Center" HorizontalAlignment="Center" BorderBrush="Black" Foreground="{x:Null}" Style="{StaticResource UIButton}" Margin="0,20,0,0" FontWeight="Normal"  >
-                
+            <Button Name="CatalogButton" 
+                    Height="50" Width="50" 
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    BorderBrush="Black" 
+                    Foreground="{x:Null}" 
+                    Style="{StaticResource UIButton}" 
+                    Margin="0,50,0,0" 
+                    FontWeight="Normal">
+
                 <Button.Background>
                     <ImageBrush ImageSource="Pictures/Catalog2PngPicture.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="SearchButton" Height="50" Width="50"   VerticalAlignment="Center" Foreground="{x:Null}" BorderBrush="{x:Null}" Style="{StaticResource UIButton}" Margin="0,50,0,0" RenderTransformOrigin="0.504,0.504" HorizontalAlignment="Center" >
-                
+            
+            <Button Name="SearchButton" Height="50" Width="50"   VerticalAlignment="Center" Foreground="{x:Null}" BorderBrush="{x:Null}" Style="{StaticResource UIButton}" Margin="0,50,0,0" RenderTransformOrigin="0.504,0.504" HorizontalAlignment="Center" >
+
                 <Button.Background>
                     <ImageBrush ImageSource="Pictures/FindExersicesPngPicture.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="FavouritesButton" Grid.Row="2" Height="50" Width="50"   VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{x:Null}" BorderBrush="{x:Null}" Style="{StaticResource UIButton}" Margin="0,40,0,0">
+            <Button Name="FavouritesButton" Grid.Row="2" Height="50" Width="50"   VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{x:Null}" BorderBrush="{x:Null}" Style="{StaticResource UIButton}" Margin="0,50,0,0">
 
                 <Button.Background>
                     <ImageBrush ImageSource="Pictures/FavouritesPngPicture.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="PlusButton" Grid.Row="3" Height="50" Width="50"   VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{x:Null}" BorderBrush="{x:Null}" Style="{StaticResource UIButton}" Margin="0,45,0,0">
-                
+            <Button Name="PlusButton" Grid.Row="3" Height="50" Width="50"   VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{x:Null}" BorderBrush="{x:Null}" Style="{StaticResource UIButton}" Margin="0,50,0,0">
+
                 <Button.Background>
                     <ImageBrush ImageSource="Pictures/Plus2PngPicture.png"/>
                 </Button.Background>
             </Button>
-            <Button x:Name="ProfileButton" Grid.Row="4" Height="50" Width="50" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{x:Null}" BorderBrush="{x:Null}" Style="{StaticResource UIButton}" Margin="0,45,0,0">
-                
+            <Button Name="ProfileButton" Height="50" Width="50" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{x:Null}" BorderBrush="{x:Null}" Style="{StaticResource UIButton}" Margin="0,50,0,0">
+
                 <Button.Background>
                     <ImageBrush ImageSource="Pictures/ProfilePngPicture.png"/>
                 </Button.Background>
             </Button>
         </StackPanel>
-       
     </Grid>
 </Window>
