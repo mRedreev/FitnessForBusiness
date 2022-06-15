@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FitnessForBusiness.Core.Models;
+using FitnessForBusiness.Core.Storages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,11 +21,19 @@ namespace FitnessForBusiness.Design
     /// </summary>
     public partial class TrainingCatalog : Window
     {
-        public TrainingCatalog()
+        User _user;
+
+
+
+        IStorage _storage;
+        public TrainingCatalog(User user, IStorage storage)
         {
             InitializeComponent();
+            _storage = storage;
         }
 
- 
+
+
+
     }
 }

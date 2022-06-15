@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FitnessForBusiness.Core.Models;
+using FitnessForBusiness.Core.Storages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +21,11 @@ namespace FitnessForBusiness.Design
     /// </summary>
     public partial class LoginWindow : Window
     {
+        IStorage _storage;
         public LoginWindow()
         {
             InitializeComponent();
+            _storage = new Context();
         }
 
 
