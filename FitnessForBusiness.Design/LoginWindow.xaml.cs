@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FitnessForBusiness.Core.Models;
+using FitnessForBusiness.Core.Storages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,16 +21,38 @@ namespace FitnessForBusiness.Design
     /// </summary>
     public partial class LoginWindow : Window
     {
+        IStorage _storage;
         public LoginWindow()
         {
             InitializeComponent();
+            _storage = new Context();
         }
+
 
         private void LogInButton_Click(object sender, RoutedEventArgs e)
         {
-            TrainingCatalog trainingCatalog = new TrainingCatalog();
-            trainingCatalog.Show();
-            this.Close();
+
+            try
+            {
+                var user = SearchUser();
+                TrainingCatalog trainingCatalog = new TrainingCatalog(user, _storage);
+                trainingCatalog.Show();
+                this.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Incorrect Data");
+            }
+
         }
+
+        private User SearchUser()
+        {
+            MessageBox.Show(LogInUsernameBox.Text);
+            User userNow = _storage.GetUsers.Where(u => u.Login.ToString() == LogInUsernameBox.Text.ToString()).Where(u => u.Password == LogInPasswordBox.Password).ToList()[0];
+            return userNow;
+        }
+
     }
 }
