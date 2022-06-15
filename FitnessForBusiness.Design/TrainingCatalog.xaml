@@ -18,15 +18,20 @@
             <ColumnDefinition Width="100"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+        
         <Grid.Background>
             <ImageBrush ImageSource="Pictures/background.jpg"/>
         </Grid.Background>
-        <ListBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="7">
-            <ListBox.Background>
-                <ImageBrush ImageSource="Pictures/background.jpg"/>
-            </ListBox.Background>
 
-        </ListBox>
+        <ContentControl Grid.Row="1"
+                        Grid.Column="1"
+                        Margin="12"
+                        Content="{Binding CurrentView}">
+            <ContentControl.Background>
+                <ImageBrush ImageSource="Pictures/background.jpg"/>
+            </ContentControl.Background>
+        </ContentControl>
+        
         <Border Name="BorderLineDownStackPanel" Grid.ColumnSpan="2" Background="#FFAB5EEB" VerticalAlignment="Top" Height="30" Grid.Column="0">
             
         </Border>
@@ -72,7 +77,15 @@
                     <ImageBrush ImageSource="Pictures/Plus2PngPicture.png"/>
                 </Button.Background>
             </Button>
-            <Button Name="ProfileButton" Height="50" Width="50" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{x:Null}" BorderBrush="{x:Null}" Style="{StaticResource UIButton}" Margin="0,50,0,0">
+            <Button Name="ProfileButton" 
+                    Height="50" Width="50" 
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center" 
+                    Foreground="{x:Null}" 
+                    BorderBrush="{x:Null}" 
+                    Style="{StaticResource UIButton}" 
+                    Margin="0,50,0,0"
+                    Command="{Binding ProfileViewCommand}">
 
                 <Button.Background>
                     <ImageBrush ImageSource="Pictures/ProfilePngPicture.png"/>
