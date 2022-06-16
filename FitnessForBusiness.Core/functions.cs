@@ -84,6 +84,19 @@ namespace FitnessForBusiness.Core
             else return "";
         }
 
+        public static bool DoesUserAlreadyExist(string login)
+        {
+            try
+            {
+                var user = FindUser(login);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
 
     }
 }
