@@ -79,7 +79,7 @@
             </ComboBoxItem>
             <ComboBoxItem>
                 <StackPanel Orientation="Horizontal">
-                    <Image Source="/Pictures/yrochka.jpg" Height="85"/>
+                    <Image Source="/Pictures/becl2.jpg" Height="85"/>
                 </StackPanel>
             </ComboBoxItem>
             <ComboBoxItem>
