@@ -29,25 +29,28 @@ namespace FitnessForBusiness.Design
             InitializeComponent();
         }
 
-        private void LevelButton_Checked(object sender, RoutedEventArgs e)
-        {
+      //  private void LevelButton_Checked(object sender, RoutedEventArgs e)
+      //  {
 
-        }
+      //  }
 
 
-        private void AvatarButton_Click(object sender, RoutedEventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog() == true)
-            {
-                Uri fileUri = new Uri(openFileDialog.FileName);
-                imgDynamicImage.Source = new BitmapImage(fileUri);
-            }
-        }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void BitrhDateDatePicker_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            DateTime dt = (DateTime)this.BitrhDateDatePicker.SelectedDate;
+            MessageBox.Show(dt.ToString("dd-MM-yyyy"));
+
+        }
+
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         //      private void AddNewUser()
