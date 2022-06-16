@@ -50,6 +50,13 @@ namespace FitnessForBusiness.Design
             Environment.Exit(0);
         }
 
+        private void BitrhDateDatePicker_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            DateTime dt = (DateTime)this.BitrhDateDatePicker.SelectedDate;
+            MessageBox.Show(dt.ToString("dd-MM-yyyy"));
+
+        }
+
         //      private void AddNewUser()
         //      {
         //          var name = NameBox.Text;

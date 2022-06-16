@@ -52,29 +52,28 @@
             
         </PasswordBox>
 
-        <ComboBox Name="GoalComboBox" Text="Your Main Goal" Height="30" Width="130" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Row="3" Grid.Column="1"  IsEditable="True" Background="#FF5748A8" BorderBrush="#FF030303" Foreground="Black" OpacityMask="Black" VerticalContentAlignment="Bottom">
+        <ComboBox Name="GoalComboBox" Text="Your Main Goal" Height="30" Width="130" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Row="4" Grid.Column="1"  IsEditable="True" Background="#FF5748A8" BorderBrush="#FF030303" Foreground="Black" OpacityMask="Black" VerticalContentAlignment="Bottom">
             <TextBlock>Lose weight</TextBlock>
             <TextBlock>Maintain weight</TextBlock>
             <TextBlock>Gain muscle mass</TextBlock>
         </ComboBox>
-        <ComboBox Name="LeveloComboBox" Text="Your Level" Height="30" Width="130" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="1"  IsEditable="True"  VerticalContentAlignment="Bottom">
+        <ComboBox Name="LeveloComboBox" Text="Your Level" Height="30" Width="130" VerticalAlignment="Center" HorizontalAlignment="Right" Grid.Row="4" Grid.Column="1"  IsEditable="True"  VerticalContentAlignment="Bottom">
             <TextBlock>Beginner</TextBlock>
             <TextBlock>Intermediate</TextBlock>
             <TextBlock>Advanced</TextBlock>
         </ComboBox>
-        <Calendar x:Name="BitrhDateDatePicker" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" VerticalAlignment="Center"  Style="{StaticResource DatePickerCalendarStyle}" 
-                 Background="#FF353340" OverridesDefaultStyle="False"   AutomationProperties.HelpText="BirthDate">
-        </Calendar>
+        <DatePicker x:Name="BitrhDateDatePicker" Grid.Row="3" Grid.Column="1"  VerticalAlignment="Bottom" Width="130"
+                 Background="#FF353340" OverridesDefaultStyle="False" HorizontalAlignment="Left" MouseDoubleClick="BitrhDateDatePicker_MouseDoubleClick" SelectedDateFormat="Short" />
         <StackPanel Grid.Row="2" Grid.Column="2" Grid.RowSpan="2">
             
             <WrapPanel HorizontalAlignment="Center">
-                <Button x:Name="AvatarButton"  Click="AvatarButton_Click" Width="140" Background="#FF272537" Foreground="#FFCFCFCF" Content="Load avatar from File..." Style="{DynamicResource UIButton}" FontWeight="Bold">
+                <Button x:Name="AvatarButton"  Click="AvatarButton_Click" Width="140" Background="#FF272537" Foreground="#FFCFCFCF" Content="Load avatar from File..." Style="{StaticResource UIButton}" FontWeight="Bold">
                     
                 </Button>
             </WrapPanel>
             <Image Name="imgDynamicImage" Stretch="Uniform" Grid.RowSpan="2"  Margin="10"/>
         </StackPanel>
-        <Button Name="RegisterButton" Background="#FF272537" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Height="30" Width="70" Content="Registration" Foreground="#FFCFCFCF" Cursor="Hand" Style="{StaticResource UIButton}" FontWeight="Bold">
+        <Button Name="RegisterButton" Background="#FF272537" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" Height="30" Width="70" Content="Registration" Foreground="#FFCFCFCF" Cursor="Hand" Style="{StaticResource UIButton}" FontWeight="Bold">
     
         </Button>
     </Grid>
