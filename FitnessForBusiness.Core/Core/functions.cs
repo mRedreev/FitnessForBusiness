@@ -1,8 +1,11 @@
-﻿using System;
+﻿using FitnessForBusiness.Core.Models;
+using FitnessForBusiness.Core.Storages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace FitnessForBusiness.Core.Core
 {
@@ -11,7 +14,7 @@ namespace FitnessForBusiness.Core.Core
         public static string NameOfLevel(bool? level)
         {
             if (level == null) return "Beginner";
-            else if (level == false) return "Amateur";
+            else if (level == false) return "Intermediate";
             else if (level == true) return "Advanced";
             return null;
         }
@@ -23,5 +26,56 @@ namespace FitnessForBusiness.Core.Core
             else if (goal == false) return "Keeping fit";
             return null;
         }
+
+        public static bool? CheckGoal(string goal)
+        {
+            bool? result = null;
+
+            if (goal == "Lose weight") result = null;
+            else if (goal == "Maintain weight") result = false;
+            else if (goal == "Gain muscle mass") result = true;
+
+            return result;
+        }
+
+        public static bool? CheckLevel(string level)
+        {
+            bool? result = null;
+
+            if (level == "Beginner") result = null;
+            else if (level == "Intermediate") result = false;
+            else if (level == "Advanced") result = true;
+
+            return result;
+        }
+
+        public static User FindUser(string login)
+        {
+            IStorage storage = new Context();
+            var user = new User();
+            user = storage.GetUsers.Where(u => u.Login == login).First();
+            return user;
+        }
+
+        public static bool TextsBoxIsNotEmpty(List<TextBox> textBoxes)
+        {
+
+            foreach (TextBox textBox in textBoxes)
+            {
+                if (textBox.Text == "") return false;
+            }
+
+            return true;
+        }
+
+        public static bool ComboBoxIsNotEmpty(ComboBox comboBox, string startText)
+        {
+            if (comboBox.Text == startText) return false;
+            if (comboBox.Text == "") return false;
+            
+            return true;
+        }
+
+
     }
 }
