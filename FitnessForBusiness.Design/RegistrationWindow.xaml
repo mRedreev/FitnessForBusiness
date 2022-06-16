@@ -66,7 +66,7 @@
         <DatePicker x:Name="BitrhDateDatePicker" Grid.Row="3" Grid.Column="2"  VerticalAlignment="Center" Width="130"
                  Background="#FF353340" OverridesDefaultStyle="False" HorizontalAlignment="Center" MouseDoubleClick="BitrhDateDatePicker_MouseDoubleClick" SelectedDateFormat="Short" />
         <TextBlock Grid.Row="3" Grid.Column="2" VerticalAlignment="Center"  HorizontalAlignment="Center" Foreground="#FFCFCFCF" Margin="70,27,150,68"  Text="Birthdate"/>
-        <ComboBox Grid.Row="2" Grid.Column="2" Width="130" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <ComboBox Name ="AvatarComboBox"  Grid.Row="2" Grid.Column="2" Width="130" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center">
             <ComboBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/Pictures/san.jpg" Height="100"></Image>
