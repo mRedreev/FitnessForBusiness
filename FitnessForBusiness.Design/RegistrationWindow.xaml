@@ -89,7 +89,7 @@
             </ComboBoxItem>
         </ComboBox>
         
-        <Button Name="RegisterButton" Background="#FF272537" Grid.Row="4" Grid.Column="1" VerticalAlignment="Bottom" Height="30" Width="70" Content="Registration" Foreground="#FFCFCFCF" Cursor="Hand" Style="{StaticResource UIButton}" FontWeight="Bold">
+        <Button Name="RegisterButton" Background="#FF272537" Grid.Row="4" Grid.Column="1" VerticalAlignment="Bottom" Height="30" Width="70" Content="Registration" Foreground="#FFCFCFCF" Cursor="Hand" Style="{StaticResource UIButton}" FontWeight="Bold" Click="RegisterButton_Click">
     
         </Button>
     </Grid>

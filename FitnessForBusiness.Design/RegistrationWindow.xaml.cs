@@ -29,10 +29,10 @@ namespace FitnessForBusiness.Design
             InitializeComponent();
         }
 
-        private void LevelButton_Checked(object sender, RoutedEventArgs e)
-        {
+      //  private void LevelButton_Checked(object sender, RoutedEventArgs e)
+      //  {
 
-        }
+      //  }
 
 
 
@@ -45,6 +45,11 @@ namespace FitnessForBusiness.Design
         {
             DateTime dt = (DateTime)this.BitrhDateDatePicker.SelectedDate;
             MessageBox.Show(dt.ToString("dd-MM-yyyy"));
+
+        }
+
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
 
         }
 
