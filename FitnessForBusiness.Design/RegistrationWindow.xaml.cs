@@ -35,15 +35,6 @@ namespace FitnessForBusiness.Design
         }
 
 
-        private void AvatarButton_Click(object sender, RoutedEventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog() == true)
-            {
-                Uri fileUri = new Uri(openFileDialog.FileName);
-                imgDynamicImage.Source = new BitmapImage(fileUri);
-            }
-        }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
