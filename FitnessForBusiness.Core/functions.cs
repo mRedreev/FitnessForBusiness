@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-namespace FitnessForBusiness.Core.Core
+namespace FitnessForBusiness.Core
 {
     public class functions
     {

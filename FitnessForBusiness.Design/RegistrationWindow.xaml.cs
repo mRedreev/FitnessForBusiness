@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Microsoft.Win32;
 using FitnessForBusiness.Core.Storages;
-using FitnessForBusiness.Core.Core;
+using FitnessForBusiness.Core;
 
 namespace FitnessForBusiness.Design
 {
@@ -58,9 +58,9 @@ namespace FitnessForBusiness.Design
                 var surname = SurnameTextBox.Text;
                 var login = EmailTextBox.Text;
                 var password = PasswordBox.Password;
-                var level = CheckLevel(LeveloComboBox.Text);
-                var goal = CheckGoal(GoalComboBox.Text);
-                var imageSource = GetImageSourceOfAvatar(AvatarComboBox.SelectedIndex);
+                var level = functions.CheckLevel(LeveloComboBox.Text);
+                var goal = functions.CheckGoal(GoalComboBox.Text);
+                var imageSource = functions.GetImageSourceOfAvatar(AvatarComboBox.SelectedIndex);
                 var born = DateTime.Parse(BitrhDateDatePicker.SelectedDate.ToString());
                 User newUser = new User(name, surname, imageSource, born, level, goal, login, password);
             }
