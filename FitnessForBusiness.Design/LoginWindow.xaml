@@ -100,7 +100,8 @@
                         HorizontalAlignment="Right"
                         Margin="0,5,5,0"
                         Content="Back"
-                        Style="{StaticResource UIButton}"/>
+                        Style="{StaticResource UIButton}"
+                        Click="GoBackButton_Click"/>
             </StackPanel>
         </Grid>
     </Border>

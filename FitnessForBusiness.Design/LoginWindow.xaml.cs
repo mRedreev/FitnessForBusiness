@@ -54,5 +54,11 @@ namespace FitnessForBusiness.Design
             return userNow;
         }
 
+        private void GoBackButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+        }
     }
 }

@@ -9,6 +9,7 @@
                             Background="#272537">
 
                         <TextBox Margin="1"
+                                 
                                  BorderThickness="0"
                                  Background="Transparent"
                                  VerticalContentAlignment="Center"
