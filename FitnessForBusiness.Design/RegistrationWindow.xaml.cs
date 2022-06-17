@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Microsoft.Win32;
 using FitnessForBusiness.Core.Storages;
+using FitnessForBusiness.Core;
 
 namespace FitnessForBusiness.Design
 {
@@ -50,22 +51,23 @@ namespace FitnessForBusiness.Design
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            //bool userNotExist = true;
-            //if (userNotExist)
-            //{
-            //    User newUser = new User();
-            //    newUser.Name = NameBox.Text;
-            //    newUser.Surname = SurnameTextBox.Text;
-            //    newUser.Login = EmailTextBox.Text;
-            //    newUser.Password = PasswordBox.Password;
-            //    newUser.Level = CheckLevel(LeveloComboBox.Text);
-            //    newUser.Goal = CheckGoal(GoalComboBox.Text);
-            //    newUser.ImageSource =
-            //}
-            //else
-            //{
-            //    MessageBox.Show("User with this email already exists");
-            //}
+            bool userNotExist = true;
+            if (userNotExist)
+            {
+                var name = NameBox.Text;
+                var surname = SurnameTextBox.Text;
+                var login = EmailTextBox.Text;
+                var password = PasswordBox.Password;
+                var level = functions.CheckLevel(LeveloComboBox.Text);
+                var goal = functions.CheckGoal(GoalComboBox.Text);
+                var imageSource = functions.GetImageSourceOfAvatar(AvatarComboBox.SelectedIndex);
+                var born = DateTime.Parse(BitrhDateDatePicker.SelectedDate.ToString());
+                User newUser = new User(name, surname, imageSource, born, level, goal, login, password);
+            }
+            else
+            {
+                MessageBox.Show("User with this email already exists");
+            }
         }
 
         //      private void AddNewUser()

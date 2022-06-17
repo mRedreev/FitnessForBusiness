@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 
-namespace FitnessForBusiness.Core.Core
+namespace FitnessForBusiness.Core
 {
     public class functions
     {
@@ -71,9 +71,30 @@ namespace FitnessForBusiness.Core.Core
         public static bool ComboBoxIsNotEmpty(ComboBox comboBox, string startText)
         {
             if (comboBox.Text == startText) return false;
-            if (comboBox.Text == "") return false;
-            
-            return true;
+            else if (comboBox.Text == "") return false;
+            else return true;
+        }
+
+        public static string GetImageSourceOfAvatar(int index)
+        {
+            if (index == 0) return "/Pictures/san.jpg";
+            else if (index == 1) return "/Pictures/suboch.jpg";
+            else if (index == 2) return "/Pictures/becl2.jpg";
+            else if (index == 3) return "/Pictures/lom2.jpg";
+            else return "";
+        }
+
+        public static bool DoesUserAlreadyExist(string login)
+        {
+            try
+            {
+                var user = FindUser(login);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
 
