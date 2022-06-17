@@ -37,11 +37,6 @@ namespace FitnessForBusiness.Design
 
 
 
-        private void ExitButton_Click(object sender, RoutedEventArgs e)
-        {
-            Environment.Exit(0);
-        }
-
         private void BitrhDateDatePicker_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             //DateTime dt = (DateTime)this.BitrhDateDatePicker.SelectedDate;
@@ -102,6 +97,34 @@ namespace FitnessForBusiness.Design
                 MessageBox.Show("Enter full data");
             }
 
+        }
+
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+                DragMove();
+        }
+
+        private void MinimizeButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow.WindowState = WindowState.Minimized;
+        }
+
+        private void WindowStateButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (Application.Current.MainWindow.WindowState != WindowState.Minimized)
+            {
+                Application.Current.MainWindow.WindowState = WindowState.Maximized;
+            }
+            else
+            {
+                Application.Current.MainWindow.WindowState = WindowState.Normal;
+            }
+        }
+
+        private void ExitButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
 
         //      private void AddNewUser()

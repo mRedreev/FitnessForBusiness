@@ -45,7 +45,7 @@
                                 HorizontalAlignment="Right"
                                 Margin="0,0,5,0">
                         <Button Style="{StaticResource MinimizeButton}"
-                                Margin="0,0,0,3.5"
+                                Margin="0,0,0,3.65"
                                 Name="MinimizeButton"
                                 Click="MinimizeButton_Click"/>
                         <Button Style="{StaticResource WindowStateButton}"
