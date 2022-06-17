@@ -116,11 +116,6 @@ namespace FitnessForBusiness.Design
             }
         }
 
-        private void ExitButton_Click(object sender, RoutedEventArgs e)
-        {
-            Environment.Exit(0);
-        }
-
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             LoginWindow loginWindow = new LoginWindow();
@@ -139,12 +134,33 @@ namespace FitnessForBusiness.Design
             this.Close();
         }
         
-        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+
+        private void MinimizeButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow.WindowState = WindowState.Minimized;
+        }
+
+        private void WindowStateButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (Application.Current.MainWindow.WindowState != WindowState.Minimized)
+            {
+                Application.Current.MainWindow.WindowState = WindowState.Maximized;
+            }
+            else
+            {
+                Application.Current.MainWindow.WindowState = WindowState.Normal;
+            }
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
-            {
                 DragMove();
-            }
         }
     }
 }

@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitnessForBusiness.Design"
         mc:Ignorable="d"
-        Height="700" Width="810"
+        Height="727" Width="810"
         Title="Strong Partner"
         Icon="Pictures/sLogo.png">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="27"/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
@@ -29,42 +30,42 @@
 
 
         <StackPanel Grid.RowSpan="1" Grid.ColumnSpan="3" Background="#ab5eeb">
-            <TextBlock Text="REGISTRATION"  Grid.Row="1" Grid.Column="1"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36" Margin="0 18 0 0" FontWeight="Bold" TextDecorations="{x:Null}" />
+            <TextBlock Text="REGISTRATION"  Grid.Row="2" Grid.Column="1"  VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36" Margin="0 18 0 0" FontWeight="Bold" TextDecorations="{x:Null}" />
         </StackPanel>
         
         
-        <TextBlock Grid.Row="1" VerticalAlignment="Center"  Margin="267,66,0,30" HorizontalAlignment="Left" Foreground="#FFCFCFCF" Grid.ColumnSpan="2">Name</TextBlock>
-        <TextBox Name="NameBox" Style="{StaticResource UITextBox}" Grid.Row="1" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        <TextBlock Grid.Row="2" VerticalAlignment="Center"  Margin="267,66,0,30" HorizontalAlignment="Left" Foreground="#FFCFCFCF" Grid.ColumnSpan="2">Name</TextBlock>
+        <TextBox Name="NameBox" Style="{StaticResource UITextBox}" Grid.Row="2" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
         <Border Width="130"
                 Style="{StaticResource Borderline}"
                 Grid.Column="1"
-                Grid.Row="1"
+                Grid.Row="2"
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Left"
                 Margin="0,0"/>
 
-        <TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"  Foreground="#FFCFCFCF" HorizontalAlignment="Right" Margin="0,66,83,30">Surname</TextBlock>
-        <TextBox Name="SurnameTextBox" Style="{StaticResource UITextBox}"  Grid.Row="1" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"  Foreground="#FFCFCFCF" HorizontalAlignment="Right" Margin="0,66,83,30">Surname</TextBlock>
+        <TextBox Name="SurnameTextBox" Style="{StaticResource UITextBox}"  Grid.Row="2" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
         <Border Width="130"
                 Style="{StaticResource Borderline}"
                 Grid.Column="1"
-                Grid.Row="1"
+                Grid.Row="2"
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Right"
                 Margin="0,0"/>
         
         <TextBlock Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"  Foreground="#FFCFCFCF" HorizontalAlignment="Left" Margin="0,25,0,70" >Email</TextBlock>
-        <TextBox Name="EmailTextBox" Style="{StaticResource UITextBox}"  Grid.Row="2" Grid.Column="1" Width="270" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox Name="EmailTextBox" Style="{StaticResource UITextBox}"  Grid.Row="3" Grid.Column="1" Width="270" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Border Width="270"
                 Style="{StaticResource Borderline}"
                 Grid.Column="1"
-                Grid.Row="2"
+                Grid.Row="3"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Left"
                 Margin="0,25,0,0"/>
         
-        <TextBlock Grid.Row="2" Grid.Column="1" VerticalAlignment="Bottom"  HorizontalAlignment="Left" Foreground="#FFCFCFCF" >Password</TextBlock>
-        <PasswordBox Name="PasswordBox"  Style="{StaticResource PassBox}" Grid.Row="3" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top"  Grid.RowSpan="2"/>
+        <TextBlock Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom"  HorizontalAlignment="Left" Foreground="#FFCFCFCF" >Password</TextBlock>
+        <PasswordBox Name="PasswordBox"  Style="{StaticResource PassBox}" Grid.Row="4" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top"  Grid.RowSpan="2"/>
         <Border Width="130"
                 Style="{StaticResource Borderline}"
                 Grid.Column="1"
@@ -122,11 +123,9 @@
 
         <Image Grid.Column="0" 
                Grid.Row="2" 
-               Grid.RowSpan="3"
+               Grid.RowSpan="4"
                Source="Pictures/sLogo.png"/>
 
-        <Button Name="RegisterButton" Background="#FF272537" Grid.Row="4" Grid.Column="1" VerticalAlignment="Bottom" Height="30" Width="70" Content="Registration" Foreground="#FFCFCFCF" Cursor="Hand" Style="{StaticResource UIButton}" FontWeight="Bold" Click="RegisterButton_Click">
-    
-        </Button>
+        <Button Name="RegisterButton" Background="#FF272537" Grid.Row="5" Grid.Column="1" VerticalAlignment="Bottom" Height="30" Width="70" Content="Registration" Foreground="#FFCFCFCF" Cursor="Hand" Style="{StaticResource UIButton}" FontWeight="Bold" Click="RegisterButton_Click"/>
     </Grid>
 </Window>

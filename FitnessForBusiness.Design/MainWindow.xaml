@@ -5,27 +5,71 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitnessForBusiness.Design"
         mc:Ignorable="d"
-        Height="600" Width="900"
-        Title="Strong Partner"
+        Height="627" Width="900"
         Icon="Pictures/sLogo.png"
         WindowStyle="None"
         AllowsTransparency="True"
-        ResizeMode="CanResizeWithGrip">
+        ResizeMode="CanResizeWithGrip"
+        Background="Transparent">
 
-    <Border CornerRadius="10">
+    <Border>
         <Grid>
             <Grid.Background>
                 <ImageBrush ImageSource="/Pictures/background.jpg"/>
             </Grid.Background>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="27"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
+
+            <Border Grid.ColumnSpan="2"
+                    Grid.Row="0"
+                    Background="#272535"
+                    MouseDown="Border_MouseDown">
+
+                <Grid HorizontalAlignment="Stretch">
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="27"
+                               Height="27"
+                               Source="/Pictures/sLogo.png"
+                               RenderOptions.BitmapScalingMode="HighQuality"/>
+
+                        <Label Content="Strong Partner"
+                           Foreground="Gray"
+                           FontWeight="Medium"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Right"
+                                Margin="0,0,5,0">
+                        <Button Style="{StaticResource MinimizeButton}"
+                                Margin="0,0,0,3.5"
+                                Name="MinimizeButton"
+                                Click="MinimizeButton_Click"/>
+                        <Button Style="{StaticResource WindowStateButton}"
+                                Name="WindowStateButton"
+                                Click="WindowStateButton_Click"/>
+                        <Button Style="{StaticResource ExitButton}"
+                                Name="ExitButton"
+                                Click="ExitButton_Click"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+            
+
             <StackPanel VerticalAlignment="Center"
                         HorizontalAlignment="Center"
-                        Orientation="Vertical">
+                        Orientation="Vertical"
+                        Grid.Row="1">
                 <StackPanel Orientation="Horizontal"
                             Margin="20,0,0,20">
                     <Image Height="50"
