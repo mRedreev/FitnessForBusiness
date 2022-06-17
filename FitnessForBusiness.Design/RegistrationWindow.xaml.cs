@@ -53,10 +53,7 @@ namespace FitnessForBusiness.Design
         {
             bool userNotExists = false;
             var listTextBoxes = new List<TextBox>(){NameBox, SurnameTextBox, EmailTextBox};
-            bool ifBoxesNotEmpty = functions.TextsBoxIsNotEmpty(listTextBoxes);
-            ifBoxesNotEmpty = functions.ComboBoxIsNotEmpty(GoalComboBox, "Your Main Goal");
-            ifBoxesNotEmpty = functions.ComboBoxIsNotEmpty(LeveloComboBox, "Your Level");
-            ifBoxesNotEmpty = functions.ComboBoxIsNotEmpty(AvatarComboBox, "");
+            bool ifBoxesNotEmpty = functions.TextsBoxIsNotEmpty(listTextBoxes) & functions.ComboBoxIsNotEmpty(GoalComboBox, "Your Main Goal") & functions.ComboBoxIsNotEmpty(LeveloComboBox, "Your Level") & functions.ComboBoxIsNotEmpty(AvatarComboBox, "");
             if (ifBoxesNotEmpty)
             {
                 if (PasswordBox.Password == PasswordAgianTextBox.Password && BitrhDateDatePicker.SelectedDate.ToString() != "")
