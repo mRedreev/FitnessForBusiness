@@ -65,6 +65,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CurrentTrainingWindow.xaml.cs">
+      <DependentUpon>CurrentTrainingWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
@@ -87,6 +90,10 @@
     <Compile Include="TrainingCatalog.xaml.cs">
       <DependentUpon>TrainingCatalog.xaml</DependentUpon>
     </Compile>
+    <Page Include="CurrentTrainingWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
