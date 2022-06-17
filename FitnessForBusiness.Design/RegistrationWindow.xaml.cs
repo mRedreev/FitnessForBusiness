@@ -44,21 +44,32 @@ namespace FitnessForBusiness.Design
 
         private void BitrhDateDatePicker_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            DateTime dt = (DateTime)this.BitrhDateDatePicker.SelectedDate;
-            MessageBox.Show(dt.ToString("dd-MM-yyyy"));
+            //DateTime dt = (DateTime)this.BitrhDateDatePicker.SelectedDate;
+            //MessageBox.Show(dt.ToString("dd-MM-yyyy"));
 
         }
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            bool userNotExists = false;
+            bool userExists;
             var listTextBoxes = new List<TextBox>(){NameBox, SurnameTextBox, EmailTextBox};
-            bool ifBoxesNotEmpty = functions.TextsBoxIsNotEmpty(listTextBoxes) & functions.ComboBoxIsNotEmpty(GoalComboBox, "Your Main Goal") & functions.ComboBoxIsNotEmpty(LeveloComboBox, "Your Level") & functions.ComboBoxIsNotEmpty(AvatarComboBox, "");
+            var listPasswordBoxes = new List<PasswordBox> { PasswordBox, PasswordAgianTextBox };
+            bool ifBoxesNotEmpty = functions.TextsBoxIsNotEmpty(listTextBoxes) & functions.ComboBoxIsNotEmpty(GoalComboBox, "Your Main Goal")
+                & functions.ComboBoxIsNotEmpty(LeveloComboBox, "Your Level")
+                & functions.ComboBoxIsNotEmpty(AvatarComboBox, "")
+                & (PasswordBox.Password != "")
+                & (BitrhDateDatePicker.SelectedDate.ToString() != "");
+            functions.MakeEmptyBoxRed(listTextBoxes);
+            functions.MakeRedPasswordboxesIfEmpty(listPasswordBoxes);
             if (ifBoxesNotEmpty)
             {
-                if (PasswordBox.Password == PasswordAgianTextBox.Password && BitrhDateDatePicker.SelectedDate.ToString() != "")
+                if (PasswordBox.Password == PasswordAgianTextBox.Password)
                 {
-                    if (userNotExists)
+                    
+                    PasswordBox.Background = Brushes.Transparent;
+                    PasswordAgianTextBox.Background = Brushes.Transparent;
+                    userExists = functions.DoesUserAlreadyExist(EmailTextBox.Text);
+                    if (!userExists)
                     {
                         var name = NameBox.Text;
                         var surname = SurnameTextBox.Text;
@@ -81,10 +92,16 @@ namespace FitnessForBusiness.Design
                 }
                 else
                 {
-                    MessageBox.Show("Enter full data");
+                    MessageBox.Show("Passwords don't match");
+                    PasswordBox.Background = Brushes.PaleVioletRed;
+                    PasswordAgianTextBox.Background = Brushes.PaleVioletRed;
                 }
             }
-            
+            else
+            {   
+                MessageBox.Show("Enter full data");
+            }
+
         }
 
         //      private void AddNewUser()

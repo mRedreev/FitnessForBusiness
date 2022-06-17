@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace FitnessForBusiness.Core
 {
@@ -97,6 +98,27 @@ namespace FitnessForBusiness.Core
             }
         }
 
+        public static void MakeEmptyBoxRed(List<TextBox> boxes)
+        {
+            foreach (TextBox box in boxes)
+            {
+                if (box.Text == "")
+                    box.Background = Brushes.PaleVioletRed;
+                else if (box.Text != "")
+                    box.Background = Brushes.Transparent;
+            }
+        }
+
+        public static void MakeRedPasswordboxesIfEmpty(List<PasswordBox> passwordBoxes)
+        {
+            foreach (PasswordBox box in passwordBoxes)
+            {
+                if (box.Password == "")
+                    box.Background = Brushes.PaleVioletRed;
+                else if (box.Password != "")
+                    box.Background = Brushes.Transparent;
+            }
+        }
 
     }
 }
