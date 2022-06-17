@@ -52,8 +52,7 @@ namespace FitnessForBusiness.Core
         public static User FindUser(string login)
         {
             IStorage storage = new Context();
-            var user = new User();
-            user = storage.GetUsers.Where(u => u.Login == login).First();
+            var user = storage.GetUsers.Where(u => u.Login == login).First();
             return user;
         }
 
@@ -75,6 +74,7 @@ namespace FitnessForBusiness.Core
             else return true;
         }
 
+        
         public static string GetImageSourceOfAvatar(int index)
         {
             if (index == 0) return "/Pictures/san.jpg";

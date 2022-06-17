@@ -1,4 +1,5 @@
-﻿using FitnessForBusiness.Core.Models;
+﻿using FitnessForBusiness.Core;
+using FitnessForBusiness.Core.Models;
 using FitnessForBusiness.Core.Storages;
 using System;
 using System.Collections.Generic;
@@ -31,29 +32,27 @@ namespace FitnessForBusiness.Design
 
         private void LogInButton_Click(object sender, RoutedEventArgs e)
         {
-
-            try
+            if (LogInUsernameBox.Text != "")
             {
-                var user = SearchUser();
-                TrainingCatalog trainingCatalog = new TrainingCatalog(user, _storage);
-                trainingCatalog.Show();
-                this.Close();
-
+                try
+                {
+                    User user = functions.FindUser(LogInUsernameBox.Text);
+                    if (user.Password != LogInPasswordBox.Password) MessageBox.Show("Wrong password");
+                    else if (LogInPasswordBox.Password == "") MessageBox.Show("Enter password");
+                    else
+                    {
+                        TrainingCatalog trainingCatalog = new TrainingCatalog(user, _storage);
+                        trainingCatalog.Show();
+                        this.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("User is not found");
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Incorrect Data");
-            }
-
+            else MessageBox.Show("Enter your email");
         }
-
-        private User SearchUser()
-        {
-            MessageBox.Show(LogInUsernameBox.Text);
-            User userNow = _storage.GetUsers.Where(u => u.Login.ToString() == LogInUsernameBox.Text.ToString()).Where(u => u.Password == LogInPasswordBox.Password).ToList()[0];
-            return userNow;
-        }
-
         private void GoBackButton_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();
