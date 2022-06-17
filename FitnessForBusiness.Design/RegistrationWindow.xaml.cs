@@ -44,14 +44,14 @@ namespace FitnessForBusiness.Design
 
         private void BitrhDateDatePicker_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            DateTime dt = (DateTime)this.BitrhDateDatePicker.SelectedDate;
-            MessageBox.Show(dt.ToString("dd-MM-yyyy"));
+            //DateTime dt = (DateTime)this.BitrhDateDatePicker.SelectedDate;
+            //MessageBox.Show(dt.ToString("dd-MM-yyyy"));
 
         }
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            bool userNotExists = false;
+            bool userExists;
             var listTextBoxes = new List<TextBox>(){NameBox, SurnameTextBox, EmailTextBox};
             var listPasswordBoxes = new List<PasswordBox> { PasswordBox, PasswordAgianTextBox };
             bool ifBoxesNotEmpty = functions.TextsBoxIsNotEmpty(listTextBoxes) & functions.ComboBoxIsNotEmpty(GoalComboBox, "Your Main Goal")
@@ -68,7 +68,8 @@ namespace FitnessForBusiness.Design
                     
                     PasswordBox.Background = Brushes.Transparent;
                     PasswordAgianTextBox.Background = Brushes.Transparent;
-                    if (userNotExists)
+                    userExists = functions.DoesUserAlreadyExist(EmailTextBox.Text);
+                    if (!userExists)
                     {
                         var name = NameBox.Text;
                         var surname = SurnameTextBox.Text;
