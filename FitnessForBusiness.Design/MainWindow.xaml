@@ -7,8 +7,12 @@
         mc:Ignorable="d"
         Height="600" Width="900"
         Title="Strong Partner"
-        Icon="Pictures/sLogo.png">
-    <Border>
+        Icon="Pictures/sLogo.png"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        ResizeMode="CanResizeWithGrip">
+
+    <Border CornerRadius="10">
         <Grid>
             <Grid.Background>
                 <ImageBrush ImageSource="/Pictures/background.jpg"/>

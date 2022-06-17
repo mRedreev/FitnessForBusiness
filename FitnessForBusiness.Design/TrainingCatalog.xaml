@@ -4,10 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitnessForBusiness.Design"
+        xmlns:viewModel="clr-namespace:FitnessForBusiness.Design.MVVM.ViewModel"
         mc:Ignorable="d"
         Title="TrainingCatalog" 
         Height="530" Width="920"
         Icon="Pictures/sLogo.png">
+
+    <Window.DataContext>
+        <viewModel:CurrentViewModel/>
+    </Window.DataContext>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>

@@ -33,15 +33,16 @@
                             HorizontalAlignment="Center">
                     <StackPanel Orientation="Vertical">
                         <TextBlock Text="My Email"
-                                       Foreground="#ab5eeb"
-                                       FontWeight="Medium"
-                                       FontSize="20"/>
+                                   Foreground="#ab5eeb"
+                                   FontWeight="Medium"
+                                   FontSize="20"
+                                   Margin="0,5,0,0"/>
 
                         <TextBlock Text="Password"
-                                       Foreground="#ab5eeb"
-                                       FontWeight="Medium"
-                                       FontSize="20"
-                                       Margin="0,12,0,0"/>
+                                   Foreground="#ab5eeb"
+                                   FontWeight="Medium"
+                                   FontSize="20"
+                                   Margin="0,15,0,0"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical"
@@ -51,11 +52,20 @@
                                  Width="150"
                                  Height="20"/>
 
+                        <Border Width="150"
+                                Margin="0,5,0,0"
+                                Style="{StaticResource Borderline}"/>
+
                         <PasswordBox Name="LogInPasswordBox"
                                      Margin="0,18,0,0"
                                      Style="{StaticResource PassBox}"
                                      Width="150"
                                      Height="20"/>
+
+                        <Border Width="150"
+                                Margin="0,0,0,0"
+                                Style="{StaticResource Borderline}"/>
+
                     </StackPanel>
                 </StackPanel>
 
@@ -103,8 +113,6 @@
                         Style="{StaticResource UIButton}"
                         Click="GoBackButton_Click"/>
             </StackPanel>
-
-            
         </Grid>
     </Border>
 </Window>
