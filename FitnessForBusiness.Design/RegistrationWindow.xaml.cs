@@ -51,23 +51,32 @@ namespace FitnessForBusiness.Design
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            bool userNotExist = true;
-            if (userNotExist)
+            bool userNotExists = false;
+            var listTextBoxes = new List<TextBox>(){NameBox, SurnameTextBox, EmailTextBox};
+            bool ifBoxesNotEmpty = functions.TextsBoxIsNotEmpty(listTextBoxes);
+            if (ifBoxesNotEmpty)
             {
-                var name = NameBox.Text;
-                var surname = SurnameTextBox.Text;
-                var login = EmailTextBox.Text;
-                var password = PasswordBox.Password;
-                var level = functions.CheckLevel(LeveloComboBox.Text);
-                var goal = functions.CheckGoal(GoalComboBox.Text);
-                var imageSource = functions.GetImageSourceOfAvatar(AvatarComboBox.SelectedIndex);
-                var born = DateTime.Parse(BitrhDateDatePicker.SelectedDate.ToString());
-                User newUser = new User(name, surname, imageSource, born, level, goal, login, password);
+                if (PasswordBox.Password == PasswordAgianTextBox.Password && BitrhDateDatePicker.SelectedDate.ToString() != "")
+                {
+                    if (userNotExists)
+                    {
+                        var name = NameBox.Text;
+                        var surname = SurnameTextBox.Text;
+                        var login = EmailTextBox.Text;
+                        var password = PasswordBox.Password;
+                        var level = functions.CheckLevel(LeveloComboBox.Text);
+                        var goal = functions.CheckGoal(GoalComboBox.Text);
+                        var imageSource = functions.GetImageSourceOfAvatar(AvatarComboBox.SelectedIndex);
+                        var born = DateTime.Parse(BitrhDateDatePicker.SelectedDate.ToString());
+                        User newUser = new User(name, surname, imageSource, born, level, goal, login, password);
+                    }
+                    else
+                    {
+                        MessageBox.Show("User with this email already exists");
+                    }
+                }
             }
-            else
-            {
-                MessageBox.Show("User with this email already exists");
-            }
+            
         }
 
         //      private void AddNewUser()
