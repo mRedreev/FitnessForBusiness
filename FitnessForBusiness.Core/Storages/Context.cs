@@ -31,5 +31,11 @@ namespace FitnessForBusiness.Core.Storages
         {
             this.SaveChanges();
         }
+
+        public void Registration(User user)
+        {
+            Users.Add(user);
+            Save();
+        }
     }
 }

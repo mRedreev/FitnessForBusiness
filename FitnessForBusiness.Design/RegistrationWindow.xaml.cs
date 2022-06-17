@@ -69,11 +69,17 @@ namespace FitnessForBusiness.Design
                         var imageSource = functions.GetImageSourceOfAvatar(AvatarComboBox.SelectedIndex);
                         var born = DateTime.Parse(BitrhDateDatePicker.SelectedDate.ToString());
                         User newUser = new User(name, surname, imageSource, born, level, goal, login, password);
+                        _storage.GetUsers.Add(newUser);
+                        _storage.Save();
                     }
                     else
                     {
                         MessageBox.Show("User with this email already exists");
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Enter full data");
                 }
             }
             

@@ -54,7 +54,10 @@ namespace FitnessForBusiness.Core.Storages
             }
         }
 
-
+        public void AddNewElement(T element)
+        {
+            _collection.Add(element);
+        }
         public List<T> GetCollection => _collection;
     }
 }
