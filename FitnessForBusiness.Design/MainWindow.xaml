@@ -178,6 +178,14 @@
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
+
+                    <Button Content="Тык"
+                            Name="Tick"
+                            Foreground="Black"
+                            FontSize="14"
+                            FontWeight="Medium"
+                            Click="Tick_Click"></Button>
+
                 </StackPanel>
             </StackPanel>
 

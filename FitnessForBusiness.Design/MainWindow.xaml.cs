@@ -162,6 +162,13 @@ namespace FitnessForBusiness.Design
             if (e.LeftButton == MouseButtonState.Pressed)
                 DragMove();
         }
+
+        private void Tick_Click(object sender, RoutedEventArgs e)
+        {
+            CurrentTrainingWindow currentTrainingWindow = new CurrentTrainingWindow();
+            currentTrainingWindow.Show();
+            this.Close();
+        }
     }
 }
 
