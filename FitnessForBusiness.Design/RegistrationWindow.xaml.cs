@@ -53,11 +53,21 @@ namespace FitnessForBusiness.Design
         {
             bool userNotExists = false;
             var listTextBoxes = new List<TextBox>(){NameBox, SurnameTextBox, EmailTextBox};
-            bool ifBoxesNotEmpty = functions.TextsBoxIsNotEmpty(listTextBoxes) & functions.ComboBoxIsNotEmpty(GoalComboBox, "Your Main Goal") & functions.ComboBoxIsNotEmpty(LeveloComboBox, "Your Level") & functions.ComboBoxIsNotEmpty(AvatarComboBox, "");
+            var listPasswordBoxes = new List<PasswordBox> { PasswordBox, PasswordAgianTextBox };
+            bool ifBoxesNotEmpty = functions.TextsBoxIsNotEmpty(listTextBoxes) & functions.ComboBoxIsNotEmpty(GoalComboBox, "Your Main Goal")
+                & functions.ComboBoxIsNotEmpty(LeveloComboBox, "Your Level")
+                & functions.ComboBoxIsNotEmpty(AvatarComboBox, "")
+                & (PasswordBox.Password != "")
+                & (BitrhDateDatePicker.SelectedDate.ToString() != "");
+            functions.MakeEmptyBoxRed(listTextBoxes);
+            functions.MakeRedPasswordboxesIfEmpty(listPasswordBoxes);
             if (ifBoxesNotEmpty)
             {
-                if (PasswordBox.Password == PasswordAgianTextBox.Password && BitrhDateDatePicker.SelectedDate.ToString() != "")
+                if (PasswordBox.Password == PasswordAgianTextBox.Password)
                 {
+                    
+                    PasswordBox.Background = Brushes.Transparent;
+                    PasswordAgianTextBox.Background = Brushes.Transparent;
                     if (userNotExists)
                     {
                         var name = NameBox.Text;
@@ -81,10 +91,16 @@ namespace FitnessForBusiness.Design
                 }
                 else
                 {
-                    MessageBox.Show("Enter full data");
+                    MessageBox.Show("Passwords don't match");
+                    PasswordBox.Background = Brushes.PaleVioletRed;
+                    PasswordAgianTextBox.Background = Brushes.PaleVioletRed;
                 }
             }
-            
+            else
+            {   
+                MessageBox.Show("Enter full data");
+            }
+
         }
 
         //      private void AddNewUser()
