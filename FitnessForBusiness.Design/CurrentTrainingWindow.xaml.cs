@@ -29,7 +29,10 @@ namespace FitnessForBusiness.Design
             _training = _storage.GetTrainings.First();
             InitializeComponent();
 
-            ExcercizesListBox.ItemsSource = _training.Excercises;
+            using (Context context = new Context())
+            {
+                ExcercizesListBox.ItemsSource = context.Trainings.Include("Excercises").First().Excercises;
+            }
         }
 
        
@@ -44,6 +47,8 @@ namespace FitnessForBusiness.Design
             var ExcercizeGifMediaElement = sender as MediaElement;
             var excercize = ExcercizeGifMediaElement.DataContext as Excercise;
             ExcercizeGifMediaElement.Source = new Uri(excercize.VideoSource);
+            ExcercizeGifMediaElement.UnloadedBehavior = MediaState.Manual;
+            ExcercizeGifMediaElement.Play();
         }
 
         private void ExcerciseNameTextBlock_Initialized(object sender, EventArgs e)

@@ -33,6 +33,8 @@ namespace FitnessForBusiness.Core.Models
             }
             Equipment = new Equipment(equipment);
         }
+        public Excercise()
+        { }
         public string ShowLevel()
         {
             return functions.NameOfLevel(Level);
