@@ -23,5 +23,15 @@ namespace FitnessForBusiness.Design
         {
             InitializeComponent();
         }
+
+        private void TextBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TrainingNameTextBox_Initialized(object sender, EventArgs e)
+        {
+
+        }
     }
 }

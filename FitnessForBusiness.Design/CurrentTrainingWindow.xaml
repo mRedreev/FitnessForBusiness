@@ -10,19 +10,23 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Pictures/background.jpg"/>
         </Grid.Background>
-        <ListBox Name="ExcercizesListBox" Margin="50 50 50 150">
+        <TextBlock x:Name="TrainingNameTextBox" Initialized="TrainingNameTextBox_Initialized" 
+         Foreground="#ab5eeb"
+         FontWeight="Medium"
+         FontSize="15"
+         Margin="0,5,0,0"/>
+        <ListBox Name="ExcercizesListBox"  Margin="50 70 50 50">
             <ListBox.Background>
-            <ImageBrush ImageSource="/Pictures/background.jpg"/>
-            </ListBox.Background> >
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
+                <ImageBrush ImageSource="/Pictures/background.jpg"/>
+            </ListBox.Background>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
                     <Grid>
                         <TextBlock Name="NameTextBlock" Grid.ColumnSpan="2" FontSize="26" FontFamily="Brush Script MT" Margin="10 7 0 3" Initialized="NameTextBlock_Initialized_1"></TextBlock>
                         <Button Width="150" Height="40" VerticalAlignment="Bottom" Margin="50" Content="Показать детали" FontFamily="Calibri" Background="Azure" Click="Button_Click"></Button>
-                        </Grid>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-
-        </Grid>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
 </Window>
