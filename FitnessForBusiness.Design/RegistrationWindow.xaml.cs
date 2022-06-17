@@ -69,8 +69,10 @@ namespace FitnessForBusiness.Design
                         var imageSource = functions.GetImageSourceOfAvatar(AvatarComboBox.SelectedIndex);
                         var born = DateTime.Parse(BitrhDateDatePicker.SelectedDate.ToString());
                         User newUser = new User(name, surname, imageSource, born, level, goal, login, password);
-                        _storage.GetUsers.Add(newUser);
-                        _storage.Save();
+                        _storage.Registration(newUser);
+                        TrainingCatalog trainingCatalog = new TrainingCatalog(newUser, _storage);
+                        trainingCatalog.Show();
+                        this.Close();
                     }
                     else
                     {
