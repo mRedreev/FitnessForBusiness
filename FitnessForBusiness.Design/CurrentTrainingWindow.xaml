@@ -26,8 +26,8 @@
                 <DataTemplate>
                     <Grid>
                         <StackPanel Orientation="Horizontal">
-                            <MediaElement x:Name="TrainingGif" 
-                                          Initialized="TrainingGif_Initialized"
+                            <MediaElement x:Name="ExcercizeGif" 
+                                          Initialized="ExcercizeGif_Initialized"
                                           Width="Auto"
                                           Height="Auto"/>
                             <StackPanel Orientation="Vertical" Margin="10, 0, 0, 0">
