@@ -1,4 +1,5 @@
 ﻿using FitnessForBusiness.Core.Models;
+using FitnessForBusiness.Core.Storages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,8 +22,13 @@ namespace FitnessForBusiness.Design
     public partial class ExcersisePlayWindow : Window
     {
         Training _training;
-        public ExcersisePlayWindow(String mediaElement)
+        User _user;
+        IStorage _storage;
+        public ExcersisePlayWindow(String mediaElement, Training training, User user, IStorage storage)
         {
+            _training = training;
+            _user = user;
+            _storage = storage;
             InitializeComponent();
             video.Source = new Uri(mediaElement);
             video.UnloadedBehavior = MediaState.Manual;
@@ -31,7 +37,7 @@ namespace FitnessForBusiness.Design
 
         private void playVideo_Click(object sender, RoutedEventArgs e)
         {
-            var trainingWindow = new CurrentTrainingWindow();
+            var trainingWindow = new CurrentTrainingWindow(_training, _user, _storage);
             trainingWindow.Show();
             this.Close();
         }
