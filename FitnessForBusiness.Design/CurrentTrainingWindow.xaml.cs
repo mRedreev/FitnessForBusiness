@@ -48,9 +48,7 @@ namespace FitnessForBusiness.Design
             var excercize = ExcercizeGifMediaElement.DataContext as Excercise;
             ExcercizeGifMediaElement.Source = new Uri(excercize.VideoSource);
             ExcercizeGifMediaElement.UnloadedBehavior = MediaState.Manual;
-            ExcercizeGifMediaElement.Play();
         }
-
         private void ExcerciseNameTextBlock_Initialized(object sender, EventArgs e)
         {
             var ExcercizeNameTextBlock = sender as TextBlock;
@@ -62,6 +60,16 @@ namespace FitnessForBusiness.Design
         {
             var LengthAndBreakTextBlock = sender as TextBlock;
             LengthAndBreakTextBlock.Text = $"Длительность упражнения: {_training.ExcerciseLength.ToString()}, перерыв: {_training.BreakLength.ToString()}";
+        }
+
+       
+        private void playVideo_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            var excercize = button.DataContext as Excercise;
+            var excersisePlay = new ExcersisePlayWindow(excercize.VideoSource);
+            excersisePlay.Show();
+            this.Close();
         }
     }
 }
