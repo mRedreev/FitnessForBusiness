@@ -59,5 +59,12 @@ namespace FitnessForBusiness.Design
                 Application.Current.MainWindow.WindowState = WindowState.Normal;
             }
         }
+
+        private void LogOutButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+        }
     }
 }

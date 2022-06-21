@@ -184,8 +184,7 @@
                             Foreground="Black"
                             FontSize="14"
                             FontWeight="Medium"
-                            Click="Tick_Click"></Button>
-
+                            Click="Tick_Click"/>
                 </StackPanel>
             </StackPanel>
 

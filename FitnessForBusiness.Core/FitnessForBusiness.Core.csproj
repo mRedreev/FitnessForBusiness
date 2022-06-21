@@ -71,7 +71,6 @@
     <Compile Include="Storages\Repository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Font\" />
     <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>

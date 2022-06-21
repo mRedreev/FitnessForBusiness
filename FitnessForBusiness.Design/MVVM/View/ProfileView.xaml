@@ -7,8 +7,44 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <StackPanel>
-        <TextBlock Text="Your Profile"
-                   Foreground="#ab5eeb"
-                   FontSize="22"/>
+        <StackPanel Margin="0,10,0,0"
+                    Orientation="Vertical"
+                    HorizontalAlignment="Left">
+            <Image Width="150"
+                   Height="150"
+                   Initialized="Image_Initialized"/>
+
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,5,0,0">
+                <TextBlock Name="NameTextBox"
+                           FontWeight="Medium"
+                           FontSize="16"
+                           Foreground="#ab5eeb"
+                           Initialized="NameTextBox_Initialized"/>
+
+                <TextBlock Name="SurnameTextBox"
+                           FontWeight="Medium"
+                           FontSize="16"
+                           Foreground="#ab5eeb"
+                           Margin="5,0,0,0"
+                           Initialized="SurnameTextBox_Initialized"/>
+            </StackPanel>
+
+            <TextBlock Name="LevelTextBox"
+                       FontWeight="Medium"
+                       FontSize="16"
+                       Foreground="#ab5eeb"
+                       Margin="0,10,0,0"
+                       Initialized="LevelTextBox_Initialized"/>
+
+            <TextBlock Name="GoalComboBox"
+                       FontSize="16"
+                       FontWeight="Medium"
+                       Foreground="#ab5eeb"
+                       Margin="0,10,0,0"
+                       Initialized="GoalComboBox_Initialized"/>
+        </StackPanel>
+
+
     </StackPanel>
 </UserControl>

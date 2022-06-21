@@ -24,5 +24,30 @@ namespace FitnessForBusiness.Design.MVVM.View
         {
             InitializeComponent();
         }
+
+        private void Image_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NameTextBox_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LevelTextBox_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SurnameTextBox_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GoalComboBox_Initialized(object sender, EventArgs e)
+        {
+
+        }
     }
 }

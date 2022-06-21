@@ -24,7 +24,7 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="200"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         
@@ -35,11 +35,7 @@
         <ContentControl Grid.Row="1"
                         Grid.Column="1"
                         Margin="12"
-                        Content="{Binding CurrentView}">
-            <ContentControl.Background>
-                <ImageBrush ImageSource="Pictures/background.jpg"/>
-            </ContentControl.Background>
-        </ContentControl>
+                        Content="{Binding CurrentView}"/>
 
         <Border Grid.ColumnSpan="2"
                 Grid.Row="0"
@@ -82,57 +78,44 @@
                     VerticalAlignment="Center"
                     Background="#ab5eeb"
                     Height="500">
-            
-            <Button Name="CatalogButton" 
-                    Height="50" Width="50" 
-                    VerticalAlignment="Center" 
-                    HorizontalAlignment="Center" 
-                    BorderBrush="Black" 
-                    Foreground="{x:Null}" 
-                    Style="{StaticResource UIButton}" 
-                    Margin="0,30,0,0" 
-                    FontWeight="Normal">
 
-                <Button.Background>
-                    <ImageBrush ImageSource="Pictures/Catalog2PngPicture.png"/>
-                </Button.Background>
-            </Button>
-            
-            <Button Name="SearchButton" Height="50" Width="50"   VerticalAlignment="Center" Foreground="{x:Null}" BorderBrush="{x:Null}" Style="{StaticResource UIButton}" Margin="0,50,0,0" RenderTransformOrigin="0.504,0.504" HorizontalAlignment="Center" >
+            <RadioButton Name="CatalogButton" 
+                         Height="50"
+                         FontWeight="Medium"
+                         Content="Explore Workouts"
+                         VerticalAlignment="Center"
+                         Style="{StaticResource MenuButtonTheme}"
+                         FontSize="18"
+                         Margin="0,30,0,0"
+                         IsChecked="True"
+                         Command="{Binding AllWorkoutsViewCommand}"/>
 
-                <Button.Background>
-                    <ImageBrush ImageSource="Pictures/FindExersicesPngPicture.png"/>
-                </Button.Background>
-            </Button>
-            
-            <Button Name="FavouritesButton" Grid.Row="2" Height="50" Width="50"   VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{x:Null}" BorderBrush="{x:Null}" Style="{StaticResource UIButton}" Margin="0,50,0,0">
+            <RadioButton Name="CompletedWorkoutsButton" 
+                         Height="50"
+                         FontWeight="Medium"
+                         Content="Completed Workouts"
+                         Style="{StaticResource MenuButtonTheme}" 
+                         FontSize="18"
+                         IsChecked="False"
+                         Command="{Binding CompletedWorkoutsCommand}"/>
 
-                <Button.Background>
-                    <ImageBrush ImageSource="Pictures/FavouritesPngPicture.png"/>
-                </Button.Background>
-            </Button>
-            
-            <Button Name="PlusButton" Grid.Row="3" Height="50" Width="50"   VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{x:Null}" BorderBrush="{x:Null}" Style="{StaticResource UIButton}" Margin="0,50,0,0">
+            <RadioButton Name="ProfileButton" 
+                         Height="50" 
+                         Style="{StaticResource MenuButtonTheme}" 
+                         Margin="0,280,0,0"
+                         FontWeight="Medium"
+                         FontSize="18"
+                         IsChecked="False"
+                         Content="My Profile"
+                         Command="{Binding ProfileViewCommand}"/>
 
-                <Button.Background>
-                    <ImageBrush ImageSource="Pictures/Plus2PngPicture.png"/>
-                </Button.Background>
-            </Button>
-            
-            <Button Name="ProfileButton" 
-                    Height="50" Width="50" 
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Center" 
-                    Foreground="{x:Null}" 
-                    BorderBrush="{x:Null}" 
-                    Style="{StaticResource UIButton}" 
-                    Margin="0,50,0,0"
-                    Command="{Binding ProfileViewCommand}">
-
-                <Button.Background>
-                    <ImageBrush ImageSource="Pictures/ProfilePngPicture.png"/>
-                </Button.Background>
-            </Button>
+            <Button Name="LogOutButton"
+                    Height="25"
+                    Width="120"
+                    Margin="60,10,0,0"
+                    Content="Log Out"
+                    Style="{StaticResource UIButton}"
+                    Click="LogOutButton_Click"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -18,6 +18,10 @@ namespace FitnessForBusiness.Design.MVVM.ViewModel
 
         public AllWorkoutsViewModel AllWorkoutsVM { get; set; }
 
+        public RelayCommand CompletedWorkoutsCommand { get; set; }
+
+        public CompletedWorkoutsViewModel CompletedWorkoutsVM { get; set; }
+
         private object _currentView;
 
         public object CurrentView
@@ -33,6 +37,8 @@ namespace FitnessForBusiness.Design.MVVM.ViewModel
         public CurrentViewModel()
         {
             ProfileVM = new ProfileViewModel();
+            AllWorkoutsVM = new AllWorkoutsViewModel();
+            CompletedWorkoutsVM = new CompletedWorkoutsViewModel();
 
             CurrentView = AllWorkoutsVM;
 
@@ -45,7 +51,11 @@ namespace FitnessForBusiness.Design.MVVM.ViewModel
             {
                 CurrentView = AllWorkoutsVM;
             });
-        }
 
+            CompletedWorkoutsCommand = new RelayCommand(o =>
+            {
+                CurrentView = CompletedWorkoutsVM;
+            });
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FitnessForBusiness.Design.MVVM.ViewModel
 {
-    internal class FavouriteWorkoutsViewModel
+    internal class CompletedWorkoutsViewModel
     {
     }
 }

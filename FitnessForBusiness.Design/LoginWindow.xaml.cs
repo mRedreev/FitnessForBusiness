@@ -46,7 +46,7 @@ namespace FitnessForBusiness.Design
                         this.Close();
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     MessageBox.Show("User is not found");
                 }
