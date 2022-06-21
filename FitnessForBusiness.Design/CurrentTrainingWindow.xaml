@@ -46,7 +46,10 @@
                                            Margin="0, 20, 0, 0"
                                            Initialized="LengthAndBreakTextBlock_Initialized"/>
                             </StackPanel>
-                            <Button x:Name="playVideo" Content="Do Excercise" Margin="20, 0, 0, 0" Click="playVideo_Click" Style="{StaticResource UIButton}"/>
+                            <Button x:Name="playVideo" Content="Do Excercise" 
+                                    Width="80"
+                                    Height="30"
+                                    Margin="20, 0, 0, 0" Click="playVideo_Click" Style="{StaticResource UIButton}"/>
                         </StackPanel>
                     </Grid>
                 </DataTemplate>

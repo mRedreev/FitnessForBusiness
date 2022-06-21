@@ -12,10 +12,9 @@
         </Grid.Background>
         <StackPanel Margin="30">
             <MediaElement x:Name="video" 
-             
-                                          Width="300"
-                                          Height="300"
-                                          LoadedBehavior="Play">
+                          Width="300"
+                          Height="300"
+                          LoadedBehavior="Play">
             </MediaElement>
             <Button x:Name="playVideo" Content="Exit" Margin="0, 20, 0, 0" Click="playVideo_Click"  Width="80" Style="{StaticResource UIButton}"/>
         </StackPanel>
