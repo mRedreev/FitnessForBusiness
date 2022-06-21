@@ -121,12 +121,30 @@
                 HorizontalAlignment="Right"
                 Margin="0,-55,0,0"/>
 
-        <ComboBox Name="GoalComboBox" Text="Your Main Goal" Height="30" Width="130" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Row="4" Grid.Column="1"  IsEditable="True" Background="#FF5748A8" BorderBrush="#FF030303" Foreground="Black" OpacityMask="Black" VerticalContentAlignment="Bottom">
+        <ComboBox Name="GoalComboBox" 
+                  Text="My Main Goal" 
+                  Height="30" Width="130" 
+                  VerticalAlignment="Bottom" 
+                  HorizontalAlignment="Left" 
+                  Grid.Row="4" Grid.Column="1"  
+                  IsEditable="True" 
+                  Background="#FF5748A8" 
+                  BorderBrush="#FF030303" 
+                  Foreground="Black" 
+                  OpacityMask="Black" 
+                  VerticalContentAlignment="Center">
             <TextBlock>Lose weight</TextBlock>
             <TextBlock>Maintain weight</TextBlock>
             <TextBlock>Gain muscle mass</TextBlock>
         </ComboBox>
-        <ComboBox Name="LeveloComboBox" Text="Your Level" Height="30" Width="130" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="4" Grid.Column="1"  IsEditable="True"  VerticalContentAlignment="Bottom">
+        <ComboBox Name="LeveloComboBox" 
+                  Text="My Level" 
+                  Height="30" Width="130" 
+                  VerticalAlignment="Bottom" 
+                  HorizontalAlignment="Right" 
+                  Grid.Row="4" Grid.Column="1" 
+                  IsEditable="True" 
+                  VerticalContentAlignment="Center">
             <TextBlock>Beginner</TextBlock>
             <TextBlock>Intermediate</TextBlock>
             <TextBlock>Advanced</TextBlock>
@@ -135,7 +153,11 @@
         <DatePicker x:Name="BitrhDateDatePicker" Grid.Row="4" Grid.Column="2"  VerticalAlignment="Center" Width="130"
                  Background="#FF353340" OverridesDefaultStyle="False" HorizontalAlignment="Center" MouseDoubleClick="BitrhDateDatePicker_MouseDoubleClick" SelectedDateFormat="Short" />
         <TextBlock Grid.Row="3" Grid.Column="2" VerticalAlignment="Center"  HorizontalAlignment="Center" Foreground="#FFCFCFCF" Margin="70,27,150,68"  Text="Birthdate"/>
-        <ComboBox Name ="AvatarComboBox"  Grid.Row="3" Grid.Column="2" Width="130" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <ComboBox Name ="AvatarComboBox" 
+                  Grid.Row="3" Grid.Column="2" 
+                  Width="130" Height="100" 
+                  VerticalAlignment="Center" 
+                  HorizontalAlignment="Center">
             <ComboBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/Pictures/san.jpg" Height="100"></Image>

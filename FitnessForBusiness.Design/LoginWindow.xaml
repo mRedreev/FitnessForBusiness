@@ -77,11 +77,12 @@
                             Margin="0,30,0,0"
                             HorizontalAlignment="Center">
                     <StackPanel Orientation="Vertical">
-                        <TextBlock Text="My Email"
-                                   Foreground="#ab5eeb"
-                                   FontWeight="Medium"
-                                   FontSize="20"
-                                   Margin="0,5,0,0"/>
+                        <Label Content="Login"
+                               HorizontalContentAlignment="Right"
+                               Foreground="#ab5eeb"
+                               FontWeight="Medium"
+                               FontSize="20"
+                               Margin="0,5,0,0"/>
 
                         <TextBlock Text="Password"
                                    Foreground="#ab5eeb"
@@ -91,7 +92,7 @@
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical"
-                                    Margin="10,5,0,0">
+                                    Margin="10,15,0,0">
                         <TextBox Name="LogInUsernameBox"
                                  Style="{StaticResource UITextBox}"
                                  Width="150"
