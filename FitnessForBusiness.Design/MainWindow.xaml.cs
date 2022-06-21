@@ -3,6 +3,7 @@ using FitnessForBusiness.Core.Models;
 using FitnessForBusiness.Core.Storages;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,9 +24,11 @@ namespace FitnessForBusiness.Design
     /// </summary>
     public partial class MainWindow : Window
     {
+        IStorage storage;
         
         public MainWindow()
         {
+            storage = new Context();
            
             InitializeComponent();
            // InitialTrainings();
@@ -163,12 +166,7 @@ namespace FitnessForBusiness.Design
                 DragMove();
         }
 
-        private void Tick_Click(object sender, RoutedEventArgs e)
-        {
-            CurrentTrainingWindow currentTrainingWindow = new CurrentTrainingWindow();
-            currentTrainingWindow.Show();
-            this.Close();
-        }
+      
     }
 }
 

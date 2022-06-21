@@ -21,17 +21,18 @@ namespace FitnessForBusiness.Design
     /// </summary>
     public partial class CurrentTrainingWindow : Window
     {
+        IStorage _storage;
         Training _training;
-
-        public CurrentTrainingWindow()
+        User _user;
+        public CurrentTrainingWindow(Training training, User user, IStorage storage)
         {
-            IStorage _storage = new Context();
-            _training = _storage.GetTrainings.First();
+            _training = training;
+            _user = user;
+            _storage = storage;
             InitializeComponent();
-
             using (Context context = new Context())
             {
-                ExcercizesListBox.ItemsSource = context.Trainings.Include("Excercises").First().Excercises;
+                ExcercizesListBox.ItemsSource = context.Trainings.Include("Excercises").ToList().Where(t => t.Id == training.Id).First().Excercises;
             }
         }
 
@@ -67,9 +68,14 @@ namespace FitnessForBusiness.Design
         {
             var button = sender as Button;
             var excercize = button.DataContext as Excercise;
-            var excersisePlay = new ExcersisePlayWindow(excercize.VideoSource);
+            var excersisePlay = new ExcersisePlayWindow(excercize.VideoSource, _training, _user, _storage);
             excersisePlay.Show();
             this.Close();
+        }
+
+        private void end_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

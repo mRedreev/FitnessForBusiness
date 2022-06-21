@@ -55,5 +55,6 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        <Button x:Name="end" Content="Completed" Click="end_Click" Width="80" Height="30" Style="{StaticResource UIButton}" VerticalAlignment="Bottom" Margin="10"/>
     </Grid>
 </Window>
