@@ -26,10 +26,14 @@
                 <DataTemplate>
                     <Grid>
                         <StackPanel Orientation="Horizontal">
-                            <MediaElement x:Name="ExcercizeGif" 
+                            <MediaElement x:Name="video" 
                                           Initialized="ExcercizeGif_Initialized"
-                                          Width="Auto"
-                                          Height="Auto"/>
+                                          Width="70"
+                                          Height="70"
+                                          LoadedBehavior="Play"                                        
+                                          >
+                            
+                            </MediaElement>
                             <StackPanel Orientation="Vertical" Margin="10, 0, 0, 0">
                                 <TextBlock x:Name="ExcerciseNameTextBlock"
                                            Foreground="AntiqueWhite"
@@ -42,6 +46,7 @@
                                            Margin="0, 20, 0, 0"
                                            Initialized="LengthAndBreakTextBlock_Initialized"/>
                             </StackPanel>
+                            <Button x:Name="playVideo" Content="Do Excercise" Margin="20, 0, 0, 0" Click="playVideo_Click" Style="{StaticResource UIButton}"/>
                         </StackPanel>
                     </Grid>
                 </DataTemplate>
