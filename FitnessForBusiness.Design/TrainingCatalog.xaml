@@ -4,7 +4,6 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitnessForBusiness.Design"
-        xmlns:viewModel="clr-namespace:FitnessForBusiness.Design.MVVM.ViewModel"
         mc:Ignorable="d" 
         Height="527" Width="920"
         MinHeight="527" MinWidth="920"
