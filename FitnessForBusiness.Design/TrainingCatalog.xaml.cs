@@ -22,14 +22,12 @@ namespace FitnessForBusiness.Design
     public partial class TrainingCatalog : Window
     {
         User _user;
-
-
-
         IStorage _storage;
-        public TrainingCatalog(User user, IStorage storage)
+        public TrainingCatalog(User user)
         {
+            _user = user;
+            
             InitializeComponent();
-            _storage = storage;
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
