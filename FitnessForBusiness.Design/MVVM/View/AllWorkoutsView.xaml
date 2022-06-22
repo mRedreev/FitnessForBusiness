@@ -5,54 +5,6 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FitnessForBusiness.Design.MVVM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="476" d:DesignWidth="696">
-    <ScrollViewer>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <TextBlock Name="TitleTextBlock" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="50">Тренировки</TextBlock>
-            <Grid Grid.Row="3" HorizontalAlignment="Center" Margin="50 50 50 100" VerticalAlignment="Bottom">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto">
-                    </ColumnDefinition>
-                </Grid.ColumnDefinitions>
-
-                <Button Grid.Column="0" Name="BackButton" HorizontalAlignment="Right" Margin="30 0" Padding="15 10" FontSize="18" Style="{StaticResource UIButton}" IsCancel="True" Width="195">Вернуться назад</Button>
-            </Grid>
-
-            <ListBox Visibility="Visible" Name="TrainigsListBox" Grid.Row="2" Margin="50 25 50 30" HorizontalAlignment="Center" VerticalContentAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Background="Transparent" BorderBrush="Transparent">
-                <ListBox.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <StackPanel Orientation="Horizontal">
-                            
-                        </StackPanel>
-                    </ItemsPanelTemplate>
-                </ListBox.ItemsPanel>
-            </ListBox>
-
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Grid Width="260"
-                          <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-
-                        <DockPanel Grid.Row="0" Margin="30 30 30 0" Width="200" Height="310" VerticalAlignment="Top" HorizontalAlignment="Stretch">
-                            <Border BorderThickness="1.2" BorderBrush="Black">
-                                <Image Name="TrainingImage" Stretch="UniformToFill" Source="/Pictures/san.jpg"></Image>
-                            </Border>
-                        </DockPanel>
-
-
-                        
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </Grid>
-    </ScrollViewer>
+             d:DesignHeight="450" d:DesignWidth="800">
+    
 </UserControl>
