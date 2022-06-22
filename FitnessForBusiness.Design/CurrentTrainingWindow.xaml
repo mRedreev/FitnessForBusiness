@@ -4,24 +4,75 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitnessForBusiness.Design"
-        mc:Ignorable="d"
-        Title="CurrentTrainingWindow" Height="450" Width="800">
+        mc:Ignorable="d" 
+        Height="487" Width="800"
+        MinHeight="450" MinWidth="800"
+        MaxHeight="600" MaxWidth="1050"
+        Icon="Pictures/sLogo.png"
+        WindowStyle="None"
+        ResizeMode="CanResizeWithGrip"
+        AllowsTransparency="True"
+        Background="Transparent">
     <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="27"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
         <Grid.Background>
             <ImageBrush ImageSource="/Pictures/background.jpg"/>
         </Grid.Background>
-        <TextBlock x:Name="TrainingNameTextBox" Initialized="TrainingNameTextBox_Initialized" 
-         Margin="40"
-         Foreground="#ab5eeb"
-         FontWeight="Medium"
-         FontSize="16"
-         HorizontalAlignment="Center"
-         VerticalAlignment="Top" 
-         />
-        <ListBox Name="ExcercizesListBox"  Margin="50,70,50,50">
-            <ListBox.Background>
-                <ImageBrush ImageSource="/Pictures/background.jpg"/>
-            </ListBox.Background>
+
+        <Border Grid.Row="0"
+                Background="#272535"
+                MouseDown="Border_MouseDown">
+
+            <Grid HorizontalAlignment="Stretch">
+
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="27"
+                           Height="27"
+                           Source="/Pictures/sLogo.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"/>
+
+                    <Label Content="Strong Partner"
+                           Foreground="Gray"
+                           FontWeight="Medium"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Right"
+                            Margin="0,0,5,0">
+                    <Button Style="{StaticResource MinimizeButton}"
+                            Margin="0,0,0,3.65"
+                            Name="MinimizeButton"
+                            Click="MinimizeButton_Click"/>
+                    <Button Style="{StaticResource WindowStateButton}"
+                            Name="WindowStateButton"
+                            Click="WindowStateButton_Click"/>
+                    <Button Style="{StaticResource ExitButton}"
+                            Name="ExitButton"
+                            Click="ExitButton_Click"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <TextBlock x:Name="TrainingNameTextBox" 
+                   Initialized="TrainingNameTextBox_Initialized" 
+                   Margin="40"
+                   Grid.Row="1"
+                   Foreground="#ab5eeb"
+                   FontWeight="Medium"
+                   FontSize="16"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Top"/>
+        
+        <ListBox Name="ExcercizesListBox" 
+                 Margin="50,70,50,50"
+                 Grid.Row="1"
+                 Background="Transparent">
+            
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -30,31 +81,43 @@
                                           Initialized="ExcercizeGif_Initialized"
                                           Width="70"
                                           Height="70"
-                                          LoadedBehavior="Play"                                        
-                                          >
+                                          LoadedBehavior="Play"/>
                             
-                            </MediaElement>
-                            <StackPanel Orientation="Vertical" Margin="10, 0, 0, 0">
+                            <StackPanel Orientation="Vertical" 
+                                        Margin="10, 0, 0, 0">
+                                
                                 <TextBlock x:Name="ExcerciseNameTextBlock"
                                            Foreground="AntiqueWhite"
                                            FontSize="14"
-                                           Initialized="ExcerciseNameTextBlock_Initialized"
-                                       />
+                                           Initialized="ExcerciseNameTextBlock_Initialized"/>
+
                                 <TextBlock x:Name="LengthAndBreakTextBlock"
-                                            Foreground="AntiqueWhite"
+                                           Foreground="AntiqueWhite"
                                            FontSize="14"
                                            Margin="0, 20, 0, 0"
                                            Initialized="LengthAndBreakTextBlock_Initialized"/>
                             </StackPanel>
-                            <Button x:Name="playVideo" Content="Do Excercise" 
+                            
+                            <Button x:Name="playVideo" 
+                                    Content="Do Excercise" 
                                     Width="80"
                                     Height="30"
-                                    Margin="20, 0, 0, 0" Click="playVideo_Click" Style="{StaticResource UIButton}"/>
+                                    Margin="20, 0, 0, 0" 
+                                    Click="playVideo_Click" 
+                                    Style="{StaticResource UIButton}"/>
                         </StackPanel>
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Button x:Name="end" Content="Completed" Click="end_Click" Width="80" Height="30" Style="{StaticResource UIButton}" VerticalAlignment="Bottom" Margin="10"/>
+        
+        <Button x:Name="end" 
+                Content="Completed"
+                Click="end_Click"
+                Grid.Row="1"
+                Width="80" Height="30" 
+                Style="{StaticResource UIButton}" 
+                VerticalAlignment="Bottom" 
+                Margin="10"/>
     </Grid>
 </Window>
