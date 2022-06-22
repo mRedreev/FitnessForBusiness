@@ -24,12 +24,12 @@ namespace FitnessForBusiness.Design
     /// </summary>
     public partial class MainWindow : Window
     {
-        IStorage storage;
+        IStorage _storage;
         
         public MainWindow()
         {
             // storage = new Context();
-            storage = new JSONStorage();
+            _storage = new JSONStorage();
            // InitialUsers2();
            // InitialTrainings2();
             InitializeComponent();
@@ -186,13 +186,13 @@ namespace FitnessForBusiness.Design
                 0.25,
                 2
                 );
-            storage.AddTraining(training1);
+            _storage.AddTraining(training1);
             MessageBox.Show("training1 saved");
         }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            LoginWindow loginWindow = new LoginWindow();
+            LoginWindow loginWindow = new LoginWindow(_storage);
 
             loginWindow.Show();
 
@@ -201,7 +201,7 @@ namespace FitnessForBusiness.Design
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            RegistrationWindow registrationWindow = new RegistrationWindow();
+            RegistrationWindow registrationWindow = new RegistrationWindow(_storage);
 
             registrationWindow.Show();
 

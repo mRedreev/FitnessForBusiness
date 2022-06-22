@@ -23,10 +23,10 @@ namespace FitnessForBusiness.Design
     public partial class LoginWindow : Window
     {
         IStorage _storage;
-        public LoginWindow()
+        public LoginWindow(IStorage storage)
         {
             InitializeComponent();
-            _storage = new Context();
+            _storage = storage;
         }
 
 
