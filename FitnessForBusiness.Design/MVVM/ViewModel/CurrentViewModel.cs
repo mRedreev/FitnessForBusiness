@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FitnessForBusiness.Core.Core;
+using FitnessForBusiness.Core.Models;
 
 namespace FitnessForBusiness.Design.MVVM.ViewModel
 {
@@ -23,6 +24,7 @@ namespace FitnessForBusiness.Design.MVVM.ViewModel
 
         private object _currentView;
 
+        public User _user;
         public object CurrentView
         {
             get { return _currentView; }
@@ -33,9 +35,10 @@ namespace FitnessForBusiness.Design.MVVM.ViewModel
             }
         }
 
-        public CurrentViewModel()
+        public CurrentViewModel(User user)
         {
-            ProfileVM = new ProfileViewModel();
+            _user = user;
+            ProfileVM = new ProfileViewModel(_user);
             AllWorkoutsVM = new AllWorkoutsViewModel();
             CompletedWorkoutsVM = new CompletedWorkoutsViewModel();
 

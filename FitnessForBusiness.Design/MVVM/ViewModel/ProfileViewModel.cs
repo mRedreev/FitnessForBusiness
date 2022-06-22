@@ -1,5 +1,6 @@
 ﻿using FitnessForBusiness.Core.Models;
 using FitnessForBusiness.Core.Storages;
+using FitnessForBusiness.Design.MVVM.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,10 +13,11 @@ namespace FitnessForBusiness.Design.MVVM.ViewModel
     {
         IStorage _storage;
         User _user;
-        public ProfileViewModel(IStorage storage, User user)
+        public ProfileViewModel(User user)
         {
-            _storage = storage;
+            
             _user = user;
+            var pofileView = new ProfileView(_user);
         }
     }
 }

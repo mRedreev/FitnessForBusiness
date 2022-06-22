@@ -25,31 +25,22 @@ namespace FitnessForBusiness.Design.MVVM.View
         IStorage _storage;
 
         User _user;
-        public ProfileView(IStorage storage, User user)
+        public ProfileView(User user)
         {
-            InitializeComponent();
-
-            _storage = storage;
             _user = user;
-        }
-
-        public ProfileView()
-        {
+            InitializeComponent();
 
         }
         private void Image_Initialized(object sender, EventArgs e)
         {
             var image = sender as Image;
 
-            BitmapImage myBitmapImage = new BitmapImage();
-
-            myBitmapImage.BeginInit();
-            myBitmapImage.UriSource = new Uri(_user.ImageSource);
         }
 
         private void NameTextBox_Initialized(object sender, EventArgs e)
         {
-            //имя текущего пользователя
+           var textNameBlock = sender as TextBlock;
+            textNameBlock.Text = _user.Name;
         }
 
         private void SurnameTextBox_Initialized(object sender, EventArgs e)

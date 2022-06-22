@@ -15,9 +15,7 @@
         AllowsTransparency="True"
         Background="Transparent">
 
-    <Window.DataContext>
-        <viewModel:CurrentViewModel/>
-    </Window.DataContext>
+
 
     <Grid>
         <Grid.RowDefinitions>
