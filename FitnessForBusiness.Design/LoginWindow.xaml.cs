@@ -41,7 +41,7 @@ namespace FitnessForBusiness.Design
                     else if (user.Password != LogInPasswordBox.Password) MessageBox.Show("Wrong password");
                     else
                     {
-                        TrainingCatalog trainingCatalog = new TrainingCatalog(user);
+                        TrainingCatalog trainingCatalog = new TrainingCatalog(user, _storage);
                         trainingCatalog.Show();
                         this.Close();
                     }
