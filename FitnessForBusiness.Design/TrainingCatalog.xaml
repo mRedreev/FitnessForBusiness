@@ -107,5 +107,149 @@
                     Style="{StaticResource UIButton}"
                     Click="LogOutButton_Click"/>
         </StackPanel>
+        <ScrollViewer>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Name="TitleTextBlock" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="50">Тренировки</TextBlock>
+                <Grid Grid.Row="3" HorizontalAlignment="Center" Margin="50 50 50 100" VerticalAlignment="Bottom">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto">
+                        </ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Grid.Column="0" Name="BackButton" HorizontalAlignment="Right" Margin="30 0" Padding="15 10" FontSize="18" Style="{StaticResource UIButton}" IsCancel="True" Width="195">Вернуться назад</Button>
+                </Grid>
+
+                <ListBox Visibility="Visible" Name="TrainigsListBox" Grid.Row="2" Margin="50 25 50 30" HorizontalAlignment="Center" VerticalContentAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.CanContentScroll="False" Background="Transparent" BorderBrush="Transparent" MouseLeave="TrainigsListBox_MouseLeave" SelectionChanged="TrainigsListBox_SelectionChanged">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal"></StackPanel>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+
+
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Width="260">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <DockPanel Grid.Row="0" Margin="30 30 30 0" Width="200" Height="310" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+                                    <Border BorderThickness="1.2" BorderBrush="Black">
+                                        <Image Name="TrainingImage" Stretch="UniformToFill" Source="/Pictures/san.jpg"></Image>
+                                    </Border>
+                                </DockPanel>
+
+
+
+
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+                <ListBox Visibility="Collapsed" Name="TrainingTypeListBox" Grid.Row="2" Margin="50 0 50 15" HorizontalAlignment="Center" HorizontalContentAlignment="Left" ScrollViewer.CanContentScroll="False" Background="Transparent" BorderBrush="Transparent">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="200"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Margin="0 20 30 0" Name="LevelTextBlock" TextWrapping="Wrap" FontFamily="Calibri" FontSize="22" Initialized="LevelTextBlock_Initialized"></TextBlock>
+                                <TextBlock Margin="0 8 30 25" Grid.Row="1" Name="NameTextBlock" TextWrapping="Wrap" FontFamily="Segoe Print" FontSize="16" Initialized="NameTextBlock_Initialized"></TextBlock>
+
+                                <ListBox Name="Trainings2ListBox" Grid.Column="1" Grid.RowSpan="2" Margin="10 10 0 25" HorizontalContentAlignment="Left" ScrollViewer.CanContentScroll="False" Background="Transparent" BorderBrush="Transparent" Initialized="Trainings2ListBox_Initialized">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                    <ColumnDefinition/>
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock Margin="10 10 30 25" Name="DateTextBlock" FontFamily="Calibri" FontSize="19" Initialized="DateTextBlock_Initialized"></TextBlock>
+
+                                                <ListBox Name="ListBox" Grid.Column="1" Margin="10 0 0 10" VerticalContentAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.CanContentScroll="False" Background="Transparent" BorderBrush="Transparent" Style="{DynamicResource TransparentListBox}" PreviewMouseWheel="ListBox_PreviewMouseWheel" Initialized="TimeSlotsListBox_Initialized">
+                                                    <ListBox.ItemsPanel>
+                                                        <ItemsPanelTemplate>
+                                                            <StackPanel Orientation="Horizontal"></StackPanel>
+                                                        </ItemsPanelTemplate>
+                                                    </ListBox.ItemsPanel>
+
+                                                    <ListBox.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <Grid>
+                                                                <Grid.RowDefinitions>
+                                                                    <RowDefinition Height="Auto"/>
+                                                                    <RowDefinition Height="Auto"/>
+                                                                </Grid.RowDefinitions>
+
+                                                                <Button Name="Begin" Margin="15 0 15 10" Padding="12 8" FontSize="16" Style="{StaticResource UIButton}" Initialized="Begin_Initialized"  Click="Begin_Click"></Button>
+
+                                                                <TextBlock Grid.Row="1" Margin="10 0 10 0" Name="ExerciseAmountTextBlock" HorizontalAlignment="Center" FontSize="18" Initialized="ExerciseAmountTextBlock_Initialized"></TextBlock>
+                                                                <TextBlock Grid.Row="1" Margin="10 20 10 0" Name="LevelTextBlock" HorizontalAlignment="Center" FontSize="18" Initialized="LevelTextBlock_Initialized_1"></TextBlock>
+
+                                                            </Grid>
+                                                        </DataTemplate>
+                                                    </ListBox.ItemTemplate>
+                                                </ListBox>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <Grid Grid.Row="1" Margin="100 30" Name="TraineGrid" MaxWidth="1425" Visibility="Collapsed">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <DockPanel Margin="0 0 25 0" Width="500" Height="300" VerticalAlignment="Top" HorizontalAlignment="Center">
+                        <Border BorderThickness="1.2" BorderBrush="#FF715C4E">
+                            <Image Name="FilmPosterHorizontalImage" Stretch="UniformToFill" Source="/Pictures/san.jpg"></Image>
+                        </Border>
+                    </DockPanel>
+
+                    <Grid Grid.Column="1" Margin="25 0 0 0" MaxWidth="650" HorizontalAlignment="Center">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+
+
+
+                    </Grid>
+
+                    <TextBlock Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Calibri" FontSize="25" Margin="0 80 0 0">Виды тренировок</TextBlock>
+                </Grid>
+            </Grid>
+        </ScrollViewer>
+
     </Grid>
 </Window>
