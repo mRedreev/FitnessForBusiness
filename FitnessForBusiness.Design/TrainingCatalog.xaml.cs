@@ -1,5 +1,6 @@
 ﻿using FitnessForBusiness.Core.Models;
 using FitnessForBusiness.Core.Storages;
+using FitnessForBusiness.Design.MVVM.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,14 +23,12 @@ namespace FitnessForBusiness.Design
     public partial class TrainingCatalog : Window
     {
         User _user;
-
-
-
         IStorage _storage;
-        public TrainingCatalog(User user, IStorage storage)
+        public TrainingCatalog(User user)
         {
+            _user = user;
+            DataContext = new CurrentViewModel(_user);
             InitializeComponent();
-            _storage = storage;
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
