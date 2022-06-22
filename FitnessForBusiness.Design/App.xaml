@@ -19,17 +19,6 @@
                 <ResourceDictionary Source="Theme/RadioButtonTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
-            <DataTemplate DataType="{x:Type viewModel:ProfileViewModel}">
-                <view:ProfileView/>
-            </DataTemplate>
-
-            <DataTemplate DataType="{x:Type viewModel:AllWorkoutsViewModel}">
-                <view:AllWorkoutsView/>
-            </DataTemplate>
-
-            <DataTemplate DataType="{x:Type viewModel:CompletedWorkoutsViewModel}">
-                <view:CompletedWorkoutsView/>
-            </DataTemplate>
 
 
 

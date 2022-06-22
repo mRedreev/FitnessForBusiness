@@ -1,6 +1,5 @@
 ﻿using FitnessForBusiness.Core.Models;
 using FitnessForBusiness.Core.Storages;
-using FitnessForBusiness.Design.MVVM.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +26,7 @@ namespace FitnessForBusiness.Design
         public TrainingCatalog(User user)
         {
             _user = user;
-            DataContext = new CurrentViewModel(_user);
+            
             InitializeComponent();
         }
 
