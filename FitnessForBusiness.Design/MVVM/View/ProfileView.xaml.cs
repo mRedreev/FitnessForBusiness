@@ -33,6 +33,10 @@ namespace FitnessForBusiness.Design.MVVM.View
             _user = user;
         }
 
+        public ProfileView()
+        {
+
+        }
         private void Image_Initialized(object sender, EventArgs e)
         {
             var image = sender as Image;
