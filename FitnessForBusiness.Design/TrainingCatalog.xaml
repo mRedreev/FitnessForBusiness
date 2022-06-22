@@ -7,6 +7,8 @@
         xmlns:viewModel="clr-namespace:FitnessForBusiness.Design.MVVM.ViewModel"
         mc:Ignorable="d" 
         Height="527" Width="920"
+        MinHeight="527" MinWidth="920"
+        MaxHeight="700" MaxWidth="1200"
         Icon="Pictures/sLogo.png"
         WindowStyle="None"
         ResizeMode="CanResizeWithGrip"
@@ -70,7 +72,6 @@
                 </StackPanel>
             </Grid>
         </Border>
-
 
         <StackPanel Name="IconsStackPanel" 
                     Grid.Row="1"

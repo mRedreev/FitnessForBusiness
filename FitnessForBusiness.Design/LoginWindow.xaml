@@ -6,6 +6,8 @@
         xmlns:local="clr-namespace:FitnessForBusiness.Design"
         mc:Ignorable="d"
         Height="627" Width="450"
+        MinHeight="627" MinWidth="450"
+        MaxHeight="800" MaxWidth="600"
         Icon="Pictures/sLogo.png"
         WindowStyle="None"
         ResizeMode="CanResizeWithGrip"
