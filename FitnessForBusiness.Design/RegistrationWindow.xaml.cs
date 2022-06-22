@@ -24,9 +24,9 @@ namespace FitnessForBusiness.Design
     public partial class RegistrationWindow : Window
     {
         IStorage _storage;
-        public RegistrationWindow()
+        public RegistrationWindow(IStorage storage)
         {
-            _storage = new Context();
+            _storage = storage;
             InitializeComponent();
         }
 
