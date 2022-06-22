@@ -24,9 +24,9 @@ namespace FitnessForBusiness.Design
     public partial class RegistrationWindow : Window
     {
         IStorage _storage;
-        public RegistrationWindow()
+        public RegistrationWindow(IStorage storage)
         {
-            _storage = new Context();
+            _storage = storage;
             InitializeComponent();
         }
 
@@ -63,7 +63,7 @@ namespace FitnessForBusiness.Design
                     
                     PasswordBox.Background = Brushes.Transparent;
                     PasswordAgianTextBox.Background = Brushes.Transparent;
-                    userExists = functions.DoesUserAlreadyExist(EmailTextBox.Text);
+                    userExists = functions.DoesUserAlreadyExistJSON(_storage, EmailTextBox.Text);
                     if (!userExists)
                     {
                         var name = NameBox.Text;

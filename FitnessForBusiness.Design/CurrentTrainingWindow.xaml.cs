@@ -30,10 +30,11 @@ namespace FitnessForBusiness.Design
             _user = user;
             _storage = storage;
             InitializeComponent();
-            using (Context context = new Context())
-            {
-                ExcercizesListBox.ItemsSource = context.Trainings.Include("Excercises").ToList().Where(t => t.Id == training.Id).First().Excercises;
-            }
+            ExcercizesListBox.ItemsSource = _storage.GetTrainings.Where(t => t.Id == training.Id).First().Excercises;
+            //using (Context context = new Context())
+            //{
+            //    ExcercizesListBox.ItemsSource = context.Trainings.Include("Excercises").ToList().Where(t => t.Id == training.Id).First().Excercises;
+            //}
         }
 
        
@@ -76,6 +77,34 @@ namespace FitnessForBusiness.Design
         private void end_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void WindowStateButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (Application.Current.MainWindow.WindowState != WindowState.Minimized)
+            {
+                Application.Current.MainWindow.WindowState = WindowState.Maximized;
+            }
+            else
+            {
+                Application.Current.MainWindow.WindowState = WindowState.Normal;
+            }
+        }
+
+        private void MinimizeButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow.WindowState = WindowState.Minimized;
+        }
+
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+                DragMove();
         }
     }
 }

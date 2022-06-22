@@ -24,16 +24,19 @@ namespace FitnessForBusiness.Design
     /// </summary>
     public partial class MainWindow : Window
     {
-        IStorage storage;
+        IStorage _storage;
         
         public MainWindow()
         {
-            storage = new Context();
-           
+            // storage = new Context();
+            _storage = new JSONStorage();
+           // InitialUsers2();
+           // InitialTrainings2();
             InitializeComponent();
+            
            // InitialTrainings();
            // InitialUsers();
-            
+
 
             /*using (Context context = new Context())
             {
@@ -62,6 +65,23 @@ namespace FitnessForBusiness.Design
                 context.SaveChanges();
                 MessageBox.Show("user1 saved");
             }
+        }
+
+        private void InitialUsers2()
+        {
+            
+                User user1 = new User(
+                    "Mikhail",
+                    "Redreev",
+                   ".. / .. / Users /user1.jpg",
+                    DateTime.Parse("30.11.2002"),
+                    true,
+                    true,
+                    "MRedreev",
+                    "Misha2002"
+                    );
+            _storage.Registration(user1);
+                MessageBox.Show("user1 saved");
         }
 
         private void InitialTrainings()
@@ -119,9 +139,60 @@ namespace FitnessForBusiness.Design
             }
         }
 
+        private void InitialTrainings2()
+        {
+            Excercise excercise1 = new Excercise
+            (
+                "Air bike",
+                "http://d205bpvrqc9yn1.cloudfront.net/0003.gif",
+                null,
+                new List<string>() { "waist", "abs" },
+                "mat"
+            );
+
+            Excercise excercise2 = new Excercise
+            (
+                "All fours squad stretch",
+                "http://d205bpvrqc9yn1.cloudfront.net/1512.gif",
+                null,
+                new List<string>() { "quads" },
+                "mat"
+            );
+
+            Excercise excercise3 = new Excercise
+            (
+                "ankle circles",
+                "http://d205bpvrqc9yn1.cloudfront.net/1368.gif",
+                null,
+                new List<string>() { "calves" },
+                "mat"
+            );
+
+            Excercise excercise4 = new Excercise
+            (
+                "astride jumps",
+                "http://d205bpvrqc9yn1.cloudfront.net/3220.gif",
+                null,
+                new List<string>() { "cardiovascular system" },
+                "mat"
+            );
+
+            Training training1 = new Training(
+                "Short warm-up",
+                "warm-up",
+                null,
+                new List<Excercise> { excercise1, excercise2, excercise3, excercise4 },
+                0.5,
+                0.25,
+                2
+                );
+            _storage.AddTraining(training1);
+            MessageBox.Show("training1 saved");
+        }
+
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            LoginWindow loginWindow = new LoginWindow();
+            LoginWindow loginWindow = new LoginWindow(_storage);
 
             loginWindow.Show();
 
@@ -130,7 +201,7 @@ namespace FitnessForBusiness.Design
 
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            RegistrationWindow registrationWindow = new RegistrationWindow();
+            RegistrationWindow registrationWindow = new RegistrationWindow(_storage);
 
             registrationWindow.Show();
 
