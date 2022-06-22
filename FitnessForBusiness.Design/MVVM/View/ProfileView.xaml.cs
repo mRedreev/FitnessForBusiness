@@ -22,14 +22,25 @@ namespace FitnessForBusiness.Design.MVVM.View
     /// </summary>
     public partial class ProfileView : UserControl
     {
-        public ProfileView()
+        IStorage _storage;
+
+        User _user;
+        public ProfileView(IStorage storage, User user)
         {
             InitializeComponent();
+
+            _storage = storage;
+            _user = user;
         }
 
         private void Image_Initialized(object sender, EventArgs e)
         {
-            //тут должен быть аватар профиля текущего пользователя
+            var image = sender as Image;
+
+            BitmapImage myBitmapImage = new BitmapImage();
+
+            myBitmapImage.BeginInit();
+            myBitmapImage.UriSource = new Uri(_user.ImageSource);
         }
 
         private void NameTextBox_Initialized(object sender, EventArgs e)
