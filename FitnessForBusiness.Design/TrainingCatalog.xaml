@@ -15,10 +15,6 @@
         AllowsTransparency="True"
         Background="Transparent">
 
-    <Window.DataContext>
-        <viewModel:CurrentViewModel/>
-    </Window.DataContext>
-
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="27"/>
@@ -29,15 +25,10 @@
             <ColumnDefinition Width="200"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        
+
         <Grid.Background>
             <ImageBrush ImageSource="Pictures/background.jpg"/>
         </Grid.Background>
-
-        <ContentControl Grid.Row="1"
-                        Grid.Column="1"
-                        Margin="12"
-                        Content="{Binding CurrentView}"/>
 
         <Border Grid.ColumnSpan="2"
                 Grid.Row="0"
@@ -88,8 +79,7 @@
                          Style="{StaticResource MenuButtonTheme}"
                          FontSize="18"
                          Margin="0,30,0,0"
-                         IsChecked="True"
-                         Command="{Binding AllWorkoutsViewCommand}"/>
+                         IsChecked="True"/>
 
             <RadioButton Name="CompletedWorkoutsButton" 
                          Height="50"
@@ -97,8 +87,7 @@
                          Content="Completed Workouts"
                          Style="{StaticResource MenuButtonTheme}" 
                          FontSize="18"
-                         IsChecked="False"
-                         Command="{Binding CompletedWorkoutsCommand}"/>
+                         IsChecked="False"/>
 
             <RadioButton Name="ProfileButton" 
                          Height="50" 
@@ -107,8 +96,7 @@
                          FontWeight="Medium"
                          FontSize="18"
                          IsChecked="False"
-                         Content="My Profile"
-                         Command="{Binding ProfileViewCommand}"/>
+                         Content="My Profile"/>
 
             <Button Name="LogOutButton"
                     Height="25"
