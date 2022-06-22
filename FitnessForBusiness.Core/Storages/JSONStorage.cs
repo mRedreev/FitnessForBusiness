@@ -11,11 +11,12 @@ namespace FitnessForBusiness.Core.Storages
     {
         readonly Repository<User> _users;
         readonly Repository<Training> _trainings;
-
+        private const string filePath1 = "../../../FitnessForBusiness.Core/Data/users.json";
+        private const string filePath2 = "../../../FitnessForBusiness.Core/Data/trainings.json";
         public JSONStorage()
         {
-            _users = new Repository<User>("user.json");
-            _trainings = new Repository<Training>("training.json");
+            _users = new Repository<User>(filePath1);
+            _trainings = new Repository<Training>(filePath2);
         }
 
 
@@ -32,6 +33,12 @@ namespace FitnessForBusiness.Core.Storages
         public void Registration(User user)
         {
             _users.AddNewElement(user);
+            Save();
+        }
+
+        public void AddTraining(Training training)
+        {
+            _trainings.AddNewElement(training);
             Save();
         }
     }

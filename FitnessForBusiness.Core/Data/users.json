@@ -1,0 +1,15 @@
+[
+  {
+    "Id": 0,
+    "Name": "Mikhail",
+    "Surname": "Redreev",
+    "ImageSource": ".. / .. / Users /user1.jpg",
+    "Age": 19,
+    "Level": true,
+    "Goal": true,
+    "Login": "MRedreev",
+    "Password": "Misha2002",
+    "Born": "2002-11-30T00:00:00",
+    "CompletedTrainingsId": []
+  }
+]

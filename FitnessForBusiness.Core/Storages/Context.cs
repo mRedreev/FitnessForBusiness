@@ -37,5 +37,11 @@ namespace FitnessForBusiness.Core.Storages
             Users.Add(user);
             Save();
         }
+
+        public void AddTraining(Training training)
+        {
+            Trainings.Add(training);
+            Save();
+        }
     }
 }
