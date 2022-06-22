@@ -6,6 +6,8 @@
         xmlns:local="clr-namespace:FitnessForBusiness.Design"
         mc:Ignorable="d"
         Height="627" Width="900"
+        MinHeight="627" MinWidth="900"
+        MaxHeight="700" MaxWidth="1200"
         Icon="Pictures/sLogo.png"
         WindowStyle="None"
         AllowsTransparency="True"
@@ -64,7 +66,6 @@
                     </StackPanel>
                 </Grid>
             </Border>
-            
 
             <StackPanel VerticalAlignment="Center"
                         HorizontalAlignment="Center"
