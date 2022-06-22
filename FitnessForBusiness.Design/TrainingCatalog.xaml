@@ -182,9 +182,9 @@
                                                     <ColumnDefinition Width="Auto"/>
                                                     <ColumnDefinition/>
                                                 </Grid.ColumnDefinitions>
-                                                <TextBlock Margin="10 10 30 25" Name="DateTextBlock" FontFamily="Calibri" FontSize="19" Initialized="DateTextBlock_Initialized"></TextBlock>
+                                                <TextBlock Margin="10 10 30 25" Name="LevelTextBlock" FontFamily="Calibri" FontSize="19" Initialized="LevelTextBlock_Initialized_2"></TextBlock>
 
-                                                <ListBox Name="ListBox" Grid.Column="1" Margin="10 0 0 10" VerticalContentAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.CanContentScroll="False" Background="Transparent" BorderBrush="Transparent" Style="{DynamicResource TransparentListBox}" PreviewMouseWheel="ListBox_PreviewMouseWheel" Initialized="TimeSlotsListBox_Initialized">
+                                                <ListBox Name="ExercisesListBox" Grid.Column="1" Margin="10 0 0 10" VerticalContentAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.CanContentScroll="False" Background="Transparent" BorderBrush="Transparent" PreviewMouseWheel="ExercisesListBox_PreviewMouseWheel" Initialized="ExercisesListBox_Initialized">
                                                     <ListBox.ItemsPanel>
                                                         <ItemsPanelTemplate>
                                                             <StackPanel Orientation="Horizontal"></StackPanel>

@@ -114,5 +114,25 @@ namespace FitnessForBusiness.Design
         {
 
         }
+
+        private void ListBox_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+
+        }
+
+        private void ExercisesListBox_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+
+        }
+
+        private void ExercisesListBox_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LevelTextBlock_Initialized_2(object sender, EventArgs e)
+        {
+
+        }
     }
 }
