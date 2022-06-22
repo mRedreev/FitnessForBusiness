@@ -80,7 +80,7 @@ namespace FitnessForBusiness.Design
                     "MRedreev",
                     "Misha2002"
                     );
-            storage.Registration(user1);
+            _storage.Registration(user1);
                 MessageBox.Show("user1 saved");
         }
 
