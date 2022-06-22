@@ -57,6 +57,12 @@ namespace FitnessForBusiness.Core
             return user;
         }
 
+        public static User FindUserJSON(IStorage storage, string login)
+        {
+            var user = storage.GetUsers.Where(u => u.Login == login).First();
+            return user;
+        }
+
         public static bool TextsBoxIsNotEmpty(List<TextBox> textBoxes)
         {
 
@@ -90,6 +96,19 @@ namespace FitnessForBusiness.Core
             try
             {
                 var user = FindUser(login);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public static bool DoesUserAlreadyExistJSON(IStorage storage, string login)
+        {
+            try
+            {
+                var user = FindUserJSON(storage, login);
                 return true;
             }
             catch (Exception)

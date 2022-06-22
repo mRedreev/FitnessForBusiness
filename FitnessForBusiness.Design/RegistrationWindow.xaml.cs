@@ -63,7 +63,7 @@ namespace FitnessForBusiness.Design
                     
                     PasswordBox.Background = Brushes.Transparent;
                     PasswordAgianTextBox.Background = Brushes.Transparent;
-                    userExists = functions.DoesUserAlreadyExist(EmailTextBox.Text);
+                    userExists = functions.DoesUserAlreadyExistJSON(_storage, EmailTextBox.Text);
                     if (!userExists)
                     {
                         var name = NameBox.Text;

@@ -24,5 +24,18 @@
     "Password": "1122",
     "Born": "1995-02-01T00:00:00",
     "CompletedTrainingsId": []
+  },
+  {
+    "Id": 0,
+    "Name": "juu",
+    "Surname": "Skaa",
+    "ImageSource": "/Pictures/san.jpg",
+    "Age": 3,
+    "Level": null,
+    "Goal": false,
+    "Login": "gfff",
+    "Password": "111",
+    "Born": "2019-01-29T00:00:00",
+    "CompletedTrainingsId": []
   }
 ]

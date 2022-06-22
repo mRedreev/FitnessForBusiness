@@ -36,7 +36,7 @@ namespace FitnessForBusiness.Design
             {
                 try
                 {
-                    User user = functions.FindUser(LogInUsernameBox.Text);
+                    User user = functions.FindUserJSON(_storage, LogInUsernameBox.Text);
                     if (LogInPasswordBox.Password == "") MessageBox.Show("Enter password");
                     else if (user.Password != LogInPasswordBox.Password) MessageBox.Show("Wrong password");
                     else
