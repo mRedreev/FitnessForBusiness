@@ -11,5 +11,18 @@
     "Password": "Misha2002",
     "Born": "2002-11-30T00:00:00",
     "CompletedTrainingsId": []
+  },
+  {
+    "Id": 0,
+    "Name": "Iuliia",
+    "Surname": "Abramkich",
+    "ImageSource": "/Pictures/suboch.jpg",
+    "Age": 27,
+    "Level": false,
+    "Goal": false,
+    "Login": "sobaka11",
+    "Password": "1122",
+    "Born": "1995-02-01T00:00:00",
+    "CompletedTrainingsId": []
   }
 ]
