@@ -87,6 +87,9 @@
     <Compile Include="MVVM\View\AllWorkoutsView.xaml.cs">
       <DependentUpon>AllWorkoutsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MVVM\View\CompletedWorkoutsView.xaml.cs">
+      <DependentUpon>CompletedWorkoutsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\View\ProfileView.xaml.cs">
       <DependentUpon>ProfileView.xaml</DependentUpon>
     </Compile>
@@ -121,6 +124,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MVVM\View\AllWorkoutsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\CompletedWorkoutsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

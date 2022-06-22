@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace FitnessForBusiness.Design.MVVM.View
 {
     /// <summary>
-    /// Логика взаимодействия для FavouriteWorkoutsView.xaml
+    /// Логика взаимодействия для CompletedWorkoutsView.xaml
     /// </summary>
-    public partial class FavouriteWorkoutsView : UserControl
+    public partial class CompletedWorkoutsView : UserControl
     {
-        public FavouriteWorkoutsView()
+        public CompletedWorkoutsView()
         {
             InitializeComponent();
         }

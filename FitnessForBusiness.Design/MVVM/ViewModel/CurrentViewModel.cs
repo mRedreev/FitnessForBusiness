@@ -9,7 +9,6 @@ namespace FitnessForBusiness.Design.MVVM.ViewModel
 {
     internal class CurrentViewModel : ObservableObject
     {
-
         public RelayCommand ProfileViewCommand { get; set; }
 
         public ProfileViewModel ProfileVM { get; set; }
