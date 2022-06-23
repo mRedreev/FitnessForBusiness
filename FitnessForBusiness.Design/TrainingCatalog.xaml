@@ -184,12 +184,12 @@
                                    TextWrapping="Wrap" 
                                    FontFamily="Calibri" 
                                    FontSize="22"></TextBlock>
-                    <ListBox Name="BeginnerTrainingsListBox"
+                        <ListBox Name="BeginnerTrainingsListBox"
                                  Margin="20 0 0 0" 
                                  HorizontalContentAlignment="Left"
                                  Background="Transparent"
-                                 BorderBrush="Transparent" 
-                        <ListBox.ItemTemplate>
+                                 BorderBrush="Transparent">
+                            <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <Grid>
                                     <StackPanel Orientation="Horizontal">
