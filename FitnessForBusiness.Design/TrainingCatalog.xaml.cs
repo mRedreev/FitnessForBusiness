@@ -69,62 +69,11 @@ namespace FitnessForBusiness.Design
             this.Close();
         }
 
-
-        private void TrainigsListBox_MouseLeave(object sender, MouseEventArgs e)
-        {
-            var listBoxBorder = VisualTreeHelper.GetChild(TrainigsListBox, 0) as Border;
-            var scrollViewer = VisualTreeHelper.GetChild(listBoxBorder, 0) as ScrollViewer;
-           
-
-            if (e.Delta > 0)
-            {
-                scrollViewer.LineLeft();
-            }
-
-            else
-            {
-                scrollViewer.LineRight();
-            }
-
-            e.Handled = true;
-        }
-
-        private void TrainigsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-
-
-        private void LevelTextBlock_Initialized(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
-        private void Trainings2ListBox_Initialized(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Begin_Initialized(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
-        private void ExerciseAmountTextBlock_Initialized(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LevelTextBlock_Initialized_1(object sender, EventArgs e)
-        {
-            var levelTextBlock = sender as TextBlock;
-            levelTextBlock.Text = functions.NameOfLevel(_user.Level);
-        }
+        //private void LevelTextBlock_Initialized_1(object sender, EventArgs e)
+        //{
+        //    var levelTextBlock = sender as TextBlock;
+        //    levelTextBlock.Text = functions.NameOfLevel(_user.Level);
+        //}
 
         private void ListBox_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
@@ -180,39 +129,117 @@ namespace FitnessForBusiness.Design
             ProfilePanel.Visibility = Visibility.Visible;
         }
 
+        private void TypesListBox_MouseLeave(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void TypesListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void TypeImage_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
         private void TrainingTypeTextBlock_Initialized(object sender, EventArgs e)
         {
-            //тип тренировки
+
         }
 
-        private void TrainingsByNameListBox_Initialized(object sender, EventArgs e)
-        {
-            //Сортировка по имени в каком-то типе
-        }
-
-       
-
-        private void NumberOfExercisesinTrainigTextBlock_Initialized(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void TrainingsByNameSlotsListBox_Initialized(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void TrainingsByNameSlotsListBox_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        private void CurrentTypeImage_Initialized(object sender, EventArgs e)
         {
 
         }
 
-        private void TrainingImage_Initialized(object sender, EventArgs e)
+        private void CurrentTypeTextBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TrainingNameTextBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BeginButton_Initialized(object sender, EventArgs e)
         {
 
         }
 
         private void BeginButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EquipmentTextBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BodyPartsTextBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IntermediateTrainingsListBox_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IntermediateTrainingNameTextBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IntermediateBeginButton_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IntermediateBeginButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void InterEquipment_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IntBodyPartsTextBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdvTrainingsListBox_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdvTrainingNameTextBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdvBeginButton_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdvBeginButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AdvEquipmentTextBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdvBodyPartsTextBlock_Initialized(object sender, EventArgs e)
         {
 
         }
