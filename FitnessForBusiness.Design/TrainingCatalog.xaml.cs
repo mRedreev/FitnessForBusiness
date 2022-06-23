@@ -182,24 +182,24 @@ namespace FitnessForBusiness.Design
 
         private void TrainingTypeTextBlock_Initialized(object sender, EventArgs e)
         {
-
+            //тип тренировки
         }
 
         private void TrainingsByNameListBox_Initialized(object sender, EventArgs e)
         {
-
+            //Сортировка по имени в каком-то типе
         }
 
        
 
         private void NumberOfExercisesinTrainigTextBlock_Initialized(object sender, EventArgs e)
         {
-
+            
         }
 
         private void TrainingsByNameSlotsListBox_Initialized(object sender, EventArgs e)
         {
-
+            
         }
 
         private void TrainingsByNameSlotsListBox_PreviewMouseWheel(object sender, MouseWheelEventArgs e)

@@ -125,7 +125,7 @@
                         </ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
-                    <Button Grid.Column="0" Name="BackButton" HorizontalAlignment="Right" Margin="30 0" Padding="15 10" FontSize="18" Style="{StaticResource UIButton}" IsCancel="True" Width="195">Вернуться назад</Button>
+                   
                 </Grid>
 
                 <ListBox Visibility="Visible" Name="TrainigsListBox" Grid.Row="2" Margin="50 25 50 30" HorizontalAlignment="Center" VerticalContentAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.CanContentScroll="False" Background="Transparent" BorderBrush="Transparent" MouseLeave="TrainigsListBox_MouseLeave" SelectionChanged="TrainigsListBox_SelectionChanged">
@@ -238,6 +238,8 @@
                         </Border>
                     </DockPanel>
 
+                    <Button Grid.Column="0" Name="BackButton" HorizontalAlignment="Right" Margin="30 0" Padding="15 10" FontSize="18" Style="{StaticResource UIButton}" IsCancel="True" Width="195">Вернуться назад</Button>
+                    
                     <Grid Grid.Column="1" Margin="25 0 0 0" MaxWidth="650" HorizontalAlignment="Center">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
