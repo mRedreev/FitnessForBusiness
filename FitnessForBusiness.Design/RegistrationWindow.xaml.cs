@@ -127,6 +127,14 @@ namespace FitnessForBusiness.Design
             Application.Current.Shutdown();
         }
 
+        private void GoBackButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+        }
+
+
         //      private void AddNewUser()
         //      {
         //          var name = NameBox.Text;

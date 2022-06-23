@@ -92,8 +92,14 @@
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Right"
                 Margin="0,0"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="1" 
+                   VerticalAlignment="Center" 
+                   Foreground="#FFCFCFCF" 
+                   HorizontalAlignment="Left" 
+                   Margin="0,25,0,70"
+                   Text="Username"/>
         
-        <TextBlock Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"  Foreground="#FFCFCFCF" HorizontalAlignment="Left" Margin="0,25,0,70" >Email</TextBlock>
         <TextBox Name="EmailTextBox" Style="{StaticResource UITextBox}"  Grid.Row="3" Grid.Column="1" Width="270" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Border Width="270"
                 Style="{StaticResource Borderline}"
@@ -123,13 +129,18 @@
                 HorizontalAlignment="Right"
                 Margin="0,-55,0,0"/>
 
+        <Label Content="My Goal"
+               Grid.Row="4"
+               Grid.Column="1"
+               Foreground="#FFCFCFCF"
+               VerticalAlignment="Center"
+               Margin="0,35,0,0"/>
+
         <ComboBox Name="GoalComboBox" 
-                  Text="My Main Goal" 
                   Height="30" Width="130" 
                   VerticalAlignment="Bottom" 
                   HorizontalAlignment="Left" 
                   Grid.Row="4" Grid.Column="1"  
-                  IsEditable="True" 
                   Background="#FF5748A8" 
                   BorderBrush="#FF030303" 
                   Foreground="Black" 
@@ -139,27 +150,58 @@
             <TextBlock>Maintain weight</TextBlock>
             <TextBlock>Gain muscle mass</TextBlock>
         </ComboBox>
+
+        <Label Content="My Level"
+               Grid.Row="4"
+               Grid.Column="1"
+               Foreground="#FFCFCFCF"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Center"
+               Margin="60,35,0,0"/>
+
         <ComboBox Name="LeveloComboBox" 
-                  Text="My Level" 
                   Height="30" Width="130" 
                   VerticalAlignment="Bottom" 
                   HorizontalAlignment="Right" 
-                  Grid.Row="4" Grid.Column="1" 
-                  IsEditable="True" 
+                  Grid.Row="4" Grid.Column="1"  
                   VerticalContentAlignment="Center">
             <TextBlock>Beginner</TextBlock>
             <TextBlock>Intermediate</TextBlock>
             <TextBlock>Advanced</TextBlock>
         </ComboBox>
-        <TextBlock Grid.Row="2" Grid.Column="2" VerticalAlignment="Bottom"  HorizontalAlignment="Center" Foreground="#FFCFCFCF" Margin="70,0,165,0"  Text="Avatar"/>
-        <DatePicker x:Name="BitrhDateDatePicker" Grid.Row="4" Grid.Column="2"  VerticalAlignment="Center" Width="130"
-                 Background="#FF353340" OverridesDefaultStyle="False" HorizontalAlignment="Center" MouseDoubleClick="BitrhDateDatePicker_MouseDoubleClick" SelectedDateFormat="Short" />
-        <TextBlock Grid.Row="3" Grid.Column="2" VerticalAlignment="Center"  HorizontalAlignment="Center" Foreground="#FFCFCFCF" Margin="70,27,150,68"  Text="Birthdate"/>
+        
+        <TextBlock Grid.Row="2" 
+                   Grid.Column="2" 
+                   VerticalAlignment="Bottom" 
+                   HorizontalAlignment="Center" 
+                   Foreground="#FFCFCFCF" 
+                   Margin="70,0,165,0" 
+                   Text="Avatar"/>
+        
+        <DatePicker x:Name="BitrhDateDatePicker" 
+                    Grid.Row="4" Grid.Column="2" 
+                    VerticalAlignment="Center" 
+                    Width="130"
+                    IsTodayHighlighted="True"
+                    Background="#FF353340" 
+                    OverridesDefaultStyle="False" 
+                    HorizontalAlignment="Center" 
+                    MouseDoubleClick="BitrhDateDatePicker_MouseDoubleClick" 
+                    SelectedDateFormat="Short"/>
+        
+        <TextBlock Grid.Row="3" Grid.Column="2" 
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center" 
+                   Foreground="#FFCFCFCF" 
+                   Margin="70,27,150,68" 
+                   Text="Birthdate"/>
+        
         <ComboBox Name ="AvatarComboBox" 
                   Grid.Row="3" Grid.Column="2" 
                   Width="130" Height="100" 
                   VerticalAlignment="Center" 
                   HorizontalAlignment="Center">
+            
             <ComboBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Image Source="/Pictures/san.jpg" Height="100"></Image>
@@ -187,6 +229,24 @@
                Grid.RowSpan="4"
                Source="Pictures/sLogo.png"/>
 
-        <Button Name="RegisterButton" Background="#FF272537" Grid.Row="5" Grid.Column="1" VerticalAlignment="Bottom" Height="30" Width="70" Content="Registration" Foreground="#FFCFCFCF" Cursor="Hand" Style="{StaticResource UIButton}" FontWeight="Bold" Click="RegisterButton_Click"/>
+        <Button Name="RegisterButton"  
+                Grid.Row="5" Grid.Column="1" 
+                VerticalAlignment="Bottom" 
+                Height="30" Width="90" 
+                Content="Registration"  
+                Style="{StaticResource UIButton}"  
+                Click="RegisterButton_Click"/>
+
+        <Button Name="GoBackButton"
+                Content="Back"
+                Grid.Column="4"
+                Grid.Row="6"
+                Width="90"
+                Height="30"
+                Style="{StaticResource UIButton}"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right"
+                Margin="10"
+                Click="GoBackButton_Click"/>
     </Grid>
 </Window>

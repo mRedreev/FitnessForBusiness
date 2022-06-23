@@ -79,7 +79,7 @@
                             Margin="0,30,0,0"
                             HorizontalAlignment="Center">
                     <StackPanel Orientation="Vertical">
-                        <Label Content="Login"
+                        <Label Content="Username"
                                HorizontalContentAlignment="Right"
                                Foreground="#ab5eeb"
                                FontWeight="Medium"
@@ -90,7 +90,7 @@
                                    Foreground="#ab5eeb"
                                    FontWeight="Medium"
                                    FontSize="20"
-                                   Margin="0,15,0,0"/>
+                                   Margin="11.5,15,0,0"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical"
