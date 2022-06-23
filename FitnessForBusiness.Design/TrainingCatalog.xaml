@@ -217,6 +217,7 @@
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
+                
                 <Grid Grid.Row="1" Margin="100 30" Name="TraineGrid" MaxWidth="1425" Visibility="Collapsed">
 
                     <Grid.ColumnDefinitions>
@@ -247,6 +248,161 @@
 
                     <TextBlock Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Calibri" FontSize="25" Margin="0 80 0 0">Виды тренировок</TextBlock>
                 </Grid>
+
+                <StackPanel Orientation="Horizontal"
+                            Visibility="Collapsed"
+                            MinWidth="696"
+                            MinHeight="496">
+                    <StackPanel Margin="120,40,0,0"
+                                Orientation="Vertical">
+                        <Image Width="150"
+                               Height="150"
+                               Name="UserAvatar"
+                               Initialized="UserAvatar_Initialized"/>
+
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,5,0,0">
+                            <TextBlock Name="UsernameNameTextBox"
+                                       FontWeight="Medium"
+                                       FontSize="16"
+                                       Foreground="#ab5eeb"
+                                       Initialized="UsernameNameTextBox_Initialized"/>
+
+                            <TextBlock Name="UserSurnameTextBox"
+                                       FontWeight="Medium"
+                                       FontSize="16"
+                                       Foreground="#ab5eeb"
+                                       Margin="5,0,0,0"
+                                       Initialized="UserSurnameTextBox_Initialized"/>
+                        </StackPanel>
+
+                        <TextBlock Name="UserLevelTextBox"
+                                   FontWeight="Medium"
+                                   FontSize="16"
+                                   Foreground="#ab5eeb"
+                                   Margin="0,10,0,0"
+                                   Initialized="UserLevelTextBox_Initialized"/>
+
+                        <TextBlock Name="UserGoalComboBox"
+                                   FontSize="16"
+                                   FontWeight="Medium"
+                                   Foreground="#ab5eeb"
+                                   Margin="0,10,0,0"
+                                   Initialized="UserGoalComboBox_Initialized"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical"
+                                Margin="90,40,0,0">
+                        <StackPanel Orientation="Vertical">
+                            <Label Content="New Avatar"
+                                   Margin="55,0,0,0"
+                                   Foreground="#ab5eeb"
+                                   FontSize="16"
+                                   FontWeight="Medium"/>
+                            <ComboBox Name="ChangeAvatarComboBox"
+                                      Width="150"
+                                      Height="130">
+                                <ComboBoxItem>
+                                    <Image Source="/Pictures/san.jpg"
+                                           Width="120"
+                                           Height="120"/>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <Image Source="/Pictures/suboch.jpg"
+                                           Width="120"
+                                           Height="120"/>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <Image Source="/Pictures/becl2.jpg"
+                                           Width="120"
+                                           Height="120"/>
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <Image Source="/Pictures/lom2.jpg"
+                                           Width="120"
+                                           Height="120"/>
+                                </ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,20,0,0">
+                            <ComboBox Name="ChangeGoalComboBox"
+                                      Width="130"
+                                      Height="30"
+                                      Text="My New Goal"
+                                      IsEditable="True"
+                                      VerticalContentAlignment="Center">
+                                <TextBlock>Lose weight</TextBlock>
+                                <TextBlock>Maintain weight</TextBlock>
+                                <TextBlock>Gain muscle mass</TextBlock>
+                            </ComboBox>
+
+                            <ComboBox Name="ChangeLevelComboBox"
+                                      Width="130"
+                                      Height="30"
+                                      Margin="5,0,0,0"
+                                      Text="My New Level"
+                                      IsEditable="True"
+                                      VerticalContentAlignment="Center">
+                                <TextBlock>Beginner</TextBlock>
+                                <TextBlock>Intermediate</TextBlock>
+                                <TextBlock>Advanced</TextBlock>
+                            </ComboBox>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,20,0,0"
+                                    HorizontalAlignment="Center">
+                            <StackPanel Orientation="Vertical">
+                                <Label Content="New Login"
+                                       HorizontalContentAlignment="Right"
+                                       Foreground="#ab5eeb"
+                                       FontWeight="Medium"
+                                       FontSize="16"
+                                       Margin="0,5,0,0"/>
+
+                                <TextBlock Text="New Password"
+                                           Foreground="#ab5eeb"
+                                           FontWeight="Medium"
+                                           FontSize="16"
+                                           Margin="0,15,0,0"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical"
+                                        Margin="10,8,0,0">
+                                <TextBox Name="ChangeUsernameBox"
+                                         Style="{StaticResource UITextBox}"
+                                         Width="150"
+                                         Height="20"/>
+
+                                <Border Width="150"
+                                        Margin="0,5,0,0"
+                                        Style="{StaticResource Borderline}"/>
+
+                                <PasswordBox Name="ChangePasswordBox"
+                                             Margin="0,15,0,0"
+                                             Style="{StaticResource PassBox}"
+                                             Width="150"
+                                             Height="20"/>
+
+                                <Border Width="150"
+                                        Margin="0,0,0,0"
+                                        Style="{StaticResource Borderline}"/>
+
+                            </StackPanel>
+                        </StackPanel>
+
+                        <Button Width="120"
+                                Height="30"
+                                Style="{StaticResource UIButton}"
+                                Margin="0,20,0,0"
+                                Content="Save Changes"
+                                Name="SaveChangesButton"
+                                Click="SaveChangesButton_Click"/>
+                    </StackPanel>
+                </StackPanel>
+
             </Grid>
             
             

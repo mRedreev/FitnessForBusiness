@@ -134,5 +134,35 @@ namespace FitnessForBusiness.Design
         {
 
         }
+
+        private void UserAvatar_Initialized(object sender, EventArgs e)
+        {
+            //аватар текущего пользователя
+        }
+
+        private void UsernameNameTextBox_Initialized(object sender, EventArgs e)
+        {
+            //имя текущего пользователя
+        }
+
+        private void UserSurnameTextBox_Initialized(object sender, EventArgs e)
+        {
+            //фамилия текущего пользователя
+        }
+
+        private void UserLevelTextBox_Initialized(object sender, EventArgs e)
+        {
+            //уровень текущего пользователя
+        }
+
+        private void UserGoalComboBox_Initialized(object sender, EventArgs e)
+        {
+            //цель текущего пользователя
+        }
+
+        private void SaveChangesButton_Click(object sender, RoutedEventArgs e)
+        {
+            //применить изменения редактирования
+        }
     }
 }
