@@ -1,7 +1,9 @@
-﻿using FitnessForBusiness.Core.Models;
+﻿using FitnessForBusiness.Core;
+using FitnessForBusiness.Core.Models;
 using FitnessForBusiness.Core.Storages;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,14 +24,13 @@ namespace FitnessForBusiness.Design
     public partial class TrainingCatalog : Window
     {
         User _user;
-
-
-
         IStorage _storage;
         public TrainingCatalog(User user, IStorage storage)
         {
-            InitializeComponent();
             _storage = storage;
+            _user = user;
+            InitializeComponent();
+            
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
@@ -132,12 +133,22 @@ namespace FitnessForBusiness.Design
 
         private void LevelTextBlock_Initialized_2(object sender, EventArgs e)
         {
-
+            var levelTextBlock = sender as TextBlock;
+            levelTextBlock.Text = functions.NameOfLevel(_user.Level);
         }
 
         private void UserAvatar_Initialized(object sender, EventArgs e)
         {
-            //аватар текущего пользователя
+            var userAvatarTextBlock = sender as Image;
+            BitmapImage bitmapImage = new BitmapImage();
+            using (var fileStream = new FileStream("../../" + _user.ImageSource, FileMode.Open))
+            {
+                bitmapImage.BeginInit();
+                bitmapImage.StreamSource = fileStream;
+                bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
+                bitmapImage.EndInit();
+            }
+            userAvatarTextBlock.Source = bitmapImage;
         }
 
         private void UsernameNameTextBox_Initialized(object sender, EventArgs e)
@@ -163,6 +174,14 @@ namespace FitnessForBusiness.Design
         private void SaveChangesButton_Click(object sender, RoutedEventArgs e)
         {
             //применить изменения редактирования
+        }
+
+        private void ProfileButton_Click(object sender, RoutedEventArgs e)
+        {
+            TitleTextBlock.Visibility = Visibility.Collapsed;
+            BackButton.Visibility = Visibility.Collapsed;
+            TrainigsListBox.Visibility = Visibility.Collapsed;
+            ProfilePanel.Visibility = Visibility.Visible;
         }
     }
 }

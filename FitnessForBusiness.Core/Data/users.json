@@ -50,5 +50,18 @@
     "Password": "hehe",
     "Born": "2000-12-25T00:00:00",
     "CompletedTrainingsId": []
+  },
+  {
+    "Id": 0,
+    "Name": "12",
+    "Surname": "12",
+    "ImageSource": "/Pictures/san.jpg",
+    "Age": 0,
+    "Level": null,
+    "Goal": null,
+    "Login": "12",
+    "Password": "12",
+    "Born": "2022-06-02T00:00:00",
+    "CompletedTrainingsId": []
   }
 ]

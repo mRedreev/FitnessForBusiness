@@ -97,7 +97,8 @@
                          FontWeight="Medium"
                          FontSize="18"
                          IsChecked="False"
-                         Content="My Profile"/>
+                         Content="My Profile"
+                         Click="ProfileButton_Click"/>
 
             <Button Name="LogOutButton"
                     Height="25"
@@ -252,7 +253,8 @@
                 <StackPanel Orientation="Horizontal"
                             Visibility="Collapsed"
                             MinWidth="696"
-                            MinHeight="496">
+                            MinHeight="496"
+                            x:Name="ProfilePanel">
                     <StackPanel Margin="120,40,0,0"
                                 Orientation="Vertical">
                         <Image Width="150"
