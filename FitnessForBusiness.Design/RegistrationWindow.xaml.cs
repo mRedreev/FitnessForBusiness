@@ -76,7 +76,7 @@ namespace FitnessForBusiness.Design
                         var born = DateTime.Parse(BitrhDateDatePicker.SelectedDate.ToString());
                         User newUser = new User(name, surname, imageSource, born, level, goal, login, password);
                         _storage.Registration(newUser);
-                        TrainingCatalog trainingCatalog = new TrainingCatalog(newUser);
+                        TrainingCatalog trainingCatalog = new TrainingCatalog(newUser, _storage);
                         trainingCatalog.Show();
                         this.Close();
                     }

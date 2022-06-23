@@ -22,12 +22,14 @@ namespace FitnessForBusiness.Design
     public partial class TrainingCatalog : Window
     {
         User _user;
+
+
+
         IStorage _storage;
-        public TrainingCatalog(User user)
+        public TrainingCatalog(User user, IStorage storage)
         {
-            _user = user;
-            
             InitializeComponent();
+            _storage = storage;
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
@@ -63,6 +65,74 @@ namespace FitnessForBusiness.Design
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();
+        }
+
+
+        private void TrainigsListBox_MouseLeave(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void TrainigsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+
+
+        private void LevelTextBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NameTextBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Trainings2ListBox_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Begin_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Begin_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ExerciseAmountTextBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LevelTextBlock_Initialized_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ListBox_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+
+        }
+
+        private void ExercisesListBox_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+
+        }
+
+        private void ExercisesListBox_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LevelTextBlock_Initialized_2(object sender, EventArgs e)
+        {
+
         }
     }
 }

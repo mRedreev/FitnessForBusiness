@@ -37,5 +37,18 @@
     "Password": "111",
     "Born": "2019-01-29T00:00:00",
     "CompletedTrainingsId": []
+  },
+  {
+    "Id": 0,
+    "Name": "hehe",
+    "Surname": "hehe",
+    "ImageSource": "/Pictures/becl2.jpg",
+    "Age": 21,
+    "Level": false,
+    "Goal": false,
+    "Login": "sobaka111",
+    "Password": "hehe",
+    "Born": "2000-12-25T00:00:00",
+    "CompletedTrainingsId": []
   }
 ]

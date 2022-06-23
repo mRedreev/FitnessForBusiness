@@ -30,10 +30,11 @@ namespace FitnessForBusiness.Design
             _user = user;
             _storage = storage;
             InitializeComponent();
-            using (Context context = new Context())
-            {
-                ExcercizesListBox.ItemsSource = context.Trainings.Include("Excercises").ToList().Where(t => t.Id == training.Id).First().Excercises;
-            }
+            ExcercizesListBox.ItemsSource = _storage.GetTrainings.Where(t => t.Id == training.Id).First().Excercises;
+            //using (Context context = new Context())
+            //{
+            //    ExcercizesListBox.ItemsSource = context.Trainings.Include("Excercises").ToList().Where(t => t.Id == training.Id).First().Excercises;
+            //}
         }
 
        
