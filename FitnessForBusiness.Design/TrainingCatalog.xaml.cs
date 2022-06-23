@@ -30,7 +30,8 @@ namespace FitnessForBusiness.Design
             _storage = storage;
             _user = user;
             InitializeComponent();
-            
+
+            TrainigsListBox.ItemsSource = _storage.GetTrainings;
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
@@ -71,7 +72,21 @@ namespace FitnessForBusiness.Design
 
         private void TrainigsListBox_MouseLeave(object sender, MouseEventArgs e)
         {
+            var listBoxBorder = VisualTreeHelper.GetChild(TrainigsListBox, 0) as Border;
+            var scrollViewer = VisualTreeHelper.GetChild(listBoxBorder, 0) as ScrollViewer;
+           
 
+            if (e.Delta > 0)
+            {
+                scrollViewer.LineLeft();
+            }
+
+            else
+            {
+                scrollViewer.LineRight();
+            }
+
+            e.Handled = true;
         }
 
         private void TrainigsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -86,10 +101,7 @@ namespace FitnessForBusiness.Design
 
         }
 
-        private void NameTextBlock_Initialized(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void Trainings2ListBox_Initialized(object sender, EventArgs e)
         {
@@ -101,10 +113,7 @@ namespace FitnessForBusiness.Design
 
         }
 
-        private void Begin_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
 
         private void ExerciseAmountTextBlock_Initialized(object sender, EventArgs e)
         {
@@ -113,7 +122,8 @@ namespace FitnessForBusiness.Design
 
         private void LevelTextBlock_Initialized_1(object sender, EventArgs e)
         {
-
+            var levelTextBlock = sender as TextBlock;
+            levelTextBlock.Text = functions.NameOfLevel(_user.Level);
         }
 
         private void ListBox_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
@@ -121,21 +131,7 @@ namespace FitnessForBusiness.Design
 
         }
 
-        private void ExercisesListBox_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
-        {
-
-        }
-
-        private void ExercisesListBox_Initialized(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LevelTextBlock_Initialized_2(object sender, EventArgs e)
-        {
-            var levelTextBlock = sender as TextBlock;
-            levelTextBlock.Text = functions.NameOfLevel(_user.Level);
-        }
+      
 
         private void UserAvatar_Initialized(object sender, EventArgs e)
         {
@@ -178,10 +174,47 @@ namespace FitnessForBusiness.Design
 
         private void ProfileButton_Click(object sender, RoutedEventArgs e)
         {
-            TitleTextBlock.Visibility = Visibility.Collapsed;
+            //TitleTextBlock.Visibility = Visibility.Collapsed;
             BackButton.Visibility = Visibility.Collapsed;
             TrainigsListBox.Visibility = Visibility.Collapsed;
             ProfilePanel.Visibility = Visibility.Visible;
+        }
+
+        private void TrainingTypeTextBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TrainingsByNameListBox_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
+        private void NumberOfExercisesinTrainigTextBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TrainingsByNameSlotsListBox_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TrainingsByNameSlotsListBox_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+
+        }
+
+        private void TrainingImage_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BeginButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
