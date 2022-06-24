@@ -76,6 +76,8 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
+                        <TextBlock Name="DiscriptionTextBlock" Initialized="DiscriptionTextBlock_Initialized"></TextBlock>
+                        <StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <MediaElement x:Name="video" 
                                           Initialized="ExcercizeGif_Initialized"
@@ -105,6 +107,7 @@
                                     Margin="20, 0, 0, 0" 
                                     Click="playVideo_Click" 
                                     Style="{StaticResource UIButton}"/>
+                        </StackPanel>
                         </StackPanel>
                     </Grid>
                 </DataTemplate>

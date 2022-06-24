@@ -106,5 +106,10 @@ namespace FitnessForBusiness.Design
             if (e.LeftButton == MouseButtonState.Pressed)
                 DragMove();
         }
+
+        private void DiscriptionTextBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
     }
 }
