@@ -107,7 +107,9 @@ namespace FitnessForBusiness.Design
                 DragMove();
         }
 
-        private void DiscriptionTextBlock_Initialized(object sender, EventArgs e)
+ 
+
+        private void NumberOfLoopsTextBlock_Initialized(object sender, EventArgs e)
         {
 
         }

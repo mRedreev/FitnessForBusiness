@@ -76,7 +76,7 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
-                        <TextBlock Name="DiscriptionTextBlock" Initialized="DiscriptionTextBlock_Initialized"></TextBlock>
+                        <TextBlock Name="NumberOfLoopsTextBlock" Initialized="NumberOfLoopsTextBlock_Initialized"></TextBlock>
                         <StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <MediaElement x:Name="video" 
