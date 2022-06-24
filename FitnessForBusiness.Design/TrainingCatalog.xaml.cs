@@ -247,7 +247,8 @@ namespace FitnessForBusiness.Design
         {
             var bodyPartsBlock = sender as TextBlock;
             var training = bodyPartsBlock.DataContext as Training;
-            var bodyParts = training
+            var bodyParts = training.Description;
+            bodyPartsBlock.Text = "BodyParts:" + bodyParts;
         }
 
         private void IntermediateTrainingsListBox_Initialized(object sender, EventArgs e)
