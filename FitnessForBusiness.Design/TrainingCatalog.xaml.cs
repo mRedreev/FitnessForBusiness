@@ -30,8 +30,9 @@ namespace FitnessForBusiness.Design
         {
             _storage = storage;
             _user = user;
-            TypesListBox.ItemsSource = _storage.GetTrainings.Select(t => t.Type).Distinct().ToList();
+            
             InitializeComponent();
+            TypesListBox.ItemsSource = _storage.GetTrainings.Select(t => t.Type).Distinct().ToList();
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
@@ -98,22 +99,26 @@ namespace FitnessForBusiness.Design
 
         private void UsernameNameTextBox_Initialized(object sender, EventArgs e)
         {
-            //имя текущего пользователя
+            var userNameTextBox = sender as TextBlock;
+            userNameTextBox.Text = _user.Name;
         }
 
         private void UserSurnameTextBox_Initialized(object sender, EventArgs e)
         {
-            //фамилия текущего пользователя
+            var userSurnameTextBlock = sender as TextBlock;
+            userSurnameTextBlock.Text = _user.Surname;
         }
 
         private void UserLevelTextBox_Initialized(object sender, EventArgs e)
         {
-            //уровень текущего пользователя
+            var levelTextBox = sender as TextBlock;
+            levelTextBox.Text = functions.NameOfLevel(_user.Level);
         }
 
         private void UserGoalComboBox_Initialized(object sender, EventArgs e)
         {
-            //цель текущего пользователя
+            var goalTextBlock = sender as TextBlock;
+            goalTextBlock.Text = functions.NameOfGoal(_user.Goal);
         }
 
         private void SaveChangesButton_Click(object sender, RoutedEventArgs e)
@@ -123,7 +128,10 @@ namespace FitnessForBusiness.Design
 
         private void ProfileButton_Click(object sender, RoutedEventArgs e)
         {
-
+            CurrentTypeImagePanel.Visibility = Visibility.Collapsed;
+            TypesPanel.Visibility = Visibility.Collapsed;
+            //CompletedTrainingsPanel.Visibillity = Visibillity.Collapsed
+            ProfilePanel.Visibility = Visibility.Visible;
         }
 
         private void TypesListBox_MouseLeave(object sender, MouseEventArgs e)
@@ -248,7 +256,7 @@ namespace FitnessForBusiness.Design
             var bodyPartsBlock = sender as TextBlock;
             var training = bodyPartsBlock.DataContext as Training;
             var bodyParts = training.Description;
-            bodyPartsBlock.Text = "BodyParts:" + bodyParts;
+            bodyPartsBlock.Text = "BodyParts: " + bodyParts;
         }
 
         private void IntermediateTrainingsListBox_Initialized(object sender, EventArgs e)
@@ -258,27 +266,27 @@ namespace FitnessForBusiness.Design
 
         private void IntermediateTrainingNameTextBlock_Initialized(object sender, EventArgs e)
         {
-
+            TrainingNameTextBlock_Initialized(sender, e);
         }
 
         private void IntermediateBeginButton_Initialized(object sender, EventArgs e)
         {
-
+            BeginButton_Initialized(sender, e);
         }
 
         private void IntermediateBeginButton_Click(object sender, RoutedEventArgs e)
         {
-
+            BeginButton_Click(sender, e);
         }
 
         private void InterEquipment_Initialized(object sender, EventArgs e)
         {
-
+            EquipmentTextBlock_Initialized(sender, e);
         }
 
         private void IntBodyPartsTextBlock_Initialized(object sender, EventArgs e)
         {
-
+            BodyPartsTextBlock_Initialized(sender, e);
         }
 
         private void AdvTrainingsListBox_Initialized(object sender, EventArgs e)
@@ -288,42 +296,67 @@ namespace FitnessForBusiness.Design
 
         private void AdvTrainingNameTextBlock_Initialized(object sender, EventArgs e)
         {
-
+            TrainingNameTextBlock_Initialized(sender, e);
         }
 
         private void AdvBeginButton_Initialized(object sender, EventArgs e)
         {
+            BeginButton_Initialized(sender, e);
 
         }
 
         private void AdvBeginButton_Click(object sender, RoutedEventArgs e)
         {
-
+            BeginButton_Click(sender, e);
         }
 
         private void AdvEquipmentTextBlock_Initialized(object sender, EventArgs e)
         {
-
+            EquipmentTextBlock_Initialized(sender, e);
         }
 
         private void AdvBodyPartsTextBlock_Initialized(object sender, EventArgs e)
         {
-
+            BodyPartsTextBlock_Initialized(sender, e);
         }
 
         private void BeginTrainingTimeTextBlock_Initialized(object sender, EventArgs e)
         {
-
+            var timeBlock = sender as TextBlock;
+            var training = timeBlock.DataContext as Training;
+            timeBlock.Text = functions.GetMinutes(training.Length);
         }
 
         private void AdvTrainingTimeTextBlock_Initialized(object sender, EventArgs e)
         {
-
+            BeginTrainingTimeTextBlock_Initialized(sender, e);
         }
 
         private void IntTrainingTimeTextBlock_Initialized(object sender, EventArgs e)
         {
+            BeginTrainingTimeTextBlock_Initialized(sender, e);
+        }
 
+        private void GetBackToTypesButton_Click(object sender, RoutedEventArgs e)
+        {
+            SwitchBackToFilmsList();
+        }
+
+        private void CompletedWorkoutsButton_Click(object sender, RoutedEventArgs e)
+        {
+            CurrentTypeImagePanel.Visibility = Visibility.Collapsed;
+            ProfilePanel.Visibility = Visibility.Collapsed;           
+            TypesPanel.Visibility = Visibility.Collapsed;
+            //CompletedTrainingsPanel.Visibillity = Visibillity.Visible
+        }
+
+        private void CatalogButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+            CurrentTypeImagePanel.Visibility = Visibility.Collapsed;
+            ProfilePanel.Visibility = Visibility.Collapsed;
+            //CompletedTrainingsPanel.Visibillity = Visibillity.Collapsed
+            TypesPanel.Visibility = Visibility.Visible;
         }
     }
 }
