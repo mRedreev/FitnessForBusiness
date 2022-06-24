@@ -205,14 +205,18 @@ namespace FitnessForBusiness.Design
         //LevelsPanel
         private void CurrentTypeImage_Initialized(object sender, EventArgs e)
         {
-            var currentTypeImage = sender as Image;
-            currentTypeImage.Source = functions.GetbitmapImageFromType(_type);
+            if (_type != null)
+            {
+                var currentTypeImage = sender as Image;
+                currentTypeImage.Source = functions.GetbitmapImageFromType(_type);
+            }
+            
         }
 
         private void CurrentTypeTextBlock_Initialized(object sender, EventArgs e)
         {
             var typeName = sender as TextBlock;
-            typeName.Text = _type.Name;
+            if (_type != null)  typeName.Text = _type.Name;
         }
 
         private void TrainingNameTextBlock_Initialized(object sender, EventArgs e)
