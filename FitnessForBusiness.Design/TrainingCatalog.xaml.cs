@@ -123,10 +123,7 @@ namespace FitnessForBusiness.Design
 
         private void ProfileButton_Click(object sender, RoutedEventArgs e)
         {
-            //TitleTextBlock.Visibility = Visibility.Collapsed;
-            BackButton.Visibility = Visibility.Collapsed;
-            TrainigsListBox.Visibility = Visibility.Collapsed;
-            ProfilePanel.Visibility = Visibility.Visible;
+
         }
 
         private void TypesListBox_MouseLeave(object sender, MouseEventArgs e)

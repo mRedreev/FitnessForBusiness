@@ -112,9 +112,9 @@
         <ScrollViewer Grid.Row="1"
                       Grid.Column="1">
             <StackPanel Name="TypesPanel"
-                Margin="50 25 50 30">
+                        Margin="50 25 50 30"
+                        Visibility="Visible">
                 <ListBox Name="TypesListBox"
-                    Visibility="Visible"
                          Grid.Row="2"
                          HorizontalAlignment="Center"
                          VerticalContentAlignment="Top" 
@@ -164,13 +164,17 @@
         </ScrollViewer>
         <ScrollViewer Grid.Row="1"
                       Grid.Column="1">
-            <StackPanel Name="CurrentTypeImagePanel" >
-                <TextBlock Name="CurrentTypeTextBlock" Initialized="CurrentTypeTextBlock_Initialized" FontSize="22"></TextBlock>
-                <Image Name="CurrentTypeImage" Stretch="UniformToFill"  Margin=" 0 10 0 0"
-                                               Initialized="CurrentTypeImage_Initialized"></Image>
+            <StackPanel Name="CurrentTypeImagePanel" 
+                        Visibility="Collapsed" >
+             <TextBlock Name="CurrentTypeTextBlock" 
+                        Initialized="CurrentTypeTextBlock_Initialized" 
+                        FontSize="22"></TextBlock>
+                <Image Name="CurrentTypeImage" 
+                       Stretch="UniformToFill" 
+                       Margin=" 0 10 0 0"                                              
+                       Initialized="CurrentTypeImage_Initialized"></Image>
                 
             <StackPanel Name="LevelPanel" 
-                        Visibility="Collapsed"
                          Grid.Row="2" Margin="50 0 50 15" 
                          HorizontalAlignment="Left" 
                          ScrollViewer.CanContentScroll="False" 
