@@ -43,10 +43,27 @@ namespace FitnessForBusiness.Core.Models
             BreakLength = breakLength;
             CircleAmount = circleAmount;
             Equipment = new List<Equipment>();
-            Equipment = excercises
+            var equipmentList = excercises
                 .Select(e => e.Equipment)
                 .Distinct()
                 .ToList();
+
+            var equipmentDistinct = new List<Equipment>();
+            equipmentDistinct.Add(equipmentList[0]);
+
+            foreach (var eq in equipmentList)
+            {
+                foreach (var eq1 in equipmentDistinct)
+                {
+                    if (eq.Name != eq1.Name)
+                    {
+                        equipmentDistinct.Add(eq);
+                    }
+                }
+            }
+
+            Equipment = equipmentDistinct;
+
             if (Equipment.Count > 1)
             {
                 foreach (var e in Equipment)
