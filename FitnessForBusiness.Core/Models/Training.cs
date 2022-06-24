@@ -12,7 +12,7 @@ namespace FitnessForBusiness.Core.Models
 
         public string Name { get; set;}
 
-        public string Type { get; set;}
+        public TrainingType Type { get; set;}
 
         public bool? Level { get; set;}
 
