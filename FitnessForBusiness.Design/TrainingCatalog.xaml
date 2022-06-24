@@ -80,7 +80,8 @@
                          Style="{StaticResource MenuButtonTheme}"
                          FontSize="18"
                          Margin="0,30,0,0"
-                         IsChecked="True"/>
+                         IsChecked="True"
+                         Click="CatalogButton_Click"/>
 
             <RadioButton Name="CompletedWorkoutsButton" 
                          Height="50"
@@ -88,7 +89,8 @@
                          Content="Completed Workouts"
                          Style="{StaticResource MenuButtonTheme}" 
                          FontSize="18"
-                         IsChecked="False"/>
+                         IsChecked="False"
+                         Click="CompletedWorkoutsButton_Click"/>
 
             <RadioButton Name="ProfileButton" 
                          Height="50" 
@@ -98,7 +100,8 @@
                          FontSize="18"
                          IsChecked="False"
                          Content="My Profile"
-                         Click="ProfileButton_Click"/>
+                         Click="ProfileButton_Click"
+                         />
 
             <Button Name="LogOutButton"
                     Height="25"
@@ -335,6 +338,10 @@
                     </ListBox>
                 </StackPanel>
             </StackPanel>
+                <Button x:Name="GetBackToTypesButton" 
+                        Content="Back"
+                        Style="{StaticResource UIButton}" 
+                        Margin="0 30 0 0" Click="GetBackToTypesButton_Click"/>
             </StackPanel>
         </ScrollViewer>
 
