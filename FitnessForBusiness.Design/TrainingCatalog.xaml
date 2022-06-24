@@ -112,12 +112,13 @@
                     Style="{StaticResource UIButton}"
                     Click="LogOutButton_Click"/>
         </StackPanel>
+        
         <ScrollViewer Grid.Row="1"
                       Grid.Column="1">
             <Grid>
                 <StackPanel Name="TypesPanel"
-                        Margin="50 25 50 30"
-                        Visibility="Visible">
+                            Margin="50 25 50 30"
+                            Visibility="Visible">
                     <ListBox Name="TypesListBox"
                          Width="600"
                          Height="350"
@@ -169,7 +170,7 @@
 
 
                 <StackPanel Name="CurrentTypeImagePanel" 
-                        Visibility="Collapsed" >
+                            Visibility="Collapsed" >
                     <TextBlock Name="CurrentTypeTextBlock" 
                         Initialized="CurrentTypeTextBlock_Initialized" 
                         FontSize="22"></TextBlock>
@@ -238,6 +239,7 @@
                                 </ListBox.ItemTemplate>
                             </ListBox>
                         </StackPanel>
+                        
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Margin="0 20 30 0" Name="IntermediateTextBlock" Text="Intermediate" TextWrapping="Wrap" FontFamily="Calibri" FontSize="22"></TextBlock>
                             <ListBox Name="IntermediateTrainingsListBox"
@@ -351,6 +353,7 @@
                 <StackPanel Orientation="Horizontal"
                             MinWidth="696"
                             MinHeight="496"
+                            Visibility="Collapsed"
                             x:Name="ProfilePanel"
                     Margin="200 40 0 0">
                     <StackPanel Margin="120,40,0,0"
