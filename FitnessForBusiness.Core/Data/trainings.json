@@ -5,7 +5,7 @@
     "Type": {
       "Id": 0,
       "Name": "warm-up",
-      "ImageSource": ".. / .. / Pictures /warm-up.png"
+      "ImageSource": "/Pictures/warm-up.png"
     },
     "Level": null,
     "Excercises": [

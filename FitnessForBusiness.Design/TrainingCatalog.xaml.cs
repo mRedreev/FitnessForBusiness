@@ -32,6 +32,7 @@ namespace FitnessForBusiness.Design
             _user = user;
             
             InitializeComponent();
+            ProfilePanel.Visibility = Visibility.Collapsed;
             TypesListBox.ItemsSource = _storage.GetTrainings.Select(t => t.Type).Distinct().ToList();
         }
 
@@ -136,7 +137,7 @@ namespace FitnessForBusiness.Design
 
         private void TypesListBox_MouseLeave(object sender, MouseEventArgs e)
         {
-
+            Cursor = Cursors.Arrow;
         }
 
         private void TypesListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -157,6 +158,9 @@ namespace FitnessForBusiness.Design
             IntermediateTrainingsListBox.ItemsSource = TrainingsWithCurrentLevel(trainingsWithCurrentType, false);
             AdvTrainingsListBox.ItemsSource= TrainingsWithCurrentLevel(trainingsWithCurrentType, true);
 
+            BeginnerTrainingsListBox.Visibility = Visibility.Visible;
+            IntermediateTrainingsListBox.Visibility = Visibility.Visible;
+            AdvTrainingsListBox.Visibility = Visibility.Visible;
             CurrentTypeImagePanel.Visibility = Visibility.Visible;
 
             //FilmPosterHorizontalImageSetting();
@@ -164,7 +168,7 @@ namespace FitnessForBusiness.Design
             //DescriptionTextBlockSetting();
         }
 
-        private void SwitchBackToFilmsList()
+        private void SwitchBackToTypesList()
         {
             _type = null;
 
@@ -192,6 +196,7 @@ namespace FitnessForBusiness.Design
             var type = typeImage.DataContext as TrainingType;
            
             typeImage.Source = functions.GetbitmapImageFromType(type);
+            
         }
 
         private void TrainingTypeTextBlock_Initialized(object sender, EventArgs e)
@@ -265,7 +270,7 @@ namespace FitnessForBusiness.Design
 
         private void IntermediateTrainingsListBox_Initialized(object sender, EventArgs e)
         {
-
+          
         }
 
         private void IntermediateTrainingNameTextBlock_Initialized(object sender, EventArgs e)
@@ -343,7 +348,7 @@ namespace FitnessForBusiness.Design
 
         private void GetBackToTypesButton_Click(object sender, RoutedEventArgs e)
         {
-            SwitchBackToFilmsList();
+            SwitchBackToTypesList();
         }
 
         private void CompletedWorkoutsButton_Click(object sender, RoutedEventArgs e)
@@ -361,6 +366,29 @@ namespace FitnessForBusiness.Design
             ProfilePanel.Visibility = Visibility.Collapsed;
             //CompletedTrainingsPanel.Visibillity = Visibillity.Collapsed
             TypesPanel.Visibility = Visibility.Visible;
+        }
+
+        private void TypesListBox_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            var listBoxBorder = VisualTreeHelper.GetChild(TypesListBox, 0) as Border;
+            var scrollViewer = VisualTreeHelper.GetChild(listBoxBorder, 0) as ScrollViewer;
+
+            if (e.Delta > 0)
+            {
+                scrollViewer.LineLeft();
+            }
+
+            else
+            {
+                scrollViewer.LineRight();
+            }
+
+            e.Handled = true;
+        }
+
+        private void TypesListBox_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Cursor = Cursors.Hand;
         }
     }
 }
