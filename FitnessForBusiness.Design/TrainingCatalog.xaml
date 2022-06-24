@@ -16,6 +16,7 @@
 
 
 
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="27"/>
@@ -111,14 +112,15 @@
                     Style="{StaticResource UIButton}"
                     Click="LogOutButton_Click"/>
         </StackPanel>
-        
         <ScrollViewer Grid.Row="1"
                       Grid.Column="1">
-            <StackPanel Name="TypesPanel"
+            <Grid>
+                <StackPanel Name="TypesPanel"
                         Margin="50 25 50 30"
                         Visibility="Visible">
-                <ListBox Name="TypesListBox"
-                         Grid.Row="2"
+                    <ListBox Name="TypesListBox"
+                         Width="600"
+                         Height="350"
                          HorizontalAlignment="Center"
                          VerticalContentAlignment="Top" 
                          ScrollViewer.HorizontalScrollBarVisibility="Hidden"
@@ -126,382 +128,383 @@
                          Background="Transparent" 
                          BorderBrush="Transparent" 
                          MouseLeave="TypesListBox_MouseLeave"
-                         SelectionChanged="TypesListBox_SelectionChanged">
-                    <ListBox.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <StackPanel Orientation="Vertical"></StackPanel>
-                        </ItemsPanelTemplate>
-                    </ListBox.ItemsPanel>
+                         SelectionChanged="TypesListBox_SelectionChanged"
+                         MouseEnter="TypesListBox_MouseEnter"
+                         PreviewMouseWheel="TypesListBox_PreviewMouseWheel">
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Vertical"></StackPanel>
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Width="260">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
 
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <Grid Width="260">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                </Grid.RowDefinitions>
-
-                                <DockPanel Grid.Row="0" Margin="30 30 30 0" Width="200" Height="310" 
+                                    <DockPanel Grid.Row="0" Margin="30 30 30 0" Width="200" Height="310" 
                                            VerticalAlignment="Top" HorizontalAlignment="Stretch">
-                                    <Border BorderThickness="1.2" BorderBrush="Black">
-                                        <Image Name="TypeImage" Stretch="UniformToFill" 
+                                        <Border BorderThickness="1.2" BorderBrush="Black">
+                                            <Image Name="TypeImage" Stretch="UniformToFill" 
                                                Initialized="TypeImage_Initialized"></Image>
-                                    </Border>
-                                </DockPanel>
+                                        </Border>
+                                    </DockPanel>
 
-                                <TextBlock Name="TrainingTypeTextBlock"
+                                    <TextBlock Name="TrainingTypeTextBlock"
                                            Grid.Row="2" Margin="10 10 10 25" 
                                            TextWrapping="Wrap" TextAlignment="Center" 
                                            HorizontalAlignment="Center" FontSize="22"
                                            Initialized="TrainingTypeTextBlock_Initialized"></TextBlock>
 
 
-                            </Grid>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
                 </StackPanel>
 
 
-        </ScrollViewer>
-        <ScrollViewer Grid.Row="1"
-                      Grid.Column="1">
-            <StackPanel Name="CurrentTypeImagePanel" 
+
+                <StackPanel Name="CurrentTypeImagePanel" 
                         Visibility="Collapsed" >
-             <TextBlock Name="CurrentTypeTextBlock" 
+                    <TextBlock Name="CurrentTypeTextBlock" 
                         Initialized="CurrentTypeTextBlock_Initialized" 
                         FontSize="22"></TextBlock>
-                <Image Name="CurrentTypeImage" 
+                    <Image Name="CurrentTypeImage" 
                        Stretch="UniformToFill" 
                        Margin=" 0 10 0 0"                                              
                        Initialized="CurrentTypeImage_Initialized"></Image>
-                
-            <StackPanel Name="LevelPanel" 
+
+                    <StackPanel Name="LevelPanel" 
                          Grid.Row="2" Margin="50 0 50 15" 
                          HorizontalAlignment="Left" 
                          ScrollViewer.CanContentScroll="False" 
                          Background="Transparent"
                             Orientation="Vertical">
 
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Margin="0 20 30 0"
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Margin="0 20 30 0"
                                    Name="EasyTextBlock" 
                                    Text="Beginner"
                                    TextWrapping="Wrap" 
                                    FontFamily="Calibri" 
                                    FontSize="22"></TextBlock>
-                        <ListBox Name="BeginnerTrainingsListBox"
+                            <ListBox Name="BeginnerTrainingsListBox"
                                  Margin="20 0 0 0" 
                                  HorizontalContentAlignment="Left"
                                  Background="Transparent"
                                  BorderBrush="Transparent">
-                            <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <Grid>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock Name="TrainingNameTextBlock" 
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Name="TrainingNameTextBlock" 
                                                        Initialized="TrainingNameTextBlock_Initialized"
                                                        FontFamily="Calibri"
                                                        FontSize="22" />
-                                        <StackPanel Orientation="Vertical" Margin="15 0 0 0">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Button Name="BeginButton"  
+                                                <StackPanel Orientation="Vertical" Margin="15 0 0 0">
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <Button Name="BeginButton"  
                                                         Padding="12 8" 
                                                         FontSize="16" 
                                                         Style="{StaticResource UIButton}" 
                                                         Initialized="BeginButton_Initialized"  
                                                         Click="BeginButton_Click"></Button>
-                                                <TextBlock Margin="5 0 0 0"
+                                                        <TextBlock Margin="5 0 0 0"
                                                                Name="BeginTrainingTimeTextBlock"
                                                                FontSize="12"
                                                                Initialized="BeginTrainingTimeTextBlock_Initialized"
                                                                />
-                                                </StackPanel>
-                                                <TextBlock Margin="0 5 0 0"
+                                                    </StackPanel>
+                                                    <TextBlock Margin="0 5 0 0"
                                                    Name="EquipmentTextBlock" 
                                                    FontFamily="Calibri"
                                                    FontSize="12" 
                                                    Initialized="EquipmentTextBlock_Initialized"
                                                    TextWrapping="Wrap"/>
-                                            <TextBlock Margin="0 5 0 0"
+                                                    <TextBlock Margin="0 5 0 0"
                                                    Name="BodyPartsTextBlock" 
                                                    FontFamily="Calibri"
                                                    FontSize="12" 
                                                    Initialized="BodyPartsTextBlock_Initialized"
                                                    TextWrapping="Wrap"/>
-                                        </StackPanel>
-                                    </StackPanel>
-                                </Grid>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Margin="0 20 30 0" Name="IntermediateTextBlock" Text="Intermediate" TextWrapping="Wrap" FontFamily="Calibri" FontSize="22"></TextBlock>
-                    <ListBox Name="IntermediateTrainingsListBox"
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Margin="0 20 30 0" Name="IntermediateTextBlock" Text="Intermediate" TextWrapping="Wrap" FontFamily="Calibri" FontSize="22"></TextBlock>
+                            <ListBox Name="IntermediateTrainingsListBox"
                                  Margin="20 0 0 0" 
                                  HorizontalContentAlignment="Left"
                                  Background="Transparent"
                                  BorderBrush="Transparent" 
                                  Initialized="IntermediateTrainingsListBox_Initialized">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <Grid>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock Name="IntermediateTrainingNameTextBlock" 
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Name="IntermediateTrainingNameTextBlock" 
                                                        Initialized="IntermediateTrainingNameTextBlock_Initialized"
                                                        FontFamily="Calibri"
                                                        FontSize="22" 
                                                        />
-                                        <StackPanel Orientation="Vertical" Margin="15 0 0 0">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Button x:Name="IntermediateBeginButton"
+                                                <StackPanel Orientation="Vertical" Margin="15 0 0 0">
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <Button x:Name="IntermediateBeginButton"
                                                         Padding="12 8" 
                                                         FontSize="16" 
                                                         Style="{StaticResource UIButton}" 
                                                         Initialized="IntermediateBeginButton_Initialized"  
                                                         Click="IntermediateBeginButton_Click"></Button>
-                                                    <TextBlock Margin="5 0 0 0"
+                                                        <TextBlock Margin="5 0 0 0"
                                                                Name="IntTrainingTimeTextBlock"
                                                                FontSize="12"
                                                                Initialized="IntTrainingTimeTextBlock_Initialized"
                                                                />
-                                                </StackPanel>
-                                                <TextBlock Margin="0 5 0 0"
+                                                    </StackPanel>
+                                                    <TextBlock Margin="0 5 0 0"
                                                    Name="InterEquipment" 
                                                    FontFamily="Calibri"
                                                    FontSize="12" 
                                                    Initialized="InterEquipment_Initialized"
                                                    TextWrapping="Wrap"/>
-                                            <TextBlock Margin="0 5 0 0"
+                                                    <TextBlock Margin="0 5 0 0"
                                                    Name="IntBodyPartsTextBlock" 
                                                    FontFamily="Calibri"
                                                    FontSize="12" 
                                                    Initialized="IntBodyPartsTextBlock_Initialized"
                                                    TextWrapping="Wrap"/>
-                                        </StackPanel>
-                                    </StackPanel>
-                                </Grid>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                </StackPanel>
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Margin="0 20 30 0" Name="HardTextBlock" Text="Advanced" TextWrapping="Wrap" FontFamily="Calibri" FontSize="22"></TextBlock>
-                    <ListBox Name="AdvTrainingsListBox"
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Margin="0 20 30 0" Name="HardTextBlock" Text="Advanced" TextWrapping="Wrap" FontFamily="Calibri" FontSize="22"></TextBlock>
+                            <ListBox Name="AdvTrainingsListBox"
                                  Margin="20 0 0 0" 
                                  HorizontalContentAlignment="Left"
                                  Background="Transparent"
                                  BorderBrush="Transparent" 
                                  Initialized="AdvTrainingsListBox_Initialized">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <Grid>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock Name="AdvTrainingNameTextBlock" 
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Name="AdvTrainingNameTextBlock" 
                                                        Initialized="AdvTrainingNameTextBlock_Initialized"
                                                        FontFamily="Calibri"
                                                        FontSize="22" 
                                                        />
-                                        <StackPanel Orientation="Vertical" Margin="15 0 0 0">
-                                                <StackPanel Orientation="Horizontal">
-                                                    <Button Name="AdvBeginButton"  
+                                                <StackPanel Orientation="Vertical" Margin="15 0 0 0">
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <Button Name="AdvBeginButton"  
                                                         Padding="12 8" 
                                                         FontSize="16" 
                                                         Style="{StaticResource UIButton}" 
                                                         Initialized="AdvBeginButton_Initialized"  
                                                         Click="AdvBeginButton_Click"></Button>
-                                                <TextBlock Margin="5 0 0 0"
+                                                        <TextBlock Margin="5 0 0 0"
                                                                Name="AdvTrainingTimeTextBlock"
                                                                FontSize="12"
                                                                Initialized="AdvTrainingTimeTextBlock_Initialized"
                                                                />
-                                                </StackPanel>
-                                                <TextBlock Margin="0 5 0 0"
+                                                    </StackPanel>
+                                                    <TextBlock Margin="0 5 0 0"
                                                    Name="AdvEquipmentTextBlock" 
                                                    FontFamily="Calibri"
                                                    FontSize="12" 
                                                    Initialized="AdvEquipmentTextBlock_Initialized"
                                                    TextWrapping="Wrap"/>
-                                            <TextBlock Margin="0 5 0 0"
+                                                    <TextBlock Margin="0 5 0 0"
                                                    Name="AdvBodyPartsTextBlock" 
                                                    FontFamily="Calibri"
                                                    FontSize="12" 
                                                    Initialized="AdvBodyPartsTextBlock_Initialized"
                                                    TextWrapping="Wrap"/>
-                                        </StackPanel>
-                                    </StackPanel>
-                                </Grid>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                </StackPanel>
-            </StackPanel>
-                <Button x:Name="GetBackToTypesButton" 
+                                                </StackPanel>
+                                            </StackPanel>
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </StackPanel>
+                    </StackPanel>
+                    <Button x:Name="GetBackToTypesButton" 
                         Content="Back"
                         Style="{StaticResource UIButton}" 
                         Margin="0 30 0 0" Click="GetBackToTypesButton_Click"/>
-            </StackPanel>
-        </ScrollViewer>
+                </StackPanel>
 
 
 
 
-        <StackPanel Orientation="Horizontal"
-                            Visibility="Collapsed"
+                <StackPanel Orientation="Horizontal"
                             MinWidth="696"
                             MinHeight="496"
-                            x:Name="ProfilePanel">
-                <StackPanel Margin="120,40,0,0"
+                            x:Name="ProfilePanel"
+                    Margin="200 40 0 0">
+                    <StackPanel Margin="120,40,0,0"
                                 Orientation="Vertical">
-                    <Image Width="150"
+                        <Image Width="150"
                                Height="150"
                                Name="UserAvatar"
                                Initialized="UserAvatar_Initialized"/>
 
-                    <StackPanel Orientation="Horizontal"
+                        <StackPanel Orientation="Horizontal"
                                     Margin="0,5,0,0">
-                        <TextBlock Name="UsernameNameTextBox"
+                            <TextBlock Name="UsernameNameTextBox"
                                        FontWeight="Medium"
                                        FontSize="16"
                                        Foreground="#ab5eeb"
                                        Initialized="UsernameNameTextBox_Initialized"/>
 
-                        <TextBlock Name="UserSurnameTextBox"
+                            <TextBlock Name="UserSurnameTextBox"
                                        FontWeight="Medium"
                                        FontSize="16"
                                        Foreground="#ab5eeb"
                                        Margin="5,0,0,0"
                                        Initialized="UserSurnameTextBox_Initialized"/>
-                    </StackPanel>
+                        </StackPanel>
 
-                    <TextBlock Name="UserLevelTextBox"
+                        <TextBlock Name="UserLevelTextBox"
                                    FontWeight="Medium"
                                    FontSize="16"
                                    Foreground="#ab5eeb"
                                    Margin="0,10,0,0"
                                    Initialized="UserLevelTextBox_Initialized"/>
 
-                    <TextBlock Name="UserGoalComboBox"
+                        <TextBlock Name="UserGoalComboBox"
                                    FontSize="16"
                                    FontWeight="Medium"
                                    Foreground="#ab5eeb"
                                    Margin="0,10,0,0"
                                    Initialized="UserGoalComboBox_Initialized"/>
-                </StackPanel>
+                    </StackPanel>
 
-                <StackPanel Orientation="Vertical"
+                    <StackPanel Orientation="Vertical"
                                 Margin="90,40,0,0">
-                    <StackPanel Orientation="Vertical">
-                        <Label Content="New Avatar"
+                        <StackPanel Orientation="Vertical">
+                            <Label Content="New Avatar"
                                    Margin="55,0,0,0"
                                    Foreground="#ab5eeb"
                                    FontSize="16"
                                    FontWeight="Medium"/>
-                        <ComboBox Name="ChangeAvatarComboBox"
+                            <ComboBox Name="ChangeAvatarComboBox"
                                       Width="150"
                                       Height="130">
-                            <ComboBoxItem>
-                                <Image Source="/Pictures/san.jpg"
+                                <ComboBoxItem>
+                                    <Image Source="/Pictures/san.jpg"
                                            Width="120"
                                            Height="120"/>
-                            </ComboBoxItem>
-                            <ComboBoxItem>
-                                <Image Source="/Pictures/suboch.jpg"
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <Image Source="/Pictures/suboch.jpg"
                                            Width="120"
                                            Height="120"/>
-                            </ComboBoxItem>
-                            <ComboBoxItem>
-                                <Image Source="/Pictures/becl2.jpg"
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <Image Source="/Pictures/becl2.jpg"
                                            Width="120"
                                            Height="120"/>
-                            </ComboBoxItem>
-                            <ComboBoxItem>
-                                <Image Source="/Pictures/lom2.jpg"
+                                </ComboBoxItem>
+                                <ComboBoxItem>
+                                    <Image Source="/Pictures/lom2.jpg"
                                            Width="120"
                                            Height="120"/>
-                            </ComboBoxItem>
-                        </ComboBox>
-                    </StackPanel>
+                                </ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
 
-                    <StackPanel Orientation="Horizontal"
+                        <StackPanel Orientation="Horizontal"
                                     Margin="0,20,0,0">
-                        <ComboBox Name="ChangeGoalComboBox"
+                            <ComboBox Name="ChangeGoalComboBox"
                                       Width="130"
                                       Height="30"
                                       Text="My New Goal"
                                       IsEditable="True"
                                       VerticalContentAlignment="Center">
-                            <TextBlock>Lose weight</TextBlock>
-                            <TextBlock>Maintain weight</TextBlock>
-                            <TextBlock>Gain muscle mass</TextBlock>
-                        </ComboBox>
+                                <TextBlock>Lose weight</TextBlock>
+                                <TextBlock>Maintain weight</TextBlock>
+                                <TextBlock>Gain muscle mass</TextBlock>
+                            </ComboBox>
 
-                        <ComboBox Name="ChangeLevelComboBox"
+                            <ComboBox Name="ChangeLevelComboBox"
                                       Width="130"
                                       Height="30"
                                       Margin="5,0,0,0"
                                       Text="My New Level"
                                       IsEditable="True"
                                       VerticalContentAlignment="Center">
-                            <TextBlock>Beginner</TextBlock>
-                            <TextBlock>Intermediate</TextBlock>
-                            <TextBlock>Advanced</TextBlock>
-                        </ComboBox>
-                    </StackPanel>
+                                <TextBlock>Beginner</TextBlock>
+                                <TextBlock>Intermediate</TextBlock>
+                                <TextBlock>Advanced</TextBlock>
+                            </ComboBox>
+                        </StackPanel>
 
-                    <StackPanel Orientation="Horizontal"
+                        <StackPanel Orientation="Horizontal"
                                     Margin="0,20,0,0"
                                     HorizontalAlignment="Center">
-                        <StackPanel Orientation="Vertical">
-                            <Label Content="New Login"
+                            <StackPanel Orientation="Vertical">
+                                <Label Content="New Login"
                                        HorizontalContentAlignment="Right"
                                        Foreground="#ab5eeb"
                                        FontWeight="Medium"
                                        FontSize="16"
                                        Margin="0,5,0,0"/>
 
-                            <TextBlock Text="New Password"
+                                <TextBlock Text="New Password"
                                            Foreground="#ab5eeb"
                                            FontWeight="Medium"
                                            FontSize="16"
                                            Margin="0,15,0,0"/>
-                        </StackPanel>
+                            </StackPanel>
 
-                        <StackPanel Orientation="Vertical"
+                            <StackPanel Orientation="Vertical"
                                         Margin="10,8,0,0">
-                            <TextBox Name="ChangeUsernameBox"
+                                <TextBox Name="ChangeUsernameBox"
                                          Style="{StaticResource UITextBox}"
                                          Width="150"
                                          Height="20"/>
 
-                            <Border Width="150"
+                                <Border Width="150"
                                         Margin="0,5,0,0"
                                         Style="{StaticResource Borderline}"/>
 
-                            <PasswordBox Name="ChangePasswordBox"
+                                <PasswordBox Name="ChangePasswordBox"
                                              Margin="0,15,0,0"
                                              Style="{StaticResource PassBox}"
                                              Width="150"
                                              Height="20"/>
 
-                            <Border Width="150"
+                                <Border Width="150"
                                         Margin="0,0,0,0"
                                         Style="{StaticResource Borderline}"/>
 
+                            </StackPanel>
                         </StackPanel>
-                    </StackPanel>
 
-                    <Button Width="120"
+                        <Button Width="120"
                                 Height="30"
                                 Style="{StaticResource UIButton}"
                                 Margin="0,20,0,0"
                                 Content="Save Changes"
                                 Name="SaveChangesButton"
                                 Click="SaveChangesButton_Click"/>
+                    </StackPanel>
                 </StackPanel>
-            </StackPanel>
-
+            </Grid>
+        </ScrollViewer>
     </Grid>
+
 </Window>
+
