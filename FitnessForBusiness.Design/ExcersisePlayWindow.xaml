@@ -5,18 +5,75 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitnessForBusiness.Design"
         mc:Ignorable="d"
-        Title="ExcersisePlayWindow" Height="450" Width="800">
+        MinHeight="427" MinWidth="400"
+        Icon="Pictures/sLogo.png"
+        WindowStyle="None"
+        ResizeMode="CanResizeWithGrip"
+        AllowsTransparency="True"
+        Background="Transparent">
     <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="27"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
         <Grid.Background>
             <ImageBrush ImageSource="/Pictures/background.jpg"/>
         </Grid.Background>
-        <StackPanel Margin="30">
+
+        <Border Grid.ColumnSpan="2"
+                Grid.Row="0"
+                Background="#272535"
+                MouseDown="Border_MouseDown">
+
+            <Grid HorizontalAlignment="Stretch">
+
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="27"
+                           Height="27"
+                           Source="/Pictures/sLogo.png"
+                           RenderOptions.BitmapScalingMode="HighQuality"/>
+
+                    <Label Content="Strong Partner"
+                           Foreground="Gray"
+                           FontWeight="Medium"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Right"
+                            Margin="0,0,5,0">
+                    <Button Style="{StaticResource MinimizeButton}"
+                            Margin="0,0,0,3.65"
+                            Name="MinimizeButton"
+                            Click="MinimizeButton_Click"/>
+                    
+                    <Button Style="{StaticResource WindowStateButton}"
+                            Name="WindowStateButton"
+                            Click="WindowStateButton_Click"/>
+                    
+                    <Button Style="{StaticResource ExitButton}"
+                            Name="ExitButton"
+                            Click="ExitButton_Click"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <StackPanel Margin="30"
+                    Grid.Row="1">
             <MediaElement x:Name="video" 
                           Width="300"
                           Height="300"
                           LoadedBehavior="Play">
             </MediaElement>
-            <Button x:Name="playVideo" Content="Exit" Margin="0, 20, 0, 0" Click="playVideo_Click"  Width="80" Style="{StaticResource UIButton}"/>
+            
+            <Button x:Name="playVideo" 
+                    Content="Exit" 
+                    Margin="0, 20, 0, 0" 
+                    Click="playVideo_Click"  
+                    Width="80" 
+                    Height="20"
+                    Style="{StaticResource UIButton}"/>
         </StackPanel>
     </Grid>
 </Window>

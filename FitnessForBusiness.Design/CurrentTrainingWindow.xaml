@@ -14,7 +14,6 @@
         AllowsTransparency="True"
         Background="Transparent">
     <Grid>
-
         <Grid.RowDefinitions>
             <RowDefinition Height="27"/>
             <RowDefinition/>
