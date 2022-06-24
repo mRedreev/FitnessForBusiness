@@ -33,7 +33,7 @@ namespace FitnessForBusiness.Core.Models
 
         public List<User> Users { get; set;}
 
-        public Training(string name, string type, bool? level, List<Excercise> excercises, double exLength, double breakLength, int circleAmount)
+        public Training(string name, TrainingType type, bool? level, List<Excercise> excercises, double exLength, double breakLength, int circleAmount)
         {
             Name = name;
             Type = type;

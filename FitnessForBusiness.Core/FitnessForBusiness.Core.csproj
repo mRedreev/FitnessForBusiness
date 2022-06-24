@@ -78,9 +78,6 @@
     <None Include="Data\users.json" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Users\user1.jpg" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

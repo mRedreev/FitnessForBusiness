@@ -2,7 +2,11 @@
   {
     "Id": 0,
     "Name": "Short warm-up",
-    "Type": "warm-up",
+    "Type": {
+      "Id": 0,
+      "Name": "warm-up",
+      "ImageSource": ".. / .. / Pictures /warm-up.png"
+    },
     "Level": null,
     "Excercises": [
       {

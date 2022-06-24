@@ -12,5 +12,11 @@ namespace FitnessForBusiness.Core.Models
         public string Name { get; set; }
         public string ImageSource { get; set; }
 
+        public TrainingType(string name, string imageSource)
+        {
+            Name = name;
+            ImageSource = imageSource;
+        }
+
     }
 }
