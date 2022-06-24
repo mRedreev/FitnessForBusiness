@@ -202,13 +202,20 @@
                                                        FontFamily="Calibri"
                                                        FontSize="22" />
                                         <StackPanel Orientation="Vertical" Margin="15 0 0 0">
-                                            <Button Name="BeginButton"  
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Button Name="BeginButton"  
                                                         Padding="12 8" 
                                                         FontSize="16" 
                                                         Style="{StaticResource UIButton}" 
                                                         Initialized="BeginButton_Initialized"  
                                                         Click="BeginButton_Click"></Button>
-                                            <TextBlock Margin="0 5 0 0"
+                                                <TextBlock Margin="5 0 0 0"
+                                                               Name="BeginTrainingTimeTextBlock"
+                                                               FontSize="12"
+                                                               Initialized="BeginTrainingTimeTextBlock_Initialized"
+                                                               />
+                                                </StackPanel>
+                                                <TextBlock Margin="0 5 0 0"
                                                    Name="EquipmentTextBlock" 
                                                    FontFamily="Calibri"
                                                    FontSize="12" 
@@ -245,13 +252,20 @@
                                                        FontSize="22" 
                                                        />
                                         <StackPanel Orientation="Vertical" Margin="15 0 0 0">
-                                            <Button x:Name="IntermediateBeginButton"
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Button x:Name="IntermediateBeginButton"
                                                         Padding="12 8" 
                                                         FontSize="16" 
                                                         Style="{StaticResource UIButton}" 
                                                         Initialized="IntermediateBeginButton_Initialized"  
                                                         Click="IntermediateBeginButton_Click"></Button>
-                                            <TextBlock Margin="0 5 0 0"
+                                                    <TextBlock Margin="5 0 0 0"
+                                                               Name="IntTrainingTimeTextBlock"
+                                                               FontSize="12"
+                                                               Initialized="IntTrainingTimeTextBlock_Initialized"
+                                                               />
+                                                </StackPanel>
+                                                <TextBlock Margin="0 5 0 0"
                                                    Name="InterEquipment" 
                                                    FontFamily="Calibri"
                                                    FontSize="12" 
@@ -288,13 +302,20 @@
                                                        FontSize="22" 
                                                        />
                                         <StackPanel Orientation="Vertical" Margin="15 0 0 0">
-                                            <Button Name="AdvBeginButton"  
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Button Name="AdvBeginButton"  
                                                         Padding="12 8" 
                                                         FontSize="16" 
                                                         Style="{StaticResource UIButton}" 
                                                         Initialized="AdvBeginButton_Initialized"  
                                                         Click="AdvBeginButton_Click"></Button>
-                                            <TextBlock Margin="0 5 0 0"
+                                                <TextBlock Margin="5 0 0 0"
+                                                               Name="AdvTrainingTimeTextBlock"
+                                                               FontSize="12"
+                                                               Initialized="AdvTrainingTimeTextBlock_Initialized"
+                                                               />
+                                                </StackPanel>
+                                                <TextBlock Margin="0 5 0 0"
                                                    Name="AdvEquipmentTextBlock" 
                                                    FontFamily="Calibri"
                                                    FontSize="12" 
