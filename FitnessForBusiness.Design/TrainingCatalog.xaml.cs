@@ -25,13 +25,13 @@ namespace FitnessForBusiness.Design
     {
         User _user;
         IStorage _storage;
+        String _type = null;
         public TrainingCatalog(User user, IStorage storage)
         {
             _storage = storage;
             _user = user;
+            TypesListBox.ItemsSource = _storage.GetTrainings.Select(t => t.Type).Distinct().ToList();
             InitializeComponent();
-
-            TrainigsListBox.ItemsSource = _storage.GetTrainings;
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
@@ -133,12 +133,63 @@ namespace FitnessForBusiness.Design
 
         private void TypesListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            e.Handled = true;
 
+            _type = TypesListBox.SelectedItem as TrainingType;
+
+            TypesListBox.SelectionChanged -= TypesListBox_SelectionChanged;
+            TypesListBox.SelectedIndex = -1;
+            TypesListBox.SelectionChanged += TypesListBox_SelectionChanged;
+            TypesPanel.Visibility = Visibility.Collapsed;
+
+            CurrentTypeTextBlock.Text = _type.Name;
+            var trainingsWithCurrentType = _storage.GetTrainings.Where(t => t.Type == _type).ToList();
+
+            BeginnerTrainingsListBox.ItemsSource = TrainingsWithCurrentLevel(trainingsWithCurrentType, null);
+            IntermediateTrainingsListBox.ItemsSource = TrainingsWithCurrentLevel(trainingsWithCurrentType, false);
+            AdvTrainingsListBox.ItemsSource= TrainingsWithCurrentLevel(trainingsWithCurrentType, true);
+
+            CurrentTypeImagePanel.Visibility = Visibility.Visible;
+
+            //FilmPosterHorizontalImageSetting();
+            //RatingTextBlockSetting();
+            //DescriptionTextBlockSetting();
+        }
+
+        private void SwitchBackToFilmsList()
+        {
+            _type = null;
+
+            BeginnerTrainingsListBox.ItemsSource = null;
+            IntermediateTrainingsListBox.ItemsSource = null;
+            AdvTrainingsListBox.ItemsSource = null;
+
+            CurrentTypeImagePanel.Visibility = Visibility.Collapsed;
+            TypesPanel.Visibility = Visibility.Collapsed;
+
+            //TypesListBox.ItemsSource = _storage.GetTrainings.Select(t => t.Type).Distinct().ToList();
+
+            TypesPanel.Visibility = Visibility.Visible;
+
+        }
+
+        private List<Training> TrainingsWithCurrentLevel(List<Training> trainings, bool? level)
+        {
+            return trainings.Where(t => t.Level == level).ToList();
         }
 
         private void TypeImage_Initialized(object sender, EventArgs e)
         {
-
+            var typeImage = sender as Image;
+            //BitmapImage bitmapImage = new BitmapImage();
+            //using (var fileStream = new FileStream("../../" + _user.ImageSource, FileMode.Open))
+            //{
+            //    bitmapImage.BeginInit();
+            //    bitmapImage.StreamSource = fileStream;
+            //    bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
+            //    bitmapImage.EndInit();
+            //}
+            //userAvatarTextBlock.Source = bitmapImage;
         }
 
         private void TrainingTypeTextBlock_Initialized(object sender, EventArgs e)
@@ -237,6 +288,21 @@ namespace FitnessForBusiness.Design
         }
 
         private void AdvBodyPartsTextBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BeginTrainingTimeTextBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdvTrainingTimeTextBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IntTrainingTimeTextBlock_Initialized(object sender, EventArgs e)
         {
 
         }
