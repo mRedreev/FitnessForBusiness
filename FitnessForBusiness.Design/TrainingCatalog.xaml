@@ -355,8 +355,8 @@
                             MinHeight="496"
                             Visibility="Collapsed"
                             x:Name="ProfilePanel"
-                    Margin="200 40 0 0">
-                    <StackPanel Margin="120,40,0,0"
+                            Margin="40,20,0,0">
+                    <StackPanel Margin="10"
                                 Orientation="Vertical">
                         <Image Width="150"
                                Height="150"
