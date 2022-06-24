@@ -25,7 +25,7 @@ namespace FitnessForBusiness.Design
     {
         User _user;
         IStorage _storage;
-        String _type = null;
+        TrainingType _type = null;
         public TrainingCatalog(User user, IStorage storage)
         {
             _storage = storage;
@@ -181,55 +181,73 @@ namespace FitnessForBusiness.Design
         private void TypeImage_Initialized(object sender, EventArgs e)
         {
             var typeImage = sender as Image;
-            //BitmapImage bitmapImage = new BitmapImage();
-            //using (var fileStream = new FileStream("../../" + _user.ImageSource, FileMode.Open))
-            //{
-            //    bitmapImage.BeginInit();
-            //    bitmapImage.StreamSource = fileStream;
-            //    bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
-            //    bitmapImage.EndInit();
-            //}
-            //userAvatarTextBlock.Source = bitmapImage;
+            var type = typeImage.DataContext as TrainingType;
+           
+            typeImage.Source = functions.GetbitmapImageFromType(type);
         }
 
         private void TrainingTypeTextBlock_Initialized(object sender, EventArgs e)
         {
+            var typeName = sender as TextBlock;
+            var type = typeName.DataContext as TrainingType;
 
+            typeName.Text = type.Name;
         }
 
+        //LevelsPanel
         private void CurrentTypeImage_Initialized(object sender, EventArgs e)
         {
-
+            var currentTypeImage = sender as Image;
+            currentTypeImage.Source = functions.GetbitmapImageFromType(_type);
         }
 
         private void CurrentTypeTextBlock_Initialized(object sender, EventArgs e)
         {
-
+            var typeName = sender as TextBlock;
+            typeName.Text = _type.Name;
         }
 
         private void TrainingNameTextBlock_Initialized(object sender, EventArgs e)
         {
-
+            var name = sender as TextBlock;
+            var training = name.DataContext as Training;
+            name.Text = training.Name;
         }
 
         private void BeginButton_Initialized(object sender, EventArgs e)
         {
-
+            var button = sender as Button;
+            button.Content = "Begin";
         }
 
         private void BeginButton_Click(object sender, RoutedEventArgs e)
         {
-
+            var button = sender as Button;
+            var training = button.DataContext as Training;
+            var currentTrWindow = new CurrentTrainingWindow(training, _user, _storage);
+            currentTrWindow.Show();
+            this.Close();
         }
 
         private void EquipmentTextBlock_Initialized(object sender, EventArgs e)
         {
-
+            var equipmentBlock = sender as TextBlock;
+            var training = equipmentBlock.DataContext as Training;
+            var equipment = training.Equipment.Select(eq => eq.Name).ToList();
+            string equipmentString = "";
+            foreach (var equipmentItem in equipment)
+            {
+                equipmentString = equipmentBlock.Text + equipmentItem + ", ";
+            }
+            if (equipmentString.Length > 2) equipmentString = equipmentString.Remove(equipmentString.Length - 2);
+            equipmentBlock.Text = "Equipment: " + equipmentString;
         }
 
         private void BodyPartsTextBlock_Initialized(object sender, EventArgs e)
         {
-
+            var bodyPartsBlock = sender as TextBlock;
+            var training = bodyPartsBlock.DataContext as Training;
+            var bodyParts = training
         }
 
         private void IntermediateTrainingsListBox_Initialized(object sender, EventArgs e)
