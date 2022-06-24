@@ -31,7 +31,7 @@ namespace FitnessForBusiness.Design
             // storage = new Context();
             _storage = new JSONStorage();
            // InitialUsers2();
-           InitialTrainings2();
+           //InitialTrainings2();
             InitializeComponent();
             
            //InitialTrainings();
