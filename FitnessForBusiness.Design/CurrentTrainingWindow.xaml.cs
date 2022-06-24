@@ -106,5 +106,12 @@ namespace FitnessForBusiness.Design
             if (e.LeftButton == MouseButtonState.Pressed)
                 DragMove();
         }
+
+ 
+
+        private void NumberOfLoopsTextBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
     }
 }

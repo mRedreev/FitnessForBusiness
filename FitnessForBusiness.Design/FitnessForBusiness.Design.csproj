@@ -190,7 +190,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Pictures\yoga.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Pictures\background.jpg" />
   </ItemGroup>
@@ -223,6 +225,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Pictures\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\power.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\cardio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pictures\warm-up.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

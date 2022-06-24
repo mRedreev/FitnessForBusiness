@@ -12,7 +12,7 @@ namespace FitnessForBusiness.Core.Models
 
         public string Name { get; set;}
 
-        public string Type { get; set;}
+        public TrainingType Type { get; set;}
 
         public bool? Level { get; set;}
 
@@ -33,7 +33,7 @@ namespace FitnessForBusiness.Core.Models
 
         public List<User> Users { get; set;}
 
-        public Training(string name, string type, bool? level, List<Excercise> excercises, double exLength, double breakLength, int circleAmount)
+        public Training(string name, TrainingType type, bool? level, List<Excercise> excercises, double exLength, double breakLength, int circleAmount)
         {
             Name = name;
             Type = type;
@@ -43,10 +43,27 @@ namespace FitnessForBusiness.Core.Models
             BreakLength = breakLength;
             CircleAmount = circleAmount;
             Equipment = new List<Equipment>();
-            Equipment = excercises
+            var equipmentList = excercises
                 .Select(e => e.Equipment)
                 .Distinct()
                 .ToList();
+
+            var equipmentDistinct = new List<Equipment>();
+            equipmentDistinct.Add(equipmentList[0]);
+
+            foreach (var eq in equipmentList)
+            {
+                foreach (var eq1 in equipmentDistinct)
+                {
+                    if (eq.Name != eq1.Name)
+                    {
+                        equipmentDistinct.Add(eq);
+                    }
+                }
+            }
+
+            Equipment = equipmentDistinct;
+
             if (Equipment.Count > 1)
             {
                 foreach (var e in Equipment)

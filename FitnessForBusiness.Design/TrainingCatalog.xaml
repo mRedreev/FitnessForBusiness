@@ -80,7 +80,8 @@
                          Style="{StaticResource MenuButtonTheme}"
                          FontSize="18"
                          Margin="0,30,0,0"
-                         IsChecked="True"/>
+                         IsChecked="True"
+                         Click="CatalogButton_Click"/>
 
             <RadioButton Name="CompletedWorkoutsButton" 
                          Height="50"
@@ -88,7 +89,8 @@
                          Content="Completed Workouts"
                          Style="{StaticResource MenuButtonTheme}" 
                          FontSize="18"
-                         IsChecked="False"/>
+                         IsChecked="False"
+                         Click="CompletedWorkoutsButton_Click"/>
 
             <RadioButton Name="ProfileButton" 
                          Height="50" 
@@ -98,7 +100,8 @@
                          FontSize="18"
                          IsChecked="False"
                          Content="My Profile"
-                         Click="ProfileButton_Click"/>
+                         Click="ProfileButton_Click"
+                         />
 
             <Button Name="LogOutButton"
                     Height="25"
@@ -112,9 +115,9 @@
         <ScrollViewer Grid.Row="1"
                       Grid.Column="1">
             <StackPanel Name="TypesPanel"
-                Margin="50 25 50 30">
+                        Margin="50 25 50 30"
+                        Visibility="Visible">
                 <ListBox Name="TypesListBox"
-                    Visibility="Visible"
                          Grid.Row="2"
                          HorizontalAlignment="Center"
                          VerticalContentAlignment="Top" 
@@ -164,13 +167,17 @@
         </ScrollViewer>
         <ScrollViewer Grid.Row="1"
                       Grid.Column="1">
-            <StackPanel Name="CurrentTypeImagePanel" >
-                <TextBlock Name="CurrentTypeTextBlock" Initialized="CurrentTypeTextBlock_Initialized" FontSize="22"></TextBlock>
-                <Image Name="CurrentTypeImage" Stretch="UniformToFill"  Margin=" 0 10 0 0"
-                                               Initialized="CurrentTypeImage_Initialized"></Image>
+            <StackPanel Name="CurrentTypeImagePanel" 
+                        Visibility="Collapsed" >
+             <TextBlock Name="CurrentTypeTextBlock" 
+                        Initialized="CurrentTypeTextBlock_Initialized" 
+                        FontSize="22"></TextBlock>
+                <Image Name="CurrentTypeImage" 
+                       Stretch="UniformToFill" 
+                       Margin=" 0 10 0 0"                                              
+                       Initialized="CurrentTypeImage_Initialized"></Image>
                 
             <StackPanel Name="LevelPanel" 
-                        Visibility="Collapsed"
                          Grid.Row="2" Margin="50 0 50 15" 
                          HorizontalAlignment="Left" 
                          ScrollViewer.CanContentScroll="False" 
@@ -198,13 +205,20 @@
                                                        FontFamily="Calibri"
                                                        FontSize="22" />
                                         <StackPanel Orientation="Vertical" Margin="15 0 0 0">
-                                            <Button Name="BeginButton"  
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Button Name="BeginButton"  
                                                         Padding="12 8" 
                                                         FontSize="16" 
                                                         Style="{StaticResource UIButton}" 
                                                         Initialized="BeginButton_Initialized"  
                                                         Click="BeginButton_Click"></Button>
-                                            <TextBlock Margin="0 5 0 0"
+                                                <TextBlock Margin="5 0 0 0"
+                                                               Name="BeginTrainingTimeTextBlock"
+                                                               FontSize="12"
+                                                               Initialized="BeginTrainingTimeTextBlock_Initialized"
+                                                               />
+                                                </StackPanel>
+                                                <TextBlock Margin="0 5 0 0"
                                                    Name="EquipmentTextBlock" 
                                                    FontFamily="Calibri"
                                                    FontSize="12" 
@@ -241,13 +255,20 @@
                                                        FontSize="22" 
                                                        />
                                         <StackPanel Orientation="Vertical" Margin="15 0 0 0">
-                                            <Button x:Name="IntermediateBeginButton"
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Button x:Name="IntermediateBeginButton"
                                                         Padding="12 8" 
                                                         FontSize="16" 
                                                         Style="{StaticResource UIButton}" 
                                                         Initialized="IntermediateBeginButton_Initialized"  
                                                         Click="IntermediateBeginButton_Click"></Button>
-                                            <TextBlock Margin="0 5 0 0"
+                                                    <TextBlock Margin="5 0 0 0"
+                                                               Name="IntTrainingTimeTextBlock"
+                                                               FontSize="12"
+                                                               Initialized="IntTrainingTimeTextBlock_Initialized"
+                                                               />
+                                                </StackPanel>
+                                                <TextBlock Margin="0 5 0 0"
                                                    Name="InterEquipment" 
                                                    FontFamily="Calibri"
                                                    FontSize="12" 
@@ -284,13 +305,20 @@
                                                        FontSize="22" 
                                                        />
                                         <StackPanel Orientation="Vertical" Margin="15 0 0 0">
-                                            <Button Name="AdvBeginButton"  
+                                                <StackPanel Orientation="Horizontal">
+                                                    <Button Name="AdvBeginButton"  
                                                         Padding="12 8" 
                                                         FontSize="16" 
                                                         Style="{StaticResource UIButton}" 
                                                         Initialized="AdvBeginButton_Initialized"  
                                                         Click="AdvBeginButton_Click"></Button>
-                                            <TextBlock Margin="0 5 0 0"
+                                                <TextBlock Margin="5 0 0 0"
+                                                               Name="AdvTrainingTimeTextBlock"
+                                                               FontSize="12"
+                                                               Initialized="AdvTrainingTimeTextBlock_Initialized"
+                                                               />
+                                                </StackPanel>
+                                                <TextBlock Margin="0 5 0 0"
                                                    Name="AdvEquipmentTextBlock" 
                                                    FontFamily="Calibri"
                                                    FontSize="12" 
@@ -310,6 +338,10 @@
                     </ListBox>
                 </StackPanel>
             </StackPanel>
+                <Button x:Name="GetBackToTypesButton" 
+                        Content="Back"
+                        Style="{StaticResource UIButton}" 
+                        Margin="0 30 0 0" Click="GetBackToTypesButton_Click"/>
             </StackPanel>
         </ScrollViewer>
 

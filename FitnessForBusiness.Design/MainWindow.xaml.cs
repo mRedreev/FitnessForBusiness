@@ -31,10 +31,10 @@ namespace FitnessForBusiness.Design
             // storage = new Context();
             _storage = new JSONStorage();
            // InitialUsers2();
-           // InitialTrainings2();
+           //InitialTrainings2();
             InitializeComponent();
             
-           // InitialTrainings();
+           //InitialTrainings();
            // InitialUsers();
 
 
@@ -124,9 +124,16 @@ namespace FitnessForBusiness.Design
                     "mat"
                 );
 
+                TrainingType typeCardio = new TrainingType("cardio", ".. / .. / Pictures /cardio.png");
+                TrainingType typePower = new TrainingType("power", ".. / .. / Pictures /power.png");
+                TrainingType typeYoga = new TrainingType("yoga", ".. / .. / Pictures /yoga.png");
+                TrainingType typeWarmUp = new TrainingType("warm-up", ".. / .. / Pictures /warm-up.png");
+
+
+
                 Training training1 = new Training(
                     "Short warm-up",
-                    "warm-up",
+                    typeWarmUp,
                     null,
                     new List<Excercise> { excercise1, excercise2, excercise3, excercise4 },
                     0.5,
@@ -177,9 +184,14 @@ namespace FitnessForBusiness.Design
                 "mat"
             );
 
+            TrainingType typeCardio = new TrainingType("cardio", ".. / .. / Pictures /cardio.png");
+            TrainingType typePower = new TrainingType("power", ".. / .. / Pictures /power.png");
+            TrainingType typeYoga = new TrainingType("yoga", ".. / .. / Pictures /yoga.png");
+            TrainingType typeWarmUp = new TrainingType("warm-up", ".. / .. / Pictures /warm-up.png");
+
             Training training1 = new Training(
                 "Short warm-up",
-                "warm-up",
+                typeWarmUp,
                 null,
                 new List<Excercise> { excercise1, excercise2, excercise3, excercise4 },
                 0.5,

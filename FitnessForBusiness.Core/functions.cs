@@ -2,11 +2,13 @@
 using FitnessForBusiness.Core.Storages;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace FitnessForBusiness.Core
 {
@@ -137,6 +139,31 @@ namespace FitnessForBusiness.Core
                 else if (box.Password != "")
                     box.Background = Brushes.Transparent;
             }
+        }
+
+        public static BitmapImage GetbitmapImageFromType(TrainingType type)
+        {
+            BitmapImage bitmapImage = new BitmapImage();
+
+            using (var fileStream = new FileStream("../../" + type.ImageSource, FileMode.Open))
+            {
+                bitmapImage.BeginInit();
+                bitmapImage.StreamSource = fileStream;
+                bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
+                bitmapImage.EndInit();
+            }
+
+            return bitmapImage;
+        }
+
+        public static string GetSeconds(double minutes)
+        {
+            return (minutes * 60).ToString() + "seconds";
+        }
+
+        public static string GetMinutes(double minutes)
+        {
+            return minutes.ToString() + "minutes";
         }
 
     }
