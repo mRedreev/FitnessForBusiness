@@ -540,11 +540,6 @@ namespace FitnessForBusiness.Design
             TrainingNameTextBlock_Initialized(sender, e);
         }
 
-        private void GoalTextBlock_Initialized(object sender, EventArgs e)
-        {
-            var textblock = sender as TextBlock;
-            textblock.Text = functions.NameOfGoal(_user.Goal);
-        }
 
         private void RecommendedTrainingNameButton_Initialized(object sender, EventArgs e)
         {
