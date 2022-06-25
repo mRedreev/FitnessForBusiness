@@ -166,5 +166,7 @@ namespace FitnessForBusiness.Core
             return minutes.ToString() + "minutes";
         }
 
+        
+
     }
 }
