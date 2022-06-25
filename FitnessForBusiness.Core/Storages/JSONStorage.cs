@@ -14,7 +14,7 @@ namespace FitnessForBusiness.Core.Storages
         readonly Repository<Excercise> _excercises;
         private const string filePath1 = "../../../FitnessForBusiness.Core/Data/users.json";
         private const string filePath2 = "../../../FitnessForBusiness.Core/Data/trainings.json";
-        private const string filepath3 = "../../../FitnessForBusiness.Core/Data/fithess_exercises.json";
+        private const string filepath3 = "../../../FitnessForBusiness.Core/Data/fitness_exercises.json";
         public JSONStorage()
         {
             _users = new Repository<User>(filePath1);

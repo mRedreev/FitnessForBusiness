@@ -145,7 +145,7 @@ namespace FitnessForBusiness.Core
         {
             BitmapImage bitmapImage = new BitmapImage();
 
-            using (var fileStream = new FileStream("../../" + type.ImageSource, FileMode.Open))
+            using (var fileStream = new FileStream(type.ImageSource, FileMode.Open))
             {
                 bitmapImage.BeginInit();
                 bitmapImage.StreamSource = fileStream;

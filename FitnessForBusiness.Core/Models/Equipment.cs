@@ -8,13 +8,12 @@ namespace FitnessForBusiness.Core.Models
 {
     public class Equipment
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
 
         public Equipment(string name)
         {
             Name = name;
-            Id = Guid.NewGuid();
         }
 
     }

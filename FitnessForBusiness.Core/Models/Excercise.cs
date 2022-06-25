@@ -8,7 +8,7 @@ namespace FitnessForBusiness.Core.Models
 {
     public class Excercise
     {
-        public Guid Id {get; set;}
+        public int Id {get; set;}
 
         public string Name {get; set;}
 
@@ -27,7 +27,6 @@ namespace FitnessForBusiness.Core.Models
             Level = level;
             BodyParts = bodyParts;
             Equipment = new Equipment(equipment);
-            Id = Guid.NewGuid();
         }
         public Excercise()
         {

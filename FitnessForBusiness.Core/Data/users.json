@@ -1,2 +1,15 @@
 [
+  {
+    "Id": "763526d5-63ed-4b5d-b790-115bf2981438",
+    "Name": "Iuliia",
+    "Surname": "Gilmullina",
+    "ImageSource": "/Pictures/suboch.jpg",
+    "Age": 4,
+    "Level": true,
+    "Goal": false,
+    "Login": "ugilmullina",
+    "Password": "200223",
+    "Born": "2017-12-27T00:00:00",
+    "CompletedTrainings": []
+  }
 ]

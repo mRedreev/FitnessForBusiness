@@ -227,8 +227,8 @@
     <Resource Include="Pictures\cardio.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Pictures\power.png.jpg" />
-    <Resource Include="Pictures\yoga.png.jpg" />
+    <Content Include="Pictures\power.png" />
+    <Content Include="Pictures\yoga.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Pictures\warm-up.png" />

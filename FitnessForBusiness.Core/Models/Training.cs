@@ -75,24 +75,10 @@ namespace FitnessForBusiness.Core.Models
 
             ExcerciseAmount = excercises.Count;
             Length = (ExcerciseLength + BreakLength) * ExcerciseAmount * CircleAmount - breakLength;
-            var bodyparts = new List<string>();
-            foreach (var e in Excercises)
-            {
-                 bodyparts.Add(e.BodyParts.Name);
-            }
-            var bodyPartsDistinct = new List<string>();
-            bodyPartsDistinct.Add(bodyparts[0]);
 
-            foreach (var eq in bodyparts)
-            {
-                foreach (var eq1 in bodyPartsDistinct)
-                {
-                    if (eq != eq1)
-                    {
-                        bodyPartsDistinct.Add(eq);
-                    }
-                }
-            }
+            var bodyparts = Excercises.Select(e => e.BodyParts.Name).ToList();
+            bodyparts = bodyparts.Distinct().ToList();
+            
 
             for (int i = 0; i < bodyparts.Count - 1; i++)
             {

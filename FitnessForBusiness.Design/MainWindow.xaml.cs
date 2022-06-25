@@ -32,6 +32,7 @@ namespace FitnessForBusiness.Design
             _storage = new JSONStorage();
             // InitialUsers2();
             //InitialTrainings2();
+            TrainsInitialized("yoga");
             InitializeComponent();
 
             //InitialTrainings();
@@ -204,16 +205,16 @@ namespace FitnessForBusiness.Design
 
         private List<TrainingType> MakeTrainingTypes()
         {
-            TrainingType typeCardio = new TrainingType("cardio", ".. / .. / Pictures /cardio.png");
-            TrainingType typePower = new TrainingType("power", ".. / .. / Pictures /power.png");
-            TrainingType typeYoga = new TrainingType("yoga", ".. / .. / Pictures /yoga.png");
-            TrainingType typeWarmUp = new TrainingType("warm-up", ".. / .. / Pictures /warm-up.png");
+            TrainingType typeCardio = new TrainingType("cardio", "../../Pictures/cardio.png");
+            TrainingType typePower = new TrainingType("power", "../../Pictures/power.png");
+            TrainingType typeYoga = new TrainingType("yoga", "../../Pictures/yoga.png");
+            TrainingType typeWarmUp = new TrainingType("warm-up", "../../Pictures/warm-up.png");
 
             return new List<TrainingType>
             {typeCardio, typeYoga, typeWarmUp, typePower};
         }
 
-        private void TrainsInitialized()
+        private void TrainsInitialized(string type)
         {
             var types = MakeTrainingTypes();
             var excersices = _storage.GetExcercises;
@@ -233,10 +234,12 @@ namespace FitnessForBusiness.Design
             var yogaExcercises = excersices.Where(e => e.Equipment.Name == "body weight").ToList();
             yogaExcercises = yogaExcercises.Where(e => e.Name.Contains("stretch")).ToList();
 
-            var yoga1 = new Training
+            if (type == "yoga")
+            {
+                var yoga1 = new Training
                 (
                 "Good morning",
-                types[2],
+                types[1],
                 null,
                 yogaExcercises.Where(e => easyExercises.Contains(e)).ToList().GetRange(0, 10),
                 1,
@@ -244,26 +247,56 @@ namespace FitnessForBusiness.Design
                 3
                 );
 
-            var yoga2 = new Training
-               (
-               "Good night",
-               types[2],
-               false,
-               yogaExcercises.Where(e => easyExercises.Contains(e)).ToList().GetRange(11, 21),
-               1,
-               20,
-               3
-               );
-            var yoga2 = new Training
-                (
-               "Feel good",
-               types[2],
-               false,
-               yogaExcercises.Where(e => easyExercises.Contains(e)).ToList().GetRange(11, 21),
-               1,
-               20,
-               3
-               );
+                //var yoga2 = new Training
+                //   (
+                //   "Good night",
+                //   types[2],
+                //   false,
+                //   yogaExcercises.Where(e => easyExercises.Contains(e)).ToList().GetRange(10, 10),
+                //   1,
+                //   0.5,
+                //   3
+                //   );
+
+                var yoga3 = new Training
+                    (
+                   "Feel good",
+                   types[1],
+                   false,
+                   yogaExcercises.Where(e => middleExercises.Contains(e)).ToList().GetRange(0, 10),
+                   1,
+                   0.5,
+                   3
+                   );
+
+                var yoga4 = new Training
+                      (
+                   "Breathe and feel",
+                   types[1],
+                   true,
+                   yogaExcercises.Where(e => hardExercises.Contains(e)).ToList().GetRange(0, 10),
+                   1,
+                   0.5,
+                   3
+                   );
+
+                //var yoga5 = new Training
+                //      (
+                //   "Yin yoga",
+                //   types[2],
+                //   true,
+                //   yogaExcercises.Where(e => hardExercises.Contains(e)).ToList().GetRange(10, 5),
+                //   2,
+                //   0.5,
+                //   3
+                //   );
+                _storage.AddTraining(yoga1);
+               // _storage.AddTraining(yoga2);
+                _storage.AddTraining(yoga3);
+                _storage.AddTraining(yoga4);
+                //_storage.AddTraining(yoga5);
+            }
+
         }
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
