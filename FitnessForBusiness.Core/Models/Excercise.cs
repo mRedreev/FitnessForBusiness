@@ -30,7 +30,9 @@ namespace FitnessForBusiness.Core.Models
             Id = Guid.NewGuid();
         }
         public Excercise()
-        { }
+        {
+
+        }
         public string ShowLevel()
         {
             return functions.NameOfLevel(Level);

@@ -25,17 +25,17 @@ namespace FitnessForBusiness.Design
     public partial class MainWindow : Window
     {
         IStorage _storage;
-        
+
         public MainWindow()
         {
             // storage = new Context();
             _storage = new JSONStorage();
-           // InitialUsers2();
-           //InitialTrainings2();
+            // InitialUsers2();
+            //InitialTrainings2();
             InitializeComponent();
-            
-           //InitialTrainings();
-           // InitialUsers();
+
+            //InitialTrainings();
+            // InitialUsers();
 
 
             /*using (Context context = new Context())
@@ -69,19 +69,19 @@ namespace FitnessForBusiness.Design
 
         private void InitialUsers2()
         {
-            
-                User user1 = new User(
-                    "Mikhail",
-                    "Redreev",
-                   ".. / .. / Users /user1.jpg",
-                    DateTime.Parse("30.11.2002"),
-                    true,
-                    true,
-                    "MRedreev",
-                    "Misha2002"
-                    );
+
+            User user1 = new User(
+                "Mikhail",
+                "Redreev",
+               ".. / .. / Users /user1.jpg",
+                DateTime.Parse("30.11.2002"),
+                true,
+                true,
+                "MRedreev",
+                "Misha2002"
+                );
             _storage.Registration(user1);
-                MessageBox.Show("user1 saved");
+            MessageBox.Show("user1 saved");
         }
 
         //private void InitialTrainings()
@@ -146,62 +146,125 @@ namespace FitnessForBusiness.Design
         //    }
         //}
 
-        private void InitialTrainings2()
+        //private void InitialTrainings2()
+        //{
+        //    Excercise excercise1 = new Excercise
+        //    (
+        //        "Air bike",
+        //        "http://d205bpvrqc9yn1.cloudfront.net/0003.gif",
+        //        null,
+        //        new List<string>() { "waist", "abs" },
+        //        "mat"
+        //    );
+
+        //    Excercise excercise2 = new Excercise
+        //    (
+        //        "All fours squad stretch",
+        //        "http://d205bpvrqc9yn1.cloudfront.net/1512.gif",
+        //        null,
+        //        new List<string>() { "quads" },
+        //        "mat"
+        //    );
+
+        //    Excercise excercise3 = new Excercise
+        //    (
+        //        "ankle circles",
+        //        "http://d205bpvrqc9yn1.cloudfront.net/1368.gif",
+        //        null,
+        //        new List<string>() { "calves" },
+        //        "mat"
+        //    );
+
+        //    Excercise excercise4 = new Excercise
+        //    (
+        //        "astride jumps",
+        //        "http://d205bpvrqc9yn1.cloudfront.net/3220.gif",
+        //        null,
+        //        new List<string>() { "cardiovascular system" },
+        //        "mat"
+        //    );
+
+        //    TrainingType typeCardio = new TrainingType("cardio", ".. / .. / Pictures /cardio.png");
+        //    TrainingType typePower = new TrainingType("power", ".. / .. / Pictures /power.png");
+        //    TrainingType typeYoga = new TrainingType("yoga", ".. / .. / Pictures /yoga.png");
+        //    TrainingType typeWarmUp = new TrainingType("warm-up", ".. / .. / Pictures /warm-up.png");
+
+        //    Training training1 = new Training(
+        //        "Short warm-up",
+        //        typeWarmUp,
+        //        null,
+        //        new List<Excercise> { excercise1, excercise2, excercise3, excercise4 },
+        //        0.5,
+        //        0.25,
+        //        2
+        //        );
+        //    _storage.AddTraining(training1);
+        //    MessageBox.Show("training1 saved");
+        //}
+
+        private List<TrainingType> MakeTrainingTypes()
         {
-            Excercise excercise1 = new Excercise
-            (
-                "Air bike",
-                "http://d205bpvrqc9yn1.cloudfront.net/0003.gif",
-                null,
-                new List<string>() { "waist", "abs" },
-                "mat"
-            );
-
-            Excercise excercise2 = new Excercise
-            (
-                "All fours squad stretch",
-                "http://d205bpvrqc9yn1.cloudfront.net/1512.gif",
-                null,
-                new List<string>() { "quads" },
-                "mat"
-            );
-
-            Excercise excercise3 = new Excercise
-            (
-                "ankle circles",
-                "http://d205bpvrqc9yn1.cloudfront.net/1368.gif",
-                null,
-                new List<string>() { "calves" },
-                "mat"
-            );
-
-            Excercise excercise4 = new Excercise
-            (
-                "astride jumps",
-                "http://d205bpvrqc9yn1.cloudfront.net/3220.gif",
-                null,
-                new List<string>() { "cardiovascular system" },
-                "mat"
-            );
-
             TrainingType typeCardio = new TrainingType("cardio", ".. / .. / Pictures /cardio.png");
             TrainingType typePower = new TrainingType("power", ".. / .. / Pictures /power.png");
             TrainingType typeYoga = new TrainingType("yoga", ".. / .. / Pictures /yoga.png");
             TrainingType typeWarmUp = new TrainingType("warm-up", ".. / .. / Pictures /warm-up.png");
 
-            Training training1 = new Training(
-                "Short warm-up",
-                typeWarmUp,
-                null,
-                new List<Excercise> { excercise1, excercise2, excercise3, excercise4 },
-                0.5,
-                0.25,
-                2
-                );
-            _storage.AddTraining(training1);
-            MessageBox.Show("training1 saved");
+            return new List<TrainingType>
+            {typeCardio, typeYoga, typeWarmUp, typePower};
         }
 
+        private void TrainsInitialized()
+        {
+            var types = MakeTrainingTypes();
+            var excersices = _storage.GetExcercises;
+
+            var easyExercises = excersices.Where(e => e.Level == null).ToList();
+            var middleExercises = excersices.Where(e => e.Level == false).ToList();
+            var hardExercises = excersices.Where(e => e.Level == true).ToList();
+
+            var powerEquipment = new List<string> { "cable", "leverage machine", "barbell", "dumbbell", "kettlebell"};
+
+            var powerExcercises = excersices.Where(e => powerEquipment.Contains(e.Equipment.Name)).ToList();
+
+            var cardioExcercises = excersices.Where(e => e.BodyParts.Name == "cardio").ToList();
+
+            var warmupExcersises = excersices.Where(e => e.Equipment.Name == "body weight").ToList();
+
+            var yogaExcercises = excersices.Where(e => e.Equipment.Name == "body weight").ToList();
+            yogaExcercises = yogaExcercises.Where(e => e.Name.Contains("stretch")).ToList();
+
+            var yoga1 = new Training
+                (
+                "Good morning",
+                types[2],
+                null,
+                yogaExcercises.Where(e => easyExercises.Contains(e)).ToList().GetRange(0, 10),
+                1,
+                0.5,
+                3
+                );
+
+            var yoga2 = new Training
+               (
+               "Good night",
+               types[2],
+               false,
+               yogaExcercises.Where(e => easyExercises.Contains(e)).ToList().GetRange(11, 21),
+               1,
+               20,
+               3
+               );
+            var yoga2 = new Training
+                (
+               "Feel good",
+               types[2],
+               false,
+               yogaExcercises.Where(e => easyExercises.Contains(e)).ToList().GetRange(11, 21),
+               1,
+               20,
+               3
+               );
+        }
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             LoginWindow loginWindow = new LoginWindow(_storage);
