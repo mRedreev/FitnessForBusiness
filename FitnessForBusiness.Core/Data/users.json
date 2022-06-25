@@ -438,5 +438,113 @@
         "Description": "cardio, "
       }
     ]
+  },
+  {
+    "Id": "e6ddfed5-a605-40e4-ae7b-a4b72d441708",
+    "Name": "Polina",
+    "Surname": "Abr",
+    "ImageSource": "/Pictures/becl2.jpg",
+    "Age": 20,
+    "Level": false,
+    "Goal": false,
+    "Login": "polly",
+    "Password": "polly",
+    "Born": "2002-01-01T00:00:00",
+    "CompletedTrainings": [
+      {
+        "Id": "0458f1d5-125e-4298-a1c1-e87eb3a2ddae",
+        "Name": "Before main training",
+        "Type": {
+          "Id": "f0a60728-439d-4981-989b-ca03360c7050",
+          "Name": "warm-up",
+          "ImageSource": "../../Pictures/warm-up.png"
+        },
+        "Level": null,
+        "Excercises": [
+          {
+            "Id": 1405,
+            "Name": "back pec stretch",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1405.gif",
+            "Level": null,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "back"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "body weight"
+            }
+          },
+          {
+            "Id": 3212,
+            "Name": "basic toe touch (male)",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3212.gif",
+            "Level": null,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "upper legs"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "body weight"
+            }
+          },
+          {
+            "Id": 3360,
+            "Name": "bear crawl",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3360.gif",
+            "Level": null,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "cardio"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "body weight"
+            }
+          },
+          {
+            "Id": 3543,
+            "Name": "bodyweight drop jump squat",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3543.gif",
+            "Level": null,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "upper legs"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "body weight"
+            }
+          },
+          {
+            "Id": 3544,
+            "Name": "bodyweight incline side plank",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3544.gif",
+            "Level": null,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "waist"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "body weight"
+            }
+          }
+        ],
+        "Equipment": [
+          {
+            "Id": 0,
+            "Name": "body weight"
+          }
+        ],
+        "ExcerciseLength": 0.75,
+        "ExcerciseAmount": 5,
+        "BreakLength": 0.15,
+        "CircleAmount": 3,
+        "Length": 13.35,
+        "Description": "back, upper legs, cardio, "
+      }
+    ]
   }
 ]
