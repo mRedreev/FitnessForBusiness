@@ -366,7 +366,9 @@ namespace FitnessForBusiness.Design
             CurrentTypeImagePanel.Visibility = Visibility.Collapsed;
             ProfilePanel.Visibility = Visibility.Collapsed;           
             TypesPanel.Visibility = Visibility.Collapsed;
-            //CompletedTrainingsPanel.Visibillity = Visibillity.Visible
+            CompletedTrainings.ItemsSource = _user.CompletedTrainings;
+            CompletedTrainingsPanel.Visibility = Visibility.Visible;
+            
         }
 
         private void CatalogButton_Click(object sender, RoutedEventArgs e)
@@ -374,7 +376,7 @@ namespace FitnessForBusiness.Design
             
             CurrentTypeImagePanel.Visibility = Visibility.Collapsed;
             ProfilePanel.Visibility = Visibility.Collapsed;
-            //CompletedTrainingsPanel.Visibillity = Visibillity.Collapsed
+            CompletedTrainingsPanel.Visibility = Visibility.Collapsed;
             TypesPanel.Visibility = Visibility.Visible;
         }
 
@@ -403,37 +405,39 @@ namespace FitnessForBusiness.Design
 
         private void CompletedTrainingNameBlock_Initialized(object sender, EventArgs e)
         {
-            
+            TrainingNameTextBlock_Initialized(sender, e);
         }
 
         private void CompletedTrainingNameButton_Initialized(object sender, EventArgs e)
         {
-
+            BeginButton_Initialized(sender, e);
         }
 
         private void CompletedTrainingNameButton_Click(object sender, RoutedEventArgs e)
         {
-
+            BeginButton_Click(sender, e);
         }
 
         private void CompletedTrainingTimeBlock_Initialized(object sender, EventArgs e)
         {
-
+            BeginTrainingTimeTextBlock_Initialized(sender, e);
         }
 
         private void CompletedTrainingEqupmentBlock_Initialized(object sender, EventArgs e)
         {
-
+            EquipmentTextBlock_Initialized(sender, e);
         }
 
         private void CompletedTrainingBodyPartsBlock_Initialized(object sender, EventArgs e)
         {
-
+            BodyPartsTextBlock_Initialized(sender, e);
         }
 
         private void CompletedTrainingTypeBlock_Initialized(object sender, EventArgs e)
         {
-
+           var textblock = sender as TextBlock;
+            var training = textblock.DataContext as Training;
+            textblock.Text = training.Type.Name;
         }
     }
 }

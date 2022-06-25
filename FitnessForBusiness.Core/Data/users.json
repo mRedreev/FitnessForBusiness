@@ -10,7 +10,7 @@
     "Login": "MRedreev",
     "Password": "Misha2002",
     "Born": "2002-11-30T00:00:00",
-    "CompletedTrainingsId": []
+    "CompletedTrainings": null
   },
   {
     "Id": 0,
@@ -23,7 +23,101 @@
     "Login": "sobaka11",
     "Password": "1122",
     "Born": "1995-02-01T00:00:00",
-    "CompletedTrainingsId": []
+    "CompletedTrainings": [
+      {
+        "Id": 0,
+        "Name": "Short warm-up",
+        "Type": {
+          "Id": 0,
+          "Name": "warm-up",
+          "ImageSource": "/Pictures/warm-up.png"
+        },
+        "Level": null,
+        "Excercises": [
+          {
+            "Id": 0,
+            "Name": "Air bike",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0003.gif",
+            "Level": null,
+            "BodyParts": [
+              {
+                "Id": 0,
+                "Name": "waist"
+              },
+              {
+                "Id": 0,
+                "Name": "abs"
+              }
+            ],
+            "Equipment": {
+              "Id": 0,
+              "Name": "mat"
+            }
+          },
+          {
+            "Id": 0,
+            "Name": "All fours squad stretch",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1512.gif",
+            "Level": null,
+            "BodyParts": [
+              {
+                "Id": 0,
+                "Name": "quads"
+              }
+            ],
+            "Equipment": {
+              "Id": 0,
+              "Name": "mat"
+            }
+          },
+          {
+            "Id": 0,
+            "Name": "ankle circles",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1368.gif",
+            "Level": null,
+            "BodyParts": [
+              {
+                "Id": 0,
+                "Name": "calves"
+              }
+            ],
+            "Equipment": {
+              "Id": 0,
+              "Name": "mat"
+            }
+          },
+          {
+            "Id": 0,
+            "Name": "astride jumps",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3220.gif",
+            "Level": null,
+            "BodyParts": [
+              {
+                "Id": 0,
+                "Name": "cardiovascular system"
+              }
+            ],
+            "Equipment": {
+              "Id": 0,
+              "Name": "mat"
+            }
+          }
+        ],
+        "Equipment": [
+          {
+            "Id": 0,
+            "Name": "mat"
+          }
+        ],
+        "ExcerciseLength": 0.5,
+        "ExcerciseAmount": 4,
+        "BreakLength": 0.25,
+        "CircleAmount": 2,
+        "Length": 5.75,
+        "Description": "waist, abs, quads, calves, ",
+        "Users": []
+      }
+    ]
   },
   {
     "Id": 0,
@@ -36,7 +130,7 @@
     "Login": "gfff",
     "Password": "111",
     "Born": "2019-01-29T00:00:00",
-    "CompletedTrainingsId": []
+    "CompletedTrainings": null
   },
   {
     "Id": 0,
@@ -49,7 +143,7 @@
     "Login": "sobaka111",
     "Password": "hehe",
     "Born": "2000-12-25T00:00:00",
-    "CompletedTrainingsId": []
+    "CompletedTrainings": null
   },
   {
     "Id": 0,
@@ -62,6 +156,6 @@
     "Login": "12",
     "Password": "12",
     "Born": "2022-06-02T00:00:00",
-    "CompletedTrainingsId": []
+    "CompletedTrainings": null
   }
 ]
