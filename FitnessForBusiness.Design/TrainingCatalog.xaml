@@ -70,7 +70,7 @@
                     Background="#ab5eeb">
 
             <RadioButton Name="CatalogButton" 
-                         Height="50"
+                         Height="55"
                          FontWeight="Medium"
                          Content="Explore Workouts"
                          VerticalAlignment="Center"
@@ -80,8 +80,17 @@
                          IsChecked="True"
                          Click="CatalogButton_Click"/>
 
+            <RadioButton Name="RecommendedWorkoutsButton"
+                         Height="55"
+                         FontWeight="Medium"
+                         Content="Recommended&#x0a;Workouts"
+                         VerticalAlignment="Center"
+                         Style="{StaticResource MenuButtonTheme}"
+                         FontSize="18"
+                         IsChecked="False"/>
+
             <RadioButton Name="CompletedWorkoutsButton" 
-                         Height="50"
+                         Height="55"
                          FontWeight="Medium"
                          Content="Completed Workouts"
                          Style="{StaticResource MenuButtonTheme}" 
@@ -90,7 +99,7 @@
                          Click="CompletedWorkoutsButton_Click"/>
 
             <RadioButton Name="ProfileButton" 
-                         Height="50" 
+                         Height="55" 
                          Style="{StaticResource MenuButtonTheme}"
                          FontWeight="Medium"
                          FontSize="18"
@@ -120,7 +129,7 @@
 
                     <ListBox Name="TypesListBox"
                              Width="600"
-                             Height="500"
+                             Height="450"
                              HorizontalAlignment="Center"
                              VerticalContentAlignment="Top" 
                              ScrollViewer.HorizontalScrollBarVisibility="Hidden"
@@ -178,20 +187,23 @@
                 </StackPanel>
 
                 <StackPanel Name="CurrentTypeImagePanel" 
-                            Visibility="Collapsed" >
+                            Visibility="Collapsed">
                     <TextBlock Name="CurrentTypeTextBlock" 
-                               Initialized="CurrentTypeTextBlock_Initialized" 
+                               Initialized="CurrentTypeTextBlock_Initialized"
+                               Foreground="LightGray"
+                               HorizontalAlignment="Center"
+                               Margin="0,10,0,0"
                                FontSize="22"/>
 
                     <Image Name="CurrentTypeImage"  
-                           Margin=" 0 10 0 0"
+                           Margin="0,10,0,0"
                            Width="150"
                            Height="150"
                            Initialized="CurrentTypeImage_Initialized"/>
 
                     <StackPanel Name="LevelPanel" 
                                 Grid.Row="2" 
-                                Margin="50 0 50 15" 
+                                Margin="50,0,50,15" 
                                 HorizontalAlignment="Left" 
                                 ScrollViewer.CanContentScroll="False" 
                                 Background="Transparent"
@@ -226,7 +238,6 @@
                                                             Margin="15 0 0 0">
                                                     <StackPanel Orientation="Horizontal">
                                                         <Button Name="BeginButton"  
-                                                                Padding="12 8"
                                                                 FontSize="16"
                                                                 Width="100"
                                                                 Height="35"
@@ -565,7 +576,8 @@
 
                 <StackPanel x:Name="CompletedTrainingsPanel" 
                             Orientation="Vertical"
-                            Visibility="Collapsed">
+                            Visibility="Collapsed"
+                            Margin="20,20,0,0">
                     <ListBox Name="CompletedTrainings" 
                              HorizontalContentAlignment="Left"
                              Background="Transparent"
@@ -575,45 +587,53 @@
                             <DataTemplate>
                                 <Grid>
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock Name="CompletedTrainingNameBlock" 
+
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Name="CompletedTrainingNameBlock" 
                                                    Initialized="CompletedTrainingNameBlock_Initialized"
                                                    FontFamily="Calibri"
+                                                   FontWeight="Medium"
+                                                   Foreground="LightGray"
                                                    FontSize="22"/>
 
-                                        <TextBlock x:Name="CompletedTrainingTypeBlock"
+                                            <TextBlock x:Name="CompletedTrainingTypeBlock"
                                                    Initialized="CompletedTrainingTypeBlock_Initialized"
-                                                   Margin="15 0 0 0"
-                                                   Padding="12 8" 
-                                                   FontSize="14" 
-                                                   Width="80"/>
+                                                   Margin="15 5 0 0" 
+                                                   FontSize="14"
+                                                   Foreground="LightGray"/>
+                                        </StackPanel>
 
                                         <StackPanel Orientation="Vertical" 
-                                                    Margin="15 0 0 0">
+                                                    Margin="35 0 0 0">
                                             <StackPanel Orientation="Horizontal">
-                                                <Button Name="CompletedTrainingNameButton"  
-                                                        Padding="12 8" 
+                                                <Button Name="CompletedTrainingNameButton"   
                                                         FontSize="16" 
+                                                        Width="90"
+                                                        Height="35"
                                                         Style="{StaticResource UIButton}" 
                                                         Initialized="CompletedTrainingNameButton_Initialized"  
                                                         Click="CompletedTrainingNameButton_Click"/>
 
-                                                <TextBlock Margin="5 0 0 0"
+                                                <TextBlock Margin="10 10 0 0"
                                                            Name="CompletedTrainingTimeBlock"
                                                            FontSize="12"
+                                                           Foreground="LightGray"
                                                            Initialized="CompletedTrainingTimeBlock_Initialized"/>
                                             </StackPanel>
 
-                                            <TextBlock Margin="0 5 0 0"
+                                            <TextBlock Margin="0 10 0 0"
                                                        Name="CompletedTrainingEqupmentBlock" 
                                                        FontFamily="Calibri"
                                                        FontSize="12" 
+                                                       Foreground="LightGray"
                                                        Initialized="CompletedTrainingEqupmentBlock_Initialized"
                                                        TextWrapping="Wrap"/>
 
-                                            <TextBlock Margin="0 5 0 0"
+                                            <TextBlock Margin="0 3 0 0"
                                                        Name="CompletedTrainingBodyPartsBlock" 
                                                        FontFamily="Calibri"
                                                        FontSize="12" 
+                                                       Foreground="LightGray"
                                                        Initialized="CompletedTrainingBodyPartsBlock_Initialized"
                                                        TextWrapping="Wrap"/>
                                         </StackPanel>
