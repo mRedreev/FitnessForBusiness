@@ -223,7 +223,15 @@ namespace FitnessForBusiness.Design
             CompletedTrainingsPanel.Visibility = Visibility.Collapsed;
             TypesPanel.Visibility = Visibility.Collapsed;
 
+            RecommendedTrainings.ItemsSource = GetRecommendedTrainings();
             RecommendedTrainingsPanel.Visibility = Visibility.Visible;
+        }
+        private List<Training> GetRecommendedTrainings()
+        {
+            var trainingsWithUsersLevel = _storage.GetTrainings.Where(t => t.Level == _user.Level).ToList();
+            if (_user.Goal == null) return trainingsWithUsersLevel.Where(t => t.Type.Name == "cardio").ToList();
+            else if (_user.Goal == true) return trainingsWithUsersLevel.Where(t => t.Type.Name == "power").ToList();
+            else return trainingsWithUsersLevel.Where(t => t.Type.Name == "yoga").ToList();
         }
 
         private void TypesListBox_MouseLeave(object sender, MouseEventArgs e)
@@ -516,52 +524,55 @@ namespace FitnessForBusiness.Design
 
         private void RecommendedTrainings_Initialized(object sender, EventArgs e)
         {
-
+            
         }
 
         private void RecommendedTrainingNameBlock_Initialized(object sender, EventArgs e)
         {
-
+            TrainingNameTextBlock_Initialized(sender, e);
         }
 
-        private void RecommendedTrainingTypeBlock_Initialized(object sender, EventArgs e)
+        private void GoalTextBlock_Initialized(object sender, EventArgs e)
         {
-
+            var textblock = sender as TextBlock;
+            textblock.Text = functions.NameOfGoal(_user.Goal);
         }
 
         private void RecommendedTrainingNameButton_Initialized(object sender, EventArgs e)
         {
-
+            BeginButton_Initialized(sender, e);
         }
 
         private void RecommendedTrainingNameButton_Click(object sender, RoutedEventArgs e)
         {
-
+            BeginButton_Click(sender, e);
         }
 
         private void RecommendedTrainingTimeBlock_Initialized(object sender, EventArgs e)
         {
-
+            BeginTrainingTimeTextBlock_Initialized(sender, e);
         }
 
         private void RecommendedTrainingEqupmentBlock_Initialized(object sender, EventArgs e)
         {
-
+            EquipmentTextBlock_Initialized(sender, e);
         }
 
         private void RecommendedTrainingBodyPartsBlock_Initialized(object sender, EventArgs e)
         {
-
+            BodyPartsTextBlock_Initialized(sender, e);
         }
 
         private void RecommendedTypeTextBlock_Initialized(object sender, EventArgs e)
         {
-
+            CompletedTrainingTypeBlock_Initialized(sender, e);
         }
 
         private void RecommendedLevelTextBlock_Initialized(object sender, EventArgs e)
         {
-
+            var textBlock = sender as TextBlock;
+            var training = textBlock.DataContext as Training;
+            textBlock.Text = functions.NameOfLevel(training.Level);
         }
 
         private void IntermediateTrainingsListBox_MouseEnter(object sender, MouseEventArgs e)

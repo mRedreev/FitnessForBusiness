@@ -158,12 +158,12 @@ namespace FitnessForBusiness.Core
 
         public static string GetSeconds(double minutes)
         {
-            return (minutes * 60).ToString() + "seconds";
+            return (minutes * 60).ToString() + " seconds";
         }
 
         public static string GetMinutes(double minutes)
         {
-            return minutes.ToString() + "minutes";
+            return minutes.ToString() + " minutes";
         }
 
         
