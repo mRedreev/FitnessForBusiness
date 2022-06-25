@@ -532,5 +532,40 @@ namespace FitnessForBusiness.Design
         {
 
         }
+
+        private void IntermediateTrainingsListBox_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Cursor = Cursors.Hand;
+        }
+
+        private void IntermediateTrainingsListBox_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Cursor = Cursors.Arrow;
+        }
+
+        private void BeginnerTrainingsListBox_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Cursor = Cursors.Hand;
+        }
+
+        private void BeginnerTrainingsListBox_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Cursor = Cursors.Arrow;
+        }
+
+        private void AdvTrainingsListBox_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Cursor = Cursors.Hand;
+        }
+
+        private void AdvTrainingsListBox_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Cursor = Cursors.Arrow;
+        }
+
+        private void CompletedTrainings_Initialized(object sender, EventArgs e)
+        {
+
+        }
     }
 }
