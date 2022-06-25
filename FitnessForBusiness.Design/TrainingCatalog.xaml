@@ -184,8 +184,7 @@
                                Initialized="CurrentTypeTextBlock_Initialized" 
                                FontSize="22"/>
 
-                    <Image Name="CurrentTypeImage" 
-                           Stretch="UniformToFill" 
+                    <Image Name="CurrentTypeImage"  
                            Margin=" 0 10 0 0"
                            Width="150"
                            Height="150"
@@ -236,7 +235,7 @@
                                                                 Initialized="BeginButton_Initialized"  
                                                                 Click="BeginButton_Click"/>
 
-                                                        <TextBlock Margin="5 0 0 0"
+                                                        <TextBlock Margin="15 10 0 0"
                                                                    Name="BeginTrainingTimeTextBlock"
                                                                    FontSize="12"
                                                                    Foreground="LightGray"
