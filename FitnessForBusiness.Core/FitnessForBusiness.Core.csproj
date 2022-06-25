@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Data\fitness_exercises.json" />
     <None Include="Data\trainings.json" />
     <None Include="Data\users.json" />
     <None Include="packages.config" />
