@@ -77,10 +77,15 @@ namespace FitnessForBusiness.Design
         private void end_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show($"Congratulations! You have completed training {_training.Name}");
-            if (_user.CompletedTrainings.Any(t => t==_training))
+            if (_user.CompletedTrainings == null)
+                _user.CompletedTrainings = new List<Training>();
+            else if (_user.CompletedTrainings.Any(t => t==_training))
                 _user.CompletedTrainings.Remove(_training);
+            
             _user.CompletedTrainings.Add(_training);
             _storage.Save();
+
+            Back_Click(sender, e);
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
@@ -115,12 +120,15 @@ namespace FitnessForBusiness.Design
 
         private void NumberOfLoopsTextBlock_Initialized(object sender, EventArgs e)
         {
-
+            var textblock = sender as TextBlock;
+            textblock.Text = _training.CircleAmount.ToString() + " circles";
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-
+            var trainingCatalog = new TrainingCatalog(_user, _storage);
+            trainingCatalog.Show();
+            this.Close();
         }
     }
 }

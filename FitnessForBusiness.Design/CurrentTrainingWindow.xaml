@@ -66,6 +66,15 @@
                    FontSize="16"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Top"/>
+        <TextBlock 
+            Name="NumberOfLoopsTextBlock" 
+            Initialized="NumberOfLoopsTextBlock_Initialized"
+            Margin="0 40 80 0"
+            HorizontalAlignment="Right"
+            Width="90"
+            Height="30"
+            FontSize="14"
+            ></TextBlock>
         
         <ListBox Name="ExcercizesListBox" 
                  Margin="50,70,50,50"
@@ -75,7 +84,7 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid>
-                        <TextBlock Name="NumberOfLoopsTextBlock" Initialized="NumberOfLoopsTextBlock_Initialized"></TextBlock>
+                        
                         <StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <MediaElement x:Name="video" 
