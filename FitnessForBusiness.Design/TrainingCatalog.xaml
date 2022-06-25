@@ -155,8 +155,7 @@
                                                VerticalAlignment="Top" 
                                                HorizontalAlignment="Stretch">
 
-                                        <Border BorderThickness="1.2" 
-                                                BorderBrush="Black">
+                                        <Border BorderThickness="0">
                                             <Image Name="TypeImage" 
                                                    Stretch="UniformToFill" 
                                                    Initialized="TypeImage_Initialized"/>
