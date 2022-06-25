@@ -3,10 +3,10 @@
     "Id": "763526d5-63ed-4b5d-b790-115bf2981438",
     "Name": "Iuliia",
     "Surname": "Gilmullina",
-    "ImageSource": "/Pictures/suboch.jpg",
+    "ImageSource": "/Pictures/san.jpg",
     "Age": 4,
-    "Level": true,
-    "Goal": false,
+    "Level": null,
+    "Goal": true,
     "Login": "ugilmullina",
     "Password": "200223",
     "Born": "2017-12-27T00:00:00",
@@ -338,8 +338,105 @@
         "CircleAmount": 3,
         "Length": 44.5,
         "Description": "upper legs, back, shoulders, lower legs, "
+      },
+      {
+        "Id": "c0f514a5-0394-4b70-895c-a3fa4b55f4f7",
+        "Name": "Best full body burn",
+        "Type": {
+          "Id": "5df30a52-b2dd-4e3b-968d-69e051affd03",
+          "Name": "cardio",
+          "ImageSource": "../../Pictures/cardio.png"
+        },
+        "Level": false,
+        "Excercises": [
+          {
+            "Id": 3672,
+            "Name": "back and forth step",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3672.gif",
+            "Level": false,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "cardio"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "body weight"
+            }
+          },
+          {
+            "Id": 1201,
+            "Name": "dumbbell burpee",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1201.gif",
+            "Level": false,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "cardio"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "dumbbell"
+            }
+          },
+          {
+            "Id": 3221,
+            "Name": "half knee bends (male)",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3221.gif",
+            "Level": false,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "cardio"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "body weight"
+            }
+          },
+          {
+            "Id": 3636,
+            "Name": "high knee against wall",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3636.gif",
+            "Level": false,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "cardio"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "body weight"
+            }
+          },
+          {
+            "Id": 501,
+            "Name": "jack burpee",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0501.gif",
+            "Level": false,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "cardio"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "body weight"
+            }
+          }
+        ],
+        "Equipment": [
+          {
+            "Id": 0,
+            "Name": "body weight"
+          },
+          {
+            "Id": 0,
+            "Name": "dumbbell"
+          }
+        ],
+        "ExcerciseLength": 1.5,
+        "ExcerciseAmount": 5,
+        "BreakLength": 0.5,
+        "CircleAmount": 4,
+        "Length": 39.5,
+        "Description": "cardio, "
       }
     ]
   }
-  
 ]

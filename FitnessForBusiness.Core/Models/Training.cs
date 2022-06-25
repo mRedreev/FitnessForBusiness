@@ -44,33 +44,14 @@ namespace FitnessForBusiness.Core.Models
             CircleAmount = circleAmount;
             Equipment = new List<Equipment>();
             var equipmentList = excercises
-                .Select(e => e.Equipment)
+                .Select(e => e.Equipment.Name)
                 .Distinct()
                 .ToList();
+            equipmentList = equipmentList.Distinct().ToList();
 
-            var equipmentDistinct = new List<Equipment>();
-            equipmentDistinct.Add(equipmentList[0]);
-
-            foreach (var eq in equipmentList)
+            foreach (var equipment in equipmentList)
             {
-                foreach (var eq1 in equipmentDistinct)
-                {
-                    if (eq.Name != eq1.Name)
-                    {
-                        equipmentDistinct.Add(eq);
-                    }
-                }
-            }
-
-            Equipment = equipmentDistinct;
-
-            if (Equipment.Count > 1)
-            {
-                foreach (var e in Equipment)
-                {
-                    if (e.Name == "")
-                        Equipment.Remove(e);
-                }
+                Equipment.Add(new Equipment(equipment));
             }
 
             ExcerciseAmount = excercises.Count;
@@ -80,7 +61,7 @@ namespace FitnessForBusiness.Core.Models
             bodyparts = bodyparts.Distinct().ToList();
             
 
-            for (int i = 0; i < bodyparts.Count - 1; i++)
+            for (int i = 0; i < bodyparts.Count; i++)
             {
                 Description = Description + bodyparts[i];
                 Description = Description + ", ";

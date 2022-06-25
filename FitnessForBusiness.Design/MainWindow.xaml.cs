@@ -32,7 +32,7 @@ namespace FitnessForBusiness.Design
             _storage = new JSONStorage();
             // InitialUsers2();
             //InitialTrainings2();
-            TrainsInitialized("cardio");
+           // TrainsInitialized("cardio");
             InitializeComponent();
 
             //InitialTrainings();
@@ -399,7 +399,7 @@ namespace FitnessForBusiness.Design
                     "Best full body burn",
                     types[0],
                     false,
-                    cardioExcercises.Where(e => middleExercises.Contains(e)).ToList().GetRange(10, 5),
+                    cardioExcercises.Where(e => middleExercises.Contains(e)).ToList().GetRange(0, 5),
                     1.5,
                     0.5,
                     4
@@ -410,7 +410,7 @@ namespace FitnessForBusiness.Design
                     "Total burn",
                     types[0],
                     false,
-                    warmupExercises.Where(e => middleExercises.Contains(e)).ToList().GetRange(15, 5),
+                    warmupExercises.Where(e => middleExercises.Contains(e)).ToList().GetRange(5, 5),
                     2,
                     0.5,
                     4
@@ -421,29 +421,29 @@ namespace FitnessForBusiness.Design
                     "Intense full body",
                     types[0],
                     true,
-                    warmupExercises.Where(e => hardExercises.Contains(e)).ToList().GetRange(20, 5),
+                    cardioExcercises.Where(e => hardExercises.Contains(e)).ToList().GetRange(0, 5),
                     3,
                     0.5,
                     5
                     );
 
-                var cardio6 = new Training
-                    (
-                    "Get shredded",
-                    types[0],
-                    true,
-                    warmupExercises.Where(e => hardExercises.Contains(e)).ToList().GetRange(25, 5),
-                    3,
-                    0.5,
-                    5
-                    );
+                //var cardio6 = new Training
+                //    (
+                //    "Get shredded",
+                //    types[0],
+                //    true,
+                //    cardioExcercises.Where(e => hardExercises.Contains(e)).ToList().GetRange(5, 5),
+                //    3,
+                //    0.5,
+                //    5
+                //    );
 
                 _storage.AddTraining(cardio1);
                 _storage.AddTraining(cardio2);
-                _storage.AddTraining(cardio3);
+               _storage.AddTraining(cardio3);
                 _storage.AddTraining(cardio4);
                 _storage.AddTraining(cardio5);
-                _storage.AddTraining(cardio6);
+               // _storage.AddTraining(cardio6);
             }
 
 
