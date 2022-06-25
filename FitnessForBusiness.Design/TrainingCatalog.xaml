@@ -120,7 +120,7 @@
 
                     <ListBox Name="TypesListBox"
                              Width="600"
-                             Height="350"
+                             Height="500"
                              HorizontalAlignment="Center"
                              VerticalContentAlignment="Top" 
                              ScrollViewer.HorizontalScrollBarVisibility="Hidden"
@@ -140,7 +140,7 @@
 
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <Grid Width="260">
+                                <Grid Width="550">
                                     
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto"/>
@@ -150,8 +150,8 @@
 
                                     <DockPanel Grid.Row="0" 
                                                Margin="30 30 30 0"
-                                               Width="200" 
-                                               Height="310" 
+                                               Width="510" 
+                                               Height="210" 
                                                VerticalAlignment="Top" 
                                                HorizontalAlignment="Stretch">
 

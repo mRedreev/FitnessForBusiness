@@ -195,7 +195,8 @@ namespace FitnessForBusiness.Design
             var type = typeImage.DataContext as TrainingType;
            
             typeImage.Source = functions.GetbitmapImageFromType(type);
-            
+            typeImage.Height = 200;
+            typeImage.Width = 500;
         }
 
         private void TrainingTypeTextBlock_Initialized(object sender, EventArgs e)
@@ -220,6 +221,8 @@ namespace FitnessForBusiness.Design
         private void MakeCurrentTypeImage()
         {
             CurrentTypeImage.Source = functions.GetbitmapImageFromType(_type);
+            CurrentTypeImage.Height = 200;
+            CurrentTypeImage.Width = 500;
         }
 
         private void MakeCurrentTypeTextBlock()
