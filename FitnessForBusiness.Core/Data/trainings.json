@@ -490,5 +490,569 @@
     "CircleAmount": 3,
     "Length": 44.5,
     "Description": "upper legs, chest, lower legs, neck, upper arms, "
+  },
+  {
+    "Id": "3d13f8fa-854c-4e33-a063-7d25993cf608",
+    "Name": "Before running",
+    "Type": {
+      "Id": "f0a60728-439d-4981-989b-ca03360c7050",
+      "Name": "warm-up",
+      "ImageSource": "../../Pictures/warm-up.png"
+    },
+    "Level": null,
+    "Excercises": [
+      {
+        "Id": 1,
+        "Name": "3/4 sit-up",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0001.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "waist"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3293,
+        "Name": "archer pull up",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3293.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 2333,
+        "Name": "arm slingers hanging straight legs",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/2333.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "waist"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3204,
+        "Name": "arms overhead full sit-up (male)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3204.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "waist"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3220,
+        "Name": "astride jumps (male)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3220.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      }
+    ],
+    "ExcerciseLength": 0.5,
+    "ExcerciseAmount": 5,
+    "BreakLength": 0.25,
+    "CircleAmount": 5,
+    "Length": 18.5,
+    "Description": "waist, back, "
+  },
+  {
+    "Id": "0458f1d5-125e-4298-a1c1-e87eb3a2ddae",
+    "Name": "Before main training",
+    "Type": {
+      "Id": "f0a60728-439d-4981-989b-ca03360c7050",
+      "Name": "warm-up",
+      "ImageSource": "../../Pictures/warm-up.png"
+    },
+    "Level": null,
+    "Excercises": [
+      {
+        "Id": 1405,
+        "Name": "back pec stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1405.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3212,
+        "Name": "basic toe touch (male)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3212.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3360,
+        "Name": "bear crawl",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3360.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3543,
+        "Name": "bodyweight drop jump squat",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3543.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3544,
+        "Name": "bodyweight incline side plank",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3544.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "waist"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      }
+    ],
+    "ExcerciseLength": 0.75,
+    "ExcerciseAmount": 5,
+    "BreakLength": 0.15,
+    "CircleAmount": 3,
+    "Length": 13.35,
+    "Description": "back, upper legs, cardio, "
+  },
+  {
+    "Id": "aeed6020-682a-4f7a-9763-df43365132a1",
+    "Name": "Before power trainig",
+    "Type": {
+      "Id": "f0a60728-439d-4981-989b-ca03360c7050",
+      "Name": "warm-up",
+      "ImageSource": "../../Pictures/warm-up.png"
+    },
+    "Level": null,
+    "Excercises": [
+      {
+        "Id": 3168,
+        "Name": "bodyweight squatting row",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3168.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1407,
+        "Name": "calf push stretch with hands against wall",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1407.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "lower legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1377,
+        "Name": "calf stretch with hands against wall",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1377.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "lower legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 2963,
+        "Name": "captains chair straight leg raise",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/2963.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "waist"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1326,
+        "Name": "chin-up",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1326.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      }
+    ],
+    "ExcerciseLength": 0.5,
+    "ExcerciseAmount": 5,
+    "BreakLength": 0.5,
+    "CircleAmount": 5,
+    "Length": 24.5,
+    "Description": "back, lower legs, "
+  },
+  {
+    "Id": "2ae98a7e-951f-4360-aaa9-c7bd146d1cff",
+    "Name": "Before cardio training",
+    "Type": {
+      "Id": "f0a60728-439d-4981-989b-ca03360c7050",
+      "Name": "warm-up",
+      "ImageSource": "../../Pictures/warm-up.png"
+    },
+    "Level": false,
+    "Excercises": [
+      {
+        "Id": 138,
+        "Name": "bottoms-up",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0138.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "waist"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1374,
+        "Name": "box jump down with one leg stabilization",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1374.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "lower legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 2466,
+        "Name": "bridge - mountain climber (cross body)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/2466.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "waist"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 870,
+        "Name": "butt-ups",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0870.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "waist"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1548,
+        "Name": "chair leg extended stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1548.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      }
+    ],
+    "ExcerciseLength": 0.75,
+    "ExcerciseAmount": 5,
+    "BreakLength": 0.25,
+    "CircleAmount": 5,
+    "Length": 24.75,
+    "Description": "waist, lower legs, "
+  },
+  {
+    "Id": "3d0b152a-b714-4f58-a2f3-a2d051196cd8",
+    "Name": "Universal warm-up",
+    "Type": {
+      "Id": "f0a60728-439d-4981-989b-ca03360c7050",
+      "Name": "warm-up",
+      "ImageSource": "../../Pictures/warm-up.png"
+    },
+    "Level": false,
+    "Excercises": [
+      {
+        "Id": 251,
+        "Name": "chest dip",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0251.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "chest"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1430,
+        "Name": "chest dip (on dip-pull-up cage)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1430.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "chest"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 259,
+        "Name": "close-grip push-up",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0259.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 2398,
+        "Name": "close-grip push-up (on knees)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/2398.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1468,
+        "Name": "crab twist toe touch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1468.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "waist"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      }
+    ],
+    "ExcerciseLength": 0.1,
+    "ExcerciseAmount": 5,
+    "BreakLength": 0.25,
+    "CircleAmount": 3,
+    "Length": 5.0,
+    "Description": "chest, upper arms, "
+  },
+  {
+    "Id": "1247117f-a6e6-4d76-b521-d023ef43c45e",
+    "Name": "Try me",
+    "Type": {
+      "Id": "f0a60728-439d-4981-989b-ca03360c7050",
+      "Name": "warm-up",
+      "ImageSource": "../../Pictures/warm-up.png"
+    },
+    "Level": true,
+    "Excercises": [
+      {
+        "Id": 262,
+        "Name": "cross body crunch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0262.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "waist"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3769,
+        "Name": "curtsey squat",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3769.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 276,
+        "Name": "dead bug",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0276.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "waist"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1275,
+        "Name": "drop push up",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1275.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "chest"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1772,
+        "Name": "elbow lift - reverse push-up",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1772.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      }
+    ],
+    "ExcerciseLength": 1.25,
+    "ExcerciseAmount": 5,
+    "BreakLength": 0.25,
+    "CircleAmount": 3,
+    "Length": 22.25,
+    "Description": "waist, upper legs, chest, "
   }
 ]

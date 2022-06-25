@@ -32,7 +32,7 @@ namespace FitnessForBusiness.Design
             _storage = new JSONStorage();
             // InitialUsers2();
             //InitialTrainings2();
-            TrainsInitialized("yoga");
+           TrainsInitialized("warm-up");
             InitializeComponent();
 
             //InitialTrainings();
@@ -229,7 +229,7 @@ namespace FitnessForBusiness.Design
 
             var cardioExcercises = excersices.Where(e => e.BodyParts.Name == "cardio").ToList();
 
-            var warmupExcersises = excersices.Where(e => e.Equipment.Name == "body weight").ToList();
+            var warmupExercises = excersices.Where(e => e.Equipment.Name == "body weight").ToList();
 
             var yogaExcercises = excersices.Where(e => e.Equipment.Name == "body weight").ToList();
             yogaExcercises = yogaExcercises.Where(e => e.Name.Contains("stretch")).ToList();
@@ -295,6 +295,80 @@ namespace FitnessForBusiness.Design
                 _storage.AddTraining(yoga3);
                 _storage.AddTraining(yoga4);
                 //_storage.AddTraining(yoga5);
+            }
+            if (type == "warm-up")
+            {
+                var warmup1 = new Training
+                (
+                "Before running",
+                types[2],
+                null,
+                warmupExercises.Where(e => easyExercises.Contains(e)).ToList().GetRange(0, 5),
+                0.5,
+                0.25,
+                5
+                );
+
+                var warmup2 = new Training
+                   (
+                   "Before main training",
+                   types[2],
+                   null,
+                   warmupExercises.Where(e => easyExercises.Contains(e)).ToList().GetRange(5, 5),
+                   0.75,
+                   0.15,
+                   3
+                   );
+
+                var warmup3 = new Training
+                    (
+                   "Before power trainig",
+                   types[2],
+                   null,
+                   warmupExercises.Where(e => easyExercises.Contains(e)).ToList().GetRange(10, 5),
+                   0.5,
+                   0.5,
+                   5
+                   );
+
+                var warmup4 = new Training
+                    (
+                    "Before cardio training",
+                    types[2],
+                    false,
+                    warmupExercises.Where(e => middleExercises.Contains(e)).ToList().GetRange(15, 5),
+                    0.75,
+                    0.25,
+                    5
+                    );
+
+                var warmup5 = new Training
+                   (
+                   "Universal warm-up",
+                   types[2],
+                   false,
+                   warmupExercises.Where(e => middleExercises.Contains(e)).ToList().GetRange(20, 5),
+                   0.1,
+                   0.25,
+                   3
+                   );
+
+                var warmup6 = new Training
+                    (
+                   "Try me",
+                   types[2],
+                   true,
+                   warmupExercises.Where(e => hardExercises.Contains(e)).ToList().GetRange(25, 5),
+                   1.25,
+                   0.25,
+                   3
+                   );
+                _storage.AddTraining(warmup1);
+                _storage.AddTraining(warmup2);
+                _storage.AddTraining(warmup3);
+                _storage.AddTraining(warmup4);
+                _storage.AddTraining(warmup5);
+                _storage.AddTraining(warmup6);
             }
 
         }

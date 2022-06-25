@@ -33,7 +33,14 @@ namespace FitnessForBusiness.Design
             
             InitializeComponent();
             ProfilePanel.Visibility = Visibility.Collapsed;
-            TypesListBox.ItemsSource = _storage.GetTrainings.Select(t => t.Type).Distinct().ToList();
+            var types = _storage.GetTrainings.Select(t => t.Type).ToList();
+            var distTypes = new List<TrainingType> { types[0] };
+            foreach (var type in types)
+            {
+                if (!distTypes.Any(t => t.Name==type.Name))
+                    distTypes.Add(type);
+            }
+            TypesListBox.ItemsSource = distTypes;
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
@@ -182,7 +189,7 @@ namespace FitnessForBusiness.Design
             TypesPanel.Visibility = Visibility.Collapsed;
 
             CurrentTypeTextBlock.Text = _type.Name;
-            var trainingsWithCurrentType = _storage.GetTrainings.Where(t => t.Type == _type).ToList();
+            var trainingsWithCurrentType = _storage.GetTrainings.Where(t => t.Type.Name == _type.Name).ToList();
 
             BeginnerTrainingsListBox.ItemsSource = TrainingsWithCurrentLevel(trainingsWithCurrentType, null);
             IntermediateTrainingsListBox.ItemsSource = TrainingsWithCurrentLevel(trainingsWithCurrentType, false);
