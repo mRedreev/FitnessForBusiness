@@ -755,13 +755,11 @@
                     <StackPanel Orientation="Horizontal"
                                 Margin="0,10,0,0">
                         <TextBlock x:Name="GoalTextBlock"
-                                   Initialized="GoalTextBlock_Initialized"
                                    FontWeight="Medium"
                                    Foreground="#3dddc2"
                                    FontSize="24"/>
 
                         <TextBlock Name="RecommendedLevelTextBlock"
-                                   Initialized="RecommendedLevelTextBlock_Initialized"
                                    FontSize="24"
                                    Margin="10,0,0,0"
                                    Foreground="#3dddc2"
