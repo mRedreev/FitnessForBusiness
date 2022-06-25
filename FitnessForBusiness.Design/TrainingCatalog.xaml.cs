@@ -390,5 +390,40 @@ namespace FitnessForBusiness.Design
         {
             Cursor = Cursors.Hand;
         }
+
+        private void CompletedTrainingNameBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CompletedTrainingNameButton_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CompletedTrainingNameButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CompletedTrainingTimeBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CompletedTrainingEqupmentBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CompletedTrainingBodyPartsBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CompletedTrainingTypeBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
     }
 }

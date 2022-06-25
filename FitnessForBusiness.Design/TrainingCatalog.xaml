@@ -505,6 +505,64 @@
                                 Click="SaveChangesButton_Click"/>
                     </StackPanel>
                 </StackPanel>
+
+                <StackPanel x:Name="CompletedTrainingsPanel" 
+                            Orientation="Vertical"
+                            Visibility="Collapsed">
+                    <ListBox Name="CompletedTrainings" 
+                                 HorizontalContentAlignment="Left"
+                                 Background="Transparent"
+                                 BorderBrush="Transparent" 
+                                 Initialized="AdvTrainingsListBox_Initialized">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Name="CompletedTrainingNameBlock" 
+                                                       Initialized="CompletedTrainingNameBlock_Initialized"
+                                                       FontFamily="Calibri"
+                                                       FontSize="22" 
+                                                       />
+                                        <TextBlock x:Name="CompletedTrainingTypeBlock"
+                                                   Initialized="CompletedTrainingTypeBlock_Initialized"
+                                                   Margin="15 0 0 0"
+                                                    Padding="12 8" 
+                                                    FontSize="14" 
+                                                   Width="80"
+                                                   ></TextBlock>
+                                        <StackPanel Orientation="Vertical" Margin="15 0 0 0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <Button Name="CompletedTrainingNameButton"  
+                                                        Padding="12 8" 
+                                                        FontSize="16" 
+                                                        Style="{StaticResource UIButton}" 
+                                                        Initialized="CompletedTrainingNameButton_Initialized"  
+                                                        Click="CompletedTrainingNameButton_Click"></Button>
+                                                <TextBlock Margin="5 0 0 0"
+                                                               Name="CompletedTrainingTimeBlock"
+                                                               FontSize="12"
+                                                               Initialized="CompletedTrainingTimeBlock_Initialized"
+                                                               />
+                                            </StackPanel>
+                                            <TextBlock Margin="0 5 0 0"
+                                                   Name="CompletedTrainingEqupmentBlock" 
+                                                   FontFamily="Calibri"
+                                                   FontSize="12" 
+                                                   Initialized="CompletedTrainingEqupmentBlock_Initialized"
+                                                   TextWrapping="Wrap"/>
+                                            <TextBlock Margin="0 5 0 0"
+                                                   Name="CompletedTrainingBodyPartsBlock" 
+                                                   FontFamily="Calibri"
+                                                   FontSize="12" 
+                                                   Initialized="CompletedTrainingBodyPartsBlock_Initialized"
+                                                   TextWrapping="Wrap"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
             </Grid>
         </ScrollViewer>
     </Grid>
