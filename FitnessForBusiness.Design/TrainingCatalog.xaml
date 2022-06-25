@@ -54,9 +54,9 @@
                             Name="MinimizeButton"
                             Click="MinimizeButton_Click"/>
                     
-                    <Button Style="{StaticResource WindowStateButton}"
-                            Name="WindowStateButton"
-                            Click="WindowStateButton_Click"/>
+                    <ToggleButton Style="{StaticResource WindowStateButton}"
+                                  Name="WindowStateButton"
+                                  Click="WindowStateButton_Click"/>
                     
                     <Button Style="{StaticResource ExitButton}"
                             Name="ExitButton"
@@ -129,12 +129,8 @@
                             Visibility="Visible">
 
                     <ListBox Name="TypesListBox"
-                             Width="600"
-                             Height="450"
                              HorizontalAlignment="Center"
                              VerticalContentAlignment="Top" 
-                             ScrollViewer.HorizontalScrollBarVisibility="Hidden"
-                             ScrollViewer.CanContentScroll="True"
                              Background="Transparent" 
                              BorderBrush="Transparent" 
                              MouseLeave="TypesListBox_MouseLeave"

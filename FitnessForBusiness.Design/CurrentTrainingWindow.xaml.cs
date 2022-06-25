@@ -96,13 +96,15 @@ namespace FitnessForBusiness.Design
 
         private void WindowStateButton_Click(object sender, RoutedEventArgs e)
         {
-            if (Application.Current.MainWindow.WindowState != WindowState.Minimized)
+            if (this.WindowState != WindowState.Maximized)
             {
-                Application.Current.MainWindow.WindowState = WindowState.Maximized;
+                this.WindowState = WindowState.Maximized;
+                WindowStateButton.IsChecked = false;
             }
             else
             {
-                Application.Current.MainWindow.WindowState = WindowState.Normal;
+                this.WindowState = WindowState.Normal;
+                WindowStateButton.IsChecked = false;
             }
         }
 

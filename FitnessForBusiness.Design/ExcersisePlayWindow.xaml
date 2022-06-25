@@ -48,9 +48,9 @@
                             Name="MinimizeButton"
                             Click="MinimizeButton_Click"/>
                     
-                    <Button Style="{StaticResource WindowStateButton}"
-                            Name="WindowStateButton"
-                            Click="WindowStateButton_Click"/>
+                    <ToggleButton Style="{StaticResource WindowStateButton}"
+                                  Name="WindowStateButton"
+                                  Click="WindowStateButton_Click"/>
                     
                     <Button Style="{StaticResource ExitButton}"
                             Name="ExitButton"
