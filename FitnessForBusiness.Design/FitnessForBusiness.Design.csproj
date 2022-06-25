@@ -230,10 +230,10 @@
     <Resource Include="Pictures\power.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Pictures\cardio.png" />
+    <Resource Include="Pictures\warm-up.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Pictures\warm-up.png" />
+    <Resource Include="Pictures\cardio.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
