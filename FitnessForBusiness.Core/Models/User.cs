@@ -27,7 +27,7 @@ namespace FitnessForBusiness.Core.Models
         public string Password { get; set; }
 
         public DateTime Born { get; set; }
-        public List<Training> CompletedTrainingsId { get; set; }
+        public List<Training> CompletedTrainings { get; set; }
 
         public string ShowGoal()
         {
@@ -52,7 +52,7 @@ namespace FitnessForBusiness.Core.Models
             Login = login;
             Password = password;
             Age = CountAge(born);
-            CompletedTrainingsId = new List<Training>();
+            CompletedTrainings = new List<Training>();
             Born = born;
         }
 

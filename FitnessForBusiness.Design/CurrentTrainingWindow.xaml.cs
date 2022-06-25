@@ -76,7 +76,7 @@ namespace FitnessForBusiness.Design
 
         private void end_Click(object sender, RoutedEventArgs e)
         {
-
+            _user.C
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
@@ -110,6 +110,11 @@ namespace FitnessForBusiness.Design
  
 
         private void NumberOfLoopsTextBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
         {
 
         }

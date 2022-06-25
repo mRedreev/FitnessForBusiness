@@ -163,8 +163,8 @@ namespace FitnessForBusiness.Design
             AdvTrainingsListBox.Visibility = Visibility.Visible;
             CurrentTypeImagePanel.Visibility = Visibility.Visible;
 
-            //FilmPosterHorizontalImageSetting();
-            //RatingTextBlockSetting();
+            MakeCurrentTypeImage();
+            MakeCurrentTypeTextBlock();
             //DescriptionTextBlockSetting();
         }
 
@@ -216,6 +216,16 @@ namespace FitnessForBusiness.Design
                 currentTypeImage.Source = functions.GetbitmapImageFromType(_type);
             }
             
+        }
+
+        private void MakeCurrentTypeImage()
+        {
+            CurrentTypeImage.Source = functions.GetbitmapImageFromType(_type);
+        }
+
+        private void MakeCurrentTypeTextBlock()
+        {
+            CurrentTypeTextBlock.Text = _type.Name;
         }
 
         private void CurrentTypeTextBlock_Initialized(object sender, EventArgs e)
@@ -393,7 +403,7 @@ namespace FitnessForBusiness.Design
 
         private void CompletedTrainingNameBlock_Initialized(object sender, EventArgs e)
         {
-
+            
         }
 
         private void CompletedTrainingNameButton_Initialized(object sender, EventArgs e)
