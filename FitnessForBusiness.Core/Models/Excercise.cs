@@ -8,7 +8,7 @@ namespace FitnessForBusiness.Core.Models
 {
     public class Excercise
     {
-        public int Id {get; set;}
+        public Guid Id {get; set;}
 
         public string Name {get; set;}
 
@@ -16,21 +16,18 @@ namespace FitnessForBusiness.Core.Models
 
         public bool? Level {get; set;}
 
-        public List<Bodypart> BodyParts {get; set;}
+        public Bodypart BodyParts {get; set;}
 
         public Equipment Equipment {get; set;}
 
-        public Excercise(string name, string videooSource, bool? level, List<string> bodyParts, string equipment)
+        public Excercise(string name, string videooSource, bool? level, Bodypart bodyParts, string equipment)
         {
             Name = name;
             VideoSource = videooSource;
             Level = level;
-            BodyParts = new List<Bodypart>();
-            foreach(var part in bodyParts)
-            {
-                BodyParts.Add(new Bodypart(part));
-            }
+            BodyParts = bodyParts;
             Equipment = new Equipment(equipment);
+            Id = Guid.NewGuid();
         }
         public Excercise()
         { }

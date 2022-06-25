@@ -8,7 +8,7 @@ namespace FitnessForBusiness.Core.Models
 {
     public class TrainingType
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string ImageSource { get; set; }
 
@@ -16,6 +16,7 @@ namespace FitnessForBusiness.Core.Models
         {
             Name = name;
             ImageSource = imageSource;
+            Id = Guid.NewGuid();
         }
 
     }

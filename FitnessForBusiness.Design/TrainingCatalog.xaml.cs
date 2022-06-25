@@ -307,7 +307,7 @@ namespace FitnessForBusiness.Design
             var bodyPartsBlock = sender as TextBlock;
             var training = bodyPartsBlock.DataContext as Training;
             var bodyParts = training.Description;
-            bodyPartsBlock.Text = "BodyParts: " + bodyParts;
+            bodyPartsBlock.Text = "BodyParts: " + bodyParts.Remove(bodyParts.Length-2);
         }
 
         private void IntermediateTrainingsListBox_Initialized(object sender, EventArgs e)

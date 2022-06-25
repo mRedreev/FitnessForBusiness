@@ -84,67 +84,67 @@ namespace FitnessForBusiness.Design
                 MessageBox.Show("user1 saved");
         }
 
-        private void InitialTrainings()
-        {
-            using (Context context = new Context()) //Создание подключения (локальной копии БД)
-            {
-                Excercise excercise1 = new Excercise
-                (
-                    "Air bike",
-                    "http://d205bpvrqc9yn1.cloudfront.net/0003.gif",
-                    null,
-                    new List<string>() { "waist", "abs" },
-                    "mat"
-                );
+        //private void InitialTrainings()
+        //{
+        //    using (Context context = new Context()) //Создание подключения (локальной копии БД)
+        //    {
+        //        Excercise excercise1 = new Excercise
+        //        (
+        //            "Air bike",
+        //            "http://d205bpvrqc9yn1.cloudfront.net/0003.gif",
+        //            null,
+        //            new List<string>() { "waist", "abs" },
+        //            "mat"
+        //        );
 
-                Excercise excercise2 = new Excercise
-                (
-                    "All fours squad stretch",
-                    "http://d205bpvrqc9yn1.cloudfront.net/1512.gif",
-                    null,
-                    new List<string>() { "quads" },
-                    "mat"
-                );
+        //        Excercise excercise2 = new Excercise
+        //        (
+        //            "All fours squad stretch",
+        //            "http://d205bpvrqc9yn1.cloudfront.net/1512.gif",
+        //            null,
+        //            new List<string>() { "quads" },
+        //            "mat"
+        //        );
 
-                Excercise excercise3 = new Excercise
-                (
-                    "ankle circles",
-                    "http://d205bpvrqc9yn1.cloudfront.net/1368.gif",
-                    null,
-                    new List<string>() { "calves" },
-                    "mat"
-                );
+        //        Excercise excercise3 = new Excercise
+        //        (
+        //            "ankle circles",
+        //            "http://d205bpvrqc9yn1.cloudfront.net/1368.gif",
+        //            null,
+        //            new List<string>() { "calves" },
+        //            "mat"
+        //        );
 
-                Excercise excercise4 = new Excercise
-                (
-                    "astride jumps",
-                    "http://d205bpvrqc9yn1.cloudfront.net/3220.gif",
-                    null,
-                    new List<string>() { "cardiovascular system" },
-                    "mat"
-                );
+        //        Excercise excercise4 = new Excercise
+        //        (
+        //            "astride jumps",
+        //            "http://d205bpvrqc9yn1.cloudfront.net/3220.gif",
+        //            null,
+        //            new List<string>() { "cardiovascular system" },
+        //            "mat"
+        //        );
 
-                TrainingType typeCardio = new TrainingType("cardio", ".. / .. / Pictures /cardio.png");
-                TrainingType typePower = new TrainingType("power", ".. / .. / Pictures /power.png");
-                TrainingType typeYoga = new TrainingType("yoga", ".. / .. / Pictures /yoga.png");
-                TrainingType typeWarmUp = new TrainingType("warm-up", ".. / .. / Pictures /warm-up.png");
+        //        TrainingType typeCardio = new TrainingType("cardio", ".. / .. / Pictures /cardio.png");
+        //        TrainingType typePower = new TrainingType("power", ".. / .. / Pictures /power.png");
+        //        TrainingType typeYoga = new TrainingType("yoga", ".. / .. / Pictures /yoga.png");
+        //        TrainingType typeWarmUp = new TrainingType("warm-up", ".. / .. / Pictures /warm-up.png");
 
 
 
-                Training training1 = new Training(
-                    "Short warm-up",
-                    typeWarmUp,
-                    null,
-                    new List<Excercise> { excercise1, excercise2, excercise3, excercise4 },
-                    0.5,
-                    0.25,
-                    2
-                    );
-                context.Trainings.Add(training1);
-                context.SaveChanges();
-                MessageBox.Show("training1 saved");
-            }
-        }
+        //        Training training1 = new Training(
+        //            "Short warm-up",
+        //            typeWarmUp,
+        //            null,
+        //            new List<Excercise> { excercise1, excercise2, excercise3, excercise4 },
+        //            0.5,
+        //            0.25,
+        //            2
+        //            );
+        //        context.Trainings.Add(training1);
+        //        context.SaveChanges();
+        //        MessageBox.Show("training1 saved");
+        //    }
+        //}
 
         private void InitialTrainings2()
         {

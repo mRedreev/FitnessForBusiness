@@ -8,7 +8,7 @@ namespace FitnessForBusiness.Core.Models
 {
     public class Training
     {
-        public int Id { get; set;}
+       public Guid Id { get; set;}
 
         public string Name { get; set;}
 
@@ -31,7 +31,7 @@ namespace FitnessForBusiness.Core.Models
         public double Length { get; set;}
         public string Description { get; set;}
 
-        public List<User> Users { get; set;}
+        //public List<User> Users { get; set;}
 
         public Training(string name, TrainingType type, bool? level, List<Excercise> excercises, double exLength, double breakLength, int circleAmount)
         {
@@ -78,9 +78,19 @@ namespace FitnessForBusiness.Core.Models
             var bodyparts = new List<string>();
             foreach (var e in Excercises)
             {
-                foreach (var bodypart in e.BodyParts)
+                 bodyparts.Add(e.BodyParts.Name);
+            }
+            var bodyPartsDistinct = new List<string>();
+            bodyPartsDistinct.Add(bodyparts[0]);
+
+            foreach (var eq in bodyparts)
+            {
+                foreach (var eq1 in bodyPartsDistinct)
                 {
-                    bodyparts.Add(bodypart.Name);
+                    if (eq != eq1)
+                    {
+                        bodyPartsDistinct.Add(eq);
+                    }
                 }
             }
 
@@ -89,7 +99,9 @@ namespace FitnessForBusiness.Core.Models
                 Description = Description + bodyparts[i];
                 Description = Description + ", ";
             }
-            Users = new List<User>();
+
+            Id = Guid.NewGuid();
+           // Users = new List<User>();
         }
 
         public Training()
