@@ -76,7 +76,11 @@ namespace FitnessForBusiness.Design
 
         private void end_Click(object sender, RoutedEventArgs e)
         {
-            _user.C
+            MessageBox.Show($"Congratulations! You have completed training {_training.Name}");
+            if (_user.CompletedTrainings.Any(t => t==_training))
+                _user.CompletedTrainings.Remove(_training);
+            _user.CompletedTrainings.Add(_training);
+            _storage.Save();
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
