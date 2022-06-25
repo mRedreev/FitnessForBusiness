@@ -32,7 +32,7 @@ namespace FitnessForBusiness.Design
             _storage = new JSONStorage();
             // InitialUsers2();
             //InitialTrainings2();
-            TrainsInitialized("cardio");
+           // TrainsInitialized("cardio");
             InitializeComponent();
 
             //InitialTrainings();
