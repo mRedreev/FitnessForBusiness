@@ -13,10 +13,7 @@
         ResizeMode="CanResizeWithGrip"
         AllowsTransparency="True"
         Background="Transparent">
-
-
-
-
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="27"/>
@@ -34,7 +31,7 @@
 
         <Border Grid.ColumnSpan="2"
                 Grid.Row="0"
-                Background="#272535"
+                Background="#272537"
                 MouseDown="Border_MouseDown">
 
             <Grid HorizontalAlignment="Stretch">
@@ -56,9 +53,11 @@
                             Margin="0,0,0,3.65"
                             Name="MinimizeButton"
                             Click="MinimizeButton_Click"/>
+                    
                     <Button Style="{StaticResource WindowStateButton}"
                             Name="WindowStateButton"
                             Click="WindowStateButton_Click"/>
+                    
                     <Button Style="{StaticResource ExitButton}"
                             Name="ExitButton"
                             Click="ExitButton_Click"/>
@@ -101,8 +100,7 @@
                          FontSize="18"
                          IsChecked="False"
                          Content="My Profile"
-                         Click="ProfileButton_Click"
-                         />
+                         Click="ProfileButton_Click"/>
 
             <Button Name="LogOutButton"
                     Height="25"
@@ -112,31 +110,34 @@
                     Style="{StaticResource UIButton}"
                     Click="LogOutButton_Click"/>
         </StackPanel>
-        
+
         <ScrollViewer Grid.Row="1"
                       Grid.Column="1">
             <Grid>
                 <StackPanel Name="TypesPanel"
                             Margin="50 25 50 30"
                             Visibility="Visible">
+
                     <ListBox Name="TypesListBox"
-                         Width="600"
-                         Height="350"
-                         HorizontalAlignment="Center"
-                         VerticalContentAlignment="Top" 
-                         ScrollViewer.HorizontalScrollBarVisibility="Hidden"
-                         ScrollViewer.CanContentScroll="False" 
-                         Background="Transparent" 
-                         BorderBrush="Transparent" 
-                         MouseLeave="TypesListBox_MouseLeave"
-                         SelectionChanged="TypesListBox_SelectionChanged"
-                         MouseEnter="TypesListBox_MouseEnter"
-                         PreviewMouseWheel="TypesListBox_PreviewMouseWheel">
+                             Width="600"
+                             Height="350"
+                             HorizontalAlignment="Center"
+                             VerticalContentAlignment="Top" 
+                             ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                             ScrollViewer.CanContentScroll="False" 
+                             Background="Transparent" 
+                             BorderBrush="Transparent" 
+                             MouseLeave="TypesListBox_MouseLeave"
+                             SelectionChanged="TypesListBox_SelectionChanged"
+                             MouseEnter="TypesListBox_MouseEnter"
+                             PreviewMouseWheel="TypesListBox_PreviewMouseWheel">
+
                         <ListBox.ItemsPanel>
                             <ItemsPanelTemplate>
                                 <StackPanel Orientation="Vertical"></StackPanel>
                             </ItemsPanelTemplate>
                         </ListBox.ItemsPanel>
+
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <Grid Width="260">
@@ -146,58 +147,68 @@
                                         <RowDefinition Height="Auto"/>
                                     </Grid.RowDefinitions>
 
-                                    <DockPanel Grid.Row="0" Margin="30 30 30 0" Width="200" Height="310" 
-                                           VerticalAlignment="Top" HorizontalAlignment="Stretch">
-                                        <Border BorderThickness="1.2" BorderBrush="Black">
-                                            <Image Name="TypeImage" Stretch="UniformToFill" 
-                                               Initialized="TypeImage_Initialized"></Image>
+                                    <DockPanel Grid.Row="0" 
+                                               Margin="30 30 30 0"
+                                               Width="200" 
+                                               Height="310" 
+                                               VerticalAlignment="Top" 
+                                               HorizontalAlignment="Stretch">
+
+                                        <Border BorderThickness="1.2" 
+                                                BorderBrush="Black">
+                                            <Image Name="TypeImage" 
+                                                   Stretch="UniformToFill" 
+                                                   Initialized="TypeImage_Initialized"/>
                                         </Border>
                                     </DockPanel>
 
                                     <TextBlock Name="TrainingTypeTextBlock"
-                                           Grid.Row="2" Margin="10 10 10 25" 
-                                           TextWrapping="Wrap" TextAlignment="Center" 
-                                           HorizontalAlignment="Center" FontSize="22"
-                                           Initialized="TrainingTypeTextBlock_Initialized"></TextBlock>
-
-
+                                               Grid.Row="2" 
+                                               Margin="10 10 10 25" 
+                                               TextWrapping="Wrap" 
+                                               TextAlignment="Center" 
+                                               HorizontalAlignment="Center" 
+                                               FontSize="22"
+                                               Initialized="TrainingTypeTextBlock_Initialized"/>
                                 </Grid>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
                 </StackPanel>
 
-
-
                 <StackPanel Name="CurrentTypeImagePanel" 
                             Visibility="Collapsed" >
                     <TextBlock Name="CurrentTypeTextBlock" 
-                        Initialized="CurrentTypeTextBlock_Initialized" 
-                        FontSize="22"></TextBlock>
+                               Initialized="CurrentTypeTextBlock_Initialized" 
+                               FontSize="22"/>
+
                     <Image Name="CurrentTypeImage" 
-                       Stretch="UniformToFill" 
-                       Margin=" 0 10 0 0"                                              
-                       Initialized="CurrentTypeImage_Initialized"></Image>
+                           Stretch="UniformToFill" 
+                           Margin=" 0 10 0 0"                                              
+                           Initialized="CurrentTypeImage_Initialized"/>
 
                     <StackPanel Name="LevelPanel" 
-                         Grid.Row="2" Margin="50 0 50 15" 
-                         HorizontalAlignment="Left" 
-                         ScrollViewer.CanContentScroll="False" 
-                         Background="Transparent"
-                            Orientation="Vertical">
+                                Grid.Row="2" 
+                                Margin="50 0 50 15" 
+                                HorizontalAlignment="Left" 
+                                ScrollViewer.CanContentScroll="False" 
+                                Background="Transparent"
+                                Orientation="Vertical">
 
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Margin="0 20 30 0"
-                                   Name="EasyTextBlock" 
-                                   Text="Beginner"
-                                   TextWrapping="Wrap" 
-                                   FontFamily="Calibri" 
-                                   FontSize="22"></TextBlock>
+                                       Name="EasyTextBlock" 
+                                       Text="Beginner"
+                                       TextWrapping="Wrap" 
+                                       FontFamily="Calibri" 
+                                       FontSize="22"/>
+
                             <ListBox Name="BeginnerTrainingsListBox"
-                                 Margin="20 0 0 0" 
-                                 HorizontalContentAlignment="Left"
-                                 Background="Transparent"
-                                 BorderBrush="Transparent">
+                                     Margin="20 0 0 0" 
+                                     HorizontalContentAlignment="Left"
+                                     Background="Transparent"
+                                     BorderBrush="Transparent">
+
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
                                         <Grid>
@@ -206,32 +217,36 @@
                                                        Initialized="TrainingNameTextBlock_Initialized"
                                                        FontFamily="Calibri"
                                                        FontSize="22" />
-                                                <StackPanel Orientation="Vertical" Margin="15 0 0 0">
+
+                                                <StackPanel Orientation="Vertical" 
+                                                            Margin="15 0 0 0">
                                                     <StackPanel Orientation="Horizontal">
                                                         <Button Name="BeginButton"  
-                                                        Padding="12 8" 
-                                                        FontSize="16" 
-                                                        Style="{StaticResource UIButton}" 
-                                                        Initialized="BeginButton_Initialized"  
-                                                        Click="BeginButton_Click"></Button>
+                                                                Padding="12 8" 
+                                                                FontSize="16" 
+                                                                Style="{StaticResource UIButton}" 
+                                                                Initialized="BeginButton_Initialized"  
+                                                                Click="BeginButton_Click"/>
+
                                                         <TextBlock Margin="5 0 0 0"
-                                                               Name="BeginTrainingTimeTextBlock"
-                                                               FontSize="12"
-                                                               Initialized="BeginTrainingTimeTextBlock_Initialized"
-                                                               />
+                                                                   Name="BeginTrainingTimeTextBlock"
+                                                                   FontSize="12"
+                                                                   Initialized="BeginTrainingTimeTextBlock_Initialized"/>
                                                     </StackPanel>
+
                                                     <TextBlock Margin="0 5 0 0"
-                                                   Name="EquipmentTextBlock" 
-                                                   FontFamily="Calibri"
-                                                   FontSize="12" 
-                                                   Initialized="EquipmentTextBlock_Initialized"
-                                                   TextWrapping="Wrap"/>
+                                                               Name="EquipmentTextBlock" 
+                                                               FontFamily="Calibri"
+                                                               FontSize="12" 
+                                                               Initialized="EquipmentTextBlock_Initialized"
+                                                               TextWrapping="Wrap"/>
+
                                                     <TextBlock Margin="0 5 0 0"
-                                                   Name="BodyPartsTextBlock" 
-                                                   FontFamily="Calibri"
-                                                   FontSize="12" 
-                                                   Initialized="BodyPartsTextBlock_Initialized"
-                                                   TextWrapping="Wrap"/>
+                                                               Name="BodyPartsTextBlock" 
+                                                               FontFamily="Calibri"
+                                                               FontSize="12" 
+                                                               Initialized="BodyPartsTextBlock_Initialized"
+                                                               TextWrapping="Wrap"/>
                                                 </StackPanel>
                                             </StackPanel>
                                         </Grid>
@@ -239,50 +254,60 @@
                                 </ListBox.ItemTemplate>
                             </ListBox>
                         </StackPanel>
-                        
+
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Margin="0 20 30 0" Name="IntermediateTextBlock" Text="Intermediate" TextWrapping="Wrap" FontFamily="Calibri" FontSize="22"></TextBlock>
+                            <TextBlock Margin="0 20 30 0" 
+                                       Name="IntermediateTextBlock" 
+                                       Text="Intermediate" 
+                                       TextWrapping="Wrap" 
+                                       FontFamily="Calibri" 
+                                       FontSize="22"/>
+
                             <ListBox Name="IntermediateTrainingsListBox"
-                                 Margin="20 0 0 0" 
-                                 HorizontalContentAlignment="Left"
-                                 Background="Transparent"
-                                 BorderBrush="Transparent" 
-                                 Initialized="IntermediateTrainingsListBox_Initialized">
+                                     Margin="20 0 0 0" 
+                                     HorizontalContentAlignment="Left"
+                                     Background="Transparent"
+                                     BorderBrush="Transparent" 
+                                     Initialized="IntermediateTrainingsListBox_Initialized">
+
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
                                         <Grid>
                                             <StackPanel Orientation="Horizontal">
                                                 <TextBlock Name="IntermediateTrainingNameTextBlock" 
-                                                       Initialized="IntermediateTrainingNameTextBlock_Initialized"
-                                                       FontFamily="Calibri"
-                                                       FontSize="22" 
-                                                       />
-                                                <StackPanel Orientation="Vertical" Margin="15 0 0 0">
+                                                           Initialized="IntermediateTrainingNameTextBlock_Initialized"
+                                                           FontFamily="Calibri"
+                                                           FontSize="22"/>
+
+                                                <StackPanel Orientation="Vertical" 
+                                                            Margin="15 0 0 0">
                                                     <StackPanel Orientation="Horizontal">
                                                         <Button x:Name="IntermediateBeginButton"
-                                                        Padding="12 8" 
-                                                        FontSize="16" 
-                                                        Style="{StaticResource UIButton}" 
-                                                        Initialized="IntermediateBeginButton_Initialized"  
-                                                        Click="IntermediateBeginButton_Click"></Button>
+                                                                Padding="12 8" 
+                                                                FontSize="16" 
+                                                                Style="{StaticResource UIButton}" 
+                                                                Initialized="IntermediateBeginButton_Initialized"  
+                                                                Click="IntermediateBeginButton_Click"/>
+
                                                         <TextBlock Margin="5 0 0 0"
-                                                               Name="IntTrainingTimeTextBlock"
-                                                               FontSize="12"
-                                                               Initialized="IntTrainingTimeTextBlock_Initialized"
-                                                               />
+                                                                   Name="IntTrainingTimeTextBlock"
+                                                                   FontSize="12"
+                                                                   Initialized="IntTrainingTimeTextBlock_Initialized"/>
                                                     </StackPanel>
+
                                                     <TextBlock Margin="0 5 0 0"
-                                                   Name="InterEquipment" 
-                                                   FontFamily="Calibri"
-                                                   FontSize="12" 
-                                                   Initialized="InterEquipment_Initialized"
-                                                   TextWrapping="Wrap"/>
+                                                               Name="InterEquipment" 
+                                                               FontFamily="Calibri"
+                                                               FontSize="12" 
+                                                               Initialized="InterEquipment_Initialized"
+                                                               TextWrapping="Wrap"/>
+
                                                     <TextBlock Margin="0 5 0 0"
-                                                   Name="IntBodyPartsTextBlock" 
-                                                   FontFamily="Calibri"
-                                                   FontSize="12" 
-                                                   Initialized="IntBodyPartsTextBlock_Initialized"
-                                                   TextWrapping="Wrap"/>
+                                                               Name="IntBodyPartsTextBlock" 
+                                                               FontFamily="Calibri"
+                                                               FontSize="12" 
+                                                               Initialized="IntBodyPartsTextBlock_Initialized"
+                                                               TextWrapping="Wrap"/>
                                                 </StackPanel>
                                             </StackPanel>
                                         </Grid>
@@ -291,48 +316,58 @@
                             </ListBox>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Margin="0 20 30 0" Name="HardTextBlock" Text="Advanced" TextWrapping="Wrap" FontFamily="Calibri" FontSize="22"></TextBlock>
+                            <TextBlock Margin="0 20 30 0" 
+                                       Name="HardTextBlock" 
+                                       Text="Advanced" 
+                                       TextWrapping="Wrap" 
+                                       FontFamily="Calibri" 
+                                       FontSize="22"/>
+
                             <ListBox Name="AdvTrainingsListBox"
-                                 Margin="20 0 0 0" 
-                                 HorizontalContentAlignment="Left"
-                                 Background="Transparent"
-                                 BorderBrush="Transparent" 
-                                 Initialized="AdvTrainingsListBox_Initialized">
+                                     Margin="20 0 0 0" 
+                                     HorizontalContentAlignment="Left"
+                                     Background="Transparent"
+                                     BorderBrush="Transparent" 
+                                     Initialized="AdvTrainingsListBox_Initialized">
+
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
                                         <Grid>
                                             <StackPanel Orientation="Horizontal">
                                                 <TextBlock Name="AdvTrainingNameTextBlock" 
-                                                       Initialized="AdvTrainingNameTextBlock_Initialized"
-                                                       FontFamily="Calibri"
-                                                       FontSize="22" 
-                                                       />
-                                                <StackPanel Orientation="Vertical" Margin="15 0 0 0">
+                                                           Initialized="AdvTrainingNameTextBlock_Initialized"
+                                                           FontFamily="Calibri"
+                                                           FontSize="22"/>
+
+                                                <StackPanel Orientation="Vertical" 
+                                                            Margin="15 0 0 0">
                                                     <StackPanel Orientation="Horizontal">
                                                         <Button Name="AdvBeginButton"  
-                                                        Padding="12 8" 
-                                                        FontSize="16" 
-                                                        Style="{StaticResource UIButton}" 
-                                                        Initialized="AdvBeginButton_Initialized"  
-                                                        Click="AdvBeginButton_Click"></Button>
+                                                                Padding="12 8" 
+                                                                FontSize="16" 
+                                                                Style="{StaticResource UIButton}" 
+                                                                Initialized="AdvBeginButton_Initialized"  
+                                                                Click="AdvBeginButton_Click"/>
+
                                                         <TextBlock Margin="5 0 0 0"
-                                                               Name="AdvTrainingTimeTextBlock"
-                                                               FontSize="12"
-                                                               Initialized="AdvTrainingTimeTextBlock_Initialized"
-                                                               />
+                                                                   Name="AdvTrainingTimeTextBlock"
+                                                                   FontSize="12"
+                                                                   Initialized="AdvTrainingTimeTextBlock_Initialized"/>
                                                     </StackPanel>
+
                                                     <TextBlock Margin="0 5 0 0"
-                                                   Name="AdvEquipmentTextBlock" 
-                                                   FontFamily="Calibri"
-                                                   FontSize="12" 
-                                                   Initialized="AdvEquipmentTextBlock_Initialized"
-                                                   TextWrapping="Wrap"/>
+                                                               Name="AdvEquipmentTextBlock" 
+                                                               FontFamily="Calibri"
+                                                               FontSize="12" 
+                                                               Initialized="AdvEquipmentTextBlock_Initialized"
+                                                               TextWrapping="Wrap"/>
+
                                                     <TextBlock Margin="0 5 0 0"
-                                                   Name="AdvBodyPartsTextBlock" 
-                                                   FontFamily="Calibri"
-                                                   FontSize="12" 
-                                                   Initialized="AdvBodyPartsTextBlock_Initialized"
-                                                   TextWrapping="Wrap"/>
+                                                               Name="AdvBodyPartsTextBlock" 
+                                                               FontFamily="Calibri"
+                                                               FontSize="12" 
+                                                               Initialized="AdvBodyPartsTextBlock_Initialized"
+                                                               TextWrapping="Wrap"/>
                                                 </StackPanel>
                                             </StackPanel>
                                         </Grid>
@@ -341,14 +376,13 @@
                             </ListBox>
                         </StackPanel>
                     </StackPanel>
+
                     <Button x:Name="GetBackToTypesButton" 
-                        Content="Back"
-                        Style="{StaticResource UIButton}" 
-                        Margin="0 30 0 0" Click="GetBackToTypesButton_Click"/>
+                            Content="Back"
+                            Style="{StaticResource UIButton}" 
+                            Margin="0 30 0 0" 
+                            Click="GetBackToTypesButton_Click"/>
                 </StackPanel>
-
-
-
 
                 <StackPanel Orientation="Horizontal"
                             MinWidth="696"
@@ -510,52 +544,55 @@
                             Orientation="Vertical"
                             Visibility="Collapsed">
                     <ListBox Name="CompletedTrainings" 
-                                 HorizontalContentAlignment="Left"
-                                 Background="Transparent"
-                                 BorderBrush="Transparent" 
-                                 Initialized="AdvTrainingsListBox_Initialized">
+                             HorizontalContentAlignment="Left"
+                             Background="Transparent"
+                             BorderBrush="Transparent" 
+                             Initialized="AdvTrainingsListBox_Initialized">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <Grid>
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock Name="CompletedTrainingNameBlock" 
-                                                       Initialized="CompletedTrainingNameBlock_Initialized"
-                                                       FontFamily="Calibri"
-                                                       FontSize="22" 
-                                                       />
+                                                   Initialized="CompletedTrainingNameBlock_Initialized"
+                                                   FontFamily="Calibri"
+                                                   FontSize="22"/>
+
                                         <TextBlock x:Name="CompletedTrainingTypeBlock"
                                                    Initialized="CompletedTrainingTypeBlock_Initialized"
                                                    Margin="15 0 0 0"
-                                                    Padding="12 8" 
-                                                    FontSize="14" 
-                                                   Width="80"
-                                                   ></TextBlock>
-                                        <StackPanel Orientation="Vertical" Margin="15 0 0 0">
+                                                   Padding="12 8" 
+                                                   FontSize="14" 
+                                                   Width="80"/>
+
+                                        <StackPanel Orientation="Vertical" 
+                                                    Margin="15 0 0 0">
                                             <StackPanel Orientation="Horizontal">
                                                 <Button Name="CompletedTrainingNameButton"  
                                                         Padding="12 8" 
                                                         FontSize="16" 
                                                         Style="{StaticResource UIButton}" 
                                                         Initialized="CompletedTrainingNameButton_Initialized"  
-                                                        Click="CompletedTrainingNameButton_Click"></Button>
+                                                        Click="CompletedTrainingNameButton_Click"/>
+
                                                 <TextBlock Margin="5 0 0 0"
-                                                               Name="CompletedTrainingTimeBlock"
-                                                               FontSize="12"
-                                                               Initialized="CompletedTrainingTimeBlock_Initialized"
-                                                               />
+                                                           Name="CompletedTrainingTimeBlock"
+                                                           FontSize="12"
+                                                           Initialized="CompletedTrainingTimeBlock_Initialized"/>
                                             </StackPanel>
+
                                             <TextBlock Margin="0 5 0 0"
-                                                   Name="CompletedTrainingEqupmentBlock" 
-                                                   FontFamily="Calibri"
-                                                   FontSize="12" 
-                                                   Initialized="CompletedTrainingEqupmentBlock_Initialized"
-                                                   TextWrapping="Wrap"/>
+                                                       Name="CompletedTrainingEqupmentBlock" 
+                                                       FontFamily="Calibri"
+                                                       FontSize="12" 
+                                                       Initialized="CompletedTrainingEqupmentBlock_Initialized"
+                                                       TextWrapping="Wrap"/>
+
                                             <TextBlock Margin="0 5 0 0"
-                                                   Name="CompletedTrainingBodyPartsBlock" 
-                                                   FontFamily="Calibri"
-                                                   FontSize="12" 
-                                                   Initialized="CompletedTrainingBodyPartsBlock_Initialized"
-                                                   TextWrapping="Wrap"/>
+                                                       Name="CompletedTrainingBodyPartsBlock" 
+                                                       FontFamily="Calibri"
+                                                       FontSize="12" 
+                                                       Initialized="CompletedTrainingBodyPartsBlock_Initialized"
+                                                       TextWrapping="Wrap"/>
                                         </StackPanel>
                                     </StackPanel>
                                 </Grid>
@@ -566,6 +603,4 @@
             </Grid>
         </ScrollViewer>
     </Grid>
-
 </Window>
-
