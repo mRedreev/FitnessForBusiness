@@ -89,11 +89,8 @@ namespace FitnessForBusiness.Design
 
         }
 
-      
-
-        private void UserAvatar_Initialized(object sender, EventArgs e)
+        private void SyncUserData()
         {
-            var userAvatarTextBlock = sender as Image;
             BitmapImage bitmapImage = new BitmapImage();
             using (var fileStream = new FileStream("../../" + _user.ImageSource, FileMode.Open))
             {
@@ -102,32 +99,51 @@ namespace FitnessForBusiness.Design
                 bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
                 bitmapImage.EndInit();
             }
-            userAvatarTextBlock.Source = bitmapImage;
+            UserAvatar.Source = bitmapImage;
+
+            UsernameNameTextBox.Text = _user.Name;
+            UserSurnameTextBox.Text = _user.Surname;
+            UserGoalComboBox.Text = functions.NameOfGoal(_user.Goal);
+            UserLevelTextBox.Text = functions.NameOfLevel(_user.Level);
         }
 
-        private void UsernameNameTextBox_Initialized(object sender, EventArgs e)
-        {
-            var userNameTextBox = sender as TextBlock;
-            userNameTextBox.Text = _user.Name;
-        }
+        //private void UserAvatar_Initialized(object sender, EventArgs e)
+        //{
+        //    var userAvatarTextBlock = sender as Image;
+        //    BitmapImage bitmapImage = new BitmapImage();
+        //    using (var fileStream = new FileStream("../../" + _user.ImageSource, FileMode.Open))
+        //    {
+        //        bitmapImage.BeginInit();
+        //        bitmapImage.StreamSource = fileStream;
+        //        bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
+        //        bitmapImage.EndInit();
+        //    }
+        //    userAvatarTextBlock.Source = bitmapImage;
+        //}
 
-        private void UserSurnameTextBox_Initialized(object sender, EventArgs e)
-        {
-            var userSurnameTextBlock = sender as TextBlock;
-            userSurnameTextBlock.Text = _user.Surname;
-        }
+        //private void UsernameNameTextBox_Initialized(object sender, EventArgs e)
+        //{
+        //    var userNameTextBox = sender as TextBlock;
+        //    userNameTextBox.Text = _user.Name;
+        //}
 
-        private void UserLevelTextBox_Initialized(object sender, EventArgs e)
-        {
-            var levelTextBox = sender as TextBlock;
-            levelTextBox.Text = functions.NameOfLevel(_user.Level);
-        }
+        //private void UserSurnameTextBox_Initialized(object sender, EventArgs e)
+        //{
+        //    var userSurnameTextBlock = sender as TextBlock;
+        //    userSurnameTextBlock.Text = _user.Surname;
+        //}
 
-        private void UserGoalComboBox_Initialized(object sender, EventArgs e)
-        {
-            var goalTextBlock = sender as TextBlock;
-            goalTextBlock.Text = functions.NameOfGoal(_user.Goal);
-        }
+        //private void UserLevelTextBox_Initialized(object sender, EventArgs e)
+        //{
+        //    var levelTextBox = sender as TextBlock;
+        //    levelTextBox.Text = functions.NameOfLevel(_user.Level);
+        //}
+
+        //private void UserGoalComboBox_Initialized(object sender, EventArgs e)
+        //{
+        //    var goalTextBlock = sender as TextBlock;
+        //    goalTextBlock.Text = functions.NameOfGoal(_user.Goal);
+        //}
 
         private void SaveChangesButton_Click(object sender, RoutedEventArgs e)
         {
@@ -140,19 +156,27 @@ namespace FitnessForBusiness.Design
             {
                 MessageBox.Show("New and current passwords can't be equal. Please, enter another");
             }
+            else
             {
-                if (newAvatar != "")
-                    _user.ImageSource = newAvatar;
-                if (newGoal != "")
-                    _user.Goal = functions.CheckGoal(newGoal);
-                if (newLevel != "")
-                    _user.Level = functions.CheckLevel(newLevel);
-                if (newName != "")
-                    _user.Name = newName;
-                if (newPassword != "")
-                    _user.Password = newPassword;
-                _storage.Save();
-                MessageBox.Show("Data has been changed successfully");
+                if (newAvatar + newGoal + newLevel + newName + newPassword == "")
+                    MessageBox.Show("Enter data to change something");
+                else
+                {
+                    MessageBox.Show("Data has been changed successfully");
+                    if (newAvatar != "")
+                        _user.ImageSource = functions.GetImageSourceOfAvatar(ChangeAvatarComboBox.SelectedIndex);
+                    if (newGoal != "")
+                        _user.Goal = functions.CheckGoal(newGoal);
+                    if (newLevel != "")
+                        _user.Level = functions.CheckLevel(newLevel);
+                    if (newName != "")
+                        _user.Name = newName;
+                    if (newPassword != "")
+                        _user.Password = newPassword;
+                    _storage.Save();
+
+                    SyncUserData();
+                }
             }
         }
 
@@ -161,9 +185,11 @@ namespace FitnessForBusiness.Design
             CurrentTypeImagePanel.Visibility = Visibility.Collapsed;
             TypesPanel.Visibility = Visibility.Collapsed;
             CompletedTrainingsPanel.Visibility = Visibility.Collapsed;
-
-            ProfilePanel.Visibility = Visibility.Visible;
             RecommendedTrainingsPanel.Visibility = Visibility.Collapsed;
+
+            SyncUserData();
+            ProfilePanel.Visibility = Visibility.Visible;
+            
         }
 
         private void CompletedWorkoutsButton_Click(object sender, RoutedEventArgs e)
@@ -171,9 +197,11 @@ namespace FitnessForBusiness.Design
             CurrentTypeImagePanel.Visibility = Visibility.Collapsed;
             ProfilePanel.Visibility = Visibility.Collapsed;
             TypesPanel.Visibility = Visibility.Collapsed;
+            RecommendedTrainingsPanel.Visibility = Visibility.Collapsed;
+
             CompletedTrainings.ItemsSource = _user.CompletedTrainings;
             CompletedTrainingsPanel.Visibility = Visibility.Visible;
-            RecommendedTrainingsPanel.Visibility = Visibility.Collapsed;
+           
         }
 
         private void CatalogButton_Click(object sender, RoutedEventArgs e)
@@ -182,8 +210,8 @@ namespace FitnessForBusiness.Design
             CurrentTypeImagePanel.Visibility = Visibility.Collapsed;
             ProfilePanel.Visibility = Visibility.Collapsed;
             CompletedTrainingsPanel.Visibility = Visibility.Collapsed;
-            TypesPanel.Visibility = Visibility.Visible;
             RecommendedTrainingsPanel.Visibility = Visibility.Collapsed;
+            TypesPanel.Visibility = Visibility.Visible;
         }
 
         private void RecommendedWorkoutsButton_Click(object sender, RoutedEventArgs e)
@@ -192,6 +220,7 @@ namespace FitnessForBusiness.Design
             ProfilePanel.Visibility = Visibility.Collapsed;
             CompletedTrainingsPanel.Visibility = Visibility.Collapsed;
             TypesPanel.Visibility = Visibility.Collapsed;
+
             RecommendedTrainingsPanel.Visibility = Visibility.Visible;
         }
 

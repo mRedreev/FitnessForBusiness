@@ -32,7 +32,7 @@ namespace FitnessForBusiness.Design
             _storage = new JSONStorage();
             // InitialUsers2();
             //InitialTrainings2();
-            //TrainsInitialized("warm-up");
+            TrainsInitialized("cardio");
             InitializeComponent();
 
             //InitialTrainings();
@@ -370,6 +370,82 @@ namespace FitnessForBusiness.Design
                 _storage.AddTraining(warmup5);
                 _storage.AddTraining(warmup6);
             }
+            if (type == "cardio")
+            {
+                var cardio1 = new Training
+                    (
+                    "Full body HIIT",
+                    types[0],
+                    null,
+                    cardioExcercises.Where(e => easyExercises.Contains(e)).ToList().GetRange(0, 3),
+                    1,
+                    0.25,
+                    3
+                    );
+
+                var cardio2 = new Training
+                    (
+                    "Burn calories HIIT",
+                    types[0],
+                    null,
+                    cardioExcercises.Where(e => easyExercises.Contains(e)).ToList().GetRange(5, 5),
+                    0.75,
+                    0.15,
+                    3
+                    );
+
+                var cardio3 = new Training
+                    (
+                    "Best full body burn",
+                    types[0],
+                    false,
+                    cardioExcercises.Where(e => middleExercises.Contains(e)).ToList().GetRange(10, 5),
+                    1.5,
+                    0.5,
+                    4
+                    );
+
+                var cardio4 = new Training
+                    (
+                    "Total burn",
+                    types[0],
+                    false,
+                    warmupExercises.Where(e => middleExercises.Contains(e)).ToList().GetRange(15, 5),
+                    2,
+                    0.5,
+                    4
+                    );
+
+                var cardio5 = new Training
+                    (
+                    "Intense full body",
+                    types[0],
+                    true,
+                    warmupExercises.Where(e => hardExercises.Contains(e)).ToList().GetRange(20, 5),
+                    3,
+                    0.5,
+                    5
+                    );
+
+                var cardio6 = new Training
+                    (
+                    "Get shredded",
+                    types[0],
+                    true,
+                    warmupExercises.Where(e => hardExercises.Contains(e)).ToList().GetRange(25, 5),
+                    3,
+                    0.5,
+                    5
+                    );
+
+                _storage.AddTraining(cardio1);
+                _storage.AddTraining(cardio2);
+                _storage.AddTraining(cardio3);
+                _storage.AddTraining(cardio4);
+                _storage.AddTraining(cardio5);
+                _storage.AddTraining(cardio6);
+            }
+
 
         }
         private void LoginButton_Click(object sender, RoutedEventArgs e)
