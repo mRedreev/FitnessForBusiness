@@ -1,11 +1,11 @@
 [
   {
     "Id": "763526d5-63ed-4b5d-b790-115bf2981438",
-    "Name": "Iuliia",
+    "Name": "ugilmullina",
     "Surname": "Gilmullina",
     "ImageSource": "/Pictures/san.jpg",
     "Age": 4,
-    "Level": false,
+    "Level": null,
     "Goal": null,
     "Login": "ugilmullina",
     "Password": "200223",
@@ -436,6 +436,170 @@
         "CircleAmount": 4,
         "Length": 39.5,
         "Description": "cardio, "
+      },
+      {
+        "Id": "34414c56-49fd-48fb-9824-2ce0fcda2146",
+        "Name": "Breathe and feel",
+        "Type": {
+          "Id": "de41d488-9ece-427c-9f05-735b4b6f4176",
+          "Name": "yoga",
+          "ImageSource": "../../Pictures/yoga.png"
+        },
+        "Level": true,
+        "Excercises": [
+          {
+            "Id": 1512,
+            "Name": "all fours squad stretch",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1512.gif",
+            "Level": true,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "upper legs"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "body weight"
+            }
+          },
+          {
+            "Id": 1271,
+            "Name": "chest and front of shoulder stretch",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1271.gif",
+            "Level": true,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "chest"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "body weight"
+            }
+          },
+          {
+            "Id": 257,
+            "Name": "circles knee stretch",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0257.gif",
+            "Level": true,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "lower legs"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "body weight"
+            }
+          },
+          {
+            "Id": 1511,
+            "Name": "hamstring stretch",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1511.gif",
+            "Level": true,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "upper legs"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "body weight"
+            }
+          },
+          {
+            "Id": 1576,
+            "Name": "leg up hamstring stretch",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1576.gif",
+            "Level": true,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "upper legs"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "body weight"
+            }
+          },
+          {
+            "Id": 1403,
+            "Name": "neck side stretch",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1403.gif",
+            "Level": true,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "neck"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "body weight"
+            }
+          },
+          {
+            "Id": 643,
+            "Name": "overhead triceps stretch",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0643.gif",
+            "Level": true,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "upper arms"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "body weight"
+            }
+          },
+          {
+            "Id": 1585,
+            "Name": "runners stretch",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1585.gif",
+            "Level": true,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "upper legs"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "body weight"
+            }
+          },
+          {
+            "Id": 721,
+            "Name": "side wrist pull stretch",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0721.gif",
+            "Level": true,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "lower arms"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "body weight"
+            }
+          },
+          {
+            "Id": 1398,
+            "Name": "standing calves calf stretch",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1398.gif",
+            "Level": true,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "lower legs"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "body weight"
+            }
+          }
+        ],
+        "Equipment": [
+          {
+            "Id": 0,
+            "Name": "body weight"
+          }
+        ],
+        "ExcerciseLength": 1.0,
+        "ExcerciseAmount": 10,
+        "BreakLength": 0.5,
+        "CircleAmount": 3,
+        "Length": 44.5,
+        "Description": "upper legs, chest, lower legs, neck, upper arms, "
       }
     ]
   },
