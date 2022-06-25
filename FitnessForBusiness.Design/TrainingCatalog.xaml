@@ -474,6 +474,7 @@
                                    FontWeight="Medium"/>
                             <ComboBox Name="ChangeAvatarComboBox"
                                       Width="150"
+                                      IsEditable="False"
                                       Height="130">
                                 <ComboBoxItem>
                                     <Image Source="/Pictures/san.jpg"
@@ -504,7 +505,7 @@
                                       Width="130"
                                       Height="30"
                                       Text="My New Goal"
-                                      IsEditable="True"
+                                      IsEditable="False"
                                       VerticalContentAlignment="Center">
                                 <TextBlock>Lose weight</TextBlock>
                                 <TextBlock>Maintain weight</TextBlock>
@@ -516,7 +517,7 @@
                                       Height="30"
                                       Margin="5,0,0,0"
                                       Text="My New Level"
-                                      IsEditable="True"
+                                      IsEditable="False"
                                       VerticalContentAlignment="Center">
                                 <TextBlock>Beginner</TextBlock>
                                 <TextBlock>Intermediate</TextBlock>
@@ -608,7 +609,7 @@
                                                Grid.Row="0"
                                                Grid.Column="0"
                                                FontWeight="Medium"
-                                               Foreground="LightGray"
+                                               Foreground="#FC6586"
                                                FontSize="22"/>
 
                                     <TextBlock x:Name="CompletedTrainingTypeBlock"
@@ -624,7 +625,7 @@
                                     <TextBlock Name="CompletedTrainingTimeBlock"
                                                FontSize="12"
                                                Grid.Row="0"
-                                               HorizontalAlignment="Center"
+                                               HorizontalAlignment="Left"
                                                VerticalAlignment="Center"
                                                Grid.Column="1"
                                                Foreground="LightGray"
@@ -634,7 +635,7 @@
                                                FontFamily="Calibri"
                                                FontSize="12" 
                                                Grid.Column="1"
-                                               HorizontalAlignment="Center"
+                                               HorizontalAlignment="Left"
                                                VerticalAlignment="Center"
                                                Grid.Row="1"
                                                Foreground="LightGray"
@@ -646,7 +647,7 @@
                                                FontSize="12" 
                                                Grid.Column="1"
                                                Grid.Row="2"
-                                               HorizontalAlignment="Center"
+                                               HorizontalAlignment="Left"
                                                VerticalAlignment="Center"
                                                Foreground="LightGray"
                                                Initialized="CompletedTrainingBodyPartsBlock_Initialized"
