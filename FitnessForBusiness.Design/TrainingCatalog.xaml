@@ -134,7 +134,7 @@
                              HorizontalAlignment="Center"
                              VerticalContentAlignment="Top" 
                              ScrollViewer.HorizontalScrollBarVisibility="Hidden"
-                             ScrollViewer.CanContentScroll="False" 
+                             ScrollViewer.CanContentScroll="True"
                              Background="Transparent" 
                              BorderBrush="Transparent" 
                              MouseLeave="TypesListBox_MouseLeave"
@@ -223,7 +223,9 @@
                                      Margin="20 0 0 0" 
                                      HorizontalContentAlignment="Left"
                                      Background="Transparent"
-                                     BorderBrush="Transparent">
+                                     BorderBrush="Transparent"
+                                     MouseEnter="BeginnerTrainingsListBox_MouseEnter"
+                                     MouseLeave="BeginnerTrainingsListBox_MouseLeave">
 
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
@@ -290,7 +292,9 @@
                                      HorizontalContentAlignment="Left"
                                      Background="Transparent"
                                      BorderBrush="Transparent" 
-                                     Initialized="IntermediateTrainingsListBox_Initialized">
+                                     Initialized="IntermediateTrainingsListBox_Initialized"
+                                     MouseEnter="IntermediateTrainingsListBox_MouseEnter"
+                                     MouseLeave="IntermediateTrainingsListBox_MouseLeave">
 
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
@@ -299,13 +303,13 @@
                                                 <TextBlock Name="IntermediateTrainingNameTextBlock" 
                                                            Initialized="IntermediateTrainingNameTextBlock_Initialized"
                                                            FontFamily="Calibri"
+                                                           Foreground="LightGray"
                                                            FontSize="22"/>
 
                                                 <StackPanel Orientation="Vertical" 
                                                             Margin="15 0 0 0">
                                                     <StackPanel Orientation="Horizontal">
-                                                        <Button x:Name="IntermediateBeginButton"
-                                                                Padding="12 8" 
+                                                        <Button x:Name="IntermediateBeginButton" 
                                                                 FontSize="16" 
                                                                 Style="{StaticResource UIButton}" 
                                                                 Initialized="IntermediateBeginButton_Initialized"  
@@ -355,7 +359,9 @@
                                      HorizontalContentAlignment="Left"
                                      Background="Transparent"
                                      BorderBrush="Transparent" 
-                                     Initialized="AdvTrainingsListBox_Initialized">
+                                     Initialized="AdvTrainingsListBox_Initialized"
+                                     MouseEnter="AdvTrainingsListBox_MouseEnter"
+                                     MouseLeave="AdvTrainingsListBox_MouseLeave">
 
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
@@ -413,7 +419,7 @@
                     <Button x:Name="GetBackToTypesButton" 
                             Content="Back"
                             Style="{StaticResource UIButton}" 
-                            Margin="0 30 0 0"
+                            Margin="0 20 0 5"
                             Width="150"
                             Height="30"
                             Click="GetBackToTypesButton_Click"/>
@@ -583,7 +589,7 @@
                              HorizontalContentAlignment="Left"
                              Background="Transparent"
                              BorderBrush="Transparent" 
-                             Initialized="AdvTrainingsListBox_Initialized">
+                             Initialized="CompletedTrainings_Initialized">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <Grid>
