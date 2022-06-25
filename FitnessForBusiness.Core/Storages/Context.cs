@@ -14,13 +14,13 @@ namespace FitnessForBusiness.Core.Storages
 
         public DbSet<Training> Trainings { get; set; }
 
-
+        public DbSet<Excercise> Excercises { get; set; }
 
         public List<User> GetUsers => Users.ToList();
 
         public List<Training> GetTrainings => Trainings.ToList();
 
-
+        public List<Excercise> GetExcercises => Excercises.ToList();
 
         public Context() : base("DBConnection")
         {

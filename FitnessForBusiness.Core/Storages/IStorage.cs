@@ -15,7 +15,7 @@ namespace FitnessForBusiness.Core.Storages
 
         void Registration(User user);
         List<User> GetUsers { get; }
-
+        List<Excercise> GetExcercises { get; }
         List<Training> GetTrainings { get; }
     }
 }
