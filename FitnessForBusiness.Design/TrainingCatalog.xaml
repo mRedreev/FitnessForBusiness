@@ -751,7 +751,23 @@
                 <StackPanel x:Name="RecommendedTrainingsPanel" 
                             Orientation="Vertical"
                             Visibility="Collapsed">
-                    
+
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,10,0,0">
+                        <TextBlock x:Name="GoalTextBlock"
+                                   Initialized="GoalTextBlock_Initialized"
+                                   FontWeight="Medium"
+                                   Foreground="#3dddc2"
+                                   FontSize="24"/>
+
+                        <TextBlock Name="RecommendedLevelTextBlock"
+                                   Initialized="RecommendedLevelTextBlock_Initialized"
+                                   FontSize="24"
+                                   Margin="10,0,0,0"
+                                   Foreground="#3dddc2"
+                                   FontWeight="Medium"/>
+                    </StackPanel>
+
                     <ListBox Name="RecommendedTrainings" 
                              HorizontalContentAlignment="Left"
                              Background="Transparent"
@@ -775,26 +791,6 @@
                                         <ColumnDefinition Width="250"/>
                                         <ColumnDefinition Width="100"/>
                                     </Grid.ColumnDefinitions>
-
-                                    <TextBlock x:Name="GoalTextBlock"
-                                               Initialized="GoalTextBlock_Initialized"
-                                               FontWeight="Medium"
-                                               Foreground="#3dddc2"
-                                               Grid.Column="0"
-                                               HorizontalAlignment="Center"
-                                               VerticalAlignment="Center"
-                                               Grid.Row="0"
-                                               FontSize="24"/>
-
-                                    <TextBlock Name="RecommendedLevelTextBlock"
-                                               Initialized="RecommendedLevelTextBlock_Initialized"
-                                               FontSize="24"
-                                               Grid.Column="1"
-                                               Grid.Row="0"
-                                               HorizontalAlignment="Center"
-                                               VerticalAlignment="Center"
-                                               Foreground="#3dddc2"
-                                               FontWeight="Medium"/>
 
                                     <TextBlock Name="RecommendedTrainingNameBlock" 
                                                Initialized="RecommendedTrainingNameBlock_Initialized"
@@ -842,7 +838,7 @@
                                             FontSize="16" 
                                             Grid.Column="2"
                                             Grid.Row="0"
-                                            Grid.ColumnSpan="4"
+                                            Grid.RowSpan="4"
                                             HorizontalAlignment="Center"
                                             VerticalAlignment="Center"
                                             Width="90"
