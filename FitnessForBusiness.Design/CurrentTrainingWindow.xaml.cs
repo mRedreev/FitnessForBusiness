@@ -80,7 +80,7 @@ namespace FitnessForBusiness.Design
             MessageBox.Show($"Congratulations! You have completed training {_training.Name}");
             if (_user.CompletedTrainings == null)
                 _user.CompletedTrainings = new List<Training>();
-            else if (_user.CompletedTrainings.Any(t => t==_training))
+            else if (_user.CompletedTrainings.Any(t => t.Name==_training.Name))
                 _user.CompletedTrainings.Remove(_training);
             
             _user.CompletedTrainings.Add(_training);
