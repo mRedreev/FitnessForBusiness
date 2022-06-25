@@ -152,16 +152,24 @@ namespace FitnessForBusiness.Design
             var newAvatar = ChangeAvatarComboBox.Text;
             var newGoal = ChangeGoalComboBox.Text;
             var newLevel = ChangeLevelComboBox.Text;
-            var newName = ChangeUsernameBox.Text;
+            var newLogin = ChangeUsernameBox.Text;
             var newPassword = ChangePasswordBox.Password;
-            if (newPassword == _user.Password)
-            {
-                MessageBox.Show("New and current passwords can't be equal. Please, enter another");
-            }
+
+            if (newAvatar + newGoal + newLevel + newLogin + newPassword == "")
+                MessageBox.Show("Enter data to change something");
             else
             {
-                if (newAvatar + newGoal + newLevel + newName + newPassword == "")
-                    MessageBox.Show("Enter data to change something");
+                bool EqualnessOdNewAndOldData = false;
+                if ((_user.ImageSource == functions.GetImageSourceOfAvatar(ChangeAvatarComboBox.SelectedIndex)) |
+                    (_user.Goal == functions.CheckGoal(newGoal)) |
+                    (_user.Level == functions.CheckLevel(newLevel)) |
+                    (_user.Password == newPassword))
+                    EqualnessOdNewAndOldData = true;
+
+                if (EqualnessOdNewAndOldData)
+                {
+                    MessageBox.Show("New and current data can't be equal. Please, enter another");
+                }
                 else
                 {
                     MessageBox.Show("Data has been changed successfully");
@@ -171,8 +179,8 @@ namespace FitnessForBusiness.Design
                         _user.Goal = functions.CheckGoal(newGoal);
                     if (newLevel != "")
                         _user.Level = functions.CheckLevel(newLevel);
-                    if (newName != "")
-                        _user.Name = newName;
+                    if (newLogin != "")
+                        _user.Login = newLogin;
                     if (newPassword != "")
                         _user.Password = newPassword;
                     _storage.Save();
