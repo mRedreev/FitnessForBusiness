@@ -31,6 +31,7 @@ namespace FitnessForBusiness.Design
             _storage = storage;
             InitializeComponent();
             ExcercizesListBox.ItemsSource = _storage.GetTrainings.Where(t => t.Id == training.Id).First().Excercises;
+            
             //using (Context context = new Context())
             //{
             //    ExcercizesListBox.ItemsSource = context.Trainings.Include("Excercises").ToList().Where(t => t.Id == training.Id).First().Excercises;
@@ -116,19 +117,17 @@ namespace FitnessForBusiness.Design
                 DragMove();
         }
 
- 
-
-        private void NumberOfLoopsTextBlock_Initialized(object sender, EventArgs e)
-        {
-            var textblock = sender as TextBlock;
-            textblock.Text = _training.CircleAmount.ToString() + " circles";
-        }
-
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             var trainingCatalog = new TrainingCatalog(_user, _storage);
             trainingCatalog.Show();
             this.Close();
+        }
+
+        private void NumberOfLoopsTextBlock_Initialized(object sender, EventArgs e)
+        {
+            var textblock = sender as TextBlock;
+            textblock.Text = _training.CircleAmount.ToString() + " circles";
         }
     }
 }

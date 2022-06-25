@@ -131,7 +131,7 @@ namespace FitnessForBusiness.Design
         {
             CurrentTypeImagePanel.Visibility = Visibility.Collapsed;
             TypesPanel.Visibility = Visibility.Collapsed;
-            //CompletedTrainingsPanel.Visibillity = Visibillity.Collapsed
+            CompletedTrainingsPanel.Visibility = Visibility.Collapsed;
             ProfilePanel.Visibility = Visibility.Visible;
         }
 
@@ -165,7 +165,6 @@ namespace FitnessForBusiness.Design
 
             MakeCurrentTypeImage();
             MakeCurrentTypeTextBlock();
-            //DescriptionTextBlockSetting();
         }
 
         private void SwitchBackToTypesList()
