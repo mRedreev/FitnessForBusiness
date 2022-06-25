@@ -200,23 +200,23 @@
 
                     <StackPanel Name="LevelPanel" 
                                 Grid.Row="2" 
-                                Margin="50,0,50,15" 
+                                Margin="20,0,0,15" 
                                 HorizontalAlignment="Left" 
                                 ScrollViewer.CanContentScroll="False" 
                                 Background="Transparent"
                                 Orientation="Vertical">
 
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Margin="0 20 30 0"
+                            <TextBlock Margin="0 43 0 0"
                                        Name="EasyTextBlock" 
                                        Text="Beginner"
-                                       Foreground="LightGray"
+                                       Width="117"
+                                       Foreground="#3dddc2"
                                        TextWrapping="Wrap" 
                                        FontFamily="Calibri" 
                                        FontSize="22"/>
 
                             <ListBox Name="BeginnerTrainingsListBox"
-                                     Margin="20 0 0 0" 
                                      HorizontalContentAlignment="Left"
                                      Background="Transparent"
                                      BorderBrush="Transparent"
@@ -226,48 +226,73 @@
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
                                         <Grid>
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBlock Name="TrainingNameTextBlock" 
-                                                           Initialized="TrainingNameTextBlock_Initialized"
-                                                           FontFamily="Calibri"
-                                                           Foreground="LightGray"
-                                                           FontSize="22"/>
 
-                                                <StackPanel Orientation="Vertical" 
-                                                            Margin="15 0 0 0">
-                                                    <StackPanel Orientation="Horizontal">
-                                                        <Button Name="BeginButton"  
-                                                                FontSize="16"
-                                                                Width="100"
-                                                                Height="35"
-                                                                Style="{StaticResource UIButton}" 
-                                                                Initialized="BeginButton_Initialized"  
-                                                                Click="BeginButton_Click"/>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="50"/>
+                                                <RowDefinition Height="25"/>
+                                                <RowDefinition Height="30"/>
+                                            </Grid.RowDefinitions>
 
-                                                        <TextBlock Margin="15 10 0 0"
-                                                                   Name="BeginTrainingTimeTextBlock"
-                                                                   FontSize="12"
-                                                                   Foreground="LightGray"
-                                                                   Initialized="BeginTrainingTimeTextBlock_Initialized"/>
-                                                    </StackPanel>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="250"/>
+                                                <ColumnDefinition Width="250"/>
+                                                <ColumnDefinition Width="100"/>
+                                            </Grid.ColumnDefinitions>
 
-                                                    <TextBlock Margin="0 5 0 0"
-                                                               Name="EquipmentTextBlock" 
-                                                               FontFamily="Calibri"
-                                                               Foreground="LightGray"
-                                                               FontSize="12" 
-                                                               Initialized="EquipmentTextBlock_Initialized"
-                                                               TextWrapping="Wrap"/>
+                                            <TextBlock Name="TrainingNameTextBlock" 
+                                                       Initialized="TrainingNameTextBlock_Initialized"
+                                                       FontFamily="Calibri"
+                                                       Grid.Column="0"
+                                                       HorizontalAlignment="Left"
+                                                       VerticalAlignment="Center"
+                                                       Grid.Row="0"
+                                                       Grid.RowSpan="3"
+                                                       Foreground="#FC6586"
+                                                       FontSize="22"/>
 
-                                                    <TextBlock Margin="0 5 0 0"
-                                                               Name="BodyPartsTextBlock" 
-                                                               FontFamily="Calibri"
-                                                               Foreground="LightGray"
-                                                               FontSize="12" 
-                                                               Initialized="BodyPartsTextBlock_Initialized"
-                                                               TextWrapping="Wrap"/>
-                                                </StackPanel>
-                                            </StackPanel>
+                                            <TextBlock Name="BeginTrainingTimeTextBlock"
+                                                       FontSize="12"
+                                                       Grid.Column="1"
+                                                       Grid.Row="0"
+                                                       HorizontalAlignment="Left"
+                                                       VerticalAlignment="Center"
+                                                       Foreground="LightGray"
+                                                       Initialized="BeginTrainingTimeTextBlock_Initialized"/>
+
+                                            <TextBlock Name="EquipmentTextBlock" 
+                                                       FontFamily="Calibri"
+                                                       Foreground="LightGray"
+                                                       FontSize="12" 
+                                                       Grid.Column="1"
+                                                       Grid.Row="1"
+                                                       HorizontalAlignment="Left"
+                                                       VerticalAlignment="Top"
+                                                       Initialized="EquipmentTextBlock_Initialized"
+                                                       TextWrapping="Wrap"/>
+
+                                            <TextBlock Name="BodyPartsTextBlock" 
+                                                       FontFamily="Calibri"
+                                                       Foreground="LightGray"
+                                                       FontSize="12" 
+                                                       Grid.Column="1"
+                                                       Grid.Row="2"
+                                                       HorizontalAlignment="Left"
+                                                       VerticalAlignment="Center"
+                                                       Initialized="BodyPartsTextBlock_Initialized"
+                                                       TextWrapping="Wrap"/>
+
+                                            <Button Name="BeginButton"  
+                                                    FontSize="16"
+                                                    Width="90"
+                                                    Height="35"
+                                                    Grid.Column="2"
+                                                    Grid.Row="0"
+                                                    HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center"
+                                                    Grid.RowSpan="3"
+                                                    Style="{StaticResource UIButton}" 
+                                                    Initialized="BeginButton_Initialized"  
+                                                    Click="BeginButton_Click"/>
                                         </Grid>
                                     </DataTemplate>
                                 </ListBox.ItemTemplate>
@@ -275,16 +300,16 @@
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Margin="0 20 30 0" 
+                            <TextBlock Margin="0 43 0 0" 
                                        Name="IntermediateTextBlock" 
                                        Text="Intermediate" 
-                                       Foreground="LightGray"
+                                       Foreground="#3dddc2"
+                                       Width="117"
                                        TextWrapping="Wrap" 
                                        FontFamily="Calibri" 
                                        FontSize="22"/>
 
-                            <ListBox Name="IntermediateTrainingsListBox"
-                                     Margin="20 0 0 0" 
+                            <ListBox Name="IntermediateTrainingsListBox" 
                                      HorizontalContentAlignment="Left"
                                      Background="Transparent"
                                      BorderBrush="Transparent" 
@@ -295,46 +320,74 @@
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
                                         <Grid>
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBlock Name="IntermediateTrainingNameTextBlock" 
-                                                           Initialized="IntermediateTrainingNameTextBlock_Initialized"
-                                                           FontFamily="Calibri"
-                                                           Foreground="LightGray"
-                                                           FontSize="22"/>
 
-                                                <StackPanel Orientation="Vertical" 
-                                                            Margin="15 0 0 0">
-                                                    <StackPanel Orientation="Horizontal">
-                                                        <Button x:Name="IntermediateBeginButton" 
-                                                                FontSize="16" 
-                                                                Style="{StaticResource UIButton}" 
-                                                                Initialized="IntermediateBeginButton_Initialized"  
-                                                                Click="IntermediateBeginButton_Click"/>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="50"/>
+                                                <RowDefinition Height="25"/>
+                                                <RowDefinition Height="30"/>
+                                            </Grid.RowDefinitions>
 
-                                                        <TextBlock Margin="5 0 0 0"
-                                                                   Name="IntTrainingTimeTextBlock"
-                                                                   FontSize="12"
-                                                                   Foreground="LightGray"
-                                                                   Initialized="IntTrainingTimeTextBlock_Initialized"/>
-                                                    </StackPanel>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="250"/>
+                                                <ColumnDefinition Width="250"/>
+                                                <ColumnDefinition Width="100"/>
+                                            </Grid.ColumnDefinitions>
 
-                                                    <TextBlock Margin="0 5 0 0"
-                                                               Name="InterEquipment" 
-                                                               FontFamily="Calibri"
-                                                               FontSize="12" 
-                                                               Foreground="LightGray"
-                                                               Initialized="InterEquipment_Initialized"
-                                                               TextWrapping="Wrap"/>
+                                            <TextBlock Name="IntermediateTrainingNameTextBlock" 
+                                                       Initialized="IntermediateTrainingNameTextBlock_Initialized"
+                                                       FontFamily="Calibri"
+                                                       FontSize="22"
+                                                       Grid.Column="0"
+                                                       HorizontalAlignment="Left"
+                                                       VerticalAlignment="Center"
+                                                       Grid.Row="0"
+                                                       Grid.RowSpan="3"
+                                                       Foreground="#FC6586"/>
 
-                                                    <TextBlock Margin="0 5 0 0"
-                                                               Name="IntBodyPartsTextBlock" 
-                                                               FontFamily="Calibri"
-                                                               FontSize="12" 
-                                                               Foreground="LightGray"
-                                                               Initialized="IntBodyPartsTextBlock_Initialized"
-                                                               TextWrapping="Wrap"/>
-                                                </StackPanel>
-                                            </StackPanel>
+                                            <TextBlock Name="IntTrainingTimeTextBlock"
+                                                       FontSize="12"
+                                                       Foreground="LightGray"
+                                                       Grid.Column="1"
+                                                       HorizontalAlignment="Left"
+                                                       VerticalAlignment="Center"
+                                                       Grid.Row="0"
+                                                       Initialized="IntTrainingTimeTextBlock_Initialized"/>
+
+                                            <TextBlock Name="InterEquipment" 
+                                                       FontFamily="Calibri"
+                                                       FontSize="12" 
+                                                       Grid.Column="1"
+                                                       Grid.Row="1"
+                                                       HorizontalAlignment="Left"
+                                                       VerticalAlignment="Top"
+                                                       Foreground="LightGray"
+                                                       Initialized="InterEquipment_Initialized"
+                                                       TextWrapping="Wrap"/>
+
+                                            <TextBlock Name="IntBodyPartsTextBlock" 
+                                                       FontFamily="Calibri"
+                                                       FontSize="12" 
+                                                       Foreground="LightGray"
+                                                       Grid.Column="1"
+                                                       Grid.Row="2"
+                                                       HorizontalAlignment="Left"
+                                                       VerticalAlignment="Center"
+                                                       Initialized="IntBodyPartsTextBlock_Initialized"
+                                                       TextWrapping="Wrap"/>
+
+                                            <Button x:Name="IntermediateBeginButton" 
+                                                    FontSize="16" 
+                                                    Grid.Column="2"
+                                                    Grid.Row="0"
+                                                    Width="90"
+                                                    Height="35"
+                                                    HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center"
+                                                    Grid.RowSpan="3"
+                                                    Style="{StaticResource UIButton}" 
+                                                    Initialized="IntermediateBeginButton_Initialized"  
+                                                    Click="IntermediateBeginButton_Click"/>
+
                                         </Grid>
                                     </DataTemplate>
                                 </ListBox.ItemTemplate>
@@ -342,16 +395,16 @@
                         </StackPanel>
                         
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Margin="0 20 30 0" 
+                            <TextBlock Margin="0 43 0 0" 
                                        Name="HardTextBlock" 
                                        Text="Advanced" 
-                                       Foreground="LightGray"
+                                       Width="117"
+                                       Foreground="#3dddc2"
                                        TextWrapping="Wrap" 
                                        FontFamily="Calibri" 
                                        FontSize="22"/>
 
-                            <ListBox Name="AdvTrainingsListBox"
-                                     Margin="20 0 0 0" 
+                            <ListBox Name="AdvTrainingsListBox" 
                                      HorizontalContentAlignment="Left"
                                      Background="Transparent"
                                      BorderBrush="Transparent" 
@@ -362,49 +415,74 @@
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
                                         <Grid>
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBlock Name="AdvTrainingNameTextBlock" 
-                                                           Initialized="AdvTrainingNameTextBlock_Initialized"
-                                                           FontFamily="Calibri"
-                                                           Foreground="LightGray"
-                                                           FontSize="22"/>
 
-                                                <StackPanel Orientation="Vertical" 
-                                                            Margin="15 0 0 0">
-                                                    <StackPanel Orientation="Horizontal">
-                                                        <Button Name="AdvBeginButton"  
-                                                                Padding="12 8" 
-                                                                FontSize="16" 
-                                                                Width="120"
-                                                                Height="35"
-                                                                Style="{StaticResource UIButton}" 
-                                                                Initialized="AdvBeginButton_Initialized"  
-                                                                Click="AdvBeginButton_Click"/>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="50"/>
+                                                <RowDefinition Height="25"/>
+                                                <RowDefinition Height="30"/>
+                                            </Grid.RowDefinitions>
 
-                                                        <TextBlock Margin="5 0 0 0"
-                                                                   Name="AdvTrainingTimeTextBlock"
-                                                                   FontSize="12"
-                                                                   Foreground="LightGray"
-                                                                   Initialized="AdvTrainingTimeTextBlock_Initialized"/>
-                                                    </StackPanel>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="250"/>
+                                                <ColumnDefinition Width="250"/>
+                                                <ColumnDefinition Width="100"/>
+                                            </Grid.ColumnDefinitions>
 
-                                                    <TextBlock Margin="0 5 0 0"
-                                                               Name="AdvEquipmentTextBlock" 
-                                                               FontFamily="Calibri"
-                                                               FontSize="12" 
-                                                               Foreground="LightGray"
-                                                               Initialized="AdvEquipmentTextBlock_Initialized"
-                                                               TextWrapping="Wrap"/>
+                                            <TextBlock Name="AdvTrainingNameTextBlock" 
+                                                       Initialized="AdvTrainingNameTextBlock_Initialized"
+                                                       FontFamily="Calibri"
+                                                       Grid.Column="0"
+                                                       Grid.Row="0"
+                                                       Grid.RowSpan="3"
+                                                       HorizontalAlignment="Left"
+                                                       VerticalAlignment="Center"
+                                                       Foreground="#FC6586"
+                                                       FontSize="22"/>
 
-                                                    <TextBlock Margin="0 5 0 0"
-                                                               Name="AdvBodyPartsTextBlock" 
-                                                               FontFamily="Calibri"
-                                                               Foreground="LightGray"
-                                                               FontSize="12" 
-                                                               Initialized="AdvBodyPartsTextBlock_Initialized"
-                                                               TextWrapping="Wrap"/>
-                                                </StackPanel>
-                                            </StackPanel>
+                                            <TextBlock Name="AdvTrainingTimeTextBlock"
+                                                       FontSize="12"
+                                                       Grid.Column="1"
+                                                       Grid.Row="0"
+                                                       HorizontalAlignment="Left"
+                                                       VerticalAlignment="Center"
+                                                       Foreground="LightGray"
+                                                       Initialized="AdvTrainingTimeTextBlock_Initialized"/>
+
+                                            <TextBlock Name="AdvEquipmentTextBlock" 
+                                                       FontFamily="Calibri"
+                                                       FontSize="12" 
+                                                       Grid.Column="1"
+                                                       Grid.Row="1"
+                                                       HorizontalAlignment="Left"
+                                                       VerticalAlignment="Top"
+                                                       Foreground="LightGray"
+                                                       Initialized="AdvEquipmentTextBlock_Initialized"
+                                                       TextWrapping="Wrap"/>
+
+                                            <TextBlock Name="AdvBodyPartsTextBlock" 
+                                                       FontFamily="Calibri"
+                                                       Foreground="LightGray"
+                                                       Grid.Column="1"
+                                                       Grid.Row="2"
+                                                       HorizontalAlignment="Left"
+                                                       VerticalAlignment="Center"
+                                                       FontSize="12" 
+                                                       Initialized="AdvBodyPartsTextBlock_Initialized"
+                                                       TextWrapping="Wrap"/>
+
+                                            <Button Name="AdvBeginButton"
+                                                    FontSize="16" 
+                                                    Width="90"
+                                                    Grid.Column="2"
+                                                    Grid.Row="0"
+                                                    HorizontalAlignment="Center"
+                                                    VerticalAlignment="Center"
+                                                    Grid.RowSpan="3"
+                                                    Height="35"
+                                                    Style="{StaticResource UIButton}" 
+                                                    Initialized="AdvBeginButton_Initialized"  
+                                                    Click="AdvBeginButton_Click"/>
+
                                         </Grid>
                                     </DataTemplate>
                                 </ListBox.ItemTemplate>
@@ -580,6 +658,7 @@
                              HorizontalContentAlignment="Left"
                              Background="Transparent"
                              BorderBrush="Transparent" 
+                             Margin="10,0,0,0"
                              Initialized="CompletedTrainings_Initialized">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
@@ -588,7 +667,7 @@
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="50"/>
                                         <RowDefinition Height="25"/>
-                                        <RowDefinition Height="25"/>
+                                        <RowDefinition Height="30"/>
                                     </Grid.RowDefinitions>
 
                                     <Grid.ColumnDefinitions>
@@ -600,7 +679,7 @@
                                     <TextBlock Name="CompletedTrainingNameBlock" 
                                                Initialized="CompletedTrainingNameBlock_Initialized"
                                                FontFamily="Calibri"
-                                               HorizontalAlignment="Center"
+                                               HorizontalAlignment="Left"
                                                VerticalAlignment="Center"
                                                Grid.Row="0"
                                                Grid.Column="0"
@@ -612,7 +691,7 @@
                                                Initialized="CompletedTrainingTypeBlock_Initialized"
                                                Grid.Column="0"
                                                Grid.Row="1"
-                                               HorizontalAlignment="Center"
+                                               HorizontalAlignment="Left"
                                                VerticalAlignment="Center"
                                                Grid.RowSpan="2"
                                                FontSize="14"
@@ -632,7 +711,7 @@
                                                FontSize="12" 
                                                Grid.Column="1"
                                                HorizontalAlignment="Left"
-                                               VerticalAlignment="Center"
+                                               VerticalAlignment="Top"
                                                Grid.Row="1"
                                                Foreground="LightGray"
                                                Initialized="CompletedTrainingEqupmentBlock_Initialized"
@@ -671,87 +750,106 @@
 
                 <StackPanel x:Name="RecommendedTrainingsPanel" 
                             Orientation="Vertical"
-                            Visibility="Collapsed"
-                            Margin="20,20,0,0">
+                            Visibility="Collapsed">
                     
                     <ListBox Name="RecommendedTrainings" 
                              HorizontalContentAlignment="Left"
                              Background="Transparent"
                              BorderBrush="Transparent" 
+                             Margin="10,0,0,0"
                              Initialized="RecommendedTrainings_Initialized">
                         
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <Grid>
 
-                                    <StackPanel Orientation="Vertical">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="50"/>
+                                        <RowDefinition Height="50"/>
+                                        <RowDefinition Height="25"/>
+                                        <RowDefinition Height="30"/>
+                                    </Grid.RowDefinitions>
 
-                                        <TextBlock x:Name="RecommendedTypeTextBlock"
-                                                   Initialized="RecommendedTypeTextBlock_Initialized"
-                                                   FontWeight="Medium"
-                                                   FontSize="24"/>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="250"/>
+                                        <ColumnDefinition Width="250"/>
+                                        <ColumnDefinition Width="100"/>
+                                    </Grid.ColumnDefinitions>
 
-                                        <TextBlock Name="RecommendedLevelTextBlock"
-                                                   Initialized="RecommendedLevelTextBlock_Initialized"
-                                                   FontSize="24"
-                                                   FontWeight="Medium"/>
+                                    <TextBlock x:Name="GoalTextBlock"
+                                               Initialized="GoalTextBlock_Initialized"
+                                               FontWeight="Medium"
+                                               Foreground="#3dddc2"
+                                               Grid.Column="0"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Grid.Row="0"
+                                               FontSize="24"/>
 
-                                        <StackPanel Orientation="Horizontal">
+                                    <TextBlock Name="RecommendedLevelTextBlock"
+                                               Initialized="RecommendedLevelTextBlock_Initialized"
+                                               FontSize="24"
+                                               Grid.Column="1"
+                                               Grid.Row="0"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Center"
+                                               Foreground="#3dddc2"
+                                               FontWeight="Medium"/>
 
-                                            <StackPanel Orientation="Vertical">
+                                    <TextBlock Name="RecommendedTrainingNameBlock" 
+                                               Initialized="RecommendedTrainingNameBlock_Initialized"
+                                               FontFamily="Calibri"
+                                               FontWeight="Medium"
+                                               Grid.Column="0"
+                                               HorizontalAlignment="Left"
+                                               VerticalAlignment="Center"
+                                               Grid.Row="1"
+                                               Foreground="#3dddc2"
+                                               FontSize="22"/>
 
-                                                <TextBlock Name="RecommendedTrainingNameBlock" 
-                                                           Initialized="RecommendedTrainingNameBlock_Initialized"
-                                                           FontFamily="Calibri"
-                                                           FontWeight="Medium"
-                                                           Foreground="LightGray"
-                                                           FontSize="22"/>
+                                    <TextBlock Name="RecommendedTrainingTimeBlock"
+                                               FontSize="12"
+                                               Grid.Row="1"
+                                               Grid.Column="1"
+                                               HorizontalAlignment="Left"
+                                               VerticalAlignment="Center"
+                                               Foreground="LightGray"
+                                               Initialized="RecommendedTrainingTimeBlock_Initialized"/>
 
-                                                <TextBlock x:Name="RecommendedTrainingTypeBlock"
-                                                           Initialized="RecommendedTrainingTypeBlock_Initialized"
-                                                           Margin="15 5 0 0" 
-                                                           FontSize="14"
-                                                           Foreground="LightGray"/>
-                                            </StackPanel>
+                                    <TextBlock Name="RecommendedTrainingEqupmentBlock" 
+                                               FontFamily="Calibri"
+                                               FontSize="12" 
+                                               Grid.Column="1"
+                                               Grid.Row="2"
+                                               HorizontalAlignment="Left"
+                                               VerticalAlignment="Top"
+                                               Foreground="LightGray"
+                                               Initialized="RecommendedTrainingEqupmentBlock_Initialized"
+                                               TextWrapping="Wrap"/>
 
-                                            <StackPanel Orientation="Vertical" 
-                                                    Margin="35 0 0 0">
+                                    <TextBlock Name="RecommendedTrainingBodyPartsBlock" 
+                                               FontFamily="Calibri"
+                                               FontSize="12"
+                                               Grid.Column="1"
+                                               Grid.Row="3"
+                                               HorizontalAlignment="Left"
+                                               VerticalAlignment="Center"
+                                               Foreground="LightGray"
+                                               Initialized="RecommendedTrainingBodyPartsBlock_Initialized"
+                                               TextWrapping="Wrap"/>
 
-                                                <StackPanel Orientation="Horizontal">
-
-                                                    <Button Name="RecommendedTrainingNameButton"   
-                                                            FontSize="16" 
-                                                            Width="90"
-                                                            Height="35"
-                                                            Style="{StaticResource UIButton}" 
-                                                            Initialized="RecommendedTrainingNameButton_Initialized"  
-                                                            Click="RecommendedTrainingNameButton_Click"/>
-
-                                                    <TextBlock Margin="10 10 0 0"
-                                                               Name="RecommendedTrainingTimeBlock"
-                                                               FontSize="12"
-                                                               Foreground="LightGray"
-                                                               Initialized="RecommendedTrainingTimeBlock_Initialized"/>
-                                                </StackPanel>
-
-                                                <TextBlock Margin="0 10 0 0"
-                                                           Name="RecommendedTrainingEqupmentBlock" 
-                                                           FontFamily="Calibri"
-                                                           FontSize="12" 
-                                                           Foreground="LightGray"
-                                                           Initialized="RecommendedTrainingEqupmentBlock_Initialized"
-                                                           TextWrapping="Wrap"/>
-
-                                                <TextBlock Margin="0 3 0 0"
-                                                           Name="RecommendedTrainingBodyPartsBlock" 
-                                                           FontFamily="Calibri"
-                                                           FontSize="12" 
-                                                           Foreground="LightGray"
-                                                           Initialized="RecommendedTrainingBodyPartsBlock_Initialized"
-                                                           TextWrapping="Wrap"/>
-                                            </StackPanel>
-                                        </StackPanel>
-                                    </StackPanel>
+                                    <Button Name="RecommendedTrainingNameButton"   
+                                            FontSize="16" 
+                                            Grid.Column="2"
+                                            Grid.Row="0"
+                                            Grid.ColumnSpan="4"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            Width="90"
+                                            Height="35"
+                                            Style="{StaticResource UIButton}" 
+                                            Initialized="RecommendedTrainingNameButton_Initialized"  
+                                            Click="RecommendedTrainingNameButton_Click"/>
                                 </Grid>
                             </DataTemplate>
                         </ListBox.ItemTemplate>
