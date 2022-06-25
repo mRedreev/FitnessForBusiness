@@ -87,7 +87,8 @@
                          VerticalAlignment="Center"
                          Style="{StaticResource MenuButtonTheme}"
                          FontSize="18"
-                         IsChecked="False"/>
+                         IsChecked="False"
+                         Click="RecommendedWorkoutsButton_Click"/>
 
             <RadioButton Name="CompletedWorkoutsButton" 
                          Height="55"
@@ -638,6 +639,97 @@
                                                        TextWrapping="Wrap"/>
                                         </StackPanel>
                                     </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+
+                <StackPanel x:Name="RecommendedTrainingsPanel" 
+                            Orientation="Vertical"
+                            Visibility="Collapsed"
+                            Margin="20,20,0,0">
+                    
+                    <ListBox Name="RecommendedTrainings" 
+                             HorizontalContentAlignment="Left"
+                             Background="Transparent"
+                             BorderBrush="Transparent" 
+                             Initialized="RecommendedTrainings_Initialized">
+                        
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+
+                                    <StackPanel Orientation="Vertical">
+
+                                        <TextBlock x:Name="RecommendedTypeTextBlock"
+                                                   Initialized="RecommendedTypeTextBlock_Initialized"
+                                                   FontWeight="Medium"
+                                                   FontSize="24"/>
+
+                                        <TextBlock Name="RecommendedLevelTextBlock"
+                                                   Initialized="RecommendedLevelTextBlock_Initialized"
+                                                   FontSize="24"
+                                                   FontWeight="Medium"/>
+
+                                        <StackPanel Orientation="Horizontal">
+
+                                            <StackPanel Orientation="Vertical">
+
+                                                <TextBlock Name="RecommendedTrainingNameBlock" 
+                                                           Initialized="RecommendedTrainingNameBlock_Initialized"
+                                                           FontFamily="Calibri"
+                                                           FontWeight="Medium"
+                                                           Foreground="LightGray"
+                                                           FontSize="22"/>
+
+                                                <TextBlock x:Name="RecommendedTrainingTypeBlock"
+                                                       Initialized="RecommendedTrainingTypeBlock_Initialized"
+                                                       Margin="15 5 0 0" 
+                                                       FontSize="14"
+                                                       Foreground="LightGray"/>
+                                            </StackPanel>
+
+                                            <StackPanel Orientation="Vertical" 
+                                                    Margin="35 0 0 0">
+
+                                                <StackPanel Orientation="Horizontal">
+
+                                                    <Button Name="RecommendedTrainingNameButton"   
+                                                        FontSize="16" 
+                                                        Width="90"
+                                                        Height="35"
+                                                        Style="{StaticResource UIButton}" 
+                                                        Initialized="RecommendedTrainingNameButton_Initialized"  
+                                                        Click="RecommendedTrainingNameButton_Click"/>
+
+                                                    <TextBlock Margin="10 10 0 0"
+                                                           Name="RecommendedTrainingTimeBlock"
+                                                           FontSize="12"
+                                                           Foreground="LightGray"
+                                                           Initialized="RecommendedTrainingTimeBlock_Initialized"/>
+                                                </StackPanel>
+
+                                                <TextBlock Margin="0 10 0 0"
+                                                       Name="RecommendedTrainingEqupmentBlock" 
+                                                       FontFamily="Calibri"
+                                                       FontSize="12" 
+                                                       Foreground="LightGray"
+                                                       Initialized="RecommendedTrainingEqupmentBlock_Initialized"
+                                                       TextWrapping="Wrap"/>
+
+                                                <TextBlock Margin="0 3 0 0"
+                                                       Name="RecommendedTrainingBodyPartsBlock" 
+                                                       FontFamily="Calibri"
+                                                       FontSize="12" 
+                                                       Foreground="LightGray"
+                                                       Initialized="RecommendedTrainingBodyPartsBlock_Initialized"
+                                                       TextWrapping="Wrap"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </StackPanel>
+                                    
+                                    
                                 </Grid>
                             </DataTemplate>
                         </ListBox.ItemTemplate>

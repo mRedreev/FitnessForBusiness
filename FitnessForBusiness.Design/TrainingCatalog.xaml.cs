@@ -133,6 +133,36 @@ namespace FitnessForBusiness.Design
             TypesPanel.Visibility = Visibility.Collapsed;
             CompletedTrainingsPanel.Visibility = Visibility.Collapsed;
             ProfilePanel.Visibility = Visibility.Visible;
+            RecommendedTrainingsPanel.Visibility = Visibility.Collapsed;
+        }
+
+        private void CompletedWorkoutsButton_Click(object sender, RoutedEventArgs e)
+        {
+            CurrentTypeImagePanel.Visibility = Visibility.Collapsed;
+            ProfilePanel.Visibility = Visibility.Collapsed;
+            TypesPanel.Visibility = Visibility.Collapsed;
+            CompletedTrainings.ItemsSource = _user.CompletedTrainings;
+            CompletedTrainingsPanel.Visibility = Visibility.Visible;
+            RecommendedTrainingsPanel.Visibility = Visibility.Collapsed;
+        }
+
+        private void CatalogButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            CurrentTypeImagePanel.Visibility = Visibility.Collapsed;
+            ProfilePanel.Visibility = Visibility.Collapsed;
+            CompletedTrainingsPanel.Visibility = Visibility.Collapsed;
+            TypesPanel.Visibility = Visibility.Visible;
+            RecommendedTrainingsPanel.Visibility = Visibility.Collapsed;
+        }
+
+        private void RecommendedWorkoutsButton_Click(object sender, RoutedEventArgs e)
+        {
+            CurrentTypeImagePanel.Visibility = Visibility.Collapsed;
+            ProfilePanel.Visibility = Visibility.Collapsed;
+            CompletedTrainingsPanel.Visibility = Visibility.Collapsed;
+            TypesPanel.Visibility = Visibility.Collapsed;
+            RecommendedTrainingsPanel.Visibility = Visibility.Visible;
         }
 
         private void TypesListBox_MouseLeave(object sender, MouseEventArgs e)
@@ -363,25 +393,6 @@ namespace FitnessForBusiness.Design
             SwitchBackToTypesList();
         }
 
-        private void CompletedWorkoutsButton_Click(object sender, RoutedEventArgs e)
-        {
-            CurrentTypeImagePanel.Visibility = Visibility.Collapsed;
-            ProfilePanel.Visibility = Visibility.Collapsed;           
-            TypesPanel.Visibility = Visibility.Collapsed;
-            CompletedTrainings.ItemsSource = _user.CompletedTrainings;
-            CompletedTrainingsPanel.Visibility = Visibility.Visible;
-            
-        }
-
-        private void CatalogButton_Click(object sender, RoutedEventArgs e)
-        {
-            
-            CurrentTypeImagePanel.Visibility = Visibility.Collapsed;
-            ProfilePanel.Visibility = Visibility.Collapsed;
-            CompletedTrainingsPanel.Visibility = Visibility.Collapsed;
-            TypesPanel.Visibility = Visibility.Visible;
-        }
-
         private void TypesListBox_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
             var listBoxBorder = VisualTreeHelper.GetChild(TypesListBox, 0) as Border;
@@ -440,6 +451,56 @@ namespace FitnessForBusiness.Design
            var textblock = sender as TextBlock;
             var training = textblock.DataContext as Training;
             textblock.Text = training.Type.Name;
+        }
+
+        private void RecommendedTrainings_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RecommendedTrainingNameBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RecommendedTrainingTypeBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RecommendedTrainingNameButton_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RecommendedTrainingNameButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RecommendedTrainingTimeBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RecommendedTrainingEqupmentBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RecommendedTrainingBodyPartsBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RecommendedTypeTextBlock_Initialized(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RecommendedLevelTextBlock_Initialized(object sender, EventArgs e)
+        {
+
         }
     }
 }
