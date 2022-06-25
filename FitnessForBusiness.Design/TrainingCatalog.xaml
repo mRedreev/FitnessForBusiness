@@ -315,6 +315,7 @@
                                 </ListBox.ItemTemplate>
                             </ListBox>
                         </StackPanel>
+                        
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Margin="0 20 30 0" 
                                        Name="HardTextBlock" 
