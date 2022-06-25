@@ -25,8 +25,8 @@ namespace FitnessForBusiness.Core
         public static string NameOfGoal(bool? goal)
         {
             if (goal == null) return "Losing weight";
-            else if (goal == true) return "Gaining muscels";
-            else if (goal == false) return "Keeping fit";
+            else if (goal == true) return "Gain muscle mass";
+            else if (goal == false) return "Maintain weight";
             return null;
         }
 
