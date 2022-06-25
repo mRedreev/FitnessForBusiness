@@ -1054,5 +1054,459 @@
     "CircleAmount": 3,
     "Length": 22.25,
     "Description": "waist, upper legs, chest, "
+  },
+  {
+    "Id": "28563f84-7d61-40c8-a49e-a0ebcba34ad6",
+    "Name": "Full body HIIT",
+    "Type": {
+      "Id": "5df30a52-b2dd-4e3b-968d-69e051affd03",
+      "Name": "cardio",
+      "ImageSource": "../../Pictures/cardio.png"
+    },
+    "Level": null,
+    "Excercises": [
+      {
+        "Id": 3220,
+        "Name": "astride jumps (male)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3220.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3360,
+        "Name": "bear crawl",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3360.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 2331,
+        "Name": "cycle cross trainer",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/2331.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "leverage machine"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      },
+      {
+        "Id": 0,
+        "Name": "leverage machine"
+      }
+    ],
+    "ExcerciseLength": 1.0,
+    "ExcerciseAmount": 3,
+    "BreakLength": 0.25,
+    "CircleAmount": 3,
+    "Length": 11.0,
+    "Description": "cardio, "
+  },
+  {
+    "Id": "47ac3e0c-fcee-4e89-9320-8165fb9e947b",
+    "Name": "Burn calories HIIT",
+    "Type": {
+      "Id": "5df30a52-b2dd-4e3b-968d-69e051affd03",
+      "Name": "cardio",
+      "ImageSource": "../../Pictures/cardio.png"
+    },
+    "Level": null,
+    "Excercises": [
+      {
+        "Id": 684,
+        "Name": "run (equipment)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0684.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3219,
+        "Name": "scissor jumps (male)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3219.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3222,
+        "Name": "semi squat jump (male)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3222.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3656,
+        "Name": "short stride run",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3656.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3318,
+        "Name": "swing 360",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3318.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      }
+    ],
+    "ExcerciseLength": 0.75,
+    "ExcerciseAmount": 5,
+    "BreakLength": 0.15,
+    "CircleAmount": 3,
+    "Length": 13.35,
+    "Description": "cardio, "
+  },
+  {
+    "Id": "c0f514a5-0394-4b70-895c-a3fa4b55f4f7",
+    "Name": "Best full body burn",
+    "Type": {
+      "Id": "5df30a52-b2dd-4e3b-968d-69e051affd03",
+      "Name": "cardio",
+      "ImageSource": "../../Pictures/cardio.png"
+    },
+    "Level": false,
+    "Excercises": [
+      {
+        "Id": 3672,
+        "Name": "back and forth step",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3672.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1201,
+        "Name": "dumbbell burpee",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1201.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "dumbbell"
+        }
+      },
+      {
+        "Id": 3221,
+        "Name": "half knee bends (male)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3221.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3636,
+        "Name": "high knee against wall",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3636.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 501,
+        "Name": "jack burpee",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0501.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      },
+      {
+        "Id": 0,
+        "Name": "dumbbell"
+      }
+    ],
+    "ExcerciseLength": 1.5,
+    "ExcerciseAmount": 5,
+    "BreakLength": 0.5,
+    "CircleAmount": 4,
+    "Length": 39.5,
+    "Description": "cardio, "
+  },
+  {
+    "Id": "0380df94-760d-4f6c-a37d-111ba6187987",
+    "Name": "Total burn",
+    "Type": {
+      "Id": "5df30a52-b2dd-4e3b-968d-69e051affd03",
+      "Name": "cardio",
+      "ImageSource": "../../Pictures/cardio.png"
+    },
+    "Level": false,
+    "Excercises": [
+      {
+        "Id": 130,
+        "Name": "bench hip extension",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0130.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3019,
+        "Name": "bench pull-ups",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3019.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3639,
+        "Name": "bent knee lying twist (male)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3639.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 139,
+        "Name": "biceps narrow pull-ups",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0139.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 137,
+        "Name": "body-up",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0137.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      }
+    ],
+    "ExcerciseLength": 2.0,
+    "ExcerciseAmount": 5,
+    "BreakLength": 0.5,
+    "CircleAmount": 4,
+    "Length": 49.5,
+    "Description": "upper legs, back, upper arms, "
+  },
+  {
+    "Id": "42b27a3f-4077-439f-8185-e95965919261",
+    "Name": "Intense full body",
+    "Type": {
+      "Id": "5df30a52-b2dd-4e3b-968d-69e051affd03",
+      "Name": "cardio",
+      "ImageSource": "../../Pictures/cardio.png"
+    },
+    "Level": true,
+    "Excercises": [
+      {
+        "Id": 1160,
+        "Name": "burpee",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1160.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 630,
+        "Name": "mountain climber",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0630.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3361,
+        "Name": "skater hops",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3361.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3671,
+        "Name": "ski step",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3671.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 798,
+        "Name": "stationary bike walk",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0798.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "leverage machine"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      },
+      {
+        "Id": 0,
+        "Name": "leverage machine"
+      }
+    ],
+    "ExcerciseLength": 3.0,
+    "ExcerciseAmount": 5,
+    "BreakLength": 0.5,
+    "CircleAmount": 5,
+    "Length": 87.0,
+    "Description": "cardio, "
   }
 ]
