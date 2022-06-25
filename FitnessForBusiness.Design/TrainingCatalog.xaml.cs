@@ -131,7 +131,29 @@ namespace FitnessForBusiness.Design
 
         private void SaveChangesButton_Click(object sender, RoutedEventArgs e)
         {
-            //применить изменения редактирования
+            var newAvatar = ChangeAvatarComboBox.Text;
+            var newGoal = ChangeGoalComboBox.Text;
+            var newLevel = ChangeLevelComboBox.Text;
+            var newName = ChangeUsernameBox.Text;
+            var newPassword = ChangePasswordBox.Password;
+            if (newPassword == _user.Password)
+            {
+                MessageBox.Show("New and current passwords can't be equal. Please, enter another");
+            }
+            {
+                if (newAvatar != "")
+                    _user.ImageSource = newAvatar;
+                if (newGoal != "")
+                    _user.Goal = functions.CheckGoal(newGoal);
+                if (newLevel != "")
+                    _user.Level = functions.CheckLevel(newLevel);
+                if (newName != "")
+                    _user.Name = newName;
+                if (newPassword != "")
+                    _user.Password = newPassword;
+                _storage.Save();
+                MessageBox.Show("Data has been changed successfully");
+            }
         }
 
         private void ProfileButton_Click(object sender, RoutedEventArgs e)
@@ -139,6 +161,7 @@ namespace FitnessForBusiness.Design
             CurrentTypeImagePanel.Visibility = Visibility.Collapsed;
             TypesPanel.Visibility = Visibility.Collapsed;
             CompletedTrainingsPanel.Visibility = Visibility.Collapsed;
+
             ProfilePanel.Visibility = Visibility.Visible;
             RecommendedTrainingsPanel.Visibility = Visibility.Collapsed;
         }
