@@ -7,7 +7,6 @@
         mc:Ignorable="d" 
         Height="487" Width="800"
         MinHeight="450" MinWidth="800"
-        MaxHeight="600" MaxWidth="1050"
         Icon="Pictures/sLogo.png"
         WindowStyle="None"
         ResizeMode="CanResizeWithGrip"

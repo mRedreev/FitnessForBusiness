@@ -86,11 +86,6 @@ namespace FitnessForBusiness.Design
         //    levelTextBlock.Text = functions.NameOfLevel(_user.Level);
         //}
 
-        private void ListBox_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
-        {
-
-        }
-
         private void SyncUserData()
         {
             BitmapImage bitmapImage = new BitmapImage();
@@ -388,11 +383,6 @@ namespace FitnessForBusiness.Design
             bodyPartsBlock.Text = "BodyParts: " + bodyParts.Remove(bodyParts.Length-2);
         }
 
-        private void IntermediateTrainingsListBox_Initialized(object sender, EventArgs e)
-        {
-          
-        }
-
         private void IntermediateTrainingNameTextBlock_Initialized(object sender, EventArgs e)
         {
             TrainingNameTextBlock_Initialized(sender, e);
@@ -416,11 +406,6 @@ namespace FitnessForBusiness.Design
         private void IntBodyPartsTextBlock_Initialized(object sender, EventArgs e)
         {
             BodyPartsTextBlock_Initialized(sender, e);
-        }
-
-        private void AdvTrainingsListBox_Initialized(object sender, EventArgs e)
-        {
-
         }
 
         private void AdvTrainingNameTextBlock_Initialized(object sender, EventArgs e)
@@ -526,14 +511,9 @@ namespace FitnessForBusiness.Design
 
         private void CompletedTrainingTypeBlock_Initialized(object sender, EventArgs e)
         {
-           var textblock = sender as TextBlock;
+            var textblock = sender as TextBlock;
             var training = textblock.DataContext as Training;
             textblock.Text = training.Type.Name;
-        }
-
-        private void RecommendedTrainings_Initialized(object sender, EventArgs e)
-        {
-            
         }
 
         private void RecommendedTrainingNameBlock_Initialized(object sender, EventArgs e)
@@ -609,14 +589,14 @@ namespace FitnessForBusiness.Design
             Cursor = Cursors.Arrow;
         }
 
-        private void CompletedTrainings_Initialized(object sender, EventArgs e)
+        private void EditUserInformationButton_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void EditUserInformationButton_Click(object sender, RoutedEventArgs e)
+        private void ShowRecommendedGoalAndLevel()
         {
-
+            
         }
     }
 }

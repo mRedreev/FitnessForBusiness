@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Height="727" Width="810"
         MinHeight="727" MinWidth="810"
-        MaxHeight="900" MaxWidth="1200"
         Icon="Pictures/sLogo.png"
         WindowStyle="None"
         ResizeMode="CanResizeWithGrip"
@@ -73,8 +72,14 @@
         </StackPanel>
         
         
-        <TextBlock Grid.Row="2" VerticalAlignment="Center"  Margin="267,66,0,30" HorizontalAlignment="Left" Foreground="#FFCFCFCF" Grid.ColumnSpan="2">Name</TextBlock>
-        <TextBox Name="NameBox" Style="{StaticResource UITextBox}" Grid.Row="2" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+        <TextBlock Grid.Row="2" 
+                   Grid.Column="1"
+                   Margin="0,36,0,0"
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Left" 
+                   Foreground="#FFCFCFCF">Name</TextBlock>
+        <TextBox Name="NameBox" 
+                 Style="{StaticResource UITextBox}" Grid.Row="2" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
         <Border Width="130"
                 Style="{StaticResource Borderline}"
                 Grid.Column="1"
@@ -83,7 +88,12 @@
                 HorizontalAlignment="Left"
                 Margin="0,0"/>
 
-        <TextBlock Grid.Row="2" Grid.Column="1" VerticalAlignment="Center"  Foreground="#FFCFCFCF" HorizontalAlignment="Right" Margin="0,66,83,30">Surname</TextBlock>
+        <TextBlock Grid.Row="2" 
+                   Grid.Column="1" 
+                   VerticalAlignment="Center" 
+                   Foreground="#FFCFCFCF" 
+                   HorizontalAlignment="Right" 
+                   Margin="0,36,83,0">Surname</TextBlock>
         <TextBox Name="SurnameTextBox" Style="{StaticResource UITextBox}"  Grid.Row="2" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
         <Border Width="130"
                 Style="{StaticResource Borderline}"

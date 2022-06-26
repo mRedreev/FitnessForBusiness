@@ -7,7 +7,6 @@
         mc:Ignorable="d" 
         Height="727" Width="1120"
         MinHeight="727" MinWidth="1120"
-        MaxHeight="700" MaxWidth="1200"
         Icon="Pictures/sLogo.png"
         WindowStyle="None"
         ResizeMode="CanResizeWithGrip"
@@ -782,6 +781,7 @@
                              Background="Transparent"
                              BorderBrush="Transparent" 
                              Margin="10,0,0,0"
+                             
                              Initialized="RecommendedTrainings_Initialized">
                         
                         <ListBox.ItemTemplate>
