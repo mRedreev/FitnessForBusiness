@@ -1508,5 +1508,1143 @@
     "CircleAmount": 5,
     "Length": 87.0,
     "Description": "cardio, "
+  },
+  {
+    "Id": "b5bab85b-d7f2-40a6-b20e-1365d102f83a",
+    "Name": "Muscle up workout",
+    "Type": {
+      "Id": "93694638-0043-4e85-a3de-e240acf71e99",
+      "Name": "power",
+      "ImageSource": "../../Pictures/power.png"
+    },
+    "Level": null,
+    "Excercises": [
+      {
+        "Id": 7,
+        "Name": "alternate lateral pulldown",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0007.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "cable"
+        }
+      },
+      {
+        "Id": 1431,
+        "Name": "assisted standing chin-up",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1431.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "leverage machine"
+        }
+      },
+      {
+        "Id": 1432,
+        "Name": "assisted standing pull-up",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1432.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "leverage machine"
+        }
+      },
+      {
+        "Id": 19,
+        "Name": "assisted triceps dip (kneeling)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0019.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "leverage machine"
+        }
+      },
+      {
+        "Id": 23,
+        "Name": "barbell alternate biceps curl",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0023.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "cable"
+      },
+      {
+        "Id": 0,
+        "Name": "leverage machine"
+      },
+      {
+        "Id": 0,
+        "Name": "barbell"
+      }
+    ],
+    "ExcerciseLength": 1.0,
+    "ExcerciseAmount": 5,
+    "BreakLength": 0.25,
+    "CircleAmount": 2,
+    "Length": 12.25,
+    "Description": "back, upper arms, "
+  },
+  {
+    "Id": "11106391-f2fc-4658-8e8a-65b20c8e0484",
+    "Name": "Build muscle & strength",
+    "Type": {
+      "Id": "93694638-0043-4e85-a3de-e240acf71e99",
+      "Name": "power",
+      "ImageSource": "../../Pictures/power.png"
+    },
+    "Level": null,
+    "Excercises": [
+      {
+        "Id": 24,
+        "Name": "barbell bench front squat",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0024.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 25,
+        "Name": "barbell bench press",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0025.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "chest"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 1316,
+        "Name": "barbell bent arm pullover",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1316.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 28,
+        "Name": "barbell clean and press",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0028.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 30,
+        "Name": "barbell close-grip bench press",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0030.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "barbell"
+      }
+    ],
+    "ExcerciseLength": 1.0,
+    "ExcerciseAmount": 5,
+    "BreakLength": 0.15,
+    "CircleAmount": 3,
+    "Length": 17.1,
+    "Description": "upper legs, chest, back, upper arms, "
+  },
+  {
+    "Id": "d8aa4132-dddf-45c8-9bdb-d846001653b9",
+    "Name": "Shredded summer body",
+    "Type": {
+      "Id": "93694638-0043-4e85-a3de-e240acf71e99",
+      "Name": "power",
+      "ImageSource": "../../Pictures/power.png"
+    },
+    "Level": null,
+    "Excercises": [
+      {
+        "Id": 33,
+        "Name": "barbell decline bench press",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0033.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "chest"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 1255,
+        "Name": "barbell decline pullover",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1255.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "chest"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 36,
+        "Name": "barbell decline wide-grip press",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0036.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "chest"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 38,
+        "Name": "barbell drag curl",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0038.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 45,
+        "Name": "barbell guillotine bench press",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0045.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "chest"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "barbell"
+      }
+    ],
+    "ExcerciseLength": 1.5,
+    "ExcerciseAmount": 5,
+    "BreakLength": 0.25,
+    "CircleAmount": 3,
+    "Length": 26.0,
+    "Description": "chest, upper arms, "
+  },
+  {
+    "Id": "4cae62b0-bd97-4aa5-9826-490fb3ad5ab7",
+    "Name": "Muscle builder",
+    "Type": {
+      "Id": "93694638-0043-4e85-a3de-e240acf71e99",
+      "Name": "power",
+      "ImageSource": "../../Pictures/power.png"
+    },
+    "Level": false,
+    "Excercises": [
+      {
+        "Id": 9,
+        "Name": "assisted chest dip (kneeling)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0009.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "chest"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "leverage machine"
+        }
+      },
+      {
+        "Id": 27,
+        "Name": "barbell bent over row",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0027.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 2407,
+        "Name": "barbell biceps curl (with arm blaster)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/2407.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 29,
+        "Name": "barbell clean-grip front squat",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0029.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 31,
+        "Name": "barbell curl",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0031.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 34,
+        "Name": "barbell decline bent arm pullover",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0034.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 41,
+        "Name": "barbell front raise",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0041.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "shoulders"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "leverage machine"
+      },
+      {
+        "Id": 0,
+        "Name": "barbell"
+      }
+    ],
+    "ExcerciseLength": 0.75,
+    "ExcerciseAmount": 7,
+    "BreakLength": 0.15,
+    "CircleAmount": 4,
+    "Length": 25.05,
+    "Description": "chest, back, upper arms, upper legs, shoulders, "
+  },
+  {
+    "Id": "66812027-30c7-4952-8fd3-94acc5a97165",
+    "Name": "Strength builder",
+    "Type": {
+      "Id": "93694638-0043-4e85-a3de-e240acf71e99",
+      "Name": "power",
+      "ImageSource": "../../Pictures/power.png"
+    },
+    "Level": false,
+    "Excercises": [
+      {
+        "Id": 43,
+        "Name": "barbell full squat",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0043.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 1461,
+        "Name": "barbell full squat (back pov)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1461.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 1462,
+        "Name": "barbell full squat (side pov)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1462.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 48,
+        "Name": "barbell incline reverse-grip press",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0048.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "barbell"
+      }
+    ],
+    "ExcerciseLength": 1.5,
+    "ExcerciseAmount": 4,
+    "BreakLength": 0.25,
+    "CircleAmount": 5,
+    "Length": 34.75,
+    "Description": "upper legs, upper arms, "
+  },
+  {
+    "Id": "cca76578-1d09-46bb-a175-a2cbe8d013bf",
+    "Name": "Ultimate Physique",
+    "Type": {
+      "Id": "93694638-0043-4e85-a3de-e240acf71e99",
+      "Name": "power",
+      "ImageSource": "../../Pictures/power.png"
+    },
+    "Level": false,
+    "Excercises": [
+      {
+        "Id": 52,
+        "Name": "barbell jm bench press",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0052.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 1720,
+        "Name": "barbell lying back of the head tricep extension",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1720.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 61,
+        "Name": "barbell lying triceps extension",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0061.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 60,
+        "Name": "barbell lying triceps extension skull crusher",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0060.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 64,
+        "Name": "barbell one arm bent over row",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0064.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 65,
+        "Name": "barbell one arm floor press",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0065.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "barbell"
+      }
+    ],
+    "ExcerciseLength": 1.0,
+    "ExcerciseAmount": 6,
+    "BreakLength": 0.2,
+    "CircleAmount": 3,
+    "Length": 21.4,
+    "Description": "upper arms, back, "
+  },
+  {
+    "Id": "184b0da5-eaa2-45af-897e-91aac33ba9e6",
+    "Name": "Build Mass",
+    "Type": {
+      "Id": "93694638-0043-4e85-a3de-e240acf71e99",
+      "Name": "power",
+      "ImageSource": "../../Pictures/power.png"
+    },
+    "Level": false,
+    "Excercises": [
+      {
+        "Id": 66,
+        "Name": "barbell one arm side deadlift",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0066.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 68,
+        "Name": "barbell one leg squat",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0068.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 69,
+        "Name": "barbell overhead squat",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0069.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 70,
+        "Name": "barbell preacher curl",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0070.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 75,
+        "Name": "barbell rear delt raise",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0075.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "shoulders"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 1257,
+        "Name": "barbell reverse grip incline bench press",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1257.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "chest"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "barbell"
+      }
+    ],
+    "ExcerciseLength": 2.0,
+    "ExcerciseAmount": 6,
+    "BreakLength": 0.25,
+    "CircleAmount": 3,
+    "Length": 40.25,
+    "Description": "upper legs, upper arms, shoulders, chest, "
+  },
+  {
+    "Id": "203ae415-6520-4002-ba12-ae439fc48bbb",
+    "Name": "Begin your muscle journey",
+    "Type": {
+      "Id": "93694638-0043-4e85-a3de-e240acf71e99",
+      "Name": "power",
+      "ImageSource": "../../Pictures/power.png"
+    },
+    "Level": true,
+    "Excercises": [
+      {
+        "Id": 15,
+        "Name": "assisted parallel close grip pull-up",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0015.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "leverage machine"
+        }
+      },
+      {
+        "Id": 17,
+        "Name": "assisted pull-up",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0017.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "leverage machine"
+        }
+      },
+      {
+        "Id": 2364,
+        "Name": "assisted wide-grip chest dip (kneeling)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/2364.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "chest"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "leverage machine"
+        }
+      },
+      {
+        "Id": 26,
+        "Name": "barbell bench squat",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0026.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 32,
+        "Name": "barbell deadlift",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0032.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 35,
+        "Name": "barbell decline close grip to skull press",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0035.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 37,
+        "Name": "barbell decline wide-grip pullover",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0037.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 1370,
+        "Name": "barbell floor calf raise",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1370.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "lower legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "leverage machine"
+      },
+      {
+        "Id": 0,
+        "Name": "barbell"
+      }
+    ],
+    "ExcerciseLength": 1.5,
+    "ExcerciseAmount": 8,
+    "BreakLength": 0.5,
+    "CircleAmount": 4,
+    "Length": 63.5,
+    "Description": "back, chest, upper legs, upper arms, lower legs, "
+  },
+  {
+    "Id": "3f825fb8-5468-491f-8402-c894e0adec80",
+    "Name": "Malibu lifeguard",
+    "Type": {
+      "Id": "93694638-0043-4e85-a3de-e240acf71e99",
+      "Name": "power",
+      "ImageSource": "../../Pictures/power.png"
+    },
+    "Level": true,
+    "Excercises": [
+      {
+        "Id": 39,
+        "Name": "barbell front chest squat",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0039.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 40,
+        "Name": "barbell front raise and pullover",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0040.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "chest"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 42,
+        "Name": "barbell front squat",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0042.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 1545,
+        "Name": "barbell full zercher squat",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1545.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 1409,
+        "Name": "barbell glute bridge",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1409.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 3562,
+        "Name": "barbell glute bridge two legs on bench (male)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3562.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 44,
+        "Name": "barbell good morning",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0044.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "barbell"
+      }
+    ],
+    "ExcerciseLength": 2.0,
+    "ExcerciseAmount": 7,
+    "BreakLength": 0.5,
+    "CircleAmount": 4,
+    "Length": 69.5,
+    "Description": "upper legs, chest, "
+  },
+  {
+    "Id": "00e93b5b-349f-4aba-9386-90740ee76f1e",
+    "Name": "Attention catcher",
+    "Type": {
+      "Id": "93694638-0043-4e85-a3de-e240acf71e99",
+      "Name": "power",
+      "ImageSource": "../../Pictures/power.png"
+    },
+    "Level": true,
+    "Excercises": [
+      {
+        "Id": 46,
+        "Name": "barbell hack squat",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0046.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 47,
+        "Name": "barbell incline bench press",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0047.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "chest"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 1719,
+        "Name": "barbell incline close grip bench press",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1719.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 49,
+        "Name": "barbell incline row",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0049.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 51,
+        "Name": "barbell jefferson squat",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0051.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 53,
+        "Name": "barbell jump squat",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0053.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 1410,
+        "Name": "barbell lateral lunge",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1410.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 1435,
+        "Name": "barbell low bar squat",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1435.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 55,
+        "Name": "barbell lying close-grip press",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0055.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      },
+      {
+        "Id": 56,
+        "Name": "barbell lying close-grip triceps extension",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0056.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "barbell"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "barbell"
+      }
+    ],
+    "ExcerciseLength": 3.0,
+    "ExcerciseAmount": 10,
+    "BreakLength": 0.5,
+    "CircleAmount": 3,
+    "Length": 104.5,
+    "Description": "upper legs, chest, upper arms, back, "
   }
 ]
