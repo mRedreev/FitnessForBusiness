@@ -105,8 +105,8 @@ namespace FitnessForBusiness.Design
 
             UsernameNameTextBox.Text = _user.Name;
             UserSurnameTextBox.Text = _user.Surname;
-            UserGoalComboBox.Text = functions.NameOfGoal(_user.Goal);
-            UserLevelTextBox.Text = functions.NameOfLevel(_user.Level);
+            UserGoalComboBox.Text = "Goal: " + functions.NameOfGoal(_user.Goal);
+            UserLevelTextBox.Text = "Level: " + functions.NameOfLevel(_user.Level);
         }
 
         //private void UserAvatar_Initialized(object sender, EventArgs e)
@@ -160,11 +160,12 @@ namespace FitnessForBusiness.Design
             else
             {
                 bool EqualnessOdNewAndOldData = false;
-                if ((_user.ImageSource == functions.GetImageSourceOfAvatar(ChangeAvatarComboBox.SelectedIndex)) |
-                    (_user.Goal == functions.CheckGoal(newGoal)) |
-                    (_user.Level == functions.CheckLevel(newLevel)) |
-                    (_user.Password == newPassword))
-                    EqualnessOdNewAndOldData = true;
+                if (((newAvatar != "") & (_user.ImageSource == functions.GetImageSourceOfAvatar(ChangeAvatarComboBox.SelectedIndex))) |
+                    ((newGoal != "") & (_user.Goal == functions.CheckGoal(newGoal))) |
+                    ((newLevel != "") & (_user.Level == functions.CheckLevel(newLevel))) |
+                    ((newPassword != "") & (_user.Password == newPassword)) |
+                    ((newLogin != "") & (_user.Login == newLogin))) 
+                { EqualnessOdNewAndOldData = true; }
 
                 if (EqualnessOdNewAndOldData)
                 {

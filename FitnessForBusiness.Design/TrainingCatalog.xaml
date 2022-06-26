@@ -578,24 +578,28 @@
                             <ComboBox Name="ChangeGoalComboBox"
                                       Width="130"
                                       Height="30"
-                                      Text="My New Goal"
+                                      
                                       IsEditable="False"
                                       VerticalContentAlignment="Center">
+                                <TextBlock></TextBlock>
                                 <TextBlock>Lose weight</TextBlock>
                                 <TextBlock>Maintain weight</TextBlock>
                                 <TextBlock>Gain muscle mass</TextBlock>
+                                
                             </ComboBox>
 
                             <ComboBox Name="ChangeLevelComboBox"
                                       Width="130"
                                       Height="30"
                                       Margin="5,0,0,0"
-                                      Text="My New Level"
+                                      
                                       IsEditable="False"
                                       VerticalContentAlignment="Center">
+                                <TextBlock></TextBlock>
                                 <TextBlock>Beginner</TextBlock>
                                 <TextBlock>Intermediate</TextBlock>
                                 <TextBlock>Advanced</TextBlock>
+                                
                             </ComboBox>
                         </StackPanel>
 
