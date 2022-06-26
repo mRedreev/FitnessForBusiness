@@ -545,7 +545,8 @@
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical"
-                                Margin="90,40,0,0">
+                                Margin="90,40,0,0"
+                                Name="EditUserInfoPanel">
                         <StackPanel Orientation="Vertical">
                             <Label Content="New Avatar"
                                    Margin="55,0,0,0"
