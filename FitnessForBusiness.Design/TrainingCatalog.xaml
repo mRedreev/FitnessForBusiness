@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitnessForBusiness.Design"
         mc:Ignorable="d" 
-        Height="527" Width="920"
-        MinHeight="527" MinWidth="920"
+        Height="727" Width="1120"
+        MinHeight="727" MinWidth="1120"
         MaxHeight="700" MaxWidth="1200"
         Icon="Pictures/sLogo.png"
         WindowStyle="None"
@@ -502,7 +502,7 @@
                 <StackPanel Orientation="Horizontal"
                             Visibility="Collapsed"
                             x:Name="ProfilePanel"
-                            Margin="40,20,0,0">
+                            Margin="120">
                     <StackPanel Margin="10"
                                 Orientation="Vertical">
                         <Image Width="150"
@@ -765,7 +765,7 @@
 
                     <StackPanel Orientation="Horizontal"
                                 Margin="0,10,0,0">
-                        <TextBlock x:Name="GoalTextBlock"
+                        <TextBlock x:Name="RecommendedGoalTextBlock"
                                    FontWeight="Medium"
                                    Foreground="#3dddc2"
                                    FontSize="24"/>
