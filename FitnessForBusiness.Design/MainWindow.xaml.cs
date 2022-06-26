@@ -32,7 +32,7 @@ namespace FitnessForBusiness.Design
             _storage = new JSONStorage();
             // InitialUsers2();
             //InitialTrainings2();
-           // TrainsInitialized("cardio");
+            //TrainsInitialized("power");
             InitializeComponent();
 
             //InitialTrainings();
@@ -444,6 +444,126 @@ namespace FitnessForBusiness.Design
                 _storage.AddTraining(cardio4);
                 _storage.AddTraining(cardio5);
                // _storage.AddTraining(cardio6);
+            }
+            if (type == "power")
+            {
+                var power1 = new Training
+                    (
+                    "Muscle up workout",
+                    types[3],
+                    null,
+                    powerExcercises.Where(e => easyExercises.Contains(e)).ToList().GetRange(0, 5),
+                    1,
+                    0.25,
+                    2
+                    );
+
+                var power2 = new Training
+                    (
+                    "Build muscle & strength",
+                    types[3],
+                    null,
+                    powerExcercises.Where(e => easyExercises.Contains(e)).ToList().GetRange(5, 5),
+                    1,
+                    0.15,
+                    3
+                    );
+
+                var power3 = new Training
+                    (
+                    "Shredded summer body",
+                    types[3],
+                    null,
+                    powerExcercises.Where(e => easyExercises.Contains(e)).ToList().GetRange(10, 5),
+                    1.5,
+                    0.25,
+                    3
+                    );
+
+                var power4 = new Training
+                    (
+                    "Muscle builder",
+                    types[3],
+                    false,
+                    powerExcercises.Where(e => middleExercises.Contains(e)).ToList().GetRange(0, 7),
+                    0.75,
+                    0.15,
+                    4
+                    );
+
+                var power5 = new Training
+                    (
+                    "Strength builder",
+                    types[3],
+                    false,
+                    powerExcercises.Where(e => middleExercises.Contains(e)).ToList().GetRange(7, 4),
+                    1.5,
+                    0.25,
+                    5);
+
+                var power6 = new Training
+                    (
+                    "Ultimate Physique",
+                    types[3],
+                    false,
+                    powerExcercises.Where(e => middleExercises.Contains(e)).ToList().GetRange(11, 6),
+                    1,
+                    0.20,
+                    3
+                    );
+
+                var power7 = new Training
+                    (
+                    "Build Mass",
+                    types[3],
+                    false,
+                    powerExcercises.Where(e => middleExercises.Contains(e)).ToList().GetRange(17, 6),
+                    2.00,
+                    0.25,
+                    3
+                    );
+
+                var power8 = new Training
+                    (
+                    "Begin your muscle journey",
+                    types[3],
+                    true,
+                    powerExcercises.Where(e => hardExercises.Contains(e)).ToList().GetRange(0, 8),
+                    1.5,
+                    0.5,
+                    4
+                    );
+
+                var power9 = new Training
+                    (
+                    "Malibu lifeguard",
+                    types[3],
+                    true,
+                    powerExcercises.Where(e => hardExercises.Contains(e)).ToList().GetRange(8, 7),
+                    2,
+                    0.5,
+                    4
+                    );
+
+                var power10 = new Training
+                    (
+                    "Attention catcher",
+                    types[3],
+                    true,
+                    powerExcercises.Where(e => hardExercises.Contains(e)).ToList().GetRange(15, 10),
+                    3,
+                    0.5,
+                    3);
+                _storage.AddTraining(power1);
+                _storage.AddTraining(power2);
+                _storage.AddTraining(power3);
+                _storage.AddTraining(power4);
+                _storage.AddTraining(power5);
+                _storage.AddTraining(power6);
+                _storage.AddTraining(power7);
+                _storage.AddTraining(power8);
+                _storage.AddTraining(power9);
+                _storage.AddTraining(power10);
             }
 
 
