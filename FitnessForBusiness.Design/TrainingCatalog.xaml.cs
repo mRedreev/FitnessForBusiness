@@ -599,5 +599,10 @@ namespace FitnessForBusiness.Design
             RecommendedLevelTextBlock.Text = functions.NameOfLevel(_user.Level);
             RecommendedGoalTextBlock.Text = functions.NameOfGoal(_user.Goal);
         }
+
+        private void CancelChangesButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

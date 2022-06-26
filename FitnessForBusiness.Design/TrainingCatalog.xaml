@@ -588,10 +588,10 @@
                                        FontWeight="Medium"/>
 
                                 <ComboBox Name="ChangeGoalComboBox"
-                                      Width="130"
-                                      Height="30"
-                                      IsEditable="False"
-                                      VerticalContentAlignment="Center">
+                                          Width="130"
+                                          Height="30"
+                                          IsEditable="False"
+                                          VerticalContentAlignment="Center">
                                     <TextBlock></TextBlock>
                                     <TextBlock>Lose weight</TextBlock>
                                     <TextBlock>Maintain weight</TextBlock>
@@ -607,11 +607,11 @@
                                        FontWeight="Medium"/>
 
                                 <ComboBox Name="ChangeLevelComboBox"
-                                      Width="130"
-                                      Height="30"
-                                      Margin="5,0,0,0"
-                                      IsEditable="False"
-                                      VerticalContentAlignment="Center">
+                                          Width="130"
+                                          Height="30"
+                                          Margin="5,0,0,0"
+                                          IsEditable="False"
+                                          VerticalContentAlignment="Center">
                                     <TextBlock></TextBlock>
                                     <TextBlock>Beginner</TextBlock>
                                     <TextBlock>Intermediate</TextBlock>
@@ -662,13 +662,23 @@
                             </StackPanel>
                         </StackPanel>
 
-                        <Button Width="120"
-                                Height="30"
-                                Style="{StaticResource UIButton}"
-                                Margin="0,20,0,0"
-                                Content="Save Changes"
-                                Name="SaveChangesButton"
-                                Click="SaveChangesButton_Click"/>
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="0,20,0,0">
+                            <Button Width="120"
+                                    Height="30"
+                                    Style="{StaticResource UIButton}"
+                                    Content="Save Changes"
+                                    Name="SaveChangesButton"
+                                    Click="SaveChangesButton_Click"/>
+
+                            <Button Width="120"
+                                    Height="30"
+                                    Style="{StaticResource UIButton}"
+                                    Margin="10,0,0,0"
+                                    Content="Cancel Changes"
+                                    Name="CancelChangesButton"
+                                    Click="CancelChangesButton_Click"/>
+                        </StackPanel>
                     </StackPanel>
                 </StackPanel>
 
