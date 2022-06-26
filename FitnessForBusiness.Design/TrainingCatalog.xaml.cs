@@ -197,6 +197,7 @@ namespace FitnessForBusiness.Design
 
             SyncUserData();
             ProfilePanel.Visibility = Visibility.Visible;
+            EditUserInformationButton.Visibility = Visibility.Visible;
             EditUserInfoPanel.Visibility = Visibility.Collapsed;
 
         }
@@ -230,6 +231,7 @@ namespace FitnessForBusiness.Design
             CompletedTrainingsPanel.Visibility = Visibility.Collapsed;
             TypesPanel.Visibility = Visibility.Collapsed;
 
+            ShowRecommendedGoalAndLevel();
             RecommendedTrainings.ItemsSource = GetRecommendedTrainings();
             RecommendedTrainingsPanel.Visibility = Visibility.Visible;
         }
@@ -601,13 +603,14 @@ namespace FitnessForBusiness.Design
 
         private void ShowRecommendedGoalAndLevel()
         {
-            RecommendedLevelTextBlock.Text = functions.NameOfLevel(_user.Level);
-            RecommendedGoalTextBlock.Text = functions.NameOfGoal(_user.Goal);
+            RecommendedLevelTextBlock.Text = "Level: " + functions.NameOfLevel(_user.Level);
+            RecommendedGoalTextBlock.Text = "Goal: " + functions.NameOfGoal(_user.Goal);
         }
 
         private void CancelChangesButton_Click(object sender, RoutedEventArgs e)
         {
-
+            EditUserInfoPanel.Visibility = Visibility.Collapsed;
+            EditUserInformationButton.Visibility = Visibility.Visible;
         }
     }
 }
