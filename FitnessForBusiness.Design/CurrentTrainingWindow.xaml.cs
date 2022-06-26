@@ -1,4 +1,5 @@
-﻿using FitnessForBusiness.Core.Models;
+﻿using FitnessForBusiness.Core;
+using FitnessForBusiness.Core.Models;
 using FitnessForBusiness.Core.Storages;
 using System;
 using System.Collections.Generic;
@@ -62,7 +63,7 @@ namespace FitnessForBusiness.Design
         private void LengthAndBreakTextBlock_Initialized(object sender, EventArgs e)
         {
             var LengthAndBreakTextBlock = sender as TextBlock;
-            LengthAndBreakTextBlock.Text = $"Длительность упражнения: {_training.ExcerciseLength.ToString()}, перерыв: {_training.BreakLength.ToString()}";
+            LengthAndBreakTextBlock.Text = $"Length: {functions.GetSeconds(_training.ExcerciseLength)}, break: {functions.GetSeconds(_training.BreakLength)}";
         }
 
        
