@@ -1,4 +1,5 @@
-﻿using FitnessForBusiness.Core.Models;
+﻿using FitnessForBusiness.Core;
+using FitnessForBusiness.Core.Models;
 using FitnessForBusiness.Core.Storages;
 using System;
 using System.Collections.Generic;
@@ -32,6 +33,9 @@ namespace FitnessForBusiness.Design
             InitializeComponent();
             video.Source = new Uri(mediaElement);
             video.UnloadedBehavior = MediaState.Manual;
+
+            lengthAndBreak.Text = $"Length: {functions.GetSeconds(_training.ExcerciseLength)}, break: {functions.GetSeconds(_training.BreakLength)}";
+
             video.Play();
         }
 

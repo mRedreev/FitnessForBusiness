@@ -54,7 +54,7 @@ namespace FitnessForBusiness.Core
 
         public static User FindUser(string login)
         {
-            IStorage storage = new Context();
+            IStorage storage = new JSONStorage();
             var user = storage.GetUsers.Where(u => u.Login == login).First();
             return user;
         }
