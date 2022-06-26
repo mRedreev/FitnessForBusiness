@@ -181,6 +181,8 @@ namespace FitnessForBusiness.Design
                         _user.Password = newPassword;
                     _storage.Save();
 
+                    EditUserInfoPanel.Visibility = Visibility.Collapsed;
+                    EditUserInformationButton.Visibility = Visibility.Visible;
                     SyncUserData();
                 }
             }
@@ -195,7 +197,8 @@ namespace FitnessForBusiness.Design
 
             SyncUserData();
             ProfilePanel.Visibility = Visibility.Visible;
-            
+            EditUserInfoPanel.Visibility = Visibility.Collapsed;
+
         }
 
         private void CompletedWorkoutsButton_Click(object sender, RoutedEventArgs e)
@@ -591,7 +594,9 @@ namespace FitnessForBusiness.Design
 
         private void EditUserInformationButton_Click(object sender, RoutedEventArgs e)
         {
-           // EditUserInfoPanel.
+            EditUserInfoPanel.Visibility = Visibility.Visible;
+            var button = sender as Button;
+            button.Visibility = Visibility.Collapsed;
         }
 
         private void ShowRecommendedGoalAndLevel()
