@@ -312,7 +312,6 @@
                                      HorizontalContentAlignment="Left"
                                      Background="Transparent"
                                      BorderBrush="Transparent" 
-                                     Initialized="IntermediateTrainingsListBox_Initialized"
                                      MouseEnter="IntermediateTrainingsListBox_MouseEnter"
                                      MouseLeave="IntermediateTrainingsListBox_MouseLeave">
 
@@ -407,7 +406,6 @@
                                      HorizontalContentAlignment="Left"
                                      Background="Transparent"
                                      BorderBrush="Transparent" 
-                                     Initialized="AdvTrainingsListBox_Initialized"
                                      MouseEnter="AdvTrainingsListBox_MouseEnter"
                                      MouseLeave="AdvTrainingsListBox_MouseLeave">
 
@@ -546,7 +544,8 @@
 
                     <StackPanel Orientation="Vertical"
                                 Margin="90,40,0,0"
-                                Name="EditUserInfoPanel">
+                                Name="EditUserInfoPanel"
+                                >
                         <StackPanel Orientation="Vertical">
                             <Label Content="New Avatar"
                                    Margin="55,0,0,0"
@@ -670,7 +669,7 @@
                              Background="Transparent"
                              BorderBrush="Transparent" 
                              Margin="10,0,0,0"
-                             Initialized="CompletedTrainings_Initialized">
+                            >
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <Grid>
@@ -783,7 +782,7 @@
                              BorderBrush="Transparent" 
                              Margin="10,0,0,0"
                              
-                             Initialized="RecommendedTrainings_Initialized">
+                             >
                         
                         <ListBox.ItemTemplate>
                             <DataTemplate>

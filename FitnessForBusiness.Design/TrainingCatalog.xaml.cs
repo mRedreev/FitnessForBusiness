@@ -591,7 +591,7 @@ namespace FitnessForBusiness.Design
 
         private void EditUserInformationButton_Click(object sender, RoutedEventArgs e)
         {
-
+           // EditUserInfoPanel.
         }
 
         private void ShowRecommendedGoalAndLevel()
