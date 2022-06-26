@@ -107,18 +107,19 @@
                          VerticalAlignment="Bottom"
                          Content="My Profile"
                          Click="ProfileButton_Click"/>
+
+            <Button Name="LogOutButton"
+                    Height="25"
+                    Width="120"
+                    Margin="10,5,0,0"
+                    HorizontalAlignment="Left"
+                    Content="Log Out"
+                    Style="{StaticResource UIButton}"
+                    Click="LogOutButton_Click"/>
+
         </StackPanel>
 
-        <Button Name="LogOutButton"
-                Height="25"
-                Grid.Row="1"
-                Grid.Column="0"
-                Width="120"
-                Margin="60,0,0,5"
-                VerticalAlignment="Bottom"
-                Content="Log Out"
-                Style="{StaticResource UIButton}"
-                Click="LogOutButton_Click"/>
+        
 
         <ScrollViewer Grid.Row="1"
                       Grid.Column="1">
