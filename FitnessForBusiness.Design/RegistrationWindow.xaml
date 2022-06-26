@@ -129,7 +129,12 @@
                 HorizontalAlignment="Left"
                 Margin="0,-55,0,0"/>
         
-        <TextBlock Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom"  HorizontalAlignment="Center" Foreground="#FFCFCFCF" Margin="138,0,34,0" >Confirm Password</TextBlock>
+        <TextBlock Grid.Row="3" 
+                   Grid.Column="1" 
+                   VerticalAlignment="Bottom" 
+                   HorizontalAlignment="Center" 
+                   Foreground="#FFCFCFCF" 
+                   Margin="104,0,0,0">Confirm Password</TextBlock>
         <PasswordBox Name="PasswordAgianTextBox" Style="{StaticResource PassBox}"  Grid.Row="4" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top"/>
         <Border Width="130"
                 Style="{StaticResource Borderline}"
