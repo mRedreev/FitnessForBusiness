@@ -597,7 +597,7 @@ namespace FitnessForBusiness.Design
         private void ShowRecommendedGoalAndLevel()
         {
             RecommendedLevelTextBlock.Text = functions.NameOfLevel(_user.Level);
-            
+            RecommendedGoalTextBlock.Text = functions.NameOfGoal(_user.Goal);
         }
     }
 }
