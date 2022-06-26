@@ -500,8 +500,6 @@
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal"
-                            MinWidth="696"
-                            MinHeight="496"
                             Visibility="Collapsed"
                             x:Name="ProfilePanel"
                             Margin="40,20,0,0">
@@ -536,6 +534,15 @@
                                    FontWeight="Medium"
                                    Foreground="#ab5eeb"
                                    Margin="0,10,0,0"/>
+
+                        <Button Name="EditUserInformationButton"
+                                Content="Edit Info"
+                                Width="110"
+                                Height="35"
+                                Style="{StaticResource UIButton}"
+                                Margin="0,25,0,0"
+                                Click="EditUserInformationButton_Click"/>
+
                     </StackPanel>
 
                     <StackPanel Orientation="Vertical"
@@ -585,7 +592,7 @@
                                 <TextBlock>Lose weight</TextBlock>
                                 <TextBlock>Maintain weight</TextBlock>
                                 <TextBlock>Gain muscle mass</TextBlock>
-                                
+
                             </ComboBox>
 
                             <ComboBox Name="ChangeLevelComboBox"
@@ -599,7 +606,7 @@
                                 <TextBlock>Beginner</TextBlock>
                                 <TextBlock>Intermediate</TextBlock>
                                 <TextBlock>Advanced</TextBlock>
-                                
+
                             </ComboBox>
                         </StackPanel>
 
