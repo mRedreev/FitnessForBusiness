@@ -612,5 +612,25 @@ namespace FitnessForBusiness.Design
             EditUserInfoPanel.Visibility = Visibility.Collapsed;
             EditUserInformationButton.Visibility = Visibility.Visible;
         }
+
+        private void CompletedTrainings_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Cursor = Cursors.Arrow;
+        }
+
+        private void CompletedTrainings_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Cursor = Cursors.Hand;
+        }
+
+        private void RecommendedTrainings_MouseEnter(object sender, MouseEventArgs e)
+        {
+            Cursor = Cursors.Hand;
+        }
+
+        private void RecommendedTrainings_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Cursor = Cursors.Arrow;
+        }
     }
 }

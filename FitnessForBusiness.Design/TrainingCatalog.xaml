@@ -690,7 +690,8 @@
                              Background="Transparent"
                              BorderBrush="Transparent" 
                              Margin="10,0,0,0"
-                            >
+                             MouseLeave="CompletedTrainings_MouseLeave"
+                             MouseEnter="CompletedTrainings_MouseEnter">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <Grid>
@@ -801,7 +802,9 @@
                              HorizontalContentAlignment="Left"
                              Background="Transparent"
                              BorderBrush="Transparent" 
-                             Margin="10,0,0,0">
+                             Margin="10,0,0,0"
+                             MouseEnter="RecommendedTrainings_MouseEnter"
+                             MouseLeave="RecommendedTrainings_MouseLeave">
                         
                         <ListBox.ItemTemplate>
                             <DataTemplate>
