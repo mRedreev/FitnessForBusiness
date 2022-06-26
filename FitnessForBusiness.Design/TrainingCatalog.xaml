@@ -785,16 +785,16 @@
                             Visibility="Collapsed">
 
                     <StackPanel Orientation="Horizontal"
-                                Margin="0,10,0,0">
+                                Margin="20,20,0,0">
                         <TextBlock x:Name="RecommendedGoalTextBlock"
                                    FontWeight="Medium"
-                                   Foreground="#3dddc2"
+                                   Foreground="#FC6586"
                                    FontSize="24"/>
 
                         <TextBlock Name="RecommendedLevelTextBlock"
                                    FontSize="24"
-                                   Margin="10,0,0,0"
-                                   Foreground="#3dddc2"
+                                   Margin="15,0,0,0"
+                                   Foreground="#FC6586"
                                    FontWeight="Medium"/>
                     </StackPanel>
 
@@ -802,9 +802,7 @@
                              HorizontalContentAlignment="Left"
                              Background="Transparent"
                              BorderBrush="Transparent" 
-                             Margin="10,0,0,0"
-                             
-                             >
+                             Margin="10,0,0,0">
                         
                         <ListBox.ItemTemplate>
                             <DataTemplate>
