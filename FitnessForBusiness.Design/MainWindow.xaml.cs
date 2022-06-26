@@ -32,7 +32,7 @@ namespace FitnessForBusiness.Design
             _storage = new JSONStorage();
             // InitialUsers2();
             //InitialTrainings2();
-            //TrainsInitialized("power");
+            //TrainsInitialized("other");
             InitializeComponent();
 
             //InitialTrainings();
@@ -564,6 +564,217 @@ namespace FitnessForBusiness.Design
                 _storage.AddTraining(power8);
                 _storage.AddTraining(power9);
                 _storage.AddTraining(power10);
+            }
+            else if (type == "other")
+            {
+                var yoga6 = new Training
+                      (
+                   "Bright and shine",
+                   types[1],
+                   null,
+                   yogaExcercises.Where(e => easyExercises.Contains(e)).ToList().GetRange(0, 5),
+                   1,
+                   0.15,
+                   3
+                   );
+                var yoga7 = new Training
+                                      (
+                                   "The date with yourself",
+                                   types[1],
+                                   null,
+                                   yogaExcercises.Where(e => easyExercises.Contains(e)).ToList().GetRange(2, 6),
+                                   1.5,
+                                   0.15,
+                                   3
+                                   );
+                var yoga8 = new Training
+                                      (
+                                   "Feel completely at ease",
+                                   types[1],
+                                   false,
+                                   yogaExcercises.Where(e => middleExercises.Contains(e)).ToList().GetRange(3, 7),
+                                   1,
+                                   0.15,
+                                   3
+                                   );
+                var yoga9 = new Training
+                                      (
+                                   "Energy of the day",
+                                   types[1],
+                                   false,
+                                   yogaExcercises.Where(e => middleExercises.Contains(e)).ToList().GetRange(2, 6),
+                                   1,
+                                   0.25,
+                                   3
+                                   );
+                var yoga10 = new Training
+                                      (
+                                   "Yoga for every day",
+                                   types[1],
+                                   true,
+                                   yogaExcercises.Where(e => hardExercises.Contains(e)).ToList().GetRange(3, 7),
+                                   1,
+                                   0.15,
+                                   3
+                                   );
+                var yoga11 = new Training
+                                      (
+                                   "Yin-Yang",
+                                   types[1],
+                                   true,
+                                   yogaExcercises.Where(e => hardExercises.Contains(e)).ToList().GetRange(1, 7),
+                                   1,
+                                   0.15,
+                                   3
+                                   );
+                var yoga12 = new Training
+                                      (
+                                   "Fullness, symmetry and grace",
+                                   types[1],
+                                   true,
+                                   yogaExcercises.Where(e => hardExercises.Contains(e)).ToList().GetRange(4, 5),
+                                   1,
+                                   0.15,
+                                   5
+                                   );
+
+
+                _storage.AddTraining(yoga6);
+                _storage.AddTraining(yoga7);
+                _storage.AddTraining(yoga8);
+                _storage.AddTraining(yoga9);
+                _storage.AddTraining(yoga10);
+                _storage.AddTraining(yoga11);
+                _storage.AddTraining(yoga12);
+
+
+
+
+
+                var warmup7 = new Training
+                                (
+                                "Before big achievements",
+                                types[2],
+                                null,
+                                warmupExercises.Where(e => easyExercises.Contains(e)).ToList().GetRange(0, 5),
+                                1.0,
+                                0.15,
+                                3
+                                );
+
+                var warmup8 = new Training
+                   (
+                   "Warm up your body",
+                   types[2],
+                   true,
+                   warmupExercises.Where(e => middleExercises.Contains(e)).ToList().GetRange(3, 4),
+                   1.5,
+                   0.15,
+                   3
+                   );
+
+                var warmup9 = new Training
+                    (
+                   "For successful cardio",
+                   types[2],
+                   true,
+                   warmupExercises.Where(e => middleExercises.Contains(e)).ToList().GetRange(4, 6),
+                   1.5,
+                   0.15,
+                   4
+                   );
+
+                var warmup10 = new Training
+                    (
+                    "Provide safe strength training",
+                    types[2],
+                    true,
+                    warmupExercises.Where(e => hardExercises.Contains(e)).ToList().GetRange(5, 7),
+                    0.75,
+                    0.25,
+                    4
+                    );
+
+                var warmup11 = new Training
+                   (
+                   "Not for Mom, but for yourself",
+                   types[2],
+                   true,
+                   warmupExercises.Where(e => hardExercises.Contains(e)).ToList().GetRange(6, 9),
+                   1,
+                   0.25,
+                   2
+                   );
+
+                _storage.AddTraining(warmup7);
+                _storage.AddTraining(warmup8);
+                _storage.AddTraining(warmup9);
+                _storage.AddTraining(warmup10);
+                _storage.AddTraining(warmup11);
+
+
+
+
+                var cardio7 = new Training
+                           (
+                           "Cardiac acceleration",
+                           types[0],
+                           null,
+                           cardioExcercises.Where(e => easyExercises.Contains(e)).ToList().GetRange(5, 4),
+                           2,
+                           0.25,
+                           4
+                           );
+
+                var cardio8 = new Training
+                            (
+                            "Run Forrest run",
+                            types[0],
+                            null,
+                            cardioExcercises.Where(e => easyExercises.Contains(e)).ToList().GetRange(4, 5),
+                            1,
+                            0.15,
+                            3
+                            );
+
+                var cardio9 = new Training
+                    (
+                    "Hot Monday",
+                    types[0],
+                    false,
+                    cardioExcercises.Where(e => middleExercises.Contains(e)).ToList().GetRange(2, 5),
+                    1.5,
+                    0.5,
+                    4
+                    );
+
+                var cardio10 = new Training
+                    (
+                    "Sweaty Thursday",
+                    types[0],
+                    true,
+                    cardioExcercises.Where(e => hardExercises.Contains(e)).ToList().GetRange(0, 5),
+                    2,
+                    0.25,
+                    4
+                    );
+
+                var cardio11 = new Training
+                    (
+                    "Training after a working week",
+                    types[0],
+                    true,
+                    cardioExcercises.Where(e => hardExercises.Contains(e)).ToList().GetRange(1, 5),
+                    3,
+                    0.25,
+                    4
+                    );
+
+                _storage.AddTraining(cardio7);
+                _storage.AddTraining(cardio8);
+                _storage.AddTraining(cardio9);
+                _storage.AddTraining(cardio10);
+                _storage.AddTraining(cardio11);
             }
 
 

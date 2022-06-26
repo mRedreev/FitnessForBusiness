@@ -2646,5 +2646,1797 @@
     "CircleAmount": 3,
     "Length": 104.5,
     "Description": "upper legs, chest, upper arms, back, "
+  },
+  {
+    "Id": "4c132812-2755-49c4-b479-aa0e6a629c8c",
+    "Name": "Bright and shine",
+    "Type": {
+      "Id": "3015055b-8d5b-46c8-9143-7d47d215324f",
+      "Name": "yoga",
+      "ImageSource": "../../Pictures/yoga.png"
+    },
+    "Level": null,
+    "Excercises": [
+      {
+        "Id": 1405,
+        "Name": "back pec stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1405.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1407,
+        "Name": "calf push stretch with hands against wall",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1407.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "lower legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1377,
+        "Name": "calf stretch with hands against wall",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1377.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "lower legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1167,
+        "Name": "dynamic chest stretch (male)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1167.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "chest"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1419,
+        "Name": "iron cross stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1419.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      }
+    ],
+    "ExcerciseLength": 1.0,
+    "ExcerciseAmount": 5,
+    "BreakLength": 0.15,
+    "CircleAmount": 3,
+    "Length": 17.1,
+    "Description": "back, lower legs, chest, upper legs, "
+  },
+  {
+    "Id": "a0d13125-5c51-4ae7-af69-8bbe6d59c45c",
+    "Name": "The date with yourself",
+    "Type": {
+      "Id": "3015055b-8d5b-46c8-9143-7d47d215324f",
+      "Name": "yoga",
+      "ImageSource": "../../Pictures/yoga.png"
+    },
+    "Level": null,
+    "Excercises": [
+      {
+        "Id": 1377,
+        "Name": "calf stretch with hands against wall",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1377.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "lower legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1167,
+        "Name": "dynamic chest stretch (male)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1167.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "chest"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1419,
+        "Name": "iron cross stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1419.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 613,
+        "Name": "lying (side) quads stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0613.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 2571,
+        "Name": "rocking frog stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/2571.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 2567,
+        "Name": "seated piriformis stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/2567.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      }
+    ],
+    "ExcerciseLength": 1.5,
+    "ExcerciseAmount": 6,
+    "BreakLength": 0.15,
+    "CircleAmount": 3,
+    "Length": 29.549999999999997,
+    "Description": "lower legs, chest, upper legs, "
+  },
+  {
+    "Id": "05c6ac0c-cced-4a2c-9f6e-d61d90f7d136",
+    "Name": "Feel completely at ease",
+    "Type": {
+      "Id": "3015055b-8d5b-46c8-9143-7d47d215324f",
+      "Name": "yoga",
+      "ImageSource": "../../Pictures/yoga.png"
+    },
+    "Level": false,
+    "Excercises": [
+      {
+        "Id": 1390,
+        "Name": "seated calf stretch (male)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1390.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "lower legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1424,
+        "Name": "seated glute stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1424.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 690,
+        "Name": "seated lower back stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0690.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1358,
+        "Name": "side lying floor stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1358.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 716,
+        "Name": "side push neck stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0716.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "neck"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3645,
+        "Name": "single leg bridge with outstretched leg",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3645.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 794,
+        "Name": "standing lateral stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0794.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      }
+    ],
+    "ExcerciseLength": 1.0,
+    "ExcerciseAmount": 7,
+    "BreakLength": 0.15,
+    "CircleAmount": 3,
+    "Length": 24.0,
+    "Description": "lower legs, upper legs, back, neck, "
+  },
+  {
+    "Id": "2614e054-ddea-40ce-820f-445b1f608e39",
+    "Name": "Energy of the day",
+    "Type": {
+      "Id": "3015055b-8d5b-46c8-9143-7d47d215324f",
+      "Name": "yoga",
+      "ImageSource": "../../Pictures/yoga.png"
+    },
+    "Level": false,
+    "Excercises": [
+      {
+        "Id": 669,
+        "Name": "rear deltoid stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0669.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "shoulders"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1390,
+        "Name": "seated calf stretch (male)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1390.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "lower legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1424,
+        "Name": "seated glute stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1424.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 690,
+        "Name": "seated lower back stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0690.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1358,
+        "Name": "side lying floor stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1358.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 716,
+        "Name": "side push neck stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0716.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "neck"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      }
+    ],
+    "ExcerciseLength": 1.0,
+    "ExcerciseAmount": 6,
+    "BreakLength": 0.25,
+    "CircleAmount": 3,
+    "Length": 22.25,
+    "Description": "shoulders, lower legs, upper legs, back, neck, "
+  },
+  {
+    "Id": "ba9270b1-3f75-4eba-96f1-2e8685219b16",
+    "Name": "Yoga for every day",
+    "Type": {
+      "Id": "3015055b-8d5b-46c8-9143-7d47d215324f",
+      "Name": "yoga",
+      "ImageSource": "../../Pictures/yoga.png"
+    },
+    "Level": true,
+    "Excercises": [
+      {
+        "Id": 1511,
+        "Name": "hamstring stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1511.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1576,
+        "Name": "leg up hamstring stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1576.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1403,
+        "Name": "neck side stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1403.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "neck"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 643,
+        "Name": "overhead triceps stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0643.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1585,
+        "Name": "runners stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1585.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 721,
+        "Name": "side wrist pull stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0721.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "lower arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1398,
+        "Name": "standing calves calf stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1398.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "lower legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      }
+    ],
+    "ExcerciseLength": 1.0,
+    "ExcerciseAmount": 7,
+    "BreakLength": 0.15,
+    "CircleAmount": 3,
+    "Length": 24.0,
+    "Description": "upper legs, neck, upper arms, lower arms, lower legs, "
+  },
+  {
+    "Id": "4977facf-8ef9-463f-8f5e-8e27eead94bf",
+    "Name": "Yin-Yang",
+    "Type": {
+      "Id": "3015055b-8d5b-46c8-9143-7d47d215324f",
+      "Name": "yoga",
+      "ImageSource": "../../Pictures/yoga.png"
+    },
+    "Level": true,
+    "Excercises": [
+      {
+        "Id": 1271,
+        "Name": "chest and front of shoulder stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1271.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "chest"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 257,
+        "Name": "circles knee stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0257.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "lower legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1511,
+        "Name": "hamstring stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1511.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1576,
+        "Name": "leg up hamstring stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1576.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1403,
+        "Name": "neck side stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1403.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "neck"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 643,
+        "Name": "overhead triceps stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0643.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1585,
+        "Name": "runners stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1585.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      }
+    ],
+    "ExcerciseLength": 1.0,
+    "ExcerciseAmount": 7,
+    "BreakLength": 0.15,
+    "CircleAmount": 3,
+    "Length": 24.0,
+    "Description": "chest, lower legs, upper legs, neck, upper arms, "
+  },
+  {
+    "Id": "b9c11d30-1956-445e-b018-043868f7c4ec",
+    "Name": "Fullness, symmetry and grace",
+    "Type": {
+      "Id": "3015055b-8d5b-46c8-9143-7d47d215324f",
+      "Name": "yoga",
+      "ImageSource": "../../Pictures/yoga.png"
+    },
+    "Level": true,
+    "Excercises": [
+      {
+        "Id": 1576,
+        "Name": "leg up hamstring stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1576.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1403,
+        "Name": "neck side stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1403.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "neck"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 643,
+        "Name": "overhead triceps stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0643.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1585,
+        "Name": "runners stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1585.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 721,
+        "Name": "side wrist pull stretch",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0721.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "lower arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      }
+    ],
+    "ExcerciseLength": 1.0,
+    "ExcerciseAmount": 5,
+    "BreakLength": 0.15,
+    "CircleAmount": 5,
+    "Length": 28.6,
+    "Description": "upper legs, neck, upper arms, lower arms, "
+  },
+  {
+    "Id": "d25ae189-3dea-479a-80dc-8ec74f629b28",
+    "Name": "Before big achievements",
+    "Type": {
+      "Id": "a944acbe-8a9d-44d2-93e9-11230a51fddd",
+      "Name": "warm-up",
+      "ImageSource": "../../Pictures/warm-up.png"
+    },
+    "Level": null,
+    "Excercises": [
+      {
+        "Id": 1,
+        "Name": "3/4 sit-up",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0001.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "waist"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3293,
+        "Name": "archer pull up",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3293.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 2333,
+        "Name": "arm slingers hanging straight legs",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/2333.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "waist"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3204,
+        "Name": "arms overhead full sit-up (male)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3204.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "waist"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3220,
+        "Name": "astride jumps (male)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3220.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      }
+    ],
+    "ExcerciseLength": 1.0,
+    "ExcerciseAmount": 5,
+    "BreakLength": 0.15,
+    "CircleAmount": 3,
+    "Length": 17.1,
+    "Description": "waist, back, cardio, "
+  },
+  {
+    "Id": "e386053f-6e3c-48ee-b377-1f7636738a26",
+    "Name": "Warm up your body",
+    "Type": {
+      "Id": "a944acbe-8a9d-44d2-93e9-11230a51fddd",
+      "Name": "warm-up",
+      "ImageSource": "../../Pictures/warm-up.png"
+    },
+    "Level": true,
+    "Excercises": [
+      {
+        "Id": 3672,
+        "Name": "back and forth step",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3672.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 20,
+        "Name": "balance board",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0020.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 130,
+        "Name": "bench hip extension",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0130.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3019,
+        "Name": "bench pull-ups",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3019.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      }
+    ],
+    "ExcerciseLength": 1.5,
+    "ExcerciseAmount": 4,
+    "BreakLength": 0.15,
+    "CircleAmount": 3,
+    "Length": 19.65,
+    "Description": "cardio, upper legs, back, "
+  },
+  {
+    "Id": "18d84a92-129f-42e1-bcd5-c5056a35fbc1",
+    "Name": "For successful cardio",
+    "Type": {
+      "Id": "a944acbe-8a9d-44d2-93e9-11230a51fddd",
+      "Name": "warm-up",
+      "ImageSource": "../../Pictures/warm-up.png"
+    },
+    "Level": true,
+    "Excercises": [
+      {
+        "Id": 20,
+        "Name": "balance board",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0020.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 130,
+        "Name": "bench hip extension",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0130.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3019,
+        "Name": "bench pull-ups",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3019.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3639,
+        "Name": "bent knee lying twist (male)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3639.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 139,
+        "Name": "biceps narrow pull-ups",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0139.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 137,
+        "Name": "body-up",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0137.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      }
+    ],
+    "ExcerciseLength": 1.5,
+    "ExcerciseAmount": 6,
+    "BreakLength": 0.15,
+    "CircleAmount": 4,
+    "Length": 39.449999999999996,
+    "Description": "upper legs, back, upper arms, "
+  },
+  {
+    "Id": "2eac5a30-9dab-4754-9f5d-809b814f2b8e",
+    "Name": "Provide safe strength training",
+    "Type": {
+      "Id": "a944acbe-8a9d-44d2-93e9-11230a51fddd",
+      "Name": "warm-up",
+      "ImageSource": "../../Pictures/warm-up.png"
+    },
+    "Level": true,
+    "Excercises": [
+      {
+        "Id": 3297,
+        "Name": "back lever",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3297.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1473,
+        "Name": "backward jump",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1473.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 129,
+        "Name": "bench dip (knees bent)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0129.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1399,
+        "Name": "bench dip on floor",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1399.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1770,
+        "Name": "biceps leg concentration curl",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1770.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 140,
+        "Name": "biceps pull-up",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0140.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3167,
+        "Name": "bodyweight squatting row (with towel)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3167.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      }
+    ],
+    "ExcerciseLength": 0.75,
+    "ExcerciseAmount": 7,
+    "BreakLength": 0.25,
+    "CircleAmount": 4,
+    "Length": 27.75,
+    "Description": "back, upper legs, upper arms, "
+  },
+  {
+    "Id": "0d040440-c24c-41bb-a496-f6898b224106",
+    "Name": "Not for Mom, but for yourself",
+    "Type": {
+      "Id": "a944acbe-8a9d-44d2-93e9-11230a51fddd",
+      "Name": "warm-up",
+      "ImageSource": "../../Pictures/warm-up.png"
+    },
+    "Level": true,
+    "Excercises": [
+      {
+        "Id": 1473,
+        "Name": "backward jump",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1473.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 129,
+        "Name": "bench dip (knees bent)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0129.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1399,
+        "Name": "bench dip on floor",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1399.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1770,
+        "Name": "biceps leg concentration curl",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1770.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 140,
+        "Name": "biceps pull-up",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0140.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "upper arms"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3167,
+        "Name": "bodyweight squatting row (with towel)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3167.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 1373,
+        "Name": "bodyweight standing calf raise",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1373.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "lower legs"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3156,
+        "Name": "bodyweight standing close-grip one arm row",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3156.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3158,
+        "Name": "bodyweight standing close-grip row",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3158.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "back"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      }
+    ],
+    "ExcerciseLength": 1.0,
+    "ExcerciseAmount": 9,
+    "BreakLength": 0.25,
+    "CircleAmount": 2,
+    "Length": 22.25,
+    "Description": "upper legs, upper arms, back, lower legs, "
+  },
+  {
+    "Id": "1a69aa74-60ca-45cd-b284-6db9dfd89607",
+    "Name": "Cardiac acceleration",
+    "Type": {
+      "Id": "ff7015b3-0747-4897-9ca4-3bb00db8d620",
+      "Name": "cardio",
+      "ImageSource": "../../Pictures/cardio.png"
+    },
+    "Level": null,
+    "Excercises": [
+      {
+        "Id": 684,
+        "Name": "run (equipment)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0684.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3219,
+        "Name": "scissor jumps (male)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3219.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3222,
+        "Name": "semi squat jump (male)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3222.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3656,
+        "Name": "short stride run",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3656.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      }
+    ],
+    "ExcerciseLength": 2.0,
+    "ExcerciseAmount": 4,
+    "BreakLength": 0.25,
+    "CircleAmount": 4,
+    "Length": 35.75,
+    "Description": "cardio, "
+  },
+  {
+    "Id": "2a410d91-501d-4747-b126-c743e1203e5e",
+    "Name": "Run Forrest run",
+    "Type": {
+      "Id": "ff7015b3-0747-4897-9ca4-3bb00db8d620",
+      "Name": "cardio",
+      "ImageSource": "../../Pictures/cardio.png"
+    },
+    "Level": null,
+    "Excercises": [
+      {
+        "Id": 3638,
+        "Name": "push to run",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3638.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 684,
+        "Name": "run (equipment)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0684.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3219,
+        "Name": "scissor jumps (male)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3219.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3222,
+        "Name": "semi squat jump (male)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3222.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3656,
+        "Name": "short stride run",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3656.gif",
+        "Level": null,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      }
+    ],
+    "ExcerciseLength": 1.0,
+    "ExcerciseAmount": 5,
+    "BreakLength": 0.15,
+    "CircleAmount": 3,
+    "Length": 17.1,
+    "Description": "cardio, "
+  },
+  {
+    "Id": "51bc6d87-46c3-4892-bdf0-14dbe0b6bbd2",
+    "Name": "Hot Monday",
+    "Type": {
+      "Id": "ff7015b3-0747-4897-9ca4-3bb00db8d620",
+      "Name": "cardio",
+      "ImageSource": "../../Pictures/cardio.png"
+    },
+    "Level": false,
+    "Excercises": [
+      {
+        "Id": 3221,
+        "Name": "half knee bends (male)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3221.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3636,
+        "Name": "high knee against wall",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3636.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 501,
+        "Name": "jack burpee",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0501.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3224,
+        "Name": "jack jump (male)",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3224.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 685,
+        "Name": "run",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0685.gif",
+        "Level": false,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      }
+    ],
+    "ExcerciseLength": 1.5,
+    "ExcerciseAmount": 5,
+    "BreakLength": 0.5,
+    "CircleAmount": 4,
+    "Length": 39.5,
+    "Description": "cardio, "
+  },
+  {
+    "Id": "d92570a1-35f7-49b5-8eaa-1f55b24076ac",
+    "Name": "Sweaty Thursday",
+    "Type": {
+      "Id": "ff7015b3-0747-4897-9ca4-3bb00db8d620",
+      "Name": "cardio",
+      "ImageSource": "../../Pictures/cardio.png"
+    },
+    "Level": true,
+    "Excercises": [
+      {
+        "Id": 1160,
+        "Name": "burpee",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1160.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 630,
+        "Name": "mountain climber",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0630.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3361,
+        "Name": "skater hops",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3361.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3671,
+        "Name": "ski step",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3671.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 798,
+        "Name": "stationary bike walk",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0798.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "leverage machine"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      },
+      {
+        "Id": 0,
+        "Name": "leverage machine"
+      }
+    ],
+    "ExcerciseLength": 2.0,
+    "ExcerciseAmount": 5,
+    "BreakLength": 0.25,
+    "CircleAmount": 4,
+    "Length": 44.75,
+    "Description": "cardio, "
+  },
+  {
+    "Id": "6e78aa38-40fa-4b2d-a75e-7e076c26b910",
+    "Name": "Training after a working week",
+    "Type": {
+      "Id": "ff7015b3-0747-4897-9ca4-3bb00db8d620",
+      "Name": "cardio",
+      "ImageSource": "../../Pictures/cardio.png"
+    },
+    "Level": true,
+    "Excercises": [
+      {
+        "Id": 630,
+        "Name": "mountain climber",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0630.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3361,
+        "Name": "skater hops",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3361.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 3671,
+        "Name": "ski step",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/3671.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "body weight"
+        }
+      },
+      {
+        "Id": 798,
+        "Name": "stationary bike walk",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0798.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "leverage machine"
+        }
+      },
+      {
+        "Id": 2141,
+        "Name": "walk elliptical cross trainer",
+        "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/2141.gif",
+        "Level": true,
+        "BodyParts": {
+          "Id": 0,
+          "Name": "cardio"
+        },
+        "Equipment": {
+          "Id": 0,
+          "Name": "elliptical machine"
+        }
+      }
+    ],
+    "Equipment": [
+      {
+        "Id": 0,
+        "Name": "body weight"
+      },
+      {
+        "Id": 0,
+        "Name": "leverage machine"
+      },
+      {
+        "Id": 0,
+        "Name": "elliptical machine"
+      }
+    ],
+    "ExcerciseLength": 3.0,
+    "ExcerciseAmount": 5,
+    "BreakLength": 0.25,
+    "CircleAmount": 4,
+    "Length": 64.75,
+    "Description": "cardio, "
   }
 ]
