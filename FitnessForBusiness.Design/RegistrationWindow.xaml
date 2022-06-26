@@ -12,28 +12,19 @@
         ResizeMode="CanResizeWithGrip"
         AllowsTransparency="True"
         Background="Transparent">
+    
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="27"/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
         <Grid.Background>
             <ImageBrush ImageSource="Pictures/background.jpg"/>
         </Grid.Background>
 
-        <Border Grid.ColumnSpan="3"
-                Grid.Row="0"
+        <Grid.RowDefinitions>
+            <RowDefinition Height="27"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0"
                 Background="#272535"
                 MouseDown="Border_MouseDown">
 
@@ -66,191 +57,213 @@
             </Grid>
         </Border>
 
+        <StackPanel Grid.Row="1">
 
-        <StackPanel Grid.Row="1" Grid.ColumnSpan="3" Background="#ab5eeb">
-            <TextBlock Text="REGISTRATION" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36" Margin="0 18 0 0" FontWeight="Bold" TextDecorations="{x:Null}" />
-        </StackPanel>
-        
-        
-        <TextBlock Grid.Row="2" 
-                   Grid.Column="1"
-                   Margin="0,36,0,0"
-                   VerticalAlignment="Center" 
-                   HorizontalAlignment="Left" 
-                   Foreground="#FFCFCFCF">Name</TextBlock>
-        <TextBox Name="NameBox" 
-                 Style="{StaticResource UITextBox}" Grid.Row="2" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
-        <Border Width="130"
-                Style="{StaticResource Borderline}"
-                Grid.Column="1"
-                Grid.Row="2"
-                VerticalAlignment="Bottom"
-                HorizontalAlignment="Left"
-                Margin="0,0"/>
+            <Image Width="200"
+                   Height="200"
+                   Margin="0,25,0,0"
+                   Source="Pictures/sLogo.png"/>
 
-        <TextBlock Grid.Row="2" 
-                   Grid.Column="1" 
-                   VerticalAlignment="Center" 
-                   Foreground="#FFCFCFCF" 
-                   HorizontalAlignment="Right" 
-                   Margin="0,36,83,0">Surname</TextBlock>
-        <TextBox Name="SurnameTextBox" Style="{StaticResource UITextBox}"  Grid.Row="2" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
-        <Border Width="130"
-                Style="{StaticResource Borderline}"
-                Grid.Column="1"
-                Grid.Row="2"
-                VerticalAlignment="Bottom"
-                HorizontalAlignment="Right"
-                Margin="0,0"/>
-
-        <TextBlock Grid.Row="3" Grid.Column="1" 
-                   VerticalAlignment="Center" 
-                   Foreground="#FFCFCFCF" 
-                   HorizontalAlignment="Left" 
-                   Margin="0,25,0,70"
-                   Text="Username"/>
-        
-        <TextBox Name="EmailTextBox" Style="{StaticResource UITextBox}"  Grid.Row="3" Grid.Column="1" Width="270" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <Border Width="270"
-                Style="{StaticResource Borderline}"
-                Grid.Column="1"
-                Grid.Row="3"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Left"
-                Margin="0,25,0,0"/>
-        
-        <TextBlock Grid.Row="3" Grid.Column="1" VerticalAlignment="Bottom"  HorizontalAlignment="Left" Foreground="#FFCFCFCF" >Password</TextBlock>
-        <PasswordBox Name="PasswordBox"  Style="{StaticResource PassBox}" Grid.Row="4" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top"  Grid.RowSpan="2"/>
-        <Border Width="130"
-                Style="{StaticResource Borderline}"
-                Grid.Column="1"
-                Grid.Row="4"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Left"
-                Margin="0,-55,0,0"/>
-        
-        <TextBlock Grid.Row="3" 
-                   Grid.Column="1" 
-                   VerticalAlignment="Bottom" 
+            <TextBlock Text="Registration" 
+                   Grid.Row="1" 
                    HorizontalAlignment="Center" 
-                   Foreground="#FFCFCFCF" 
-                   Margin="104,0,0,0">Confirm Password</TextBlock>
-        <PasswordBox Name="PasswordAgianTextBox" Style="{StaticResource PassBox}"  Grid.Row="4" Grid.Column="1" Width="130" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top"/>
-        <Border Width="130"
-                Style="{StaticResource Borderline}"
-                Grid.Column="1"
-                Grid.Row="4"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Right"
-                Margin="0,-55,0,0"/>
+                   FontSize="28" 
+                   Foreground="#ab5eeb"
+                   Margin="0 18 0 0" 
+                   FontWeight="Bold"/>
 
-        <Label Content="My Goal"
-               Grid.Row="4"
-               Grid.Column="1"
-               Foreground="#FFCFCFCF"
-               VerticalAlignment="Center"
-               Margin="0,35,0,0"/>
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="0,40,0,0">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Name"
+                                   Foreground="#FFCFCFCF"
+                                   FontSize="16"
+                                   VerticalAlignment="Center"/>
 
-        <ComboBox Name="GoalComboBox" 
-                  Height="30" Width="130" 
-                  VerticalAlignment="Bottom" 
-                  HorizontalAlignment="Left" 
-                  Grid.Row="4" Grid.Column="1"  
-                  Background="#FF5748A8" 
-                  BorderBrush="#FF030303" 
-                  Foreground="Black" 
-                  OpacityMask="Black" 
-                  VerticalContentAlignment="Center">
-            <TextBlock>Lose weight</TextBlock>
-            <TextBlock>Maintain weight</TextBlock>
-            <TextBlock>Gain muscle mass</TextBlock>
-        </ComboBox>
+                        <StackPanel Orientation="Vertical"
+                                    Margin="90,0,0,0">
+                            <TextBox Name="NameBox" 
+                                 Style="{StaticResource UITextBox}"  
+                                 Width="200" 
+                                 Height="30"/>
 
-        <Label Content="My Level"
-               Grid.Row="4"
-               Grid.Column="1"
-               Foreground="#FFCFCFCF"
-               VerticalAlignment="Center"
-               HorizontalAlignment="Center"
-               Margin="60,35,0,0"/>
+                            <Border Width="200"
+                                Style="{StaticResource Borderline}"/>
+                        </StackPanel>
+                    </StackPanel>
 
-        <ComboBox Name="LeveloComboBox" 
-                  Height="30" Width="130" 
-                  VerticalAlignment="Bottom" 
-                  HorizontalAlignment="Right" 
-                  Grid.Row="4" Grid.Column="1"  
-                  VerticalContentAlignment="Center">
-            <TextBlock>Beginner</TextBlock>
-            <TextBlock>Intermediate</TextBlock>
-            <TextBlock>Advanced</TextBlock>
-        </ComboBox>
-        
-        <TextBlock Grid.Row="2" 
-                   Grid.Column="2" 
-                   VerticalAlignment="Bottom" 
-                   HorizontalAlignment="Center" 
-                   Foreground="#FFCFCFCF" 
-                   Margin="70,0,165,0" 
-                   Text="Avatar"/>
-        
-        <DatePicker x:Name="BitrhDateDatePicker" 
-                    Grid.Row="4" Grid.Column="2" 
-                    VerticalAlignment="Center" 
-                    Width="130"
-                    IsTodayHighlighted="True"
-                    Background="#FF353340" 
-                    OverridesDefaultStyle="False" 
-                    HorizontalAlignment="Center" 
-                    MouseDoubleClick="BitrhDateDatePicker_MouseDoubleClick" 
-                    SelectedDateFormat="Short"/>
-        
-        <TextBlock Grid.Row="3" Grid.Column="2" 
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center" 
-                   Foreground="#FFCFCFCF" 
-                   Margin="70,27,150,68" 
-                   Text="Birthdate"/>
-        
-        <ComboBox Name ="AvatarComboBox" 
-                  Grid.Row="3" Grid.Column="2" 
-                  Width="130" Height="100" 
-                  VerticalAlignment="Center" 
-                  HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,10,0,0">
+                        <TextBlock Foreground="#FFCFCFCF"  
+                                   Text="Surname"
+                                   FontSize="16"
+                                   VerticalAlignment="Center"/>
+
+                        <StackPanel Orientation="Vertical"
+                                    Margin="70,0,0,0">
+                            <TextBox Name="SurnameTextBox" 
+                                      Style="{StaticResource UITextBox}" 
+                                      Width="200" 
+                                      Height="30"/>
+
+                            <Border Width="200"
+                                    Style="{StaticResource Borderline}"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,10,0,0">
+
+                        <TextBlock Foreground="#FFCFCFCF"
+                                   Text="Username"
+                                   FontSize="16"
+                                   VerticalAlignment="Center"/>
+
+                        <StackPanel Orientation="Vertical"
+                                    Margin="62,0,0,0">
+
+                            <TextBox Name="EmailTextBox" 
+                                     Style="{StaticResource UITextBox}" 
+                                     Width="200" 
+                                     Height="30"/>
+
+                            <Border Width="200"
+                                    Style="{StaticResource Borderline}"
+                                    Margin="0,0,0,0"/>
+
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,10,0,0">
+
+                        <TextBlock Text="Password"
+                                   FontSize="16"
+                                   Foreground="#FFCFCFCF"
+                                   VerticalAlignment="Center"/>
+
+                        <StackPanel Orientation="Vertical"
+                                    Margin="67,0,0,0">
+
+                            <PasswordBox Name="PasswordBox" 
+                                         Style="{StaticResource PassBox}" 
+                                         Width="200" 
+                                         Height="30"/>
+
+                            <Border Width="200"
+                                    Style="{StaticResource Borderline}"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,10,0,0">
+
+                        <TextBlock Foreground="#FFCFCFCF" 
+                                   Text="Confirm Password"
+                                   FontSize="16"
+                                   VerticalAlignment="Center"/>
+
+                        <StackPanel Orientation="Vertical"
+                                    Margin="7,0,0,0">
+                            <PasswordBox Name="PasswordAgianTextBox" 
+                                         Style="{StaticResource PassBox}"  
+                                         Width="200" 
+                                         Height="30"/>
+
+                            <Border Width="200"
+                                    Style="{StaticResource Borderline}"/>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical"
+                            Margin="25,0,0,0">
+
+                    <TextBlock Foreground="#FFCFCFCF"  
+                               Text="Avatar"
+                               HorizontalAlignment="Center"/>
+
+                    <ComboBox Name ="AvatarComboBox" 
+                              Width="130" 
+                              Height="100">
+
+                        <ComboBoxItem>
+                            <Image Source="/Pictures/san.jpg" Height="100"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Image Source="/Pictures/suboch.jpg" Height="100"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Image Source="/Pictures/becl2.jpg" Height="100"/>
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            <Image Source="/Pictures/lom2.jpg" Height="100"/>
+                        </ComboBoxItem>
+                    </ComboBox>
+
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,15,0,0">
+
+                        <StackPanel Orientation="Vertical">
+                            <Label Content="My Goal"
+                                   Foreground="#FFCFCFCF"
+                                   Margin="0,0,0,0"/>
+
+                            <ComboBox Name="GoalComboBox" 
+                                      Height="30" 
+                                      Width="130" 
+                                      Background="#FF5748A8" >
+                                <TextBlock>Lose weight</TextBlock>
+                                <TextBlock>Maintain weight</TextBlock>
+                                <TextBlock>Gain muscle mass</TextBlock>
+                            </ComboBox>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical"
+                                    Margin="10,0,0,0">
+                            <Label Content="My Level"
+                                   Foreground="#FFCFCFCF"
+                                   Margin="0,0,0,0"/>
+
+                            <ComboBox Name="LeveloComboBox" 
+                                      Height="30" 
+                                      Width="130">
+                                <TextBlock>Beginner</TextBlock>
+                                <TextBlock>Intermediate</TextBlock>
+                                <TextBlock>Advanced</TextBlock>
+                            </ComboBox>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <TextBlock Foreground="#FFCFCFCF" 
+                               Margin="0,10,0,0" 
+                               Text="Birthdate"
+                               HorizontalAlignment="Center"/>
+
+                    <DatePicker x:Name="BitrhDateDatePicker" 
+                                Width="130"
+                                HorizontalAlignment="Center"
+                                IsTodayHighlighted="True"
+                                Background="#FF353340" 
+                                OverridesDefaultStyle="False" 
+                                MouseDoubleClick="BitrhDateDatePicker_MouseDoubleClick" 
+                                SelectedDateFormat="Short"/>
+                </StackPanel>
+            </StackPanel>
             
-            <ComboBoxItem>
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="/Pictures/san.jpg" Height="100"></Image>
-                </StackPanel>
-            </ComboBoxItem>
-            <ComboBoxItem>
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="/Pictures/suboch.jpg" Height="100"></Image>
-                </StackPanel>
-            </ComboBoxItem>
-            <ComboBoxItem>
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="/Pictures/becl2.jpg" Height="85"/>
-                </StackPanel>
-            </ComboBoxItem>
-            <ComboBoxItem>
-                <StackPanel Orientation="Horizontal">
-                    <Image Source="/Pictures/lom2.jpg" Height="100"></Image>
-                </StackPanel>
-            </ComboBoxItem>
-        </ComboBox>
+            <Button Name="RegisterButton"  
+                    Height="30" 
+                    Margin="0,15,0,0"
+                    Width="90" 
+                    Content="Registration"  
+                    Style="{StaticResource UIButton}"  
+                    Click="RegisterButton_Click"/>
 
-        <Image Grid.Column="0" 
-               Grid.Row="2" 
-               Grid.RowSpan="4"
-               Source="Pictures/sLogo.png"/>
+        </StackPanel>
 
-        <Button Name="RegisterButton"  
-                Grid.Row="5" Grid.Column="1" 
-                VerticalAlignment="Bottom" 
-                Height="30" Width="90" 
-                Content="Registration"  
-                Style="{StaticResource UIButton}"  
-                Click="RegisterButton_Click"/>
 
         <Button Name="GoBackButton"
                 Content="Back"
