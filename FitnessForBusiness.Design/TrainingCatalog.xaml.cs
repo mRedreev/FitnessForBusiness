@@ -599,6 +599,13 @@ namespace FitnessForBusiness.Design
             EditUserInfoPanel.Visibility = Visibility.Visible;
             var button = sender as Button;
             button.Visibility = Visibility.Collapsed;
+
+
+            ChangeAvatarComboBox.Text = "";
+            ChangeGoalComboBox.Text = "";
+            ChangeLevelComboBox.Text = "";
+            ChangeUsernameBox.Text = "";
+            ChangePasswordBox.Password = "";
         }
 
         private void ShowRecommendedGoalAndLevel()

@@ -5,7 +5,7 @@
     "Surname": "Gilmullina",
     "ImageSource": "/Pictures/suboch.jpg",
     "Age": 4,
-    "Level": null,
+    "Level": false,
     "Goal": true,
     "Login": "ugilmullina",
     "Password": "200223",
