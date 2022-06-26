@@ -544,8 +544,7 @@
 
                     <StackPanel Orientation="Vertical"
                                 Margin="90,40,0,0"
-                                Name="EditUserInfoPanel"
-                                >
+                                Name="EditUserInfoPanel">
                         <StackPanel Orientation="Vertical">
                             <Label Content="New Avatar"
                                    Margin="55,0,0,0"
@@ -581,32 +580,44 @@
 
                         <StackPanel Orientation="Horizontal"
                                     Margin="0,20,0,0">
-                            <ComboBox Name="ChangeGoalComboBox"
+                            <StackPanel Orientation="Vertical">
+
+                                <Label Content="Change Goal"
+                                       Foreground="#ab5eeb"
+                                       FontSize="16"
+                                       FontWeight="Medium"/>
+
+                                <ComboBox Name="ChangeGoalComboBox"
                                       Width="130"
                                       Height="30"
-                                      
                                       IsEditable="False"
                                       VerticalContentAlignment="Center">
-                                <TextBlock></TextBlock>
-                                <TextBlock>Lose weight</TextBlock>
-                                <TextBlock>Maintain weight</TextBlock>
-                                <TextBlock>Gain muscle mass</TextBlock>
+                                    <TextBlock></TextBlock>
+                                    <TextBlock>Lose weight</TextBlock>
+                                    <TextBlock>Maintain weight</TextBlock>
+                                    <TextBlock>Gain muscle mass</TextBlock>
+                                </ComboBox>
+                            </StackPanel>
 
-                            </ComboBox>
+                            <StackPanel Orientation="Vertical">
 
-                            <ComboBox Name="ChangeLevelComboBox"
+                                <Label Content="Change Level"
+                                       Foreground="#ab5eeb"
+                                       FontSize="16"
+                                       FontWeight="Medium"/>
+
+                                <ComboBox Name="ChangeLevelComboBox"
                                       Width="130"
                                       Height="30"
                                       Margin="5,0,0,0"
-                                      
                                       IsEditable="False"
                                       VerticalContentAlignment="Center">
-                                <TextBlock></TextBlock>
-                                <TextBlock>Beginner</TextBlock>
-                                <TextBlock>Intermediate</TextBlock>
-                                <TextBlock>Advanced</TextBlock>
-
-                            </ComboBox>
+                                    <TextBlock></TextBlock>
+                                    <TextBlock>Beginner</TextBlock>
+                                    <TextBlock>Intermediate</TextBlock>
+                                    <TextBlock>Advanced</TextBlock>
+                                </ComboBox>
+                            </StackPanel>
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal"
