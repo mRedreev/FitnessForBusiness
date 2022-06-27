@@ -600,6 +600,170 @@
         "CircleAmount": 3,
         "Length": 44.5,
         "Description": "upper legs, chest, lower legs, neck, upper arms, "
+      },
+      {
+        "Id": "00e93b5b-349f-4aba-9386-90740ee76f1e",
+        "Name": "Attention catcher",
+        "Type": {
+          "Id": "93694638-0043-4e85-a3de-e240acf71e99",
+          "Name": "power",
+          "ImageSource": "../../Pictures/power.png"
+        },
+        "Level": true,
+        "Excercises": [
+          {
+            "Id": 46,
+            "Name": "barbell hack squat",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0046.gif",
+            "Level": true,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "upper legs"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "barbell"
+            }
+          },
+          {
+            "Id": 47,
+            "Name": "barbell incline bench press",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0047.gif",
+            "Level": true,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "chest"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "barbell"
+            }
+          },
+          {
+            "Id": 1719,
+            "Name": "barbell incline close grip bench press",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1719.gif",
+            "Level": true,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "upper arms"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "barbell"
+            }
+          },
+          {
+            "Id": 49,
+            "Name": "barbell incline row",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0049.gif",
+            "Level": true,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "back"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "barbell"
+            }
+          },
+          {
+            "Id": 51,
+            "Name": "barbell jefferson squat",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0051.gif",
+            "Level": true,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "upper legs"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "barbell"
+            }
+          },
+          {
+            "Id": 53,
+            "Name": "barbell jump squat",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0053.gif",
+            "Level": true,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "upper legs"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "barbell"
+            }
+          },
+          {
+            "Id": 1410,
+            "Name": "barbell lateral lunge",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1410.gif",
+            "Level": true,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "upper legs"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "barbell"
+            }
+          },
+          {
+            "Id": 1435,
+            "Name": "barbell low bar squat",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/1435.gif",
+            "Level": true,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "upper legs"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "barbell"
+            }
+          },
+          {
+            "Id": 55,
+            "Name": "barbell lying close-grip press",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0055.gif",
+            "Level": true,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "upper arms"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "barbell"
+            }
+          },
+          {
+            "Id": 56,
+            "Name": "barbell lying close-grip triceps extension",
+            "VideoSource": "http://d205bpvrqc9yn1.cloudfront.net/0056.gif",
+            "Level": true,
+            "BodyParts": {
+              "Id": 0,
+              "Name": "upper arms"
+            },
+            "Equipment": {
+              "Id": 0,
+              "Name": "barbell"
+            }
+          }
+        ],
+        "Equipment": [
+          {
+            "Id": 0,
+            "Name": "barbell"
+          }
+        ],
+        "ExcerciseLength": 3.0,
+        "ExcerciseAmount": 10,
+        "BreakLength": 0.5,
+        "CircleAmount": 3,
+        "Length": 104.5,
+        "Description": "upper legs, chest, upper arms, back, "
       }
     ]
   },

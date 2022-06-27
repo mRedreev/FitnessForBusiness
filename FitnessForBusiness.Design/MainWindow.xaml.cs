@@ -551,7 +551,7 @@ namespace FitnessForBusiness.Design
                     types[3],
                     true,
                     powerExcercises.Where(e => hardExercises.Contains(e)).ToList().GetRange(15, 10),
-                    3,
+                    2,
                     0.5,
                     3);
                 _storage.AddTraining(power1);
