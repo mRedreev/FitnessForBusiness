@@ -14,6 +14,23 @@ namespace FitnessForBusiness.Core
 {
     public class functions
     {
+        static IStorage _storage = new JSONStorage();
+        public static List<Excercise> excersices = _storage.GetExcercises;
+
+        public static List<Excercise> easyExercises = excersices.Where(e => e.Level == null).ToList();
+        public static List<Excercise> middleExercises = excersices.Where(e => e.Level == false).ToList();
+        public static List<Excercise> hardExercises = excersices.Where(e => e.Level == true).ToList();
+
+        public static List<string> powerEquipment = new List<string> { "cable", "leverage machine", "barbell", "dumbbell", "kettlebell" };
+
+        public static List<Excercise> powerExcercises = excersices.Where(e => powerEquipment.Contains(e.Equipment.Name)).ToList();
+
+        public static List<Excercise> cardioExcercises = excersices.Where(e => e.BodyParts.Name == "cardio").ToList();
+
+        public static List<Excercise> warmupExercises = excersices.Where(e => e.Equipment.Name == "body weight").ToList();
+
+        public static List<Excercise> yogaExcercises = excersices.Where(e => e.Equipment.Name == "body weight").Where(e => e.Name.Contains("stretch")).ToList();
+
         public static string NameOfLevel(bool? level)
         {
             if (level == null) return "Beginner";
@@ -166,7 +183,16 @@ namespace FitnessForBusiness.Core
             return minutes.ToString() + " minutes";
         }
 
-        
+        public static List<TrainingType> MakeTrainingTypes()
+        {
+            TrainingType typeCardio = new TrainingType("cardio", "../../Pictures/cardio.png");
+            TrainingType typePower = new TrainingType("power", "../../Pictures/power.png");
+            TrainingType typeYoga = new TrainingType("yoga", "../../Pictures/yoga.png");
+            TrainingType typeWarmUp = new TrainingType("warm-up", "../../Pictures/warm-up.png");
+
+            return new List<TrainingType>
+            {typeCardio, typeYoga, typeWarmUp, typePower};
+        }
 
     }
 }

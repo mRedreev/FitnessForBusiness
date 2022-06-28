@@ -75,7 +75,7 @@ namespace FitnessForBusiness.Design
 
         private void LogOutButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
+            MainWindow mainWindow = new MainWindow(true);
             mainWindow.Show();
             this.Close();
         }
@@ -188,6 +188,12 @@ namespace FitnessForBusiness.Design
             }
         }
 
+        private void DeleteTrainingsInUsersList()
+        {
+            _user.CompletedTrainings = _storage.GetTrainings.Where(t => _user.CompletedTrainings.Contains(t)).ToList();
+            _storage.Save();
+        }
+
         private void ProfileButton_Click(object sender, RoutedEventArgs e)
         {
             CurrentTypeImagePanel.Visibility = Visibility.Collapsed;
@@ -195,6 +201,7 @@ namespace FitnessForBusiness.Design
             CompletedTrainingsPanel.Visibility = Visibility.Collapsed;
             RecommendedTrainingsPanel.Visibility = Visibility.Collapsed;
 
+            if (_user.CompletedTrainings.Count != 0) DeleteTrainingsInUsersList();
             SyncUserData();
             ProfilePanel.Visibility = Visibility.Visible;
             EditUserInformationButton.Visibility = Visibility.Visible;

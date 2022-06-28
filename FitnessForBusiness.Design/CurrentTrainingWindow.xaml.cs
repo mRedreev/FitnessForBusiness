@@ -40,6 +40,8 @@ namespace FitnessForBusiness.Design
         }
 
        
+
+       
         private void TrainingNameTextBox_Initialized(object sender, EventArgs e)
         {
             var NameTextBlock = sender as TextBlock;

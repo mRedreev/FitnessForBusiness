@@ -39,7 +39,7 @@ namespace FitnessForBusiness.Design
                 {
                     User user = functions.FindUserJSON(_storage, LogInUsernameBox.Text);
                     if (LogInPasswordBox.Password == "") MessageBox.Show("Enter password");
-                    else if (GetHashPassword.GetHash(user.Password) != LogInPasswordBox.Password) MessageBox.Show("Wrong password");
+                    else if (user.Password != GetHashPassword.GetHash(LogInPasswordBox.Password)) MessageBox.Show("Wrong password");
                     else
                     {
                         TrainingCatalog trainingCatalog = new TrainingCatalog(user, _storage);
@@ -56,7 +56,7 @@ namespace FitnessForBusiness.Design
         }
         private void GoBackButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
+            MainWindow mainWindow = new MainWindow(true);
             mainWindow.Show();
             this.Close();
         }

@@ -132,7 +132,7 @@ namespace FitnessForBusiness.Design
 
         private void GoBackButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
+            MainWindow mainWindow = new MainWindow(true);
             mainWindow.Show();
             this.Close();
         }

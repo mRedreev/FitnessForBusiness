@@ -874,5 +874,18 @@
         "Description": "back, upper legs, cardio, "
       }
     ]
+  },
+  {
+    "Id": "f1a7029d-dda1-4d86-a01a-128d58713d46",
+    "Name": "djdjd",
+    "Surname": "dcsc",
+    "ImageSource": "/Pictures/becl2.jpg",
+    "Age": 10,
+    "Level": false,
+    "Goal": false,
+    "Login": "11",
+    "Password": "ZRK9Q9nKpuAsmQsKgmUtyg==",
+    "Born": "2011-11-11T00:00:00",
+    "CompletedTrainings": []
   }
 ]

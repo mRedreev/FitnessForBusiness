@@ -73,7 +73,7 @@ namespace FitnessForBusiness.Core.Models
 
         public Training()
         {
-
+            Excercises = new List<Excercise>();
         }
 
         public string ShowLevel()
