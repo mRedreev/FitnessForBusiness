@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using Microsoft.Win32;
 using FitnessForBusiness.Core.Storages;
 using FitnessForBusiness.Core;
+using FitnessForBusiness.Core.Security;
 
 namespace FitnessForBusiness.Design
 {
@@ -69,7 +70,7 @@ namespace FitnessForBusiness.Design
                         var name = NameBox.Text;
                         var surname = SurnameTextBox.Text;
                         var login = EmailTextBox.Text;
-                        var password = PasswordBox.Password;
+                        var password = GetHashPassword.GetHash(PasswordBox.Password);
                         var level = functions.CheckLevel(LeveloComboBox.Text);
                         var goal = functions.CheckGoal(GoalComboBox.Text);
                         var imageSource = functions.GetImageSourceOfAvatar(AvatarComboBox.SelectedIndex);

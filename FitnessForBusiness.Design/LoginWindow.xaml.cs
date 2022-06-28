@@ -1,5 +1,6 @@
 ﻿using FitnessForBusiness.Core;
 using FitnessForBusiness.Core.Models;
+using FitnessForBusiness.Core.Security;
 using FitnessForBusiness.Core.Storages;
 using System;
 using System.Collections.Generic;
@@ -38,7 +39,7 @@ namespace FitnessForBusiness.Design
                 {
                     User user = functions.FindUserJSON(_storage, LogInUsernameBox.Text);
                     if (LogInPasswordBox.Password == "") MessageBox.Show("Enter password");
-                    else if (user.Password != LogInPasswordBox.Password) MessageBox.Show("Wrong password");
+                    else if (GetHashPassword.GetHash(user.Password) != LogInPasswordBox.Password) MessageBox.Show("Wrong password");
                     else
                     {
                         TrainingCatalog trainingCatalog = new TrainingCatalog(user, _storage);
