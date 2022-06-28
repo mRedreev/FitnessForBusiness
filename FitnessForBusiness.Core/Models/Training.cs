@@ -73,6 +73,7 @@ namespace FitnessForBusiness.Core.Models
 
         public Training()
         {
+            Id = Guid.NewGuid();
             Excercises = new List<Excercise>();
             Description = "";
             Equipment = new List<Equipment>();
