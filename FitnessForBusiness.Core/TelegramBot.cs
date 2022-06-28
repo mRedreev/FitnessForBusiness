@@ -29,8 +29,11 @@ namespace FitnessForBusiness.Core
         static string fileName = "../../../FitnessForBusiness.Core/Data/trainings.json";
         static IStorage _storage = new JSONStorage();
 
+        static List<Training> _NewTrainings = new List<Training>();
+
         static List<Training> botUpdates = _storage.GetTrainings;
 
+        static string _nameOfNewTraining;
         
         static List<TrainingType> types = functions.MakeTrainingTypes();
 
@@ -335,15 +338,20 @@ namespace FitnessForBusiness.Core
 
                                 foreach (var equipment in equipmentList1)
                                 {
-                                    item.Equipment.Add(new Equipment(equipment));
+                                    if (!item.Equipment.Any(e => e.Name == equipment))
+                                        item.Equipment.Add(new Equipment(equipment));
+
                                 }
                                 var bodyparts1 = item.Excercises.Select(e => e.BodyParts.Name).ToList();
                                 bodyparts1 = bodyparts1.Distinct().ToList();
 
                                 for (int i = 0; i < bodyparts1.Count; i++)
                                 {
-                                    item.Description = item.Description + bodyparts1[i];
-                                    item.Description = item.Description + ", ";
+                                    if (!item.Description.Contains(bodyparts1[i]))
+                                    {
+                                        item.Description = item.Description + bodyparts1[i];
+                                        item.Description = item.Description + ", ";
+                                    }
                                 }
                             }
                         }
@@ -352,17 +360,22 @@ namespace FitnessForBusiness.Core
                         _botUpdate.Equipment = new List<Equipment>();
                         var equipmentList = _botUpdate.Excercises.Select(e => e.Equipment.Name).Distinct().ToList();
                         equipmentList = equipmentList.Distinct().ToList();
+
                         foreach (var equipment in equipmentList)
                         {
-                            _botUpdate.Equipment.Add(new Equipment(equipment));
+                            if (!_botUpdate.Equipment.Any(e => e.Name == equipment))
+                                 _botUpdate.Equipment.Add(new Equipment(equipment));
                         }
                         var bodyparts = _botUpdate.Excercises.Select(e => e.BodyParts.Name).ToList();
                         bodyparts = bodyparts.Distinct().ToList();
 
                         for (int i = 0; i < bodyparts.Count; i++)
                         {
-                            _botUpdate.Description = _botUpdate.Description + bodyparts[i];
-                            _botUpdate.Description = _botUpdate.Description + ", ";
+                            if (!_botUpdate.Description.Contains(bodyparts[i]))
+                            {
+                                _botUpdate.Description = _botUpdate.Description + bodyparts[i];
+                                _botUpdate.Description = _botUpdate.Description + ", ";
+                            }
                         }
 
                         await bot.SendTextMessageAsync(message.Chat, "Добавлено");
@@ -426,8 +439,18 @@ namespace FitnessForBusiness.Core
         {
             var _botUpdate = new Training();
             if (update.Type == UpdateType.Message)
-            {
-                await MessageHandler(bot, update, arg3, _botUpdate);
+            { 
+                try
+                {
+                    await MessageHandler(bot, update, arg3, _botUpdate);
+                }
+                catch (Exception)
+                {
+
+                    await bot.SendTextMessageAsync(update.Message.Chat.Id, "Введите данные корректно");
+                }
+
+                
             }
             botUpdates.Add(_botUpdate);
             //if (botUpdates.Count > 0)

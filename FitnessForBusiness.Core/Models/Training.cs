@@ -74,6 +74,8 @@ namespace FitnessForBusiness.Core.Models
         public Training()
         {
             Excercises = new List<Excercise>();
+            Description = "";
+            Equipment = new List<Equipment>();
         }
 
         public string ShowLevel()
