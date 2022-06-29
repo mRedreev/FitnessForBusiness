@@ -268,8 +268,7 @@ namespace FitnessForBusiness.Core
                     if (adds.Contains(message.Text) && _step == 4)
                     {
                         _step = 3;
-                        var new_ex_id = int.Parse(message.Text);
-                        _excercisesOfNewTraining.Add(excercises.Where(e => e.Id == new_ex_id).First());
+                        _excercisesOfNewTraining.Add(excercises.Where(e => e.Id == int.Parse(message.Text)).First());
                         await bot.SendTextMessageAsync(message.Chat, "Добавлено");
                     }
                     if (message.Text.ToLower() == "/end")
@@ -277,19 +276,19 @@ namespace FitnessForBusiness.Core
                         _step = 5;
                         await bot.SendTextMessageAsync(message.Chat, "Введите длительность упражнения", replyMarkup: new ForceReplyMarkup { Selective = true });
                     }
-                    if (message.ReplyToMessage != null && message.ReplyToMessage.Text.Contains("Введите длительность упражнения"))
+                    if (message.ReplyToMessage != null && message.ReplyToMessage.Text.Contains("Введите длительность упражнения") && _step == 5)
                     {
                         _step = 6;
                         _exerciseLengthOfNewTraining = double.Parse(message.Text);
                         await bot.SendTextMessageAsync(chatId: update.Message.Chat.Id, text: "Введите длительность перерыва", replyMarkup: new ForceReplyMarkup { Selective = true });
                     }
-                    if (message.ReplyToMessage != null && message.ReplyToMessage.Text.Contains("Введите длительность перерыва"))
+                    if (message.ReplyToMessage != null && message.ReplyToMessage.Text.Contains("Введите длительность перерыва") && _step == 6)
                     {
                         _step = 7;
                         _breakLengthOfNewTraining = double.Parse(message.Text);
                         await bot.SendTextMessageAsync(chatId: update.Message.Chat.Id, text: "Введите количество кругов", replyMarkup: new ForceReplyMarkup { Selective = true });
                     }
-                    if (message.ReplyToMessage != null && message.ReplyToMessage.Text.Contains("Введите количество кругов"))
+                    if (message.ReplyToMessage != null && message.ReplyToMessage.Text.Contains("Введите количество кругов") && _step == 7)
                     {
                         _step = 8;
                         _circleAmountOfNewTraining = int.Parse(message.Text);
