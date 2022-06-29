@@ -32,14 +32,7 @@ namespace FitnessForBusiness.Design
             _storage = storage;
             InitializeComponent();
             ExcercizesListBox.ItemsSource = _storage.GetTrainings.Where(t => t.Id == training.Id).First().Excercises;
-            
-            //using (Context context = new Context())
-            //{
-            //    ExcercizesListBox.ItemsSource = context.Trainings.Include("Excercises").ToList().Where(t => t.Id == training.Id).First().Excercises;
-            //}
         }
-
-       
 
        
         private void TrainingNameTextBox_Initialized(object sender, EventArgs e)

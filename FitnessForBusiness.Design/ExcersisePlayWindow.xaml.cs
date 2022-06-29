@@ -31,6 +31,11 @@ namespace FitnessForBusiness.Design
             _user = user;
             _storage = storage;
             InitializeComponent();
+            InitialiserOfGeneralElements(mediaElement);
+        }
+
+        private void InitialiserOfGeneralElements(string mediaElement)
+        {
             video.Source = new Uri(mediaElement);
             video.UnloadedBehavior = MediaState.Manual;
 
