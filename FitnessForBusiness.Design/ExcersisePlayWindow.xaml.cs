@@ -31,19 +31,17 @@ namespace FitnessForBusiness.Design
             _user = user;
             _storage = storage;
             InitializeComponent();
+            InitialiserOfGeneralElements(mediaElement);
+        }
+
+        private void InitialiserOfGeneralElements(string mediaElement)
+        {
             video.Source = new Uri(mediaElement);
             video.UnloadedBehavior = MediaState.Manual;
 
             lengthAndBreak.Text = $"Length: {functions.GetSeconds(_training.ExcerciseLength)}, break: {functions.GetSeconds(_training.BreakLength)}";
 
             video.Play();
-        }
-
-        private void playVideo_Click(object sender, RoutedEventArgs e)
-        {
-            var trainingWindow = new CurrentTrainingWindow(_training, _user, _storage);
-            trainingWindow.Show();
-            this.Close();
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
@@ -74,6 +72,13 @@ namespace FitnessForBusiness.Design
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void playVideo_Click(object sender, RoutedEventArgs e)
+        {
+            var trainingWindow = new CurrentTrainingWindow(_training, _user, _storage);
+            trainingWindow.Show();
+            this.Close();
         }
     }
 }

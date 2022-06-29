@@ -32,14 +32,7 @@ namespace FitnessForBusiness.Design
             _storage = storage;
             InitializeComponent();
             ExcercizesListBox.ItemsSource = _storage.GetTrainings.Where(t => t.Id == training.Id).First().Excercises;
-            
-            //using (Context context = new Context())
-            //{
-            //    ExcercizesListBox.ItemsSource = context.Trainings.Include("Excercises").ToList().Where(t => t.Id == training.Id).First().Excercises;
-            //}
         }
-
-       
 
        
         private void TrainingNameTextBox_Initialized(object sender, EventArgs e)
@@ -68,6 +61,11 @@ namespace FitnessForBusiness.Design
             LengthAndBreakTextBlock.Text = $"Length: {functions.GetSeconds(_training.ExcerciseLength)}, break: {functions.GetSeconds(_training.BreakLength)}";
         }
 
+        private void NumberOfLoopsTextBlock_Initialized(object sender, EventArgs e)
+        {
+            var textblock = sender as TextBlock;
+            textblock.Text = _training.CircleAmount.ToString() + " circles";
+        }
        
         private void playVideo_Click(object sender, RoutedEventArgs e)
         {
@@ -127,12 +125,6 @@ namespace FitnessForBusiness.Design
             var trainingCatalog = new TrainingCatalog(_user, _storage);
             trainingCatalog.Show();
             this.Close();
-        }
-
-        private void NumberOfLoopsTextBlock_Initialized(object sender, EventArgs e)
-        {
-            var textblock = sender as TextBlock;
-            textblock.Text = _training.CircleAmount.ToString() + " circles";
         }
     }
 }

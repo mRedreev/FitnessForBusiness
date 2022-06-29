@@ -69,14 +69,13 @@ namespace FitnessForBusiness.Core
             return result;
         }
 
-        public static User FindUser(string login)
+
+        public static bool DoesUserExist(IStorage storage, string login)
         {
-            IStorage storage = new JSONStorage();
-            var user = storage.GetUsers.Where(u => u.Login == login).First();
-            return user;
+            return storage.GetUsers.Any(x => x.Login == login);
         }
 
-        public static User FindUserJSON(IStorage storage, string login)
+        public static User FindUser(IStorage storage, string login)
         {
             var user = storage.GetUsers.Where(u => u.Login == login).First();
             return user;
