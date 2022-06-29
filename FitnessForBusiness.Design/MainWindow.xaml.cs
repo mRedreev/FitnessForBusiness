@@ -24,72 +24,103 @@ namespace FitnessForBusiness.Design
     /// </summary>
     public partial class MainWindow : Window
     {
-        IStorage _storage;
         public MainWindow()
         {
-           
-            // storage = new Context();
-            _storage = new JSONStorage();
-            // InitialUsers2();
-            //InitialTrainings2();
-            //TrainsInitialized("other");
             InitializeComponent();
             TelegramBot.Main();
-            //InitialTrainings();
-            // InitialUsers();
-
-
-            /*using (Context context = new Context())
-            {
-                MessageBox.Show(context.Users.ToList()[1].CompletedTrainings[0].ToString());
-                context.Users.ToList()[1].CompletedTrainings = new List<Training>() { context.Trainings.ToList()[0] };
-                context.SaveChanges();
-                //context.Users.ToList()[1].CompletedTrainings = new List<Training>() { context.Trainings.ToList()[0] };
-            }*/
         }
 
         public MainWindow(bool wasAlreadyStarted)
         {
-            _storage = new JSONStorage();
             InitializeComponent();
         }
 
-        private void InitialUsers()
+        
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            using (Context context = new Context()) //Создание подключения (локальной копии БД)
+            LoginWindow loginWindow = new LoginWindow();
+
+            loginWindow.Show();
+
+            this.Close();
+        }
+
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            RegistrationWindow registrationWindow = new RegistrationWindow();
+
+            registrationWindow.Show();
+
+            this.Close();
+        }
+        
+
+        private void MinimizeButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow.WindowState = WindowState.Minimized;
+        }
+
+        private void WindowStateButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.WindowState != WindowState.Maximized)
             {
-                User user1 = new User(
-                    "Mikhail",
-                    "Redreev",
-                   ".. / .. / Users /user1.jpg",
-                    DateTime.Parse("30.11.2002"),
-                    true,
-                    true,
-                    "MRedreev",
-                    "Misha2002"
-                    );
-                context.Users.Add(user1);
-                context.SaveChanges();
-                MessageBox.Show("user1 saved");
+                this.WindowState = WindowState.Maximized;
+                WindowStateButton.IsChecked = false;
+            }
+            else
+            {
+                this.WindowState = WindowState.Normal;
+                WindowStateButton.IsChecked = false;
             }
         }
 
-        private void InitialUsers2()
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
-
-            User user1 = new User(
-                "Mikhail",
-                "Redreev",
-               ".. / .. / Users /user1.jpg",
-                DateTime.Parse("30.11.2002"),
-                true,
-                true,
-                "MRedreev",
-                "Misha2002"
-                );
-            _storage.Registration(user1);
-            MessageBox.Show("user1 saved");
+            Application.Current.Shutdown();
         }
+
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+                DragMove();
+        }
+
+        //private void InitialUsers()
+        //{
+        //    using (Context context = new Context()) //Создание подключения (локальной копии БД)
+        //    {
+        //        User user1 = new User(
+        //            "Mikhail",
+        //            "Redreev",
+        //           ".. / .. / Users /user1.jpg",
+        //            DateTime.Parse("30.11.2002"),
+        //            true,
+        //            true,
+        //            "MRedreev",
+        //            "Misha2002"
+        //            );
+        //        context.Users.Add(user1);
+        //        context.SaveChanges();
+        //        MessageBox.Show("user1 saved");
+        //    }
+        //}
+
+        //private void InitialUsers2()
+        //{
+
+        //    User user1 = new User(
+        //        "Mikhail",
+        //        "Redreev",
+        //       ".. / .. / Users /user1.jpg",
+        //        DateTime.Parse("30.11.2002"),
+        //        true,
+        //        true,
+        //        "MRedreev",
+        //        "Misha2002"
+        //        );
+        //    _storage.Registration(user1);
+        //    MessageBox.Show("user1 saved");
+        //}
 
         //private void InitialTrainings()
         //{
@@ -759,56 +790,8 @@ namespace FitnessForBusiness.Design
 
 
         //}
-        private void LoginButton_Click(object sender, RoutedEventArgs e)
-        {
-            LoginWindow loginWindow = new LoginWindow(_storage);
 
-            loginWindow.Show();
 
-            this.Close();
-        }
-
-        private void RegisterButton_Click(object sender, RoutedEventArgs e)
-        {
-            RegistrationWindow registrationWindow = new RegistrationWindow(_storage);
-
-            registrationWindow.Show();
-
-            this.Close();
-        }
-        
-
-        private void MinimizeButton_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.MainWindow.WindowState = WindowState.Minimized;
-        }
-
-        private void WindowStateButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (this.WindowState != WindowState.Maximized)
-            {
-                this.WindowState = WindowState.Maximized;
-                WindowStateButton.IsChecked = false;
-            }
-            else
-            {
-                this.WindowState = WindowState.Normal;
-                WindowStateButton.IsChecked = false;
-            }
-        }
-
-        private void ExitButton_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
-        }
-
-        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Pressed)
-                DragMove();
-        }
-
-      
     }
 }
 

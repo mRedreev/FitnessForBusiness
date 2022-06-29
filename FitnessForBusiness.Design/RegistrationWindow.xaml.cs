@@ -25,9 +25,9 @@ namespace FitnessForBusiness.Design
     public partial class RegistrationWindow : Window
     {
         IStorage _storage;
-        public RegistrationWindow(IStorage storage)
+        public RegistrationWindow()
         {
-            _storage = storage;
+            _storage = new JSONStorage();
             InitializeComponent();
         }
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
