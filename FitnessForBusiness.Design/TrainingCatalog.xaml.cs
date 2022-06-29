@@ -33,16 +33,21 @@ namespace FitnessForBusiness.Design
             
             InitializeComponent();
             ProfilePanel.Visibility = Visibility.Collapsed;
+            TypeInitialiser();
+        }
+
+        private void TypeInitialiser()
+        {
             var types = _storage.GetTrainings.Select(t => t.Type).ToList();
             var distTypes = new List<TrainingType> { types[0] };
             foreach (var type in types)
             {
-                if (!distTypes.Any(t => t.Name==type.Name))
+                if (!distTypes.Any(t => t.Name == type.Name))
                     distTypes.Add(type);
             }
+
             TypesListBox.ItemsSource = distTypes;
         }
-
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -79,13 +84,6 @@ namespace FitnessForBusiness.Design
             mainWindow.Show();
             this.Close();
         }
-
-        //private void LevelTextBlock_Initialized_1(object sender, EventArgs e)
-        //{
-        //    var levelTextBlock = sender as TextBlock;
-        //    levelTextBlock.Text = functions.NameOfLevel(_user.Level);
-        //}
-
         private void SyncUserData()
         {
             BitmapImage bitmapImage = new BitmapImage();
@@ -103,44 +101,6 @@ namespace FitnessForBusiness.Design
             UserGoalComboBox.Text = "Goal: " + functions.NameOfGoal(_user.Goal);
             UserLevelTextBox.Text = "Level: " + functions.NameOfLevel(_user.Level);
         }
-
-        //private void UserAvatar_Initialized(object sender, EventArgs e)
-        //{
-        //    var userAvatarTextBlock = sender as Image;
-        //    BitmapImage bitmapImage = new BitmapImage();
-        //    using (var fileStream = new FileStream("../../" + _user.ImageSource, FileMode.Open))
-        //    {
-        //        bitmapImage.BeginInit();
-        //        bitmapImage.StreamSource = fileStream;
-        //        bitmapImage.CacheOption = BitmapCacheOption.OnLoad;
-        //        bitmapImage.EndInit();
-        //    }
-        //    userAvatarTextBlock.Source = bitmapImage;
-        //}
-
-        //private void UsernameNameTextBox_Initialized(object sender, EventArgs e)
-        //{
-        //    var userNameTextBox = sender as TextBlock;
-        //    userNameTextBox.Text = _user.Name;
-        //}
-
-        //private void UserSurnameTextBox_Initialized(object sender, EventArgs e)
-        //{
-        //    var userSurnameTextBlock = sender as TextBlock;
-        //    userSurnameTextBlock.Text = _user.Surname;
-        //}
-
-        //private void UserLevelTextBox_Initialized(object sender, EventArgs e)
-        //{
-        //    var levelTextBox = sender as TextBlock;
-        //    levelTextBox.Text = functions.NameOfLevel(_user.Level);
-        //}
-
-        //private void UserGoalComboBox_Initialized(object sender, EventArgs e)
-        //{
-        //    var goalTextBlock = sender as TextBlock;
-        //    goalTextBlock.Text = functions.NameOfGoal(_user.Goal);
-        //}
 
         private void SaveChangesButton_Click(object sender, RoutedEventArgs e)
         {
