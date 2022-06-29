@@ -15,6 +15,7 @@ using System.Threading;
 using Update = Telegram.Bot.Types.Update;
 using Telegram.Bot.Polling;
 using FitnessForBusiness.Core.Storages;
+using System.Windows;
 
 namespace FitnessForBusiness.Core
 {
@@ -48,19 +49,26 @@ namespace FitnessForBusiness.Core
 
         public static void Main()
         {
-            var receiverOptions = new ReceiverOptions
+            try
             {
-                AllowedUpdates = new UpdateType[]
+                var receiverOptions = new ReceiverOptions
+                {
+                    AllowedUpdates = new UpdateType[]
                 {
                     UpdateType.Message,
                     UpdateType.EditedMessage,
                 }
-            };
+                };
 
-            Bot.StartReceiving(UpdateHandler, ErrorHandler, receiverOptions);
+                Bot.StartReceiving(UpdateHandler, ErrorHandler, receiverOptions);
 
 
-            Console.ReadLine();
+                Console.ReadLine();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Something in Telegram Bot went wrong");
+            }
         }
 
         private static Task ErrorHandler(ITelegramBotClient arg1, Exception arg2, CancellationToken arg3)
