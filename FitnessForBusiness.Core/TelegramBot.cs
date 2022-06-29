@@ -29,32 +29,25 @@ namespace FitnessForBusiness.Core
         static string fileName = "../../../FitnessForBusiness.Core/Data/trainings.json";
         static IStorage _storage = new JSONStorage();
 
-        static List<Training> _NewTrainings = new List<Training>();
-
         static List<Training> botUpdates = _storage.GetTrainings;
 
         static string _nameOfNewTraining;
-        
+        static TrainingType _typeOfNewTraining;
+        static bool? _levelOfNewTraining;
+        static List<Excercise> _excercisesOfNewTraining = new List<Excercise>();
+        static double _exerciseLengthOfNewTraining;
+        static double _breakLengthOfNewTraining;
+        static int _circleAmountOfNewTraining;
+        static int _step;
+
         static List<TrainingType> types = functions.MakeTrainingTypes();
 
         static List<Excercise> excercises = _storage.GetExcercises;
+
+        static List<Excercise> powerExcercises = excercises.Where(e => e.Equipment.Name == "cable" || e.Equipment.Name == "leverage machine").ToList();
+
         public static void Main()
         {
-            //Read all saved updates
-
-            
-            //try
-            //{
-               
-            //    //var botUpdatesString = System.IO.File.ReadAllText(fileName);
-
-            //    //botUpdates = JsonConvert.DeserializeObject<List<Training>>(botUpdatesString) ?? botUpdates;
-            //}
-            //catch (Exception ex)
-            //{
-            //    Console.WriteLine($"Error reading or deserializing {ex}");
-            //}
-
             var receiverOptions = new ReceiverOptions
             {
                 AllowedUpdates = new UpdateType[]
@@ -80,49 +73,49 @@ namespace FitnessForBusiness.Core
             string arrOfId = "Выберите Id тренировки, которую хотите удалить: \n";
             foreach (var item in botUpdates)
             {
-                arrOfId += item.Id.ToString() + "\n";
+                arrOfId += item.Id.ToString() + " " + item.Name + "\n";
             }
             return arrOfId;
         }
 
-        private static string ForAdd(Training _botUpdate)
+        private static string ForAdd()
         {
             string arrOfId = "Выберите id упражнения, которое хотите добавить: \n";
-            if (_botUpdate.Type == types[0])
+            if (_typeOfNewTraining == types[0])
             {
                 foreach (var item in functions.cardioExcercises) //CARDIO
                 {
-                    if (item.Level == _botUpdate.Level)
+                    if (item.Level == _levelOfNewTraining)
                     {
                         arrOfId += item.Id.ToString() + " " + item.Name + "\n";
                     }
                 }
             }
-            else if (_botUpdate.Type == types[3]) //POWER
+            if (_typeOfNewTraining == types[3]) //POWER
             {
-                foreach (var item in functions.powerExcercises)
+                foreach (var item in powerExcercises)
                 {
-                    if (item.Level == _botUpdate.Level)
+                    if (item.Level == _levelOfNewTraining)
                     {
                         arrOfId += item.Id.ToString() + " " + item.Name + "\n";
                     }
                 }
             }
-            else if (_botUpdate.Type == types[1]) //YOGA
+            if (_typeOfNewTraining == types[1]) //YOGA
             {
                 foreach (var item in functions.yogaExcercises)
                 {
-                    if (item.Level == _botUpdate.Level)
+                    if (item.Level == _levelOfNewTraining)
                     {
                         arrOfId += item.Id.ToString() + " " + item.Name + "\n";
                     }
                 }
             }
-            else
+            if (_typeOfNewTraining == types[2])
             {
                 foreach (var item in functions.warmupExercises) // WARM-UP
                 {
-                    if (item.Level == _botUpdate.Level)
+                    if (item.Level == _levelOfNewTraining)
                     {
                         arrOfId += item.Id.ToString() + " " + item.Name + "\n";
                     }
@@ -131,26 +124,26 @@ namespace FitnessForBusiness.Core
             return arrOfId;
         }
 
-        private static async Task MessageHandler(ITelegramBotClient bot, Update update, CancellationToken arg3, Training _botUpdate)
+        private static async Task MessageHandler(ITelegramBotClient bot, Update update, CancellationToken arg3)
         {
             if (update.Message.Type == MessageType.Text)
             {
-                var del = new List<string>();
-                foreach (var item in botUpdates)
-                {
-                    del.Add(item.Id.ToString());
-                }
-                var adds = new List<string>();
-                foreach (var item in excercises)
-                {
-                    if (item.Level == _botUpdate.Level)
-                    {
-                        adds.Add(item.Id.ToString());
-                    }
-                }
                 Console.WriteLine(JsonConvert.SerializeObject(update));
                 if (update.Type == UpdateType.Message)
                 {
+                    var del = new List<string>();
+                    foreach (var item in botUpdates)
+                    {
+                        del.Add(item.Id.ToString());
+                    }
+                    var adds = new List<string>();
+                    foreach (var item in excercises)
+                    {
+                        if (item.Level == _levelOfNewTraining)
+                        {
+                            adds.Add(item.Id.ToString());
+                        }
+                    }
                     var message = update.Message;
                     if (message.Text.ToLower() == "/start")
                     {
@@ -168,8 +161,6 @@ namespace FitnessForBusiness.Core
                     }
                     else if (message.Text.ToLower() == FirstOptionText.ToLower())
                     {
-                        //_botUpdate.Id = Guid.NewGuid();
-
                         await bot.SendTextMessageAsync(message.Chat, "Введите название тренировки:", replyMarkup: new ForceReplyMarkup { Selective = true });
                     }
 
@@ -181,54 +172,29 @@ namespace FitnessForBusiness.Core
                     {
                         var id_delete = message.Text;
                         botUpdates.RemoveAll(item => item.Id.ToString() == id_delete);
+                        var botUpdatesString = JsonConvert.SerializeObject(botUpdates);
+                        System.IO.File.WriteAllText(fileName, botUpdatesString);
                         await bot.SendTextMessageAsync(message.Chat, "Удалено");
                     }
-                    if (TypesOfTraining.ToLower().Contains(message.Text.ToLower()))
+                    if (TypesOfTraining.ToLower().Contains(message.Text.ToLower()) && _step == 1)
                     {
+                        _step = 2;
                         var training_type = message.Text;
                         if (training_type == "Кардио")
                         {
-                            foreach (var item in botUpdates)
-                            {
-                                if (item.Id == _botUpdate.Id)
-                                {
-                                    item.Type = types[0];
-                                }
-                            }
-                            _botUpdate.Type = types[0];
+                            _typeOfNewTraining = types[0];
                         }
                         else if (training_type == "Силовая")
                         {
-                            foreach (var item in botUpdates)
-                            {
-                                if (item.Id == _botUpdate.Id)
-                                {
-                                    item.Type = types[3];
-                                }
-                            }
-                            _botUpdate.Type = types[3];
+                            _typeOfNewTraining = types[3];
                         }
                         else if (training_type == "Йога")
                         {
-                            foreach (var item in botUpdates)
-                            {
-                                if (item.Id == _botUpdate.Id)
-                                {
-                                    item.Type = types[1];
-                                }
-                            }
-                            _botUpdate.Type = types[1];
+                            _typeOfNewTraining = types[1];
                         }
                         else
                         {
-                            foreach (var item in botUpdates)
-                            {
-                                if (item.Id == _botUpdate.Id)
-                                {
-                                    item.Type = types[2];
-                                }
-                            }
-                            _botUpdate.Type = types[2];
+                            _typeOfNewTraining = types[2];
                         }
                         await bot.SendTextMessageAsync(
                         chatId: message.Chat.Id,
@@ -244,41 +210,21 @@ namespace FitnessForBusiness.Core
                         },
                         cancellationToken: arg3);
                     }
-                    if (Levels.ToLower().Contains(message.Text.ToLower()))
+                    if (Levels.ToLower().Contains(message.Text.ToLower()) && _step == 2)
                     {
+                        _step = 3;
                         var level = message.Text;
                         if (level == "Новичок")
                         {
-                            foreach (var item in botUpdates)
-                            {
-                                if (item.Id == _botUpdate.Id)
-                                {
-                                    item.Level = null;
-                                }
-                            }
-                            _botUpdate.Level = null;
+                            _levelOfNewTraining = null;
                         }
                         else if (level == "Любитель")
                         {
-                            foreach (var item in botUpdates)
-                            {
-                                if (item.Id == _botUpdate.Id)
-                                {
-                                    item.Level = false;
-                                }
-                            }
-                            _botUpdate.Level = false;
+                            _levelOfNewTraining = false;
                         }
                         else
                         {
-                            foreach (var item in botUpdates)
-                            {
-                                if (item.Id == _botUpdate.Id)
-                                {
-                                    item.Level = true;
-                                }
-                            }
-                            _botUpdate.Level = true;
+                            _levelOfNewTraining = true;
                         }
                         await bot.SendTextMessageAsync(message.Chat, "Теперь добавьте упражнения в тренировку (напишите /end, когда закончите)", replyMarkup: new ReplyKeyboardMarkup(new[]
                             {
@@ -291,14 +237,8 @@ namespace FitnessForBusiness.Core
                     }
                     if (message.ReplyToMessage != null && message.ReplyToMessage.Text.Contains("Введите название тренировки:"))
                     {
-                        foreach (var item in botUpdates)
-                        {
-                            if (item.Id == _botUpdate.Id)
-                            {
-                                item.Name = message.Text;
-                            }
-                        }
-                        _botUpdate.Name = message.Text;
+                        _step = 1;
+                        _nameOfNewTraining = message.Text;
                         await bot.SendTextMessageAsync(
                         chatId: message.Chat.Id,
                         text: "Выберите тип тренировки:",
@@ -320,106 +260,39 @@ namespace FitnessForBusiness.Core
                         },
                         cancellationToken: arg3);
                     }
-                    if (message.Text.ToLower().Contains("добавить упражнение"))
+                    if (message.Text.ToLower().Contains("добавить упражнение") && _step == 3)
                     {
-                        await bot.SendTextMessageAsync(message.Chat, ForAdd(_botUpdate));
+                        _step = 4;
+                        await bot.SendTextMessageAsync(message.Chat, ForAdd());
                     }
-                    if (adds.Contains(message.Text))
+                    if (adds.Contains(message.Text) && _step == 4)
                     {
-                        foreach (var item in botUpdates)
-                        {
-                            if (item.Id == _botUpdate.Id)
-                            {
-                                item.Excercises.Add(excercises.Where(e => e.Id == int.Parse(message.Text)).First());
-                                item.ExcerciseAmount = item.Excercises.Count;
-                                item.Equipment = new List<Equipment>();
-                                var equipmentList1 = item.Excercises.Select(e => e.Equipment.Name).Distinct().ToList();
-                                equipmentList1 = equipmentList1.Distinct().ToList();
-
-                                foreach (var equipment in equipmentList1)
-                                {
-                                    if (!item.Equipment.Any(e => e.Name == equipment))
-                                        item.Equipment.Add(new Equipment(equipment));
-
-                                }
-                                var bodyparts1 = item.Excercises.Select(e => e.BodyParts.Name).ToList();
-                                bodyparts1 = bodyparts1.Distinct().ToList();
-
-                                for (int i = 0; i < bodyparts1.Count; i++)
-                                {
-                                    if (!item.Description.Contains(bodyparts1[i]))
-                                    {
-                                        item.Description = item.Description + bodyparts1[i];
-                                        item.Description = item.Description + ", ";
-                                    }
-                                }
-                            }
-                        }
-                        _botUpdate.Excercises.Add(excercises.Where(e => e.Id == int.Parse(message.Text)).First());
-                        _botUpdate.ExcerciseAmount = _botUpdate.Excercises.Count;
-                        _botUpdate.Equipment = new List<Equipment>();
-                        var equipmentList = _botUpdate.Excercises.Select(e => e.Equipment.Name).Distinct().ToList();
-                        equipmentList = equipmentList.Distinct().ToList();
-
-                        foreach (var equipment in equipmentList)
-                        {
-                            if (!_botUpdate.Equipment.Any(e => e.Name == equipment))
-                                 _botUpdate.Equipment.Add(new Equipment(equipment));
-                        }
-                        var bodyparts = _botUpdate.Excercises.Select(e => e.BodyParts.Name).ToList();
-                        bodyparts = bodyparts.Distinct().ToList();
-
-                        for (int i = 0; i < bodyparts.Count; i++)
-                        {
-                            if (!_botUpdate.Description.Contains(bodyparts[i]))
-                            {
-                                _botUpdate.Description = _botUpdate.Description + bodyparts[i];
-                                _botUpdate.Description = _botUpdate.Description + ", ";
-                            }
-                        }
-
+                        _step = 3;
+                        var new_ex_id = int.Parse(message.Text);
+                        _excercisesOfNewTraining.Add(excercises.Where(e => e.Id == new_ex_id).First());
                         await bot.SendTextMessageAsync(message.Chat, "Добавлено");
                     }
                     if (message.Text.ToLower() == "/end")
                     {
+                        _step = 5;
                         await bot.SendTextMessageAsync(message.Chat, "Введите длительность упражнения", replyMarkup: new ForceReplyMarkup { Selective = true });
                     }
                     if (message.ReplyToMessage != null && message.ReplyToMessage.Text.Contains("Введите длительность упражнения"))
                     {
-                        foreach (var item in botUpdates)
-                        {
-                            if (item.Id == _botUpdate.Id)
-                            {
-                                item.ExcerciseLength = double.Parse(message.Text);
-                            }
-                        }
-                        _botUpdate.ExcerciseLength = double.Parse(message.Text);
+                        _step = 6;
+                        _exerciseLengthOfNewTraining = double.Parse(message.Text);
                         await bot.SendTextMessageAsync(chatId: update.Message.Chat.Id, text: "Введите длительность перерыва", replyMarkup: new ForceReplyMarkup { Selective = true });
                     }
                     if (message.ReplyToMessage != null && message.ReplyToMessage.Text.Contains("Введите длительность перерыва"))
                     {
-                        foreach (var item in botUpdates)
-                        {
-                            if (item.Id == _botUpdate.Id)
-                            {
-                                item.BreakLength = double.Parse(message.Text);
-                            }
-                        }
-                        _botUpdate.BreakLength = double.Parse(message.Text);
+                        _step = 7;
+                        _breakLengthOfNewTraining = double.Parse(message.Text);
                         await bot.SendTextMessageAsync(chatId: update.Message.Chat.Id, text: "Введите количество кругов", replyMarkup: new ForceReplyMarkup { Selective = true });
                     }
                     if (message.ReplyToMessage != null && message.ReplyToMessage.Text.Contains("Введите количество кругов"))
                     {
-                        foreach (var item in botUpdates)
-                        {
-                            if (item.Id == _botUpdate.Id)
-                            {
-                                item.CircleAmount = int.Parse(message.Text);
-                                item.Length = (item.ExcerciseLength + item.BreakLength) * item.ExcerciseAmount * item.CircleAmount - item.BreakLength;
-                            }
-                        }
-                        _botUpdate.CircleAmount = int.Parse(message.Text);
-                        _botUpdate.Length = (_botUpdate.ExcerciseLength + _botUpdate.BreakLength) * _botUpdate.ExcerciseAmount * _botUpdate.CircleAmount - _botUpdate.BreakLength;
+                        _step = 8;
+                        _circleAmountOfNewTraining = int.Parse(message.Text);
                         await bot.SendTextMessageAsync(chatId: update.Message.Chat.Id, text: "Теперь все! Новая тренировка добавлена",
                             replyMarkup: new ReplyKeyboardMarkup(new[]
                             {
@@ -430,6 +303,7 @@ namespace FitnessForBusiness.Core
                                 ResizeKeyboard = true
                             },
                             cancellationToken: arg3);
+
                     }
                 }
             }
@@ -437,12 +311,11 @@ namespace FitnessForBusiness.Core
 
         private static async Task UpdateHandler(ITelegramBotClient bot, Update update, CancellationToken arg3)
         {
-            var _botUpdate = new Training();
             if (update.Type == UpdateType.Message)
-            { 
+            {
                 try
                 {
-                    await MessageHandler(bot, update, arg3, _botUpdate);
+                    await MessageHandler(bot, update, arg3);
                 }
                 catch (Exception)
                 {
@@ -450,27 +323,17 @@ namespace FitnessForBusiness.Core
                     await bot.SendTextMessageAsync(update.Message.Chat.Id, "Введите данные корректно");
                 }
 
-                
-            }
-            botUpdates.Add(_botUpdate);
-            //if (botUpdates.Count > 0)
-            //{
-            //var real_update = botUpdates.First();
-            //for (int i = 0; i < botUpdates.Count; i++)
-            //{
-            // botUpdates.RemoveAt(i);
-            //}
-            //botUpdates.Add(real_update);
-            //}
 
-            botUpdates = botUpdates.GroupBy(p => p.Id).Select(gr => gr.First()).ToList();
-            if (botUpdates.Count > 1)
+            }
+            if (_step == 8)
             {
-                botUpdates.RemoveAll(b => b.Name == null);
+                var _botUpdate = new Training(_nameOfNewTraining, _typeOfNewTraining, _levelOfNewTraining, _excercisesOfNewTraining, _exerciseLengthOfNewTraining, _breakLengthOfNewTraining, _circleAmountOfNewTraining);
+                botUpdates.Add(_botUpdate);
+                var botUpdatesString = JsonConvert.SerializeObject(botUpdates);
+                System.IO.File.WriteAllText(fileName, botUpdatesString);
+                _step = 0;
+                _excercisesOfNewTraining.Clear();
             }
-
-            var botUpdatesString = JsonConvert.SerializeObject(botUpdates);
-            System.IO.File.WriteAllText(fileName, botUpdatesString);
         }
     }
 }
