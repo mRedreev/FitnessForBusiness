@@ -27,10 +27,10 @@ namespace FitnessForBusiness.Core
         private const string TypesOfTraining = "Кардио Силовая Йога Разминка";
         private const string Levels = "Новичок Любитель Продвинутый";
 
-        static string fileName = "../../../FitnessForBusiness.Core/Data/trainings.json";
+        static string _fileName = "../../../FitnessForBusiness.Core/Data/trainings.json";
         static IStorage _storage = new JSONStorage();
 
-        static List<Training> botUpdates = _storage.GetTrainings;
+        static List<Training> _botUpdates = _storage.GetTrainings;
 
         static string _nameOfNewTraining;
         static TrainingType _typeOfNewTraining;
@@ -79,7 +79,7 @@ namespace FitnessForBusiness.Core
         private static string ForDelete()
         {
             string arrOfId = "Выберите Id тренировки, которую хотите удалить: \n";
-            foreach (var item in botUpdates)
+            foreach (var item in _botUpdates)
             {
                 arrOfId += item.Id.ToString() + " " + item.Name + "\n";
             }
@@ -140,7 +140,7 @@ namespace FitnessForBusiness.Core
                 if (update.Type == UpdateType.Message)
                 {
                     var del = new List<string>();
-                    foreach (var item in botUpdates)
+                    foreach (var item in _botUpdates)
                     {
                         del.Add(item.Id.ToString());
                     }
@@ -179,9 +179,9 @@ namespace FitnessForBusiness.Core
                     if (del.Contains(message.Text))
                     {
                         var id_delete = message.Text;
-                        botUpdates.RemoveAll(item => item.Id.ToString() == id_delete);
-                        var botUpdatesString = JsonConvert.SerializeObject(botUpdates);
-                        System.IO.File.WriteAllText(fileName, botUpdatesString);
+                        _botUpdates.RemoveAll(item => item.Id.ToString() == id_delete);
+                        var botUpdatesString = JsonConvert.SerializeObject(_botUpdates);
+                        System.IO.File.WriteAllText(_fileName, botUpdatesString);
                         await bot.SendTextMessageAsync(message.Chat, "Удалено");
                     }
                     if (TypesOfTraining.ToLower().Contains(message.Text.ToLower()) && _step == 1)
@@ -335,9 +335,9 @@ namespace FitnessForBusiness.Core
             if (_step == 8)
             {
                 var _botUpdate = new Training(_nameOfNewTraining, _typeOfNewTraining, _levelOfNewTraining, _excercisesOfNewTraining, _exerciseLengthOfNewTraining, _breakLengthOfNewTraining, _circleAmountOfNewTraining);
-                botUpdates.Add(_botUpdate);
-                var botUpdatesString = JsonConvert.SerializeObject(botUpdates);
-                System.IO.File.WriteAllText(fileName, botUpdatesString);
+                _botUpdates.Add(_botUpdate);
+                var botUpdatesString = JsonConvert.SerializeObject(_botUpdates);
+                System.IO.File.WriteAllText(_fileName, botUpdatesString);
                 _step = 0;
                 _excercisesOfNewTraining.Clear();
             }

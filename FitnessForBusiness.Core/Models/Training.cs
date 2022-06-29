@@ -31,8 +31,6 @@ namespace FitnessForBusiness.Core.Models
         public double Length { get; set;}
         public string Description { get; set;}
 
-        //public List<User> Users { get; set;}
-
         public Training(string name, TrainingType type, bool? level, List<Excercise> excercises, double exLength, double breakLength, int circleAmount)
         {
             Name = name;
