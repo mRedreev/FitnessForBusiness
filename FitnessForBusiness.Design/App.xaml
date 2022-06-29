@@ -18,10 +18,6 @@
                 <ResourceDictionary Source="Theme/MinimizeButtonTheme.xaml"/>
                 <ResourceDictionary Source="Theme/RadioButtonTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-
-
-
-
         </ResourceDictionary>
     </Application.Resources>
 </Application>

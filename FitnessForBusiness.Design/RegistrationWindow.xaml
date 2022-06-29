@@ -47,9 +47,11 @@
                             Margin="0,0,0,3.65"
                             Name="MinimizeButton"
                             Click="MinimizeButton_Click"/>
+                    
                     <ToggleButton Style="{StaticResource WindowStateButton}"
                                   Name="WindowStateButton"
                                   Click="WindowStateButton_Click"/>
+                    
                     <Button Style="{StaticResource ExitButton}"
                             Name="ExitButton"
                             Click="ExitButton_Click_1"/>
@@ -191,16 +193,23 @@
                               Height="100">
 
                         <ComboBoxItem>
-                            <Image Source="/Pictures/san.jpg" Height="100"/>
+                            <Image Source="/Pictures/san.jpg" 
+                                   Height="100"/>
                         </ComboBoxItem>
+
                         <ComboBoxItem>
-                            <Image Source="/Pictures/suboch.jpg" Height="100"/>
+                            <Image Source="/Pictures/suboch.jpg" 
+                                   Height="100"/>
                         </ComboBoxItem>
+
                         <ComboBoxItem>
-                            <Image Source="/Pictures/becl2.jpg" Height="100"/>
+                            <Image Source="/Pictures/becl2.jpg" 
+                                   Height="100"/>
                         </ComboBoxItem>
+
                         <ComboBoxItem>
-                            <Image Source="/Pictures/lom2.jpg" Height="100"/>
+                            <Image Source="/Pictures/lom2.jpg" 
+                                   Height="100"/>
                         </ComboBoxItem>
                     </ComboBox>
 
@@ -215,7 +224,8 @@
                             <ComboBox Name="GoalComboBox" 
                                       Height="30" 
                                       Width="130" 
-                                      Background="#FF5748A8" >
+                                      Background="#FF5748A8">
+
                                 <TextBlock>Lose weight</TextBlock>
                                 <TextBlock>Maintain weight</TextBlock>
                                 <TextBlock>Gain muscle mass</TextBlock>
@@ -224,6 +234,7 @@
 
                         <StackPanel Orientation="Vertical"
                                     Margin="10,0,0,0">
+
                             <Label Content="My Level"
                                    Foreground="#FFCFCFCF"
                                    Margin="0,0,0,0"/>
@@ -231,6 +242,7 @@
                             <ComboBox Name="LeveloComboBox" 
                                       Height="30" 
                                       Width="130">
+
                                 <TextBlock>Beginner</TextBlock>
                                 <TextBlock>Intermediate</TextBlock>
                                 <TextBlock>Advanced</TextBlock>
@@ -253,7 +265,7 @@
                                 SelectedDateFormat="Short"/>
                 </StackPanel>
             </StackPanel>
-            
+
             <Button Name="RegisterButton"  
                     Height="30" 
                     Margin="0,15,0,0"
@@ -261,9 +273,7 @@
                     Content="Registration"  
                     Style="{StaticResource UIButton}"  
                     Click="RegisterButton_Click"/>
-
         </StackPanel>
-
 
         <Button Name="GoBackButton"
                 Content="Back"

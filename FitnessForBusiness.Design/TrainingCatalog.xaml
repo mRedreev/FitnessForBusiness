@@ -141,7 +141,7 @@
 
                         <ListBox.ItemsPanel>
                             <ItemsPanelTemplate>
-                                <StackPanel Orientation="Vertical"></StackPanel>
+                                <StackPanel Orientation="Vertical"/>
                             </ItemsPanelTemplate>
                         </ListBox.ItemsPanel>
 
