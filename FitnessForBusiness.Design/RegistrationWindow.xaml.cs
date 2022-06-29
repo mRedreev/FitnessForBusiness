@@ -31,13 +31,6 @@ namespace FitnessForBusiness.Design
             InitializeComponent();
         }
 
-      //  private void LevelButton_Checked(object sender, RoutedEventArgs e)
-      //  {
-
-      //  }
-
-
-
         private void BitrhDateDatePicker_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             //DateTime dt = (DateTime)this.BitrhDateDatePicker.SelectedDate;
