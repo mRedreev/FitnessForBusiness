@@ -44,13 +44,6 @@ namespace FitnessForBusiness.Design
             video.Play();
         }
 
-        private void playVideo_Click(object sender, RoutedEventArgs e)
-        {
-            var trainingWindow = new CurrentTrainingWindow(_training, _user, _storage);
-            trainingWindow.Show();
-            this.Close();
-        }
-
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -79,6 +72,13 @@ namespace FitnessForBusiness.Design
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void playVideo_Click(object sender, RoutedEventArgs e)
+        {
+            var trainingWindow = new CurrentTrainingWindow(_training, _user, _storage);
+            trainingWindow.Show();
+            this.Close();
         }
     }
 }

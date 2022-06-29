@@ -49,9 +49,11 @@
                                 Margin="0,0,0,3.65"
                                 Name="MinimizeWindowButton"
                                 Click="MinimizeWindowButton_Click"/>
+                        
                         <ToggleButton Style="{StaticResource WindowStateButton}"
                                 Name="WindowStateButton"
                                 Click="WindowStateButton_Click"/>
+                        
                         <Button Style="{StaticResource ExitButton}"
                                 Name="ExitButton"
                                 Click="ExitButton_Click"/>
@@ -66,6 +68,7 @@
                     <Image Source="Pictures/sLogo.png" 
                            Height="200"
                            Width="200"/>
+                    
                     <TextBlock Text="Strong Partner"
                                FontWeight="Bold"
                                FontSize="28"

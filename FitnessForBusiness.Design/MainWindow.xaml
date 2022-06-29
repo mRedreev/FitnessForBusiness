@@ -55,9 +55,11 @@
                         <Button Style="{StaticResource MinimizeButton}"
                                 Name="MinimizeButton"
                                 Click="MinimizeButton_Click"/>
+                        
                         <ToggleButton Style="{StaticResource WindowStateButton}"
                                       Name="WindowStateButton"
                                       Click="WindowStateButton_Click"/>
+                        
                         <Button Style="{StaticResource ExitButton}"
                                 Name="ExitButton"
                                 Click="ExitButton_Click"/>
@@ -177,8 +179,6 @@
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
-
-                    
                 </StackPanel>
             </StackPanel>
 

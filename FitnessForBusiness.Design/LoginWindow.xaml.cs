@@ -35,22 +35,22 @@ namespace FitnessForBusiness.Design
         {
             if (LogInUsernameBox.Text != "")
             {
-                try
+                if (LogInPasswordBox.Password != "")
                 {
-                    User user = functions.FindUserJSON(_storage, LogInUsernameBox.Text);
-                    if (LogInPasswordBox.Password == "") MessageBox.Show("Enter password");
-                    else if (user.Password != GetHashPassword.GetHash(LogInPasswordBox.Password)) MessageBox.Show("Wrong password");
-                    else
-                    {
-                        TrainingCatalog trainingCatalog = new TrainingCatalog(user, _storage);
-                        trainingCatalog.Show();
-                        this.Close();
+                    if (functions.DoesUserExist(_storage, LogInUsernameBox.Text))
+                    {                  
+                        User user = functions.FindUser(_storage, LogInUsernameBox.Text);
+                        if (user.Password != GetHashPassword.GetHash(LogInPasswordBox.Password)) MessageBox.Show("Wrong password");
+                        else
+                        {
+                            TrainingCatalog trainingCatalog = new TrainingCatalog(user, _storage);
+                            trainingCatalog.Show();
+                            this.Close();
+                        }
                     }
+                    else  MessageBox.Show("User is not found");
                 }
-                catch (Exception)
-                {
-                    MessageBox.Show("User is not found");
-                }
+                else MessageBox.Show("Enter password");
             }
             else MessageBox.Show("Enter your email");
         }

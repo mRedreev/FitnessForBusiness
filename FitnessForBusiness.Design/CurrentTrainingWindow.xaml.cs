@@ -61,6 +61,11 @@ namespace FitnessForBusiness.Design
             LengthAndBreakTextBlock.Text = $"Length: {functions.GetSeconds(_training.ExcerciseLength)}, break: {functions.GetSeconds(_training.BreakLength)}";
         }
 
+        private void NumberOfLoopsTextBlock_Initialized(object sender, EventArgs e)
+        {
+            var textblock = sender as TextBlock;
+            textblock.Text = _training.CircleAmount.ToString() + " circles";
+        }
        
         private void playVideo_Click(object sender, RoutedEventArgs e)
         {
@@ -120,12 +125,6 @@ namespace FitnessForBusiness.Design
             var trainingCatalog = new TrainingCatalog(_user, _storage);
             trainingCatalog.Show();
             this.Close();
-        }
-
-        private void NumberOfLoopsTextBlock_Initialized(object sender, EventArgs e)
-        {
-            var textblock = sender as TextBlock;
-            textblock.Text = _training.CircleAmount.ToString() + " circles";
         }
     }
 }
