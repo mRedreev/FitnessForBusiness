@@ -887,5 +887,18 @@
     "Password": "ZRK9Q9nKpuAsmQsKgmUtyg==",
     "Born": "2011-11-11T00:00:00",
     "CompletedTrainings": []
+  },
+  {
+    "Id": "48dc1f7d-ad1d-47ec-96ed-40fa3fe693f1",
+    "Name": "234t35",
+    "Surname": "2354",
+    "ImageSource": "/Pictures/san.jpg",
+    "Age": 10,
+    "Level": true,
+    "Goal": false,
+    "Login": "23456",
+    "Password": "ZRK9Q9nKpuAsmQsKgmUtyg==",
+    "Born": "2011-12-12T00:00:00",
+    "CompletedTrainings": []
   }
 ]

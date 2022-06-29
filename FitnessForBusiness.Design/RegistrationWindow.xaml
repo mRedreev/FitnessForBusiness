@@ -261,7 +261,6 @@
                                 IsTodayHighlighted="True"
                                 Background="#FF353340" 
                                 OverridesDefaultStyle="False" 
-                                MouseDoubleClick="BitrhDateDatePicker_MouseDoubleClick" 
                                 SelectedDateFormat="Short"/>
                 </StackPanel>
             </StackPanel>

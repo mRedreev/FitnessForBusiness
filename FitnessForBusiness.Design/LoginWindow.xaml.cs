@@ -35,10 +35,14 @@ namespace FitnessForBusiness.Design
         {
             if (LogInUsernameBox.Text != "")
             {
+                LogInUsernameBox.Background = Brushes.Transparent;
+
                 if (LogInPasswordBox.Password != "")
                 {
+                    LogInPasswordBox.Background = Brushes.Transparent;
+
                     if (functions.DoesUserExist(_storage, LogInUsernameBox.Text))
-                    {                  
+                    {
                         User user = functions.FindUser(_storage, LogInUsernameBox.Text);
                         if (user.Password != GetHashPassword.GetHash(LogInPasswordBox.Password)) MessageBox.Show("Wrong password");
                         else
@@ -48,11 +52,19 @@ namespace FitnessForBusiness.Design
                             this.Close();
                         }
                     }
-                    else  MessageBox.Show("User is not found");
+                    else MessageBox.Show("User is not found");
                 }
-                else MessageBox.Show("Enter password");
+                else
+                {
+                    MessageBox.Show("Enter password");
+                    LogInPasswordBox.Background = Brushes.PaleVioletRed;
+                }
             }
-            else MessageBox.Show("Enter your email");
+            else
+            { 
+                MessageBox.Show("Enter your email");
+                LogInUsernameBox.Background = Brushes.PaleVioletRed;
+            }
         }
         private void GoBackButton_Click(object sender, RoutedEventArgs e)
         {

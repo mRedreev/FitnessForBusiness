@@ -99,7 +99,7 @@ namespace FitnessForBusiness.Core
             else return true;
         }
 
-        
+
         public static string GetImageSourceOfAvatar(int index)
         {
             if (index == 0) return "/Pictures/san.jpg";
@@ -107,32 +107,6 @@ namespace FitnessForBusiness.Core
             else if (index == 2) return "/Pictures/becl2.jpg";
             else if (index == 3) return "/Pictures/lom2.jpg";
             else return "";
-        }
-
-        public static bool DoesUserAlreadyExist(string login)
-        {
-            try
-            {
-                var user = FindUser(login);
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
-
-        public static bool DoesUserAlreadyExistJSON(IStorage storage, string login)
-        {
-            try
-            {
-                var user = FindUserJSON(storage, login);
-                return true;
-            }
-            catch (Exception)
-            {
-                return false;
-            }
         }
 
         public static void MakeEmptyBoxRed(List<TextBox> boxes)

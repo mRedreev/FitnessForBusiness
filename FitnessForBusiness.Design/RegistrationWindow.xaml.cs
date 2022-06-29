@@ -30,26 +30,13 @@ namespace FitnessForBusiness.Design
             _storage = storage;
             InitializeComponent();
         }
-
-        private void BitrhDateDatePicker_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            //DateTime dt = (DateTime)this.BitrhDateDatePicker.SelectedDate;
-            //MessageBox.Show(dt.ToString("dd-MM-yyyy"));
-
-        }
-
         private void RegisterButton_Click(object sender, RoutedEventArgs e)
         {
-            bool userExists;
             var listTextBoxes = new List<TextBox>(){NameBox, SurnameTextBox, EmailTextBox};
             var listPasswordBoxes = new List<PasswordBox> { PasswordBox, PasswordAgianTextBox };
-            bool ifBoxesNotEmpty = functions.TextsBoxIsNotEmpty(listTextBoxes) & functions.ComboBoxIsNotEmpty(GoalComboBox, "Your Main Goal")
-                & functions.ComboBoxIsNotEmpty(LeveloComboBox, "Your Level")
-                & functions.ComboBoxIsNotEmpty(AvatarComboBox, "")
-                & (PasswordBox.Password != "")
-                & (BitrhDateDatePicker.SelectedDate.ToString() != "");
-            functions.MakeEmptyBoxRed(listTextBoxes);
-            functions.MakeRedPasswordboxesIfEmpty(listPasswordBoxes);
+            var ifBoxesNotEmpty = CheckEmptyBoxes(listTextBoxes);
+
+
             if (ifBoxesNotEmpty)
             {
                 if (PasswordBox.Password == PasswordAgianTextBox.Password)
@@ -57,8 +44,8 @@ namespace FitnessForBusiness.Design
                     
                     PasswordBox.Background = Brushes.Transparent;
                     PasswordAgianTextBox.Background = Brushes.Transparent;
-                    userExists = functions.DoesUserAlreadyExistJSON(_storage, EmailTextBox.Text);
-                    if (!userExists)
+
+                    if (!functions.DoesUserExist(_storage, EmailTextBox.Text))
                     {
                         var name = NameBox.Text;
                         var surname = SurnameTextBox.Text;
@@ -68,8 +55,10 @@ namespace FitnessForBusiness.Design
                         var goal = functions.CheckGoal(GoalComboBox.Text);
                         var imageSource = functions.GetImageSourceOfAvatar(AvatarComboBox.SelectedIndex);
                         var born = DateTime.Parse(BitrhDateDatePicker.SelectedDate.ToString());
+
                         User newUser = new User(name, surname, imageSource, born, level, goal, login, password);
                         _storage.Registration(newUser);
+
                         TrainingCatalog trainingCatalog = new TrainingCatalog(newUser, _storage);
                         trainingCatalog.Show();
                         this.Close();
@@ -82,6 +71,7 @@ namespace FitnessForBusiness.Design
                 else
                 {
                     MessageBox.Show("Passwords don't match");
+
                     PasswordBox.Background = Brushes.PaleVioletRed;
                     PasswordAgianTextBox.Background = Brushes.PaleVioletRed;
                 }
@@ -89,10 +79,21 @@ namespace FitnessForBusiness.Design
             else
             {   
                 MessageBox.Show("Enter full data");
+
+                functions.MakeEmptyBoxRed(listTextBoxes);
+                functions.MakeRedPasswordboxesIfEmpty(listPasswordBoxes);
             }
 
         }
 
+        private bool CheckEmptyBoxes(List<TextBox> listTextBoxes)
+        {
+            return functions.TextsBoxIsNotEmpty(listTextBoxes) & functions.ComboBoxIsNotEmpty(GoalComboBox, "Your Main Goal")
+              & functions.ComboBoxIsNotEmpty(LeveloComboBox, "Your Level")
+              & functions.ComboBoxIsNotEmpty(AvatarComboBox, "")
+              & (PasswordBox.Password != "")
+              & (BitrhDateDatePicker.SelectedDate.ToString() != "");
+        }
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.LeftButton == MouseButtonState.Pressed)
@@ -129,18 +130,5 @@ namespace FitnessForBusiness.Design
             mainWindow.Show();
             this.Close();
         }
-
-
-        //      private void AddNewUser()
-        //      {
-        //          var name = NameBox.Text;
-        //          var surname = ;
-        //          var imageSource = ;
-        //        var born = BitrhDateDatePicker;
-        //        var login = EmailTextBox.Text;
-        //        var password = PasswordBox.Text;
-        //        var goal = GoalComboBox.Text
-
-        //      }
     }
 }
